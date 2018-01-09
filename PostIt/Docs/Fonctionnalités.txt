@@ -1,0 +1,12 @@
+﻿FONCTIONNALITES
+===============
+
+- Laisser un message à un collaborateur
+- Agenda avec rappels
+- Numeros de telephone utiles
+- Suivi (probleme/commande) client
+    - pochette photo/video perdue
+    - rep retard ou retour litigieux
+	- demande prix produit
+	- livraison a convenir
+	- 

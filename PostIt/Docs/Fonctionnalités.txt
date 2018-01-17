@@ -3,10 +3,16 @@
 
 - Laisser un message à un collaborateur
 - Agenda avec rappels
-- Numeros de telephone utiles
+- Numeros de téléphone utiles (prestataires, fournisseurs, hotlines)
 - Suivi (probleme/commande) client
     - pochette photo/video perdue
     - rep retard ou retour litigieux
 	- demande prix produit
 	- livraison a convenir
-	- 
+
+Etats des événements :
+----------------------
+- En cours
+- Terminé
+- A venir
+- 

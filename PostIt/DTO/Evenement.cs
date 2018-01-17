@@ -12,6 +12,7 @@ namespace PostIt.DTO
         public string Type { get; set; }
         public DateTime Date { get; set; }
 
+        public int Etat { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }

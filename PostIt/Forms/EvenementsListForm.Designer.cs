@@ -42,10 +42,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEvenements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEvenements.Location = new System.Drawing.Point(0, 39);
-            this.dgvEvenements.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvEvenements.Location = new System.Drawing.Point(0, 28);
             this.dgvEvenements.Name = "dgvEvenements";
-            this.dgvEvenements.Size = new System.Drawing.Size(1250, 837);
+            this.dgvEvenements.Size = new System.Drawing.Size(833, 541);
             this.dgvEvenements.TabIndex = 0;
             // 
             // toolStrip
@@ -55,26 +54,25 @@
             this.TslAdd});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(1250, 28);
+            this.toolStrip.Size = new System.Drawing.Size(833, 25);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
             // 
             // TslAdd
             // 
             this.TslAdd.Name = "TslAdd";
-            this.TslAdd.Size = new System.Drawing.Size(137, 25);
+            this.TslAdd.Size = new System.Drawing.Size(91, 22);
             this.TslAdd.Text = "Nouveau Post\'It";
             this.TslAdd.Click += new System.EventHandler(this.TslAdd_Click);
             // 
             // EvenementsListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1250, 877);
+            this.ClientSize = new System.Drawing.Size(833, 570);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.dgvEvenements);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EvenementsListForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

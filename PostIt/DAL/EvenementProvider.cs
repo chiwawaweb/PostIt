@@ -55,5 +55,27 @@ namespace PostIt.DAL
                 }
             }
         }
+
+        public List<string> GetOperateurs()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var result = context.Evenements.Select(v => v.Operateur).Distinct();
+
+                    var vendeurs = from b in context.Evenements
+                                   orderby b.Operateur ascending
+
+                                   select b
+                                   ;
+                    return result.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

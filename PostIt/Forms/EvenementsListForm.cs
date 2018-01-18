@@ -142,7 +142,7 @@ namespace PostIt.Forms
 
         private void NewPostIt()
         {
-            EvenementEditForm frm = new EvenementEditForm();
+            EvenementEditForm frm = new EvenementEditForm(this, false);
             frm.ShowDialog();
 
         }

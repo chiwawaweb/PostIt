@@ -16,7 +16,7 @@ namespace PostIt.Classes
         {
             List<Categorie> categories = new List<Categorie>()
             {
-                new Categorie { Nom="Message", Abrv="MSG", Actif=true },
+                new Categorie { Nom="Message à un collaborateur", Abrv="MSG", Actif=true },
                 new Categorie { Nom="Demande prix", Abrv="DPX", Actif=true},
                 new Categorie { Nom="Suivi réparation", Abrv="REP", Actif=true},
                 new Categorie { Nom="Pochette photo/video", Abrv="PHO", Actif=true},
@@ -42,6 +42,34 @@ namespace PostIt.Classes
             };
 
             return statuts;
+        }
+
+        public string RemoveDiacritics(String s)
+        {
+            String normalizedString = s.Normalize(NormalizationForm.FormD);
+            StringBuilder stringBuilder = new StringBuilder();
+
+            for (int i = 0; i < normalizedString.Length; i++)
+            {
+                Char c = normalizedString[i];
+                if (CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
+                    stringBuilder.Append(c);
+            }
+            return stringBuilder.ToString();
+        }
+
+        public string ReadSetting(string key)
+        {
+            try
+            {
+                var appSettings = ConfigurationManager.AppSettings;
+                string result = appSettings[key] ?? "Not Found";
+                return result;
+            }
+            catch (ConfigurationErrorsException)
+            {
+                return "";
+            }
         }
     }
 }

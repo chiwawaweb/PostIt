@@ -28,164 +28,189 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
+            this.LblOperateur = new System.Windows.Forms.Label();
+            this.CbxOperateur = new System.Windows.Forms.ComboBox();
+            this.CbxCategorie = new System.Windows.Forms.ComboBox();
+            this.LblCategorie = new System.Windows.Forms.Label();
+            this.TxtTiers = new System.Windows.Forms.TextBox();
+            this.LblTiers = new System.Windows.Forms.Label();
+            this.TxtDescription = new System.Windows.Forms.TextBox();
+            this.CbxStatut = new System.Windows.Forms.ComboBox();
+            this.LblDescription = new System.Windows.Forms.Label();
+            this.LblStatut = new System.Windows.Forms.Label();
+            this.DtpEcheance = new System.Windows.Forms.DateTimePicker();
+            this.LblEcheance = new System.Windows.Forms.Label();
             this.BtnAnnuler = new System.Windows.Forms.Button();
             this.BtnEnregistrer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // LblOperateur
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Collaborateur";
+            this.LblOperateur.AutoSize = true;
+            this.LblOperateur.Location = new System.Drawing.Point(21, 25);
+            this.LblOperateur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblOperateur.Name = "LblOperateur";
+            this.LblOperateur.Size = new System.Drawing.Size(69, 13);
+            this.LblOperateur.TabIndex = 0;
+            this.LblOperateur.Text = "Collaborateur";
             // 
-            // comboBox1
+            // CbxOperateur
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(36, 62);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(279, 28);
-            this.comboBox1.TabIndex = 1;
+            this.CbxOperateur.FormattingEnabled = true;
+            this.CbxOperateur.Location = new System.Drawing.Point(24, 40);
+            this.CbxOperateur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxOperateur.Name = "CbxOperateur";
+            this.CbxOperateur.Size = new System.Drawing.Size(187, 21);
+            this.CbxOperateur.TabIndex = 0;
             // 
-            // comboBox2
+            // CbxCategorie
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(360, 62);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(279, 28);
-            this.comboBox2.TabIndex = 3;
+            this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxCategorie.FormattingEnabled = true;
+            this.CbxCategorie.Location = new System.Drawing.Point(226, 40);
+            this.CbxCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxCategorie.Name = "CbxCategorie";
+            this.CbxCategorie.Size = new System.Drawing.Size(201, 21);
+            this.CbxCategorie.TabIndex = 1;
             // 
-            // label2
+            // LblCategorie
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(356, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Catégorie";
+            this.LblCategorie.AutoSize = true;
+            this.LblCategorie.Location = new System.Drawing.Point(223, 25);
+            this.LblCategorie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblCategorie.Name = "LblCategorie";
+            this.LblCategorie.Size = new System.Drawing.Size(52, 13);
+            this.LblCategorie.TabIndex = 2;
+            this.LblCategorie.Text = "Catégorie";
+            this.LblCategorie.Click += new System.EventHandler(this.LblCategorie_Click);
             // 
-            // textBox1
+            // TxtTiers
             // 
-            this.textBox1.Location = new System.Drawing.Point(36, 159);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 26);
-            this.textBox1.TabIndex = 4;
+            this.TxtTiers.Location = new System.Drawing.Point(24, 86);
+            this.TxtTiers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtTiers.Name = "TxtTiers";
+            this.TxtTiers.Size = new System.Drawing.Size(187, 20);
+            this.TxtTiers.TabIndex = 2;
             // 
-            // label3
+            // LblTiers
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Tiers";
+            this.LblTiers.AutoSize = true;
+            this.LblTiers.Location = new System.Drawing.Point(21, 71);
+            this.LblTiers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblTiers.Name = "LblTiers";
+            this.LblTiers.Size = new System.Drawing.Size(30, 13);
+            this.LblTiers.TabIndex = 5;
+            this.LblTiers.Text = "Tiers";
             // 
-            // textBox2
+            // TxtDescription
             // 
-            this.textBox2.Location = new System.Drawing.Point(36, 229);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(676, 157);
-            this.textBox2.TabIndex = 6;
+            this.TxtDescription.Location = new System.Drawing.Point(24, 128);
+            this.TxtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtDescription.Multiline = true;
+            this.TxtDescription.Name = "TxtDescription";
+            this.TxtDescription.Size = new System.Drawing.Size(403, 103);
+            this.TxtDescription.TabIndex = 3;
             // 
-            // comboBox3
+            // CbxStatut
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(36, 441);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(279, 28);
-            this.comboBox3.TabIndex = 7;
+            this.CbxStatut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxStatut.FormattingEnabled = true;
+            this.CbxStatut.Location = new System.Drawing.Point(24, 258);
+            this.CbxStatut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxStatut.Name = "CbxStatut";
+            this.CbxStatut.Size = new System.Drawing.Size(187, 21);
+            this.CbxStatut.TabIndex = 4;
             // 
-            // label4
+            // LblDescription
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 206);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Description";
+            this.LblDescription.AutoSize = true;
+            this.LblDescription.Location = new System.Drawing.Point(21, 113);
+            this.LblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblDescription.Name = "LblDescription";
+            this.LblDescription.Size = new System.Drawing.Size(60, 13);
+            this.LblDescription.TabIndex = 8;
+            this.LblDescription.Text = "Description";
             // 
-            // label5
+            // LblStatut
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 418);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Statut";
+            this.LblStatut.AutoSize = true;
+            this.LblStatut.Location = new System.Drawing.Point(21, 243);
+            this.LblStatut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblStatut.Name = "LblStatut";
+            this.LblStatut.Size = new System.Drawing.Size(35, 13);
+            this.LblStatut.TabIndex = 9;
+            this.LblStatut.Text = "Statut";
             // 
-            // dateTimePicker1
+            // DtpEcheance
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(463, 443);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 10;
+            this.DtpEcheance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpEcheance.Location = new System.Drawing.Point(332, 259);
+            this.DtpEcheance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpEcheance.Name = "DtpEcheance";
+            this.DtpEcheance.Size = new System.Drawing.Size(95, 20);
+            this.DtpEcheance.TabIndex = 5;
             // 
-            // label6
+            // LblEcheance
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(459, 420);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 20);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Echéance";
+            this.LblEcheance.AutoSize = true;
+            this.LblEcheance.Location = new System.Drawing.Point(329, 244);
+            this.LblEcheance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblEcheance.Name = "LblEcheance";
+            this.LblEcheance.Size = new System.Drawing.Size(56, 13);
+            this.LblEcheance.TabIndex = 11;
+            this.LblEcheance.Text = "Echéance";
             // 
             // BtnAnnuler
             // 
-            this.BtnAnnuler.Location = new System.Drawing.Point(418, 534);
+            this.BtnAnnuler.Location = new System.Drawing.Point(201, 307);
+            this.BtnAnnuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAnnuler.Name = "BtnAnnuler";
-            this.BtnAnnuler.Size = new System.Drawing.Size(121, 53);
-            this.BtnAnnuler.TabIndex = 12;
+            this.BtnAnnuler.Size = new System.Drawing.Size(111, 34);
+            this.BtnAnnuler.TabIndex = 8;
             this.BtnAnnuler.Text = "Annuler";
             this.BtnAnnuler.UseVisualStyleBackColor = true;
+            this.BtnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);
             // 
             // BtnEnregistrer
             // 
-            this.BtnEnregistrer.Location = new System.Drawing.Point(583, 534);
+            this.BtnEnregistrer.Location = new System.Drawing.Point(316, 307);
+            this.BtnEnregistrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnEnregistrer.Name = "BtnEnregistrer";
-            this.BtnEnregistrer.Size = new System.Drawing.Size(129, 53);
-            this.BtnEnregistrer.TabIndex = 13;
+            this.BtnEnregistrer.Size = new System.Drawing.Size(111, 34);
+            this.BtnEnregistrer.TabIndex = 7;
             this.BtnEnregistrer.Text = "Enregistrer";
             this.BtnEnregistrer.UseVisualStyleBackColor = true;
+            this.BtnEnregistrer.Click += new System.EventHandler(this.BtnEnregistrer_Click);
             // 
             // EvenementEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 613);
+            this.ClientSize = new System.Drawing.Size(453, 367);
             this.Controls.Add(this.BtnEnregistrer);
             this.Controls.Add(this.BtnAnnuler);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblEcheance);
+            this.Controls.Add(this.DtpEcheance);
+            this.Controls.Add(this.LblStatut);
+            this.Controls.Add(this.LblDescription);
+            this.Controls.Add(this.CbxStatut);
+            this.Controls.Add(this.TxtDescription);
+            this.Controls.Add(this.LblTiers);
+            this.Controls.Add(this.TxtTiers);
+            this.Controls.Add(this.CbxCategorie);
+            this.Controls.Add(this.LblCategorie);
+            this.Controls.Add(this.CbxOperateur);
+            this.Controls.Add(this.LblOperateur);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EvenementEditForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Post\'It";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EvenementEditForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,18 +218,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LblOperateur;
+        private System.Windows.Forms.ComboBox CbxOperateur;
+        private System.Windows.Forms.ComboBox CbxCategorie;
+        private System.Windows.Forms.Label LblCategorie;
+        private System.Windows.Forms.TextBox TxtTiers;
+        private System.Windows.Forms.Label LblTiers;
+        private System.Windows.Forms.TextBox TxtDescription;
+        private System.Windows.Forms.ComboBox CbxStatut;
+        private System.Windows.Forms.Label LblDescription;
+        private System.Windows.Forms.Label LblStatut;
+        private System.Windows.Forms.DateTimePicker DtpEcheance;
+        private System.Windows.Forms.Label LblEcheance;
         private System.Windows.Forms.Button BtnAnnuler;
         private System.Windows.Forms.Button BtnEnregistrer;
     }

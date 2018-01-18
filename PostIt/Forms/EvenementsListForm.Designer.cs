@@ -28,33 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvEvenements = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvenements)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvEvenements
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(833, 410);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvEvenements.AllowUserToAddRows = false;
+            this.dgvEvenements.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEvenements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvenements.Location = new System.Drawing.Point(0, 38);
+            this.dgvEvenements.Name = "dgvEvenements";
+            this.dgvEvenements.Size = new System.Drawing.Size(833, 532);
+            this.dgvEvenements.TabIndex = 0;
             // 
-            // EvenementsForm
+            // EvenementsListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 484);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "EvenementsForm";
-            this.Text = "EvenementsForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ClientSize = new System.Drawing.Size(833, 570);
+            this.ControlBox = false;
+            this.Controls.Add(this.dgvEvenements);
+            this.Name = "EvenementsListForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.Load += new System.EventHandler(this.EvenementsListForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvenements)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEvenements;
     }
 }

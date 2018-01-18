@@ -19,11 +19,18 @@ namespace PostIt.Forms
 
             EvenementProvider evenementProvider = new EvenementProvider();
             evenementProvider.CountAll();
+
+            EvenementsListForm frm = new EvenementsListForm();
+            frm.MdiParent = this;
+            frm.Show();
+
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
     }
 }

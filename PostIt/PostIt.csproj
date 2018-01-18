@@ -55,8 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Etat.cs" />
-    <Compile Include="Classes\Type.cs" />
+    <Compile Include="Classes\Statut.cs" />
+    <Compile Include="Classes\Categorie.cs" />
     <Compile Include="Classes\Utils.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="DAL\EvenementProvider.cs" />

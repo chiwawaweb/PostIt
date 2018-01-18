@@ -24,5 +24,36 @@ namespace PostIt.DAL
                 }
             }
         }
+
+        public List<Evenement> Search(string keywords, DateTime dateDebut, DateTime dateFin)
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var evenements = from b in context.Evenements
+                                     orderby b.Id descending
+
+                                     /*
+                                     where (((b.Client.Contains(keywords)
+                                        || (b.Articles.Contains(keywords))
+                                        || (b.Agence.Contains(keywords))
+                                        || (b.Contact.Contains(keywords))
+                                        || (b.NoteInterne.Contains(keywords))
+                                        || (b.Vendeur.Contains(keywords))
+                                        )
+                                     && (b.Date >= dateDebut)
+                                     && (b.Date <= dateFin))
+                                     )
+                                     */
+                                     select b;
+                    return evenements.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

@@ -12,9 +12,11 @@
 	- système d'historique de suivi (commentaires)
 - Affichage des derniers commentaires sur la page d'accueil
 
+- Quand état passe à terminé, un commentaire auto est ajouté avec la date et l'heure
+
 Etats des événements :
 ----------------------
 - En cours
 - Terminé
-- A venir
+- A venir (agenda)
 - 

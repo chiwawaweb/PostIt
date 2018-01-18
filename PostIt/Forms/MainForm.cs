@@ -31,6 +31,9 @@ namespace PostIt.Forms
             Application.Exit();
         }
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

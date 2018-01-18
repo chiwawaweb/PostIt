@@ -16,13 +16,14 @@ namespace PostIt.Forms
     {
         private static int idRetour;
 
+        EvenementProvider evenementProvider = new EvenementProvider();
+
         public EvenementsListForm()
         {
             InitializeComponent();
         }
 
-        //private void CreateTable(List<Evenement> list, int _idRetour)
-        private void CreateTable(int _idRetour)
+        private void CreateTable(List<Evenement> list, int _idRetour)
         {
             idRetour = _idRetour;
 
@@ -63,13 +64,13 @@ namespace PostIt.Forms
             DataGridViewTextBoxColumn tiersColumn = new DataGridViewTextBoxColumn();
             tiersColumn.Name = "Tiers";
             tiersColumn.HeaderText = "TIERS";
-            tiersColumn.Width = 180;
+            tiersColumn.Width = 200;
             tiersColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn descriptionColumn = new DataGridViewTextBoxColumn();
             descriptionColumn.Name = "Description";
             descriptionColumn.HeaderText = "DESCRIPTION";
-            descriptionColumn.Width = 550;
+            descriptionColumn.Width = 535;
             descriptionColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn operateurColumn = new DataGridViewTextBoxColumn();
@@ -87,16 +88,44 @@ namespace PostIt.Forms
             dgvEvenements.Columns.Add(descriptionColumn);
             dgvEvenements.Columns.Add(operateurColumn);
 
+            /* Ajout des lignes */
+            for (int i = 0; i < list.Count; i++)
+            {
+                int number = dgvEvenements.Rows.Add();
+
+                string id = list[i].Id.ToString("000000");
+                DateTime date = list[i].Date;
+                string categorie = list[i].Categorie;
+                string statut = list[i].Statut;
+                string tiers = list[i].Tiers;
+                string description = list[i].Description;
+                string operateur = list[i].Operateur;
+                
+
+                dgvEvenements.Rows[number].Cells[0].Value = id;
+                dgvEvenements.Rows[number].Cells[1].Value = date.ToString("dd/MM/yyyy");
+                dgvEvenements.Rows[number].Cells[2].Value = categorie;
+                dgvEvenements.Rows[number].Cells[3].Value = statut;
+                dgvEvenements.Rows[number].Cells[4].Value = tiers;
+                dgvEvenements.Rows[number].Cells[5].Value = description;
+                dgvEvenements.Rows[number].Cells[6].Value = operateur;
+
+                // pointe sur l'enregistrement courant
+                if (list[i].Id == idRetour)
+                {
+                    dgvEvenements.Rows[number].Cells[1].Selected = true;
+                }
+            }
+
         }
 
         public void RefreshData()
         {
             List<Evenement> list;
-            //list = transfertProvider.Search(TxtSearch.Text, DtpDebut.Value, DtpFin.Value); // à completer avec mots cles / dates
+            //list = evenementProvider.Search(TxtSearch.Text, DtpDebut.Value, DtpFin.Value); // à completer avec mots cles / dates
+            list = evenementProvider.Search("", DateTime.Now.AddMonths(-1), DateTime.Now);
 
-            //CreateTable(list, idRetour);
-            CreateTable(idRetour);
-
+            CreateTable(list, idRetour);
 
         }
 
@@ -104,6 +133,18 @@ namespace PostIt.Forms
         {
             RefreshData();
             WindowState = FormWindowState.Maximized;
+        }
+
+        private void TslAdd_Click(object sender, EventArgs e)
+        {
+            NewPostIt();
+        }
+
+        private void NewPostIt()
+        {
+            EvenementEditForm frm = new EvenementEditForm();
+            frm.ShowDialog();
+
         }
     }
 }

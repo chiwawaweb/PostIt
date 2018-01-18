@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_app.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -69,6 +72,12 @@
     <Compile Include="Forms\CommentairesListForm.Designer.cs">
       <DependentUpon>CommentairesListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EvenementEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EvenementEditForm.Designer.cs">
+      <DependentUpon>EvenementEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EvenementsListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +94,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\CommentairesListForm.resx">
       <DependentUpon>CommentairesListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EvenementEditForm.resx">
+      <DependentUpon>EvenementEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EvenementsListForm.resx">
       <DependentUpon>EvenementsListForm.cs</DependentUpon>
@@ -118,6 +130,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Docs\Fonctionnalités.txt" />
+    <Content Include="icon_app.ico" />
+    <Content Include="Resources\icon_app.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

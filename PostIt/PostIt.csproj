@@ -55,15 +55,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Etat.cs" />
+    <Compile Include="Classes\Type.cs" />
+    <Compile Include="Classes\Utils.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="DAL\EvenementProvider.cs" />
+    <Compile Include="DTO\Commentaire.cs" />
     <Compile Include="DTO\Contact.cs" />
     <Compile Include="DTO\Evenement.cs" />
-    <Compile Include="Forms\EvenementsForm.cs">
+    <Compile Include="Forms\CommentairesListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EvenementsForm.Designer.cs">
-      <DependentUpon>EvenementsForm.cs</DependentUpon>
+    <Compile Include="Forms\CommentairesListForm.Designer.cs">
+      <DependentUpon>CommentairesListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EvenementsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EvenementsListForm.Designer.cs">
+      <DependentUpon>EvenementsListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -73,8 +83,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\EvenementsForm.resx">
-      <DependentUpon>EvenementsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CommentairesListForm.resx">
+      <DependentUpon>CommentairesListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EvenementsListForm.resx">
+      <DependentUpon>EvenementsListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

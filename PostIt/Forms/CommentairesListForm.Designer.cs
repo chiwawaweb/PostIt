@@ -1,6 +1,6 @@
 ﻿namespace PostIt.Forms
 {
-    partial class EvenementsForm
+    partial class CommentairesListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // CommentairesListForm
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(833, 410);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // EvenementsForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 484);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "EvenementsForm";
-            this.Text = "EvenementsForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ClientSize = new System.Drawing.Size(958, 476);
+            this.Name = "CommentairesListForm";
+            this.Text = "CommentairesListForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

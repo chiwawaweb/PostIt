@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace PostIt.DTO
 {
-    public class Evenement
+    public class Commentaire
     {
         public int? Id { get; set; }
-        public string Type { get; set; }
+        public int IdEvenement { get; set; }
         public DateTime Date { get; set; }
-        public string Client { get; set; }
+        public string Operateur { get; set; }
 
-
-        public int Etat { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }

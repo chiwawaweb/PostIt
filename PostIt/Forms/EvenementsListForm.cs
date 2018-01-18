@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PostIt.Forms
 {
-    public partial class EvenementsForm : Form
+    public partial class EvenementsListForm : Form
     {
-        public EvenementsForm()
+        public EvenementsListForm()
         {
             InitializeComponent();
         }

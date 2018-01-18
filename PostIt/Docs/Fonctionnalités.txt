@@ -9,6 +9,8 @@
     - rep retard ou retour litigieux
 	- demande prix produit
 	- livraison a convenir
+	- système d'historique de suivi (commentaires)
+- Affichage des derniers commentaires sur la page d'accueil
 
 Etats des événements :
 ----------------------

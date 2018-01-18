@@ -16,6 +16,8 @@ namespace PostIt.DAL
         }
 
         public DbSet<Evenement> Evenements { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Commentaire> Commentaires { get; set; }
     }
 
     public class ContextInitializer : DropCreateDatabaseIfModelChanges<Context>

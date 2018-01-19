@@ -22,9 +22,10 @@ namespace PostIt.Forms
     {
         Utils utils = new Utils();
 
-        string formTitle, operateur, categorie, tiers, description;
+        string formTitle, operateur, categorie, tiers, description, statut;
         bool evenementUpdateMode;
         int _id;
+        DateTime echeance;
 
         EvenementsListForm _owner;
 
@@ -40,7 +41,7 @@ namespace PostIt.Forms
 
             /* Combobox Categorie */
             var dsCategorie = new List<Categorie>();
-            foreach (Categorie categorie in utils.AllCategories())
+            foreach (Categorie categorie in utils.AllCategoriesActives())
             {
                 if (categorie.Actif == true)
                 {
@@ -53,7 +54,7 @@ namespace PostIt.Forms
 
             /* Combobox Statut */
             var dsStatut = new List<Statut>();
-            foreach (Statut statut in utils.AllStatuts())
+            foreach (Statut statut in utils.AllStatutsActives())
             {
                 if (statut.Actif == true)
                 {
@@ -76,10 +77,10 @@ namespace PostIt.Forms
             CbxOperateur.DisplayMember = "Operateur";
 
             /* Date échéance à +7 jours par défaut */
-            DtpEcheance.Value = DateTime.Now.AddDays(+7);
+            DtpEcheance.Value = DateTime.Now.AddDays(+1);
 
 
-            switch(evenementUpdateMode)
+            switch (evenementUpdateMode)
             {
                 /* Mode création */
                 case false:
@@ -128,13 +129,57 @@ namespace PostIt.Forms
 
         private void SavePostIt()
         {
-            /* récupération des données */
+            /* Récupération des données */
             operateur = utils.RemoveDiacritics(CbxOperateur.Text.ToUpper().Trim());
             categorie = utils.RemoveDiacritics(CbxCategorie.Text.ToUpper().Trim());
             tiers = utils.RemoveDiacritics(TxtTiers.Text.ToUpper().Trim());
             description = utils.RemoveDiacritics(TxtDescription.Text.ToUpper().Trim());
+            statut = utils.RemoveDiacritics(CbxStatut.Text.ToUpper().Trim());
+            echeance = DtpEcheance.Value;
+
+            /* Vérification des données */
+            bool erreurs = false;
+            string errMsg = "Votre saisie comporte des erreurs : \n\n";
+
+            if (operateur.Length < 2)
+            {
+                erreurs = true;
+                errMsg += "- Opérateur non spécifié ou trop court\n";
+            }
+
+            if (categorie.Length<3)
+            {
+                bool errors = true;
+                errMsg += "- Catégorie incorrecte\n";
+            }
+
+            if (tiers.Length<2)
+            {
+                erreurs = true;
+                errMsg += "- Tiers non spécifié ou trop court\n";
+            }
+
+            if (description.Length < 7)
+            {
+                erreurs = true;
+                errMsg += "- Description ou message trop court\n";
+            }
+
+            if (statut.Length<3)
+            {
+                erreurs = true;
+                errMsg += "- Statut incorrect\n";
+            }
 
 
+            if (erreurs == true)
+            {
+                MessageBox.Show(errMsg, "Erreurs dans la saisie", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+            }
         }
     }
 }

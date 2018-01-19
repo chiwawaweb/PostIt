@@ -132,7 +132,19 @@
   <ItemGroup>
     <Content Include="Docs\Fonctionnalités.txt" />
     <Content Include="icon_app.ico" />
+    <Content Include="Resources\icon_add.ico" />
     <Content Include="Resources\icon_app.ico" />
+    <Content Include="Resources\icon_close.ico" />
+    <Content Include="Resources\icon_delete.ico" />
+    <Content Include="Resources\icon_edit.ico" />
+    <Content Include="Resources\icon_email.ico" />
+    <Content Include="Resources\icon_list.ico" />
+    <Content Include="Resources\icon_new.ico" />
+    <Content Include="Resources\icon_quit.ico" />
+    <Content Include="Resources\icon_refresh.ico" />
+    <Content Include="Resources\icon_save.ico" />
+    <Content Include="Resources\icon_setup.ico" />
+    <Content Include="Resources\icon_update.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

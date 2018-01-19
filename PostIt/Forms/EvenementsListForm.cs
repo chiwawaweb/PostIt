@@ -146,5 +146,10 @@ namespace PostIt.Forms
             frm.ShowDialog();
 
         }
+
+        private void BtnNouveau_Click(object sender, EventArgs e)
+        {
+            NewPostIt();
+        }
     }
 }

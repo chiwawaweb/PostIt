@@ -12,7 +12,7 @@ namespace PostIt.Classes
 {
     public class Utils
     {
-        public List<Categorie> AllCategories()
+        public List<Categorie> AllCategoriesActives()
         {
             List<Categorie> categories = new List<Categorie>()
             {
@@ -32,7 +32,7 @@ namespace PostIt.Classes
             return categories;
         }
 
-        public List<Statut> AllStatuts()
+        public List<Statut> AllStatutsActives()
         {
             List<Statut> statuts = new List<Statut>()
             {

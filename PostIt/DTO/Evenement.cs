@@ -13,10 +13,13 @@ namespace PostIt.DTO
         [Key]
         [Column("ID")]
         public int Id { get; set; }
+        [Required]
         [Column("DATE")]
         public DateTime Date { get; set; }
+        [Required]
         [Column("CATEGORIE")]
         public string Categorie { get; set; }
+        [Required]
         [Column("OPERATEUR")]
         public string Operateur { get; set; }
         [Column("TIERS")]

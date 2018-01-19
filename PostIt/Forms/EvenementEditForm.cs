@@ -25,7 +25,7 @@ namespace PostIt.Forms
         string formTitle, operateur, categorie, tiers, description, statut;
         bool evenementUpdateMode;
         int _id;
-        DateTime echeance;
+        DateTime date, echeance;
 
         EvenementsListForm _owner;
 
@@ -130,6 +130,7 @@ namespace PostIt.Forms
         private void SavePostIt()
         {
             /* Récupération des données */
+            date = Convert.ToDateTime(DateTime.Now);
             operateur = utils.RemoveDiacritics(CbxOperateur.Text.ToUpper().Trim());
             categorie = utils.RemoveDiacritics(CbxCategorie.Text.ToUpper().Trim());
             tiers = utils.RemoveDiacritics(TxtTiers.Text.ToUpper().Trim());
@@ -178,8 +179,43 @@ namespace PostIt.Forms
             }
             else
             {
-
+                /* Aucune erreur, on continue */
+                using (Context context = new Context())
+                {
+                    if (evenementUpdateMode == true)
+                    {
+                        UpdateDatabase();
+                    }
+                    else
+                    {
+                        AddDatabase();
+                    }
+                    Close();
+                }
             }
+        }
+
+        private void UpdateDatabase()
+        {
+            
+        }
+
+        private void AddDatabase()
+        {
+            Evenement evenement = new Evenement();
+
+            evenement.Date = date;
+            evenement.Categorie = categorie;
+            evenement.Operateur = operateur;
+            evenement.Tiers = tiers;
+            evenement.Description = description;
+            evenement.Statut = statut;
+            evenement.Echeance = echeance;
+            evenement.CreatedAt = DateTime.Now;
+
+            evenementProvider.Create(evenement);
+            MessageBox.Show("post it ok");
+
         }
     }
 }

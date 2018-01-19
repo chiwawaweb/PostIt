@@ -37,6 +37,10 @@
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.DtpFin = new System.Windows.Forms.DateTimePicker();
             this.DtpDebut = new System.Windows.Forms.DateTimePicker();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BtnReset = new System.Windows.Forms.Button();
+            this.CbxStatut = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvenements)).BeginInit();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -44,14 +48,24 @@
             // dgvEvenements
             // 
             this.dgvEvenements.AllowUserToAddRows = false;
+            this.dgvEvenements.AllowUserToDeleteRows = false;
+            this.dgvEvenements.AllowUserToResizeRows = false;
             this.dgvEvenements.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEvenements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEvenements.Location = new System.Drawing.Point(0, 87);
+            this.dgvEvenements.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvEvenements.Location = new System.Drawing.Point(0, 92);
             this.dgvEvenements.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvEvenements.MultiSelect = false;
             this.dgvEvenements.Name = "dgvEvenements";
-            this.dgvEvenements.Size = new System.Drawing.Size(1250, 784);
+            this.dgvEvenements.ReadOnly = true;
+            this.dgvEvenements.RowHeadersVisible = false;
+            this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEvenements.ShowCellErrors = false;
+            this.dgvEvenements.ShowCellToolTips = false;
+            this.dgvEvenements.ShowEditingIcon = false;
+            this.dgvEvenements.Size = new System.Drawing.Size(1588, 780);
             this.dgvEvenements.TabIndex = 0;
             // 
             // toolStrip
@@ -63,7 +77,7 @@
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip.Size = new System.Drawing.Size(1250, 32);
+            this.toolStrip.Size = new System.Drawing.Size(1588, 32);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -86,23 +100,24 @@
             // 
             // CbxSearchCategorie
             // 
+            this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxSearchCategorie.FormattingEnabled = true;
-            this.CbxSearchCategorie.Location = new System.Drawing.Point(353, 40);
+            this.CbxSearchCategorie.Location = new System.Drawing.Point(76, 56);
             this.CbxSearchCategorie.Name = "CbxSearchCategorie";
-            this.CbxSearchCategorie.Size = new System.Drawing.Size(239, 28);
+            this.CbxSearchCategorie.Size = new System.Drawing.Size(313, 28);
             this.CbxSearchCategorie.TabIndex = 2;
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(598, 39);
+            this.TxtSearch.Location = new System.Drawing.Point(459, 56);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(231, 26);
+            this.TxtSearch.Size = new System.Drawing.Size(245, 26);
             this.TxtSearch.TabIndex = 3;
             // 
             // DtpFin
             // 
             this.DtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFin.Location = new System.Drawing.Point(1003, 42);
+            this.DtpFin.Location = new System.Drawing.Point(957, 59);
             this.DtpFin.Name = "DtpFin";
             this.DtpFin.Size = new System.Drawing.Size(139, 26);
             this.DtpFin.TabIndex = 4;
@@ -110,17 +125,57 @@
             // DtpDebut
             // 
             this.DtpDebut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpDebut.Location = new System.Drawing.Point(850, 42);
+            this.DtpDebut.Location = new System.Drawing.Point(782, 59);
             this.DtpDebut.Name = "DtpDebut";
             this.DtpDebut.Size = new System.Drawing.Size(137, 26);
             this.DtpDebut.TabIndex = 5;
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Location = new System.Drawing.Point(1458, 52);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(113, 33);
+            this.BtnSearch.TabIndex = 6;
+            this.BtnSearch.Text = "R.A.Z.";
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Filtrer :";
+            // 
+            // BtnReset
+            // 
+            this.BtnReset.Location = new System.Drawing.Point(1336, 51);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(116, 33);
+            this.BtnReset.TabIndex = 8;
+            this.BtnReset.Text = "Filtrer";
+            this.BtnReset.UseVisualStyleBackColor = true;
+            // 
+            // CbxStatut
+            // 
+            this.CbxStatut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxStatut.FormattingEnabled = true;
+            this.CbxStatut.Location = new System.Drawing.Point(1145, 55);
+            this.CbxStatut.Name = "CbxStatut";
+            this.CbxStatut.Size = new System.Drawing.Size(132, 28);
+            this.CbxStatut.TabIndex = 9;
             // 
             // EvenementsListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1250, 877);
+            this.ClientSize = new System.Drawing.Size(1588, 873);
             this.ControlBox = false;
+            this.Controls.Add(this.CbxStatut);
+            this.Controls.Add(this.BtnReset);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.DtpDebut);
             this.Controls.Add(this.DtpFin);
             this.Controls.Add(this.TxtSearch);
@@ -151,5 +206,9 @@
         private System.Windows.Forms.TextBox TxtSearch;
         private System.Windows.Forms.DateTimePicker DtpFin;
         private System.Windows.Forms.DateTimePicker DtpDebut;
+        private System.Windows.Forms.Button BtnSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnReset;
+        private System.Windows.Forms.ComboBox CbxStatut;
     }
 }

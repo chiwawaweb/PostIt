@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PostIt.DAL;
 using PostIt.DTO;
+using PostIt.Classes;
 
 namespace PostIt.Forms
 {
     public partial class EvenementsListForm : Form
     {
         private static int idRetour;
+
+        Utils utils = new Utils();
 
         EvenementProvider evenementProvider = new EvenementProvider();
 
@@ -52,7 +55,7 @@ namespace PostIt.Forms
             DataGridViewTextBoxColumn categorieColumn = new DataGridViewTextBoxColumn();
             categorieColumn.Name = "Categorie";
             categorieColumn.HeaderText = "CATEGORIE";
-            categorieColumn.Width = 130;
+            categorieColumn.Width = 200;
             categorieColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn statutColumn = new DataGridViewTextBoxColumn();
@@ -70,7 +73,7 @@ namespace PostIt.Forms
             DataGridViewTextBoxColumn descriptionColumn = new DataGridViewTextBoxColumn();
             descriptionColumn.Name = "Description";
             descriptionColumn.HeaderText = "DESCRIPTION";
-            descriptionColumn.Width = 535;
+            descriptionColumn.Width = 500;
             descriptionColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn operateurColumn = new DataGridViewTextBoxColumn();
@@ -117,13 +120,29 @@ namespace PostIt.Forms
                 }
             }
 
+            /* Combobox Catégorie */
+            var dsCategorie = new List<Categorie>();
+            Categorie categorievide = new Categorie();
+            categorievide.Nom = "--- Tous ---";
+            dsCategorie.Add(categorievide);
+            foreach (Categorie categorie in utils.AllCategoriesActives())
+            {
+                if (categorie.Actif == true)
+                {
+                    dsCategorie.Add(categorie);
+                }
+            }
+            CbxSearchCategorie.DataSource = dsCategorie;
+            CbxSearchCategorie.DisplayMember = "FullName";
+            CbxSearchCategorie.ValueMember = "FullName";
+
         }
 
         public void RefreshData()
         {
             List<Evenement> list;
-            //list = evenementProvider.Search(TxtSearch.Text, DtpDebut.Value, DtpFin.Value); // à completer avec mots cles / dates
-            list = evenementProvider.Search("", DateTime.Now.AddMonths(-1), DateTime.Now);
+            list = evenementProvider.Search(TxtSearch.Text, DtpDebut.Value, DtpFin.Value); // à completer avec mots cles / dates
+            //list = evenementProvider.Search("", DateTime.Now.AddMonths(-1), DateTime.Now);
 
             CreateTable(list, idRetour);
 

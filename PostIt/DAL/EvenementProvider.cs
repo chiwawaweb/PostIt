@@ -35,12 +35,9 @@ namespace PostIt.DAL
                                      orderby b.Id descending
 
                                      /*
-                                     where (((b.Client.Contains(keywords)
-                                        || (b.Articles.Contains(keywords))
-                                        || (b.Agence.Contains(keywords))
-                                        || (b.Contact.Contains(keywords))
-                                        || (b.NoteInterne.Contains(keywords))
-                                        || (b.Vendeur.Contains(keywords))
+                                     where (((b.Tiers.Contains(keywords)
+                                        || (b.Operateur.Contains(keywords))
+                                        
                                         )
                                      && (b.Date >= dateDebut)
                                      && (b.Date <= dateFin))
@@ -70,6 +67,24 @@ namespace PostIt.DAL
                                    select b
                                    ;
                     return result.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public int? Create(Evenement Evenement)
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    context.Evenements.Add(Evenement);
+                    context.SaveChanges();
+                    int? id = Evenement.Id;
+                    return id;
                 }
                 catch
                 {

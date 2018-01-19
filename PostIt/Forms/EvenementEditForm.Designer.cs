@@ -42,6 +42,7 @@
             this.LblEcheance = new System.Windows.Forms.Label();
             this.BtnAnnuler = new System.Windows.Forms.Button();
             this.BtnEnregistrer = new System.Windows.Forms.Button();
+            this.BtnCommentaires = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblOperateur
@@ -65,15 +66,15 @@
             // 
             this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategorie.FormattingEnabled = true;
-            this.CbxCategorie.Location = new System.Drawing.Point(339, 62);
+            this.CbxCategorie.Location = new System.Drawing.Point(372, 62);
             this.CbxCategorie.Name = "CbxCategorie";
-            this.CbxCategorie.Size = new System.Drawing.Size(300, 28);
+            this.CbxCategorie.Size = new System.Drawing.Size(267, 28);
             this.CbxCategorie.TabIndex = 1;
             // 
             // LblCategorie
             // 
             this.LblCategorie.AutoSize = true;
-            this.LblCategorie.Location = new System.Drawing.Point(334, 38);
+            this.LblCategorie.Location = new System.Drawing.Point(368, 39);
             this.LblCategorie.Name = "LblCategorie";
             this.LblCategorie.Size = new System.Drawing.Size(78, 20);
             this.LblCategorie.TabIndex = 2;
@@ -98,6 +99,7 @@
             // 
             // TxtDescription
             // 
+            this.TxtDescription.AcceptsReturn = true;
             this.TxtDescription.Location = new System.Drawing.Point(36, 197);
             this.TxtDescription.Multiline = true;
             this.TxtDescription.Name = "TxtDescription";
@@ -168,11 +170,26 @@
             this.BtnEnregistrer.UseVisualStyleBackColor = true;
             this.BtnEnregistrer.Click += new System.EventHandler(this.BtnEnregistrer_Click);
             // 
+            // BtnCommentaires
+            // 
+            this.BtnCommentaires.BackColor = System.Drawing.Color.Yellow;
+            this.BtnCommentaires.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCommentaires.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnCommentaires.Location = new System.Drawing.Point(36, 472);
+            this.BtnCommentaires.Name = "BtnCommentaires";
+            this.BtnCommentaires.Size = new System.Drawing.Size(218, 52);
+            this.BtnCommentaires.TabIndex = 12;
+            this.BtnCommentaires.Text = "Annotations...";
+            this.BtnCommentaires.UseVisualStyleBackColor = false;
+            this.BtnCommentaires.Visible = false;
+            this.BtnCommentaires.Click += new System.EventHandler(this.BtnCommentaires_Click);
+            // 
             // EvenementEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 565);
+            this.Controls.Add(this.BtnCommentaires);
             this.Controls.Add(this.BtnEnregistrer);
             this.Controls.Add(this.BtnAnnuler);
             this.Controls.Add(this.LblEcheance);
@@ -217,5 +234,6 @@
         private System.Windows.Forms.Label LblEcheance;
         private System.Windows.Forms.Button BtnAnnuler;
         private System.Windows.Forms.Button BtnEnregistrer;
+        private System.Windows.Forms.Button BtnCommentaires;
     }
 }

@@ -64,14 +64,14 @@
     <Compile Include="Classes\Utils.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="DAL\EvenementProvider.cs" />
-    <Compile Include="DTO\Commentaire.cs" />
+    <Compile Include="DTO\Annotation.cs" />
     <Compile Include="DTO\Contact.cs" />
     <Compile Include="DTO\Evenement.cs" />
-    <Compile Include="Forms\CommentairesListForm.cs">
+    <Compile Include="Forms\AnnotationsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CommentairesListForm.Designer.cs">
-      <DependentUpon>CommentairesListForm.cs</DependentUpon>
+    <Compile Include="Forms\AnnotationsForm.Designer.cs">
+      <DependentUpon>AnnotationsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EvenementEditForm.cs">
       <SubType>Form</SubType>
@@ -93,8 +93,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\CommentairesListForm.resx">
-      <DependentUpon>CommentairesListForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AnnotationsForm.resx">
+      <DependentUpon>AnnotationsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EvenementEditForm.resx">
       <DependentUpon>EvenementEditForm.cs</DependentUpon>

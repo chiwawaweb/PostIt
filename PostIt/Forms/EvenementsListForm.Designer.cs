@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvenementsListForm));
             this.dgvEvenements = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.BtnModifier = new System.Windows.Forms.ToolStripButton();
             this.BtnNouveau = new System.Windows.Forms.ToolStripButton();
+            this.BtnModifier = new System.Windows.Forms.ToolStripButton();
             this.CbxSearchCategorie = new System.Windows.Forms.ComboBox();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.DtpFin = new System.Windows.Forms.DateTimePicker();
@@ -81,14 +81,6 @@
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
             // 
-            // BtnModifier
-            // 
-            this.BtnModifier.Image = ((System.Drawing.Image)(resources.GetObject("BtnModifier.Image")));
-            this.BtnModifier.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnModifier.Name = "BtnModifier";
-            this.BtnModifier.Size = new System.Drawing.Size(107, 29);
-            this.BtnModifier.Text = "Modifier";
-            // 
             // BtnNouveau
             // 
             this.BtnNouveau.Image = ((System.Drawing.Image)(resources.GetObject("BtnNouveau.Image")));
@@ -97,6 +89,15 @@
             this.BtnNouveau.Size = new System.Drawing.Size(164, 29);
             this.BtnNouveau.Text = "Nouveau Post\'it";
             this.BtnNouveau.Click += new System.EventHandler(this.BtnNouveau_Click);
+            // 
+            // BtnModifier
+            // 
+            this.BtnModifier.Image = ((System.Drawing.Image)(resources.GetObject("BtnModifier.Image")));
+            this.BtnModifier.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnModifier.Name = "BtnModifier";
+            this.BtnModifier.Size = new System.Drawing.Size(107, 29);
+            this.BtnModifier.Text = "Modifier";
+            this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
             // 
             // CbxSearchCategorie
             // 

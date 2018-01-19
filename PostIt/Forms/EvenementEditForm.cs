@@ -65,7 +65,6 @@ namespace PostIt.Forms
             CbxStatut.DisplayMember = "FullName";
             CbxStatut.ValueMember = "FullName";
 
-
             /* Combobox Opérateur */
             var dataSourceVendeur = new List<string>();
             dataSourceVendeur.Add("");
@@ -99,17 +98,23 @@ namespace PostIt.Forms
 
         private void NewPostIt()
         {
-            formTitle = "Création d'un Post'It";
+            formTitle = "Création d'un Post'it";
         }
 
         private void LoadPostIt()
         {
-            formTitle = "Modification d'un Post'It";
+            formTitle = "Modification d'un Post'iIt";
+            BtnCommentaires.Visible = true;
         }
 
         private void LblCategorie_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnCommentaires_Click(object sender, EventArgs e)
+        {
+            AddCommentaire();
         }
 
         private void BtnAnnuler_Click(object sender, EventArgs e)
@@ -127,16 +132,22 @@ namespace PostIt.Forms
             SavePostIt();
         }
 
+        private void AddCommentaire()
+        {
+            AnnotationsForm frm = new AnnotationsForm();
+            frm.ShowDialog();
+        }
+
         private void SavePostIt()
         {
             /* Récupération des données */
             date = Convert.ToDateTime(DateTime.Now);
             operateur = utils.RemoveDiacritics(CbxOperateur.Text.ToUpper().Trim());
-            categorie = utils.RemoveDiacritics(CbxCategorie.Text.ToUpper().Trim());
+            categorie = CbxCategorie.Text.Trim();
             tiers = utils.RemoveDiacritics(TxtTiers.Text.ToUpper().Trim());
             description = utils.RemoveDiacritics(TxtDescription.Text.ToUpper().Trim());
-            statut = utils.RemoveDiacritics(CbxStatut.Text.ToUpper().Trim());
-            echeance = DtpEcheance.Value;
+            statut = CbxStatut.Text.Trim();
+            echeance = Convert.ToDateTime(DtpEcheance.Value.ToShortDateString());
 
             /* Vérification des données */
             bool erreurs = false;
@@ -214,8 +225,6 @@ namespace PostIt.Forms
             evenement.CreatedAt = DateTime.Now;
 
             evenementProvider.Create(evenement);
-            MessageBox.Show("post it ok");
-
         }
     }
 }

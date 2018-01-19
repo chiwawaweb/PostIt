@@ -76,6 +76,13 @@ namespace PostIt.Forms
             descriptionColumn.Width = 500;
             descriptionColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
+            DataGridViewTextBoxColumn echeanceColumn = new DataGridViewTextBoxColumn();
+            echeanceColumn.Name = "Echeance";
+            echeanceColumn.HeaderText = "ECHEANCE";
+            echeanceColumn.Width = 85;
+            echeanceColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            echeanceColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             DataGridViewTextBoxColumn operateurColumn = new DataGridViewTextBoxColumn();
             operateurColumn.Name = "Suivi par";
             operateurColumn.HeaderText = "SUIVI PAR";
@@ -89,6 +96,7 @@ namespace PostIt.Forms
             dgvEvenements.Columns.Add(statutColumn);
             dgvEvenements.Columns.Add(tiersColumn);
             dgvEvenements.Columns.Add(descriptionColumn);
+            dgvEvenements.Columns.Add(echeanceColumn);
             dgvEvenements.Columns.Add(operateurColumn);
 
             /* Ajout des lignes */
@@ -102,6 +110,7 @@ namespace PostIt.Forms
                 string statut = list[i].Statut;
                 string tiers = list[i].Tiers;
                 string description = list[i].Description;
+                DateTime echeance = list[i].Echeance;
                 string operateur = list[i].Operateur;
                 
 
@@ -111,7 +120,8 @@ namespace PostIt.Forms
                 dgvEvenements.Rows[number].Cells[3].Value = statut;
                 dgvEvenements.Rows[number].Cells[4].Value = tiers;
                 dgvEvenements.Rows[number].Cells[5].Value = description;
-                dgvEvenements.Rows[number].Cells[6].Value = operateur;
+                dgvEvenements.Rows[number].Cells[6].Value = echeance.ToString("dd/MM/yyyy");
+                dgvEvenements.Rows[number].Cells[7].Value = operateur;
 
                 // pointe sur l'enregistrement courant
                 if (list[i].Id == idRetour)
@@ -123,7 +133,7 @@ namespace PostIt.Forms
             /* Combobox Catégorie */
             var dsCategorie = new List<Categorie>();
             Categorie categorievide = new Categorie();
-            categorievide.Nom = "--- Tous ---";
+            categorievide.Nom = "";
             dsCategorie.Add(categorievide);
             foreach (Categorie categorie in utils.AllCategoriesActives())
             {
@@ -169,6 +179,17 @@ namespace PostIt.Forms
         private void BtnNouveau_Click(object sender, EventArgs e)
         {
             NewPostIt();
+        }
+
+        private void BtnModifier_Click(object sender, EventArgs e)
+        {
+            UpdatePostIt();
+        }
+
+        private void UpdatePostIt()
+        {
+            EvenementEditForm frm = new EvenementEditForm(this, true);
+            frm.ShowDialog();
         }
     }
 }

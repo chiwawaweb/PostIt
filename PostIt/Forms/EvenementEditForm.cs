@@ -93,7 +93,7 @@ namespace PostIt.Forms
             }
 
             /* Titre du formulaire */
-            LblTiers.Text = formTitle;
+            LblTitre.Text = formTitle;
         }
 
         private void NewPostIt()

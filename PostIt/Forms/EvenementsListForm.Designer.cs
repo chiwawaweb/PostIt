@@ -105,7 +105,7 @@
             this.CbxSearchCategorie.FormattingEnabled = true;
             this.CbxSearchCategorie.Location = new System.Drawing.Point(76, 54);
             this.CbxSearchCategorie.Name = "CbxSearchCategorie";
-            this.CbxSearchCategorie.Size = new System.Drawing.Size(313, 28);
+            this.CbxSearchCategorie.Size = new System.Drawing.Size(257, 28);
             this.CbxSearchCategorie.TabIndex = 2;
             // 
             // TxtSearch

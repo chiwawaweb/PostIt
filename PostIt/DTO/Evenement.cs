@@ -30,9 +30,13 @@ namespace PostIt.DTO
         public string Statut { get; set; }
         [Column("ECHEANCE")]
         public DateTime Echeance { get; set; }
+        [Column("SUPPRIME")]
+        public bool Supprime { get; set; }
         [Column("CREATED_AT")]
         public DateTime CreatedAt { get; set; }
         [Column("UPDATED_AT")]
         public DateTime UpdatedAt { get; set; }
+
+        public ICollection<Annotation> annotations { get; set; }
     }
 }

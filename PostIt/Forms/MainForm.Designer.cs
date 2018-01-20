@@ -71,24 +71,24 @@
             // annuaireToolStripMenuItem
             // 
             this.annuaireToolStripMenuItem.Name = "annuaireToolStripMenuItem";
-            this.annuaireToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.annuaireToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.annuaireToolStripMenuItem.Text = "Annuaire";
             // 
             // paramètresToolStripMenuItem
             // 
             this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
-            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.paramètresToolStripMenuItem.Text = "Paramètres";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(130, 6);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -159,7 +159,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
-            this.Text = "PostIt";
+            this.Text = "Post\'it";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

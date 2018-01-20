@@ -48,113 +48,126 @@
             // LblOperateur
             // 
             this.LblOperateur.AutoSize = true;
-            this.LblOperateur.Location = new System.Drawing.Point(32, 38);
+            this.LblOperateur.Location = new System.Drawing.Point(21, 25);
+            this.LblOperateur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblOperateur.Name = "LblOperateur";
-            this.LblOperateur.Size = new System.Drawing.Size(104, 20);
+            this.LblOperateur.Size = new System.Drawing.Size(69, 13);
             this.LblOperateur.TabIndex = 0;
             this.LblOperateur.Text = "Collaborateur";
             // 
             // CbxOperateur
             // 
             this.CbxOperateur.FormattingEnabled = true;
-            this.CbxOperateur.Location = new System.Drawing.Point(36, 62);
+            this.CbxOperateur.Location = new System.Drawing.Point(24, 40);
+            this.CbxOperateur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CbxOperateur.Name = "CbxOperateur";
-            this.CbxOperateur.Size = new System.Drawing.Size(278, 28);
+            this.CbxOperateur.Size = new System.Drawing.Size(187, 21);
             this.CbxOperateur.TabIndex = 0;
             // 
             // CbxCategorie
             // 
             this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategorie.FormattingEnabled = true;
-            this.CbxCategorie.Location = new System.Drawing.Point(372, 62);
+            this.CbxCategorie.Location = new System.Drawing.Point(248, 40);
+            this.CbxCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CbxCategorie.Name = "CbxCategorie";
-            this.CbxCategorie.Size = new System.Drawing.Size(267, 28);
+            this.CbxCategorie.Size = new System.Drawing.Size(179, 21);
             this.CbxCategorie.TabIndex = 1;
             // 
             // LblCategorie
             // 
             this.LblCategorie.AutoSize = true;
-            this.LblCategorie.Location = new System.Drawing.Point(368, 39);
+            this.LblCategorie.Location = new System.Drawing.Point(245, 25);
+            this.LblCategorie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblCategorie.Name = "LblCategorie";
-            this.LblCategorie.Size = new System.Drawing.Size(78, 20);
+            this.LblCategorie.Size = new System.Drawing.Size(52, 13);
             this.LblCategorie.TabIndex = 2;
             this.LblCategorie.Text = "Catégorie";
             this.LblCategorie.Click += new System.EventHandler(this.LblCategorie_Click);
             // 
             // TxtTiers
             // 
-            this.TxtTiers.Location = new System.Drawing.Point(36, 132);
+            this.TxtTiers.Location = new System.Drawing.Point(24, 86);
+            this.TxtTiers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTiers.Name = "TxtTiers";
-            this.TxtTiers.Size = new System.Drawing.Size(278, 26);
+            this.TxtTiers.Size = new System.Drawing.Size(187, 20);
             this.TxtTiers.TabIndex = 2;
             // 
             // LblTiers
             // 
             this.LblTiers.AutoSize = true;
-            this.LblTiers.Location = new System.Drawing.Point(32, 109);
+            this.LblTiers.Location = new System.Drawing.Point(21, 71);
+            this.LblTiers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTiers.Name = "LblTiers";
-            this.LblTiers.Size = new System.Drawing.Size(43, 20);
+            this.LblTiers.Size = new System.Drawing.Size(78, 13);
             this.LblTiers.TabIndex = 5;
-            this.LblTiers.Text = "Tiers";
+            this.LblTiers.Text = "Tiers concerné";
             // 
             // TxtDescription
             // 
             this.TxtDescription.AcceptsReturn = true;
-            this.TxtDescription.Location = new System.Drawing.Point(36, 197);
+            this.TxtDescription.Location = new System.Drawing.Point(24, 128);
+            this.TxtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtDescription.Multiline = true;
             this.TxtDescription.Name = "TxtDescription";
-            this.TxtDescription.Size = new System.Drawing.Size(602, 156);
+            this.TxtDescription.Size = new System.Drawing.Size(403, 103);
             this.TxtDescription.TabIndex = 3;
             // 
             // CbxStatut
             // 
             this.CbxStatut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxStatut.FormattingEnabled = true;
-            this.CbxStatut.Location = new System.Drawing.Point(36, 397);
+            this.CbxStatut.Location = new System.Drawing.Point(24, 258);
+            this.CbxStatut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CbxStatut.Name = "CbxStatut";
-            this.CbxStatut.Size = new System.Drawing.Size(278, 28);
+            this.CbxStatut.Size = new System.Drawing.Size(93, 21);
             this.CbxStatut.TabIndex = 4;
             // 
             // LblDescription
             // 
             this.LblDescription.AutoSize = true;
-            this.LblDescription.Location = new System.Drawing.Point(32, 174);
+            this.LblDescription.Location = new System.Drawing.Point(21, 113);
+            this.LblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblDescription.Name = "LblDescription";
-            this.LblDescription.Size = new System.Drawing.Size(166, 20);
+            this.LblDescription.Size = new System.Drawing.Size(114, 13);
             this.LblDescription.TabIndex = 8;
             this.LblDescription.Text = "Description / Message";
             // 
             // LblStatut
             // 
             this.LblStatut.AutoSize = true;
-            this.LblStatut.Location = new System.Drawing.Point(32, 374);
+            this.LblStatut.Location = new System.Drawing.Point(21, 243);
+            this.LblStatut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblStatut.Name = "LblStatut";
-            this.LblStatut.Size = new System.Drawing.Size(53, 20);
+            this.LblStatut.Size = new System.Drawing.Size(81, 13);
             this.LblStatut.TabIndex = 9;
-            this.LblStatut.Text = "Statut";
+            this.LblStatut.Text = "Statut du Post\'it";
             // 
             // DtpEcheance
             // 
             this.DtpEcheance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpEcheance.Location = new System.Drawing.Point(498, 398);
+            this.DtpEcheance.Location = new System.Drawing.Point(332, 259);
+            this.DtpEcheance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DtpEcheance.Name = "DtpEcheance";
-            this.DtpEcheance.Size = new System.Drawing.Size(140, 26);
+            this.DtpEcheance.Size = new System.Drawing.Size(95, 20);
             this.DtpEcheance.TabIndex = 5;
             // 
             // LblEcheance
             // 
             this.LblEcheance.AutoSize = true;
-            this.LblEcheance.Location = new System.Drawing.Point(494, 375);
+            this.LblEcheance.Location = new System.Drawing.Point(329, 244);
+            this.LblEcheance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblEcheance.Name = "LblEcheance";
-            this.LblEcheance.Size = new System.Drawing.Size(81, 20);
+            this.LblEcheance.Size = new System.Drawing.Size(56, 13);
             this.LblEcheance.TabIndex = 11;
             this.LblEcheance.Text = "Echéance";
             // 
             // BtnAnnuler
             // 
-            this.BtnAnnuler.Location = new System.Drawing.Point(302, 472);
+            this.BtnAnnuler.Location = new System.Drawing.Point(201, 307);
+            this.BtnAnnuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAnnuler.Name = "BtnAnnuler";
-            this.BtnAnnuler.Size = new System.Drawing.Size(166, 52);
+            this.BtnAnnuler.Size = new System.Drawing.Size(111, 34);
             this.BtnAnnuler.TabIndex = 8;
             this.BtnAnnuler.Text = "Annuler";
             this.BtnAnnuler.UseVisualStyleBackColor = true;
@@ -162,9 +175,10 @@
             // 
             // BtnEnregistrer
             // 
-            this.BtnEnregistrer.Location = new System.Drawing.Point(474, 472);
+            this.BtnEnregistrer.Location = new System.Drawing.Point(316, 307);
+            this.BtnEnregistrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnEnregistrer.Name = "BtnEnregistrer";
-            this.BtnEnregistrer.Size = new System.Drawing.Size(166, 52);
+            this.BtnEnregistrer.Size = new System.Drawing.Size(111, 34);
             this.BtnEnregistrer.TabIndex = 7;
             this.BtnEnregistrer.Text = "Enregistrer";
             this.BtnEnregistrer.UseVisualStyleBackColor = true;
@@ -175,9 +189,10 @@
             this.BtnCommentaires.BackColor = System.Drawing.Color.Yellow;
             this.BtnCommentaires.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCommentaires.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnCommentaires.Location = new System.Drawing.Point(36, 472);
+            this.BtnCommentaires.Location = new System.Drawing.Point(24, 307);
+            this.BtnCommentaires.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnCommentaires.Name = "BtnCommentaires";
-            this.BtnCommentaires.Size = new System.Drawing.Size(218, 52);
+            this.BtnCommentaires.Size = new System.Drawing.Size(145, 34);
             this.BtnCommentaires.TabIndex = 12;
             this.BtnCommentaires.Text = "Annotations...";
             this.BtnCommentaires.UseVisualStyleBackColor = false;
@@ -186,9 +201,9 @@
             // 
             // EvenementEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 565);
+            this.ClientSize = new System.Drawing.Size(453, 367);
             this.Controls.Add(this.BtnCommentaires);
             this.Controls.Add(this.BtnEnregistrer);
             this.Controls.Add(this.BtnAnnuler);
@@ -205,13 +220,14 @@
             this.Controls.Add(this.CbxOperateur);
             this.Controls.Add(this.LblOperateur);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EvenementEditForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Post\'It";
+            this.Text = "Post\'it";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EvenementEditForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

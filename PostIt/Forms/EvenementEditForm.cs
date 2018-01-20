@@ -141,7 +141,7 @@ namespace PostIt.Forms
 
         private void AddCommentaire()
         {
-            AnnotationsForm frm = new AnnotationsForm();
+            AnnotationsEditForm frm = new AnnotationsEditForm();
             frm.ShowDialog();
         }
 

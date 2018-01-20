@@ -70,11 +70,11 @@
     <Compile Include="DTO\Annotation.cs" />
     <Compile Include="DTO\Contact.cs" />
     <Compile Include="DTO\Evenement.cs" />
-    <Compile Include="Forms\AnnotationsForm.cs">
+    <Compile Include="Forms\AnnotationsEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AnnotationsForm.Designer.cs">
-      <DependentUpon>AnnotationsForm.cs</DependentUpon>
+    <Compile Include="Forms\AnnotationsEditForm.Designer.cs">
+      <DependentUpon>AnnotationsEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EvenementEditForm.cs">
       <SubType>Form</SubType>
@@ -96,8 +96,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AnnotationsForm.resx">
-      <DependentUpon>AnnotationsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AnnotationsEditForm.resx">
+      <DependentUpon>AnnotationsEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EvenementEditForm.resx">
       <DependentUpon>EvenementEditForm.cs</DependentUpon>

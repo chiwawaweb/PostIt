@@ -93,7 +93,7 @@ namespace PostIt.Forms
             }
 
             /* Titre du formulaire */
-            this.Text = formTitle;
+            LblTiers.Text = formTitle;
         }
 
         private void NewPostIt()
@@ -105,6 +105,13 @@ namespace PostIt.Forms
         {
             formTitle = "Modification d'un Post'iIt";
             BtnCommentaires.Visible = true;
+            BtnModifier.Visible = true;
+            CbxOperateur.Enabled = false;
+            CbxCategorie.Enabled = false;
+            TxtTiers.ReadOnly = true;
+            TxtDescription.ReadOnly = true;
+            CbxStatut.Enabled = false;
+            DtpEcheance.Enabled = false;
         }
 
         private void LblCategorie_Click(object sender, EventArgs e)

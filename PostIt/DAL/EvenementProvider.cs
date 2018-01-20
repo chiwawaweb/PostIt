@@ -33,7 +33,6 @@ namespace PostIt.DAL
                 {
                     var evenements = from b in context.Evenements
                                      orderby b.Id descending
-
                                      /*
                                      where (((b.Tiers.Contains(keywords)
                                         || (b.Operateur.Contains(keywords))
@@ -92,5 +91,8 @@ namespace PostIt.DAL
                 }
             }
         }
+
+
+
     }
 }

@@ -17,16 +17,17 @@ namespace PostIt.Classes
             List<Categorie> categories = new List<Categorie>()
             {
                 new Categorie { Nom="Message à un collaborateur", Abrv="MSG", Actif=true },
-                new Categorie { Nom="Demande prix", Abrv="DPX", Actif=true},
-                new Categorie { Nom="Suivi réparation", Abrv="REP", Actif=true},
-                new Categorie { Nom="Pochette photo/video", Abrv="PHO", Actif=true},
-                new Categorie { Nom="Rappel agenda", Abrv="AGD", Actif=true},
-                new Categorie { Nom="Livraison à convenir", Abrv="LIV", Actif=true},
-                new Categorie { Nom="Echange produit DOA", Abrv="ECH", Actif=true},
-                new Categorie { Nom="Commande spéciale", Abrv="CDS", Actif=true},
-                new Categorie { Nom="Attente virement", Abrv="VIR", Actif=true},
-                new Categorie { Nom="Demande de transfert", Abrv="TRS", Actif=false},
-                new Categorie { Nom="Devis", Abrv="DEV", Actif=false}
+                new Categorie { Nom="Demande prix", Abrv="DPX", Actif=true },
+                new Categorie { Nom="Suivi réparation", Abrv="REP", Actif=true },
+                new Categorie { Nom="Pochette photo/video", Abrv="PHO", Actif=true },
+                new Categorie { Nom="Rappel agenda", Abrv="AGD", Actif=true },
+                new Categorie { Nom="Livraison à convenir", Abrv="LIV", Actif=true },
+                new Categorie { Nom="Echange produit DOA", Abrv="ECH", Actif=true },
+                new Categorie { Nom="Commande spéciale", Abrv="CDS", Actif=true },
+                new Categorie { Nom="Attente virement", Abrv="VIR", Actif=true },
+                new Categorie { Nom="Demande de transfert", Abrv="TRS", Actif=false },
+                new Categorie { Nom="Devis", Abrv="DEV", Actif=false },
+                new Categorie { Nom="Réservation produit", Abrv="RES", Actif=true }
             };
 
             return categories;
@@ -36,9 +37,10 @@ namespace PostIt.Classes
         {
             List<Statut> statuts = new List<Statut>()
             {
-                new Statut { Nom="En cours", Abrv="ENC", Actif=true },
-                new Statut { Nom="Terminé", Abrv="FIN", Actif=true },
-                new Statut { Nom="A venir", Abrv="AVN", Actif=true }
+                new Statut { Id=0, Nom="En cours", Abrv="ENC", Actif=true },
+                new Statut { Id=1, Nom="Terminé", Abrv="FIN", Actif=true },
+                new Statut { Id=2, Nom="A venir", Abrv="AVN", Actif=true },
+                new Statut { Id=3, Nom="Annulé", Abrv="ANN", Actif=false}
             };
 
             return statuts;

@@ -188,8 +188,13 @@ namespace PostIt.Forms
 
         private void UpdatePostIt()
         {
-            EvenementEditForm frm = new EvenementEditForm(this, true);
-            frm.ShowDialog();
+            if (dgvEvenements.RowCount > 0)
+            {
+                int ID = int.Parse(dgvEvenements.CurrentRow.Cells[0].Value.ToString());
+                idRetour = ID;
+                EvenementEditForm frm = new EvenementEditForm(this, true, ID);
+                frm.ShowDialog();
+            }
         }
     }
 }

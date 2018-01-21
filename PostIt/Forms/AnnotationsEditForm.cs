@@ -16,13 +16,16 @@ namespace PostIt.Forms
     public partial class AnnotationsEditForm : Form
     {
         string commentaire, operateur;
+        bool annotationUpdateMode;
+        int _id;
 
         Utils utils = new Utils();
 
         AnnotationProvider annotationProvider = new AnnotationProvider();
 
-        public AnnotationsEditForm()
+        public AnnotationsEditForm(int Id)
         {
+            _id = Id;
             InitializeComponent();
         }
 
@@ -64,9 +67,50 @@ namespace PostIt.Forms
             }
             else
             {
+                /* Pas d'erreurs */
+                switch (annotationUpdateMode)
+                {
 
+                    case false:
+                        /* Mode création */
+                        AddDatabase();
+                        break;
+
+
+                    case true:
+                        /* Mode mise à jour */
+                        UpdateDatabase();
+                        break;
+                }
+                Close();
             }
+
+            
+
+        }
+
+        private void AddDatabase()
+        {
+            /* Création de l'annotation */
+            
+                Annotation annotation = new Annotation();
+                annotation.Date = DateTime.Now;
+                annotation.Commentaire = commentaire;
+                annotation.Operateur = operateur;
+                annotation.CreatedAt = DateTime.Now;
+                annotation.EvenementId = _id;
+                
+                annotationProvider.Create(annotation);
+                //context.Annotations.Add(annotation);
+                //context.SaveChanges();
+            
+            
+        }
+
+        private void UpdateDatabase()
+        {
 
         }
     }
 }
+;

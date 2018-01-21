@@ -92,7 +92,20 @@ namespace PostIt.DAL
             }
         }
 
-
+        public Evenement GetEvenementById(int ID)
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    return context.Evenements.Find(ID);
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
 
     }
 }

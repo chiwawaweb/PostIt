@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,13 @@ namespace PostIt.Forms
     {
         string commentaire, operateur;
         bool annotationUpdateMode;
-        int _id;
+        int _id, idRetour;
 
         Utils utils = new Utils();
 
         AnnotationProvider annotationProvider = new AnnotationProvider();
+
+        EvenementProvider evenementProvider = new EvenementProvider();
 
         public AnnotationsEditForm(int Id)
         {
@@ -84,27 +87,103 @@ namespace PostIt.Forms
                 }
                 Close();
             }
+        }
 
-            
+        private void CreateTable(List<Annotation> list, int _idRetour)
+        {
+            _idRetour = _idRetour;
 
+            /* Initialisation du tableau */
+            dgvAnnotations.Rows.Clear();
+            dgvAnnotations.Columns.Clear();
+
+            /* Mise en forme du tableau */
+            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn();
+            idColumn.Name = "ID";
+            idColumn.HeaderText = "#";
+            idColumn.Width = 50;
+            idColumn.Visible = false;
+            idColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            idColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn dateColumn = new DataGridViewTextBoxColumn();
+            dateColumn.Name = "Date";
+            dateColumn.HeaderText = "DATE";
+            dateColumn.Width = 120;
+            dateColumn.MinimumWidth = 120;
+            dateColumn.FillWeight = 1;
+            dateColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dateColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn annotationColumn = new DataGridViewTextBoxColumn();
+            annotationColumn.Name = "Annotation";
+            annotationColumn.HeaderText = "ANNOTATION";
+            annotationColumn.Width = 463;
+            annotationColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn operateurColumn = new DataGridViewTextBoxColumn();
+            operateurColumn.Name = "Operateur";
+            operateurColumn.HeaderText = "OPERATEUR";
+            operateurColumn.Width = 120;
+            operateurColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            /* Création des colonnes */
+            dgvAnnotations.Columns.Add(idColumn);
+            dgvAnnotations.Columns.Add(dateColumn);
+            dgvAnnotations.Columns.Add(annotationColumn);
+            dgvAnnotations.Columns.Add(operateurColumn);
+
+            /* Empeche le tri des colonnes */
+            dgvAnnotations.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvAnnotations.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvAnnotations.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dgvAnnotations.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+            /* Ajout des lignes */
+            for (int i = 0; i < list.Count; i++)
+            {
+                int number = dgvAnnotations.Rows.Add();
+
+                string id = list[i].Id.ToString();
+                DateTime date = list[i].Date;
+                string annotation = list[i].Commentaire;
+                string operateur = list[i].Operateur;
+
+                dgvAnnotations.Rows[number].Cells[0].Value = id;
+                dgvAnnotations.Rows[number].Cells[1].Value = date.ToString("dd/MM/yyyy HH:mm:ss");
+                dgvAnnotations.Rows[number].Cells[2].Value = annotation;
+                dgvAnnotations.Rows[number].Cells[3].Value = operateur;
+            }
+        }
+
+        public void RefreshData()
+        {
+            List<Annotation> list;
+            list = annotationProvider.GetByEvenementId(_id); // à completer avec mots cles / dates
+            //list = evenementProvider.Search("", DateTime.Now.AddMonths(-1), DateTime.Now);
+
+            CreateTable(list, idRetour);
+
+        }
+
+        private void AnnotationsEditForm_Load(object sender, EventArgs e)
+        {
+            RefreshData();
         }
 
         private void AddDatabase()
         {
-            /* Création de l'annotation */
-            
-                Annotation annotation = new Annotation();
-                annotation.Date = DateTime.Now;
-                annotation.Commentaire = commentaire;
-                annotation.Operateur = operateur;
-                annotation.CreatedAt = DateTime.Now;
-                annotation.EvenementId = _id;
+            Evenement evenement = evenementProvider.GetEvenementById(_id);
                 
-                annotationProvider.Create(annotation);
-                //context.Annotations.Add(annotation);
-                //context.SaveChanges();
-            
-            
+            /* Création de l'annotation */
+            Annotation annotation = new Annotation();
+            annotation.Date = DateTime.Now;
+            annotation.Commentaire = commentaire;
+            annotation.Operateur = operateur;
+            annotation.CreatedAt = DateTime.Now;
+            annotation.EvenementId = _id;
+
+            annotationProvider.Create(evenement, annotation);
         }
 
         private void UpdateDatabase()

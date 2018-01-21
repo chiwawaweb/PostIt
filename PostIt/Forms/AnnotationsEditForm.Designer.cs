@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CbxOperateur = new System.Windows.Forms.ComboBox();
             this.TxtCommentaire = new System.Windows.Forms.TextBox();
             this.BtnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvAnnotations = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.BtnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnnotations)).BeginInit();
             this.SuspendLayout();
             // 
             // CbxOperateur
             // 
+            this.CbxOperateur.BackColor = System.Drawing.SystemColors.Info;
             this.CbxOperateur.FormattingEnabled = true;
-            this.CbxOperateur.Location = new System.Drawing.Point(852, 48);
+            this.CbxOperateur.Location = new System.Drawing.Point(852, 449);
             this.CbxOperateur.Name = "CbxOperateur";
             this.CbxOperateur.Size = new System.Drawing.Size(242, 28);
             this.CbxOperateur.TabIndex = 1;
@@ -50,7 +51,8 @@
             // TxtCommentaire
             // 
             this.TxtCommentaire.AcceptsReturn = true;
-            this.TxtCommentaire.Location = new System.Drawing.Point(12, 48);
+            this.TxtCommentaire.BackColor = System.Drawing.SystemColors.Info;
+            this.TxtCommentaire.Location = new System.Drawing.Point(12, 449);
             this.TxtCommentaire.Multiline = true;
             this.TxtCommentaire.Name = "TxtCommentaire";
             this.TxtCommentaire.Size = new System.Drawing.Size(834, 84);
@@ -58,7 +60,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(852, 88);
+            this.BtnSave.Location = new System.Drawing.Point(852, 489);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(244, 46);
             this.BtnSave.TabIndex = 2;
@@ -70,7 +72,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(848, 25);
+            this.label1.Location = new System.Drawing.Point(848, 426);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 20);
             this.label1.TabIndex = 3;
@@ -79,7 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 25);
+            this.label2.Location = new System.Drawing.Point(12, 426);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
             this.label2.TabIndex = 4;
@@ -87,26 +89,34 @@
             // 
             // dgvAnnotations
             // 
+            this.dgvAnnotations.AllowUserToAddRows = false;
+            this.dgvAnnotations.AllowUserToDeleteRows = false;
+            this.dgvAnnotations.AllowUserToResizeColumns = false;
+            this.dgvAnnotations.AllowUserToResizeRows = false;
+            this.dgvAnnotations.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAnnotations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAnnotations.Location = new System.Drawing.Point(12, 175);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAnnotations.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAnnotations.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvAnnotations.Location = new System.Drawing.Point(12, 64);
             this.dgvAnnotations.Name = "dgvAnnotations";
+            this.dgvAnnotations.ReadOnly = true;
+            this.dgvAnnotations.RowHeadersVisible = false;
             this.dgvAnnotations.RowTemplate.Height = 28;
+            this.dgvAnnotations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAnnotations.Size = new System.Drawing.Size(1084, 348);
             this.dgvAnnotations.TabIndex = 5;
             this.dgvAnnotations.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 152);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Annotations";
-            // 
             // BtnClose
             // 
-            this.BtnClose.Location = new System.Drawing.Point(855, 543);
+            this.BtnClose.Location = new System.Drawing.Point(852, 559);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(242, 32);
             this.BtnClose.TabIndex = 7;
@@ -119,9 +129,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 595);
+            this.ClientSize = new System.Drawing.Size(1110, 613);
             this.Controls.Add(this.BtnClose);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvAnnotations);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -136,6 +145,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Annotations";
+            this.Load += new System.EventHandler(this.AnnotationsEditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnnotations)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -150,7 +160,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvAnnotations;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnClose;
     }
 }

@@ -30,6 +30,7 @@ namespace PostIt.Forms
         EvenementsListForm _owner;
 
         EvenementProvider evenementProvider = new EvenementProvider();
+        AnnotationProvider annotationProvider = new AnnotationProvider();
 
         public EvenementEditForm(EvenementsListForm owner, bool update, int id = 0)
         {
@@ -92,6 +93,27 @@ namespace PostIt.Forms
                     break;
             }
 
+            /* Détermine si des annotations existent déjà */
+            List<Annotation> list;
+            list = annotationProvider.GetByEvenementId(_id);
+            if (list.Count > 0)
+            {
+                string nbAnnotations = list.Count.ToString();
+                if (list.Count > 1)
+                {
+                    BtnCommentaires.Text = nbAnnotations + " annotations";
+                }
+                else
+                {
+                    BtnCommentaires.Text = nbAnnotations + " annotation";
+                }
+
+                /* Couleur du bouton */
+                BtnCommentaires.BackColor = Color.Yellow;
+                
+                
+            }
+
             /* Titre du formulaire */
             LblTitre.Text = formTitle;
         }
@@ -100,7 +122,7 @@ namespace PostIt.Forms
         {
             formTitle = "Création d'un Post'it";
         }
-
+        
         private void LoadPostIt()
         {
             formTitle = "Modification d'un Post'iIt";

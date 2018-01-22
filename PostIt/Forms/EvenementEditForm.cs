@@ -127,6 +127,7 @@ namespace PostIt.Forms
             TxtTiers.Visible = false;
             TxtDescription.ReadOnly = true;
             TxtDescription.TabStop = false;
+            TxtDescription.BackColor = Color.White;
             DtpEcheance.Visible = false;
             LblEcheanceView.Visible = true;
             LblOperateurView.Visible = true;

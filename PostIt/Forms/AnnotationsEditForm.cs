@@ -34,6 +34,17 @@ namespace PostIt.Forms
             _owner = owner;
             FormClosed += new FormClosedEventHandler(AnnotationsEditForm_FormClosed);
             InitializeComponent();
+
+            /* Combobox Opérateur */
+            var dataSourceVendeur = new List<string>();
+            dataSourceVendeur.Add("");
+            foreach (string transfert in evenementProvider.GetOperateurs())
+            {
+                dataSourceVendeur.Add(transfert);
+            }
+            CbxOperateur.DataSource = dataSourceVendeur;
+            CbxOperateur.DisplayMember = "Operateur";
+
         }
 
         private void BtnClose_Click(object sender, EventArgs e)

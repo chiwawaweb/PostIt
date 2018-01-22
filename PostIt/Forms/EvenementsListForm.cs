@@ -196,5 +196,10 @@ namespace PostIt.Forms
                 frm.ShowDialog();
             }
         }
+
+        private void dgvEvenements_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            UpdatePostIt();
+        }
     }
 }

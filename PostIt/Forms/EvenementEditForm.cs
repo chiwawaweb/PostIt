@@ -121,14 +121,18 @@ namespace PostIt.Forms
                     BtnCommentaires.Text = nbAnnotations + " annotation";
                 }
 
-                /* Couleur du bouton */
-                BtnCommentaires.BackColor = Color.Yellow;
+                /* Bouton clignotant */
+                Timer.Enabled = true;
+            }
+            else
+            {
+                Timer.Enabled = false;
             }
         }
 
         private void LoadPostIt()
         {
-            formTitle = "Modification d'un Post'iIt";
+            formTitle = "Modification d'un Post'it";
             BtnCommentaires.Visible = true;
             BtnModifier.Visible = true;
             CbxOperateur.Enabled = false;
@@ -137,11 +141,12 @@ namespace PostIt.Forms
             TxtDescription.ReadOnly = true;
             CbxStatut.Enabled = false;
             DtpEcheance.Enabled = false;
-        }
 
-        private void LblCategorie_Click(object sender, EventArgs e)
-        {
+            /* Récupération des données */
+            operateur = evenementProvider.GetEvenementById(_id).Operateur;
 
+
+            CbxOperateur.Text = operateur;
         }
 
         private void BtnCommentaires_Click(object sender, EventArgs e)
@@ -162,6 +167,21 @@ namespace PostIt.Forms
         private void BtnEnregistrer_Click(object sender, EventArgs e)
         {
             SavePostIt();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            
+            if (BtnCommentaires.BackColor != Color.Yellow)
+            {
+                Color btnColor = BtnCommentaires.BackColor;
+                BtnCommentaires.BackColor = Color.Yellow;
+            }
+            else
+            {
+                BtnCommentaires.BackColor = SystemColors.ButtonFace;
+                BtnCommentaires.UseVisualStyleBackColor = true;
+            }
         }
 
         private void AddCommentaire()
@@ -264,5 +284,7 @@ namespace PostIt.Forms
             /* Mets à jour le bouton des annotations */
             AnnotationsBtnUpdate();
         }
+
+        
     }
 }

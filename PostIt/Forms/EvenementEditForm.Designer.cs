@@ -68,6 +68,8 @@
             // 
             // CbxOperateur
             // 
+            this.CbxOperateur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.CbxOperateur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CbxOperateur.FormattingEnabled = true;
             this.CbxOperateur.Location = new System.Drawing.Point(28, 77);
             this.CbxOperateur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);

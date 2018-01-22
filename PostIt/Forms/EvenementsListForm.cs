@@ -113,7 +113,6 @@ namespace PostIt.Forms
                 DateTime echeance = list[i].Echeance;
                 string operateur = list[i].Operateur;
                 
-
                 dgvEvenements.Rows[number].Cells[0].Value = id;
                 dgvEvenements.Rows[number].Cells[1].Value = date.ToString("dd/MM/yyyy");
                 dgvEvenements.Rows[number].Cells[2].Value = categorie;
@@ -123,7 +122,23 @@ namespace PostIt.Forms
                 dgvEvenements.Rows[number].Cells[6].Value = echeance.ToString("dd/MM/yyyy");
                 dgvEvenements.Rows[number].Cells[7].Value = operateur;
 
-                // pointe sur l'enregistrement courant
+                /* Coloration des lignes en fonction de l'échance */
+                if (echeance == Convert.ToDateTime(DateTime.Now.ToShortDateString()))
+                {
+                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.Orange;
+                }
+
+                if (echeance < Convert.ToDateTime(DateTime.Now.ToShortDateString()))
+                {
+                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.Red;
+                }
+
+                if (echeance == Convert.ToDateTime(DateTime.Now.AddDays(1).ToShortDateString()))
+                {
+                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.Yellow;
+                }
+
+                /* pointe sur l'enregistrement courant */
                 if (list[i].Id == idRetour)
                 {
                     dgvEvenements.Rows[number].Cells[1].Selected = true;

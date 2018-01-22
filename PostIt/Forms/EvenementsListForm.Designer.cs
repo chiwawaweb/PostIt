@@ -82,7 +82,6 @@
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Size = new System.Drawing.Size(867, 31);
             this.toolStrip.TabIndex = 1;
-            this.toolStrip.Text = "toolStrip1";
             // 
             // BtnNouveau
             // 
@@ -106,7 +105,7 @@
             // 
             this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxSearchCategorie.FormattingEnabled = true;
-            this.CbxSearchCategorie.Location = new System.Drawing.Point(51, 35);
+            this.CbxSearchCategorie.Location = new System.Drawing.Point(39, 34);
             this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2);
             this.CbxSearchCategorie.Name = "CbxSearchCategorie";
             this.CbxSearchCategorie.Size = new System.Drawing.Size(173, 21);
@@ -151,11 +150,12 @@
             this.BtnSearch.TabIndex = 6;
             this.BtnSearch.Text = "R.A.Z.";
             this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 38);
+            this.label1.Location = new System.Drawing.Point(-3, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
@@ -172,6 +172,7 @@
             this.BtnReset.TabIndex = 8;
             this.BtnReset.Text = "Filtrer";
             this.BtnReset.UseVisualStyleBackColor = true;
+            this.BtnReset.Visible = false;
             // 
             // CbxStatut
             // 

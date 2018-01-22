@@ -144,9 +144,23 @@ namespace PostIt.Forms
 
             /* Récupération des données */
             operateur = evenementProvider.GetEvenementById(_id).Operateur;
+            categorie = evenementProvider.GetEvenementById(_id).Categorie;
+            tiers = evenementProvider.GetEvenementById(_id).Tiers;
+            description = evenementProvider.GetEvenementById(_id).Description;
+            echeance = evenementProvider.GetEvenementById(_id).Echeance;
 
-
+            /* Affichage des donnees */
             CbxOperateur.Text = operateur;
+            CbxCategorie.Text = categorie;
+            TxtTiers.Text = tiers;
+            TxtDescription.Text = description;
+            DtpEcheance.Value = echeance;
+
+
+            /* Modification des boutons */
+            BtnEnregistrer.Visible = false;
+            BtnAnnuler.Visible = false;
+            BtnFermer.Visible = true;
         }
 
         private void BtnCommentaires_Click(object sender, EventArgs e)
@@ -167,6 +181,16 @@ namespace PostIt.Forms
         private void BtnEnregistrer_Click(object sender, EventArgs e)
         {
             SavePostIt();
+        }
+
+        private void BtnFermer_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnModifier_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("La modification n'est pas encore disponible...", "Fonction à venir", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Timer_Tick(object sender, EventArgs e)

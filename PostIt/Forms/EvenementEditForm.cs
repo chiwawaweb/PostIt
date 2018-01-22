@@ -53,19 +53,6 @@ namespace PostIt.Forms
             CbxCategorie.DisplayMember = "FullName";
             CbxCategorie.ValueMember = "FullName";
 
-            /* Combobox Statut */
-            var dsStatut = new List<Statut>();
-            foreach (Statut statut in utils.AllStatutsActives())
-            {
-                if (statut.Actif == true)
-                {
-                    dsStatut.Add(statut);
-                }
-            }
-            CbxStatut.DataSource = dsStatut;
-            CbxStatut.DisplayMember = "FullName";
-            CbxStatut.ValueMember = "FullName";
-
             /* Combobox Opérateur */
             var dataSourceVendeur = new List<string>();
             dataSourceVendeur.Add("");
@@ -132,15 +119,16 @@ namespace PostIt.Forms
 
         private void LoadPostIt()
         {
-            formTitle = "Modification d'un Post'it";
+            formTitle = "Consultation d'un Post'it";
             BtnCommentaires.Visible = true;
             BtnModifier.Visible = true;
             CbxOperateur.Visible = false;
             CbxCategorie.Visible = false;
             TxtTiers.Visible = false;
             TxtDescription.ReadOnly = true;
-            CbxStatut.Visible = false;
-            DtpEcheance.Enabled = false;
+            TxtDescription.TabStop = false;
+            DtpEcheance.Visible = false;
+            LblEcheanceView.Visible = true;
             LblOperateurView.Visible = true;
             LblTiersView.Visible = true;
             LblCategorieView.Visible = true;
@@ -161,7 +149,7 @@ namespace PostIt.Forms
             LblTiersView.Text = tiers;
             TxtDescription.Text = description;
             DtpEcheance.Value = echeance;
-            
+            LblEcheanceView.Text = echeance.ToString("dd/MM/yyyy");
 
             /* Modification des boutons */
             BtnEnregistrer.Visible = false;
@@ -228,7 +216,7 @@ namespace PostIt.Forms
             categorie = CbxCategorie.Text.Trim();
             tiers = utils.RemoveDiacritics(TxtTiers.Text.ToUpper().Trim());
             description = utils.RemoveDiacritics(TxtDescription.Text.ToUpper().Trim());
-            statut = CbxStatut.Text.Trim();
+            statut = "En cours";
             echeance = Convert.ToDateTime(DtpEcheance.Value.ToShortDateString());
 
             /* Vérification des données */

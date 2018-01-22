@@ -83,7 +83,6 @@ namespace PostIt.Forms
                         AddDatabase();
                         break;
 
-
                     case true:
                         /* Mode mise à jour */
                         UpdateDatabase();

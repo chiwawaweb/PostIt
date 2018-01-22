@@ -37,9 +37,7 @@
             this.TxtTiers = new System.Windows.Forms.TextBox();
             this.LblTiers = new System.Windows.Forms.Label();
             this.TxtDescription = new System.Windows.Forms.TextBox();
-            this.CbxStatut = new System.Windows.Forms.ComboBox();
             this.LblDescription = new System.Windows.Forms.Label();
-            this.LblStatut = new System.Windows.Forms.Label();
             this.DtpEcheance = new System.Windows.Forms.DateTimePicker();
             this.LblEcheance = new System.Windows.Forms.Label();
             this.BtnAnnuler = new System.Windows.Forms.Button();
@@ -61,125 +59,120 @@
             // LblOperateur
             // 
             this.LblOperateur.AutoSize = true;
-            this.LblOperateur.Location = new System.Drawing.Point(36, 72);
+            this.LblOperateur.Location = new System.Drawing.Point(24, 47);
+            this.LblOperateur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblOperateur.Name = "LblOperateur";
-            this.LblOperateur.Size = new System.Drawing.Size(104, 20);
+            this.LblOperateur.Size = new System.Drawing.Size(69, 13);
             this.LblOperateur.TabIndex = 0;
             this.LblOperateur.Text = "Collaborateur";
             // 
             // CbxOperateur
             // 
             this.CbxOperateur.FormattingEnabled = true;
-            this.CbxOperateur.Location = new System.Drawing.Point(36, 95);
+            this.CbxOperateur.Location = new System.Drawing.Point(24, 62);
+            this.CbxOperateur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CbxOperateur.Name = "CbxOperateur";
-            this.CbxOperateur.Size = new System.Drawing.Size(278, 28);
+            this.CbxOperateur.Size = new System.Drawing.Size(187, 21);
             this.CbxOperateur.TabIndex = 0;
             // 
             // CbxCategorie
             // 
             this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategorie.FormattingEnabled = true;
-            this.CbxCategorie.Location = new System.Drawing.Point(372, 95);
+            this.CbxCategorie.Location = new System.Drawing.Point(248, 62);
+            this.CbxCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CbxCategorie.Name = "CbxCategorie";
-            this.CbxCategorie.Size = new System.Drawing.Size(266, 28);
+            this.CbxCategorie.Size = new System.Drawing.Size(179, 21);
             this.CbxCategorie.TabIndex = 1;
             // 
             // LblCategorie
             // 
             this.LblCategorie.AutoSize = true;
-            this.LblCategorie.Location = new System.Drawing.Point(368, 72);
+            this.LblCategorie.Location = new System.Drawing.Point(248, 47);
+            this.LblCategorie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblCategorie.Name = "LblCategorie";
-            this.LblCategorie.Size = new System.Drawing.Size(78, 20);
+            this.LblCategorie.Size = new System.Drawing.Size(52, 13);
             this.LblCategorie.TabIndex = 2;
             this.LblCategorie.Text = "Catégorie";
             // 
             // TxtTiers
             // 
-            this.TxtTiers.Location = new System.Drawing.Point(36, 166);
+            this.TxtTiers.Location = new System.Drawing.Point(24, 108);
+            this.TxtTiers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTiers.Name = "TxtTiers";
-            this.TxtTiers.Size = new System.Drawing.Size(278, 26);
+            this.TxtTiers.Size = new System.Drawing.Size(187, 20);
             this.TxtTiers.TabIndex = 2;
             // 
             // LblTiers
             // 
             this.LblTiers.AutoSize = true;
-            this.LblTiers.Location = new System.Drawing.Point(36, 143);
+            this.LblTiers.Location = new System.Drawing.Point(24, 93);
+            this.LblTiers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTiers.Name = "LblTiers";
-            this.LblTiers.Size = new System.Drawing.Size(113, 20);
+            this.LblTiers.Size = new System.Drawing.Size(78, 13);
             this.LblTiers.TabIndex = 5;
             this.LblTiers.Text = "Tiers concerné";
             // 
             // TxtDescription
             // 
             this.TxtDescription.AcceptsReturn = true;
-            this.TxtDescription.Location = new System.Drawing.Point(36, 231);
+            this.TxtDescription.Location = new System.Drawing.Point(24, 150);
+            this.TxtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtDescription.Multiline = true;
             this.TxtDescription.Name = "TxtDescription";
-            this.TxtDescription.Size = new System.Drawing.Size(602, 156);
+            this.TxtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TxtDescription.Size = new System.Drawing.Size(403, 103);
             this.TxtDescription.TabIndex = 3;
-            // 
-            // CbxStatut
-            // 
-            this.CbxStatut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxStatut.FormattingEnabled = true;
-            this.CbxStatut.Location = new System.Drawing.Point(36, 431);
-            this.CbxStatut.Name = "CbxStatut";
-            this.CbxStatut.Size = new System.Drawing.Size(138, 28);
-            this.CbxStatut.TabIndex = 4;
-            this.CbxStatut.Visible = false;
             // 
             // LblDescription
             // 
             this.LblDescription.AutoSize = true;
-            this.LblDescription.Location = new System.Drawing.Point(36, 208);
+            this.LblDescription.Location = new System.Drawing.Point(24, 135);
+            this.LblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblDescription.Name = "LblDescription";
-            this.LblDescription.Size = new System.Drawing.Size(166, 20);
+            this.LblDescription.Size = new System.Drawing.Size(114, 13);
             this.LblDescription.TabIndex = 8;
             this.LblDescription.Text = "Description / Message";
-            // 
-            // LblStatut
-            // 
-            this.LblStatut.AutoSize = true;
-            this.LblStatut.Location = new System.Drawing.Point(36, 408);
-            this.LblStatut.Name = "LblStatut";
-            this.LblStatut.Size = new System.Drawing.Size(122, 20);
-            this.LblStatut.TabIndex = 9;
-            this.LblStatut.Text = "Statut du Post\'it";
-            this.LblStatut.Visible = false;
             // 
             // DtpEcheance
             // 
             this.DtpEcheance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpEcheance.Location = new System.Drawing.Point(498, 432);
+            this.DtpEcheance.Location = new System.Drawing.Point(24, 279);
+            this.DtpEcheance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DtpEcheance.Name = "DtpEcheance";
-            this.DtpEcheance.Size = new System.Drawing.Size(140, 26);
+            this.DtpEcheance.Size = new System.Drawing.Size(95, 20);
             this.DtpEcheance.TabIndex = 5;
             // 
             // LblEcheance
             // 
             this.LblEcheance.AutoSize = true;
-            this.LblEcheance.Location = new System.Drawing.Point(494, 409);
+            this.LblEcheance.Location = new System.Drawing.Point(24, 264);
+            this.LblEcheance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblEcheance.Name = "LblEcheance";
-            this.LblEcheance.Size = new System.Drawing.Size(81, 20);
+            this.LblEcheance.Size = new System.Drawing.Size(92, 13);
             this.LblEcheance.TabIndex = 11;
-            this.LblEcheance.Text = "Echéance";
+            this.LblEcheance.Text = "Echéance prévue";
             // 
             // BtnAnnuler
             // 
-            this.BtnAnnuler.Location = new System.Drawing.Point(330, 506);
+            this.BtnAnnuler.Location = new System.Drawing.Point(220, 329);
+            this.BtnAnnuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAnnuler.Name = "BtnAnnuler";
-            this.BtnAnnuler.Size = new System.Drawing.Size(138, 52);
+            this.BtnAnnuler.Size = new System.Drawing.Size(92, 34);
             this.BtnAnnuler.TabIndex = 8;
+            this.BtnAnnuler.TabStop = false;
             this.BtnAnnuler.Text = "Annuler";
             this.BtnAnnuler.UseVisualStyleBackColor = true;
             this.BtnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);
             // 
             // BtnEnregistrer
             // 
-            this.BtnEnregistrer.Location = new System.Drawing.Point(474, 506);
+            this.BtnEnregistrer.Location = new System.Drawing.Point(316, 329);
+            this.BtnEnregistrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnEnregistrer.Name = "BtnEnregistrer";
-            this.BtnEnregistrer.Size = new System.Drawing.Size(166, 52);
+            this.BtnEnregistrer.Size = new System.Drawing.Size(111, 34);
             this.BtnEnregistrer.TabIndex = 7;
+            this.BtnEnregistrer.TabStop = false;
             this.BtnEnregistrer.Text = "Enregistrer";
             this.BtnEnregistrer.UseVisualStyleBackColor = true;
             this.BtnEnregistrer.Click += new System.EventHandler(this.BtnEnregistrer_Click);
@@ -189,10 +182,12 @@
             this.BtnCommentaires.BackColor = System.Drawing.SystemColors.Control;
             this.BtnCommentaires.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCommentaires.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnCommentaires.Location = new System.Drawing.Point(36, 506);
+            this.BtnCommentaires.Location = new System.Drawing.Point(24, 329);
+            this.BtnCommentaires.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnCommentaires.Name = "BtnCommentaires";
-            this.BtnCommentaires.Size = new System.Drawing.Size(218, 52);
+            this.BtnCommentaires.Size = new System.Drawing.Size(145, 34);
             this.BtnCommentaires.TabIndex = 12;
+            this.BtnCommentaires.TabStop = false;
             this.BtnCommentaires.Text = "Nouvelle annotation";
             this.BtnCommentaires.UseVisualStyleBackColor = true;
             this.BtnCommentaires.Visible = false;
@@ -202,11 +197,12 @@
             // 
             this.BtnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnModifier.Image = ((System.Drawing.Image)(resources.GetObject("BtnModifier.Image")));
-            this.BtnModifier.Location = new System.Drawing.Point(628, 8);
+            this.BtnModifier.Location = new System.Drawing.Point(419, 5);
             this.BtnModifier.Margin = new System.Windows.Forms.Padding(0);
             this.BtnModifier.Name = "BtnModifier";
-            this.BtnModifier.Size = new System.Drawing.Size(42, 43);
+            this.BtnModifier.Size = new System.Drawing.Size(28, 28);
             this.BtnModifier.TabIndex = 13;
+            this.BtnModifier.TabStop = false;
             this.BtnModifier.UseVisualStyleBackColor = true;
             this.BtnModifier.Visible = false;
             this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
@@ -218,7 +214,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(680, 598);
+            this.shapeContainer1.Size = new System.Drawing.Size(453, 389);
             this.shapeContainer1.TabIndex = 14;
             this.shapeContainer1.TabStop = false;
             // 
@@ -238,10 +234,9 @@
             this.LblTitre.BackColor = System.Drawing.Color.CornflowerBlue;
             this.LblTitre.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitre.ForeColor = System.Drawing.Color.White;
-            this.LblTitre.Location = new System.Drawing.Point(36, 18);
-            this.LblTitre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTitre.Location = new System.Drawing.Point(24, 12);
             this.LblTitre.Name = "LblTitre";
-            this.LblTitre.Size = new System.Drawing.Size(223, 27);
+            this.LblTitre.Size = new System.Drawing.Size(142, 18);
             this.LblTitre.TabIndex = 15;
             this.LblTitre.Text = "Edition d\'un Post\'it";
             // 
@@ -252,10 +247,12 @@
             // 
             // BtnFermer
             // 
-            this.BtnFermer.Location = new System.Drawing.Point(474, 506);
+            this.BtnFermer.Location = new System.Drawing.Point(316, 329);
+            this.BtnFermer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnFermer.Name = "BtnFermer";
-            this.BtnFermer.Size = new System.Drawing.Size(164, 52);
+            this.BtnFermer.Size = new System.Drawing.Size(111, 34);
             this.BtnFermer.TabIndex = 16;
+            this.BtnFermer.TabStop = false;
             this.BtnFermer.Text = "Fermer";
             this.BtnFermer.UseVisualStyleBackColor = true;
             this.BtnFermer.Visible = false;
@@ -265,9 +262,10 @@
             // 
             this.LblOperateurView.AutoSize = true;
             this.LblOperateurView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblOperateurView.Location = new System.Drawing.Point(37, 98);
+            this.LblOperateurView.Location = new System.Drawing.Point(24, 64);
+            this.LblOperateurView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblOperateurView.Name = "LblOperateurView";
-            this.LblOperateurView.Size = new System.Drawing.Size(117, 20);
+            this.LblOperateurView.Size = new System.Drawing.Size(82, 13);
             this.LblOperateurView.TabIndex = 17;
             this.LblOperateurView.Text = "Collaborateur";
             this.LblOperateurView.Visible = false;
@@ -276,9 +274,10 @@
             // 
             this.LblCategorieView.AutoSize = true;
             this.LblCategorieView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCategorieView.Location = new System.Drawing.Point(381, 95);
+            this.LblCategorieView.Location = new System.Drawing.Point(248, 64);
+            this.LblCategorieView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblCategorieView.Name = "LblCategorieView";
-            this.LblCategorieView.Size = new System.Drawing.Size(87, 20);
+            this.LblCategorieView.Size = new System.Drawing.Size(61, 13);
             this.LblCategorieView.TabIndex = 18;
             this.LblCategorieView.Text = "Categorie";
             this.LblCategorieView.Visible = false;
@@ -287,9 +286,10 @@
             // 
             this.LblTiersView.AutoSize = true;
             this.LblTiersView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTiersView.Location = new System.Drawing.Point(37, 169);
+            this.LblTiersView.Location = new System.Drawing.Point(24, 110);
+            this.LblTiersView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTiersView.Name = "LblTiersView";
-            this.LblTiersView.Size = new System.Drawing.Size(48, 20);
+            this.LblTiersView.Size = new System.Drawing.Size(35, 13);
             this.LblTiersView.TabIndex = 19;
             this.LblTiersView.Text = "Tiers";
             this.LblTiersView.Visible = false;
@@ -298,17 +298,19 @@
             // 
             this.LblEcheanceView.AutoSize = true;
             this.LblEcheanceView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEcheanceView.Location = new System.Drawing.Point(494, 437);
+            this.LblEcheanceView.Location = new System.Drawing.Point(24, 282);
+            this.LblEcheanceView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblEcheanceView.Name = "LblEcheanceView";
-            this.LblEcheanceView.Size = new System.Drawing.Size(89, 20);
+            this.LblEcheanceView.Size = new System.Drawing.Size(64, 13);
             this.LblEcheanceView.TabIndex = 20;
             this.LblEcheanceView.Text = "Echeance";
+            this.LblEcheanceView.Visible = false;
             // 
             // EvenementEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 598);
+            this.ClientSize = new System.Drawing.Size(453, 389);
             this.Controls.Add(this.LblEcheanceView);
             this.Controls.Add(this.LblTiersView);
             this.Controls.Add(this.LblCategorieView);
@@ -321,9 +323,7 @@
             this.Controls.Add(this.BtnAnnuler);
             this.Controls.Add(this.LblEcheance);
             this.Controls.Add(this.DtpEcheance);
-            this.Controls.Add(this.LblStatut);
             this.Controls.Add(this.LblDescription);
-            this.Controls.Add(this.CbxStatut);
             this.Controls.Add(this.TxtDescription);
             this.Controls.Add(this.LblTiers);
             this.Controls.Add(this.TxtTiers);
@@ -333,6 +333,7 @@
             this.Controls.Add(this.LblOperateur);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EvenementEditForm";
@@ -355,9 +356,7 @@
         private System.Windows.Forms.TextBox TxtTiers;
         private System.Windows.Forms.Label LblTiers;
         private System.Windows.Forms.TextBox TxtDescription;
-        private System.Windows.Forms.ComboBox CbxStatut;
         private System.Windows.Forms.Label LblDescription;
-        private System.Windows.Forms.Label LblStatut;
         private System.Windows.Forms.DateTimePicker DtpEcheance;
         private System.Windows.Forms.Label LblEcheance;
         private System.Windows.Forms.Button BtnAnnuler;

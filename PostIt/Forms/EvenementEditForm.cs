@@ -135,12 +135,15 @@ namespace PostIt.Forms
             formTitle = "Modification d'un Post'it";
             BtnCommentaires.Visible = true;
             BtnModifier.Visible = true;
-            CbxOperateur.Enabled = false;
-            CbxCategorie.Enabled = false;
-            TxtTiers.ReadOnly = true;
+            CbxOperateur.Visible = false;
+            CbxCategorie.Visible = false;
+            TxtTiers.Visible = false;
             TxtDescription.ReadOnly = true;
-            CbxStatut.Enabled = false;
+            CbxStatut.Visible = false;
             DtpEcheance.Enabled = false;
+            LblOperateurView.Visible = true;
+            LblTiersView.Visible = true;
+            LblCategorieView.Visible = true;
 
             /* Récupération des données */
             operateur = evenementProvider.GetEvenementById(_id).Operateur;
@@ -151,11 +154,14 @@ namespace PostIt.Forms
 
             /* Affichage des donnees */
             CbxOperateur.Text = operateur;
+            LblOperateurView.Text = operateur;
             CbxCategorie.Text = categorie;
+            LblCategorieView.Text = categorie;
             TxtTiers.Text = tiers;
+            LblTiersView.Text = tiers;
             TxtDescription.Text = description;
             DtpEcheance.Value = echeance;
-
+            
 
             /* Modification des boutons */
             BtnEnregistrer.Visible = false;

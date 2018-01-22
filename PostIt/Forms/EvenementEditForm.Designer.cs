@@ -52,6 +52,10 @@
             this.LblTitre = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.BtnFermer = new System.Windows.Forms.Button();
+            this.LblOperateurView = new System.Windows.Forms.Label();
+            this.LblCategorieView = new System.Windows.Forms.Label();
+            this.LblTiersView = new System.Windows.Forms.Label();
+            this.LblEcheanceView = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblOperateur
@@ -257,11 +261,58 @@
             this.BtnFermer.Visible = false;
             this.BtnFermer.Click += new System.EventHandler(this.BtnFermer_Click);
             // 
+            // LblOperateurView
+            // 
+            this.LblOperateurView.AutoSize = true;
+            this.LblOperateurView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblOperateurView.Location = new System.Drawing.Point(37, 98);
+            this.LblOperateurView.Name = "LblOperateurView";
+            this.LblOperateurView.Size = new System.Drawing.Size(117, 20);
+            this.LblOperateurView.TabIndex = 17;
+            this.LblOperateurView.Text = "Collaborateur";
+            this.LblOperateurView.Visible = false;
+            // 
+            // LblCategorieView
+            // 
+            this.LblCategorieView.AutoSize = true;
+            this.LblCategorieView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCategorieView.Location = new System.Drawing.Point(381, 95);
+            this.LblCategorieView.Name = "LblCategorieView";
+            this.LblCategorieView.Size = new System.Drawing.Size(87, 20);
+            this.LblCategorieView.TabIndex = 18;
+            this.LblCategorieView.Text = "Categorie";
+            this.LblCategorieView.Visible = false;
+            // 
+            // LblTiersView
+            // 
+            this.LblTiersView.AutoSize = true;
+            this.LblTiersView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTiersView.Location = new System.Drawing.Point(37, 169);
+            this.LblTiersView.Name = "LblTiersView";
+            this.LblTiersView.Size = new System.Drawing.Size(48, 20);
+            this.LblTiersView.TabIndex = 19;
+            this.LblTiersView.Text = "Tiers";
+            this.LblTiersView.Visible = false;
+            // 
+            // LblEcheanceView
+            // 
+            this.LblEcheanceView.AutoSize = true;
+            this.LblEcheanceView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEcheanceView.Location = new System.Drawing.Point(494, 437);
+            this.LblEcheanceView.Name = "LblEcheanceView";
+            this.LblEcheanceView.Size = new System.Drawing.Size(89, 20);
+            this.LblEcheanceView.TabIndex = 20;
+            this.LblEcheanceView.Text = "Echeance";
+            // 
             // EvenementEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 598);
+            this.Controls.Add(this.LblEcheanceView);
+            this.Controls.Add(this.LblTiersView);
+            this.Controls.Add(this.LblCategorieView);
+            this.Controls.Add(this.LblOperateurView);
             this.Controls.Add(this.BtnFermer);
             this.Controls.Add(this.LblTitre);
             this.Controls.Add(this.BtnModifier);
@@ -319,5 +370,9 @@
         private System.Windows.Forms.Label LblTitre;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.Button BtnFermer;
+        private System.Windows.Forms.Label LblOperateurView;
+        private System.Windows.Forms.Label LblCategorieView;
+        private System.Windows.Forms.Label LblTiersView;
+        private System.Windows.Forms.Label LblEcheanceView;
     }
 }

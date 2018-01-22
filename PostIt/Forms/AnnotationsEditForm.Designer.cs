@@ -43,26 +43,29 @@
             // 
             this.CbxOperateur.BackColor = System.Drawing.SystemColors.Info;
             this.CbxOperateur.FormattingEnabled = true;
-            this.CbxOperateur.Location = new System.Drawing.Point(852, 449);
+            this.CbxOperateur.Location = new System.Drawing.Point(568, 292);
+            this.CbxOperateur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CbxOperateur.Name = "CbxOperateur";
-            this.CbxOperateur.Size = new System.Drawing.Size(242, 28);
+            this.CbxOperateur.Size = new System.Drawing.Size(163, 21);
             this.CbxOperateur.TabIndex = 1;
             // 
             // TxtCommentaire
             // 
             this.TxtCommentaire.AcceptsReturn = true;
             this.TxtCommentaire.BackColor = System.Drawing.SystemColors.Info;
-            this.TxtCommentaire.Location = new System.Drawing.Point(12, 449);
+            this.TxtCommentaire.Location = new System.Drawing.Point(8, 292);
+            this.TxtCommentaire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtCommentaire.Multiline = true;
             this.TxtCommentaire.Name = "TxtCommentaire";
-            this.TxtCommentaire.Size = new System.Drawing.Size(834, 84);
+            this.TxtCommentaire.Size = new System.Drawing.Size(557, 56);
             this.TxtCommentaire.TabIndex = 0;
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(852, 489);
+            this.BtnSave.Location = new System.Drawing.Point(568, 318);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(244, 46);
+            this.BtnSave.Size = new System.Drawing.Size(163, 30);
             this.BtnSave.TabIndex = 2;
             this.BtnSave.TabStop = false;
             this.BtnSave.Text = "Ajouter l\'annotation";
@@ -72,18 +75,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(848, 426);
+            this.label1.Location = new System.Drawing.Point(565, 277);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Opérateur";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 426);
+            this.label2.Location = new System.Drawing.Point(8, 277);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 20);
+            this.label2.Size = new System.Drawing.Size(102, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nouvelle annotation";
             // 
@@ -104,21 +109,23 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAnnotations.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAnnotations.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvAnnotations.Location = new System.Drawing.Point(12, 64);
+            this.dgvAnnotations.Location = new System.Drawing.Point(8, 42);
+            this.dgvAnnotations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvAnnotations.Name = "dgvAnnotations";
             this.dgvAnnotations.ReadOnly = true;
             this.dgvAnnotations.RowHeadersVisible = false;
             this.dgvAnnotations.RowTemplate.Height = 28;
             this.dgvAnnotations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAnnotations.Size = new System.Drawing.Size(1084, 348);
+            this.dgvAnnotations.Size = new System.Drawing.Size(723, 226);
             this.dgvAnnotations.TabIndex = 5;
             this.dgvAnnotations.TabStop = false;
             // 
             // BtnClose
             // 
-            this.BtnClose.Location = new System.Drawing.Point(852, 559);
+            this.BtnClose.Location = new System.Drawing.Point(568, 363);
+            this.BtnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(242, 32);
+            this.BtnClose.Size = new System.Drawing.Size(161, 21);
             this.BtnClose.TabIndex = 7;
             this.BtnClose.TabStop = false;
             this.BtnClose.Text = "Fermer";
@@ -127,9 +134,9 @@
             // 
             // AnnotationsEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 613);
+            this.ClientSize = new System.Drawing.Size(740, 398);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.dgvAnnotations);
             this.Controls.Add(this.label2);
@@ -138,6 +145,7 @@
             this.Controls.Add(this.TxtCommentaire);
             this.Controls.Add(this.CbxOperateur);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AnnotationsEditForm";
@@ -145,6 +153,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Annotations";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AnnotationsEditForm_FormClosed);
             this.Load += new System.EventHandler(this.AnnotationsEditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnnotations)).EndInit();
             this.ResumeLayout(false);

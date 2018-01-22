@@ -93,7 +93,20 @@ namespace PostIt.Forms
                     break;
             }
 
-            /* Détermine si des annotations existent déjà */
+            AnnotationsBtnUpdate();
+
+            /* Titre du formulaire */
+            LblTitre.Text = formTitle;
+        }
+
+        private void NewPostIt()
+        {
+            formTitle = "Création d'un Post'it";
+        }
+        
+        private void AnnotationsBtnUpdate()
+        {
+            /* Détermine si des annotations existent déjà et mets à jour le bouton annotations*/
             List<Annotation> list;
             list = annotationProvider.GetByEvenementId(_id);
             if (list.Count > 0)
@@ -110,19 +123,9 @@ namespace PostIt.Forms
 
                 /* Couleur du bouton */
                 BtnCommentaires.BackColor = Color.Yellow;
-                
-                
             }
-
-            /* Titre du formulaire */
-            LblTitre.Text = formTitle;
         }
 
-        private void NewPostIt()
-        {
-            formTitle = "Création d'un Post'it";
-        }
-        
         private void LoadPostIt()
         {
             formTitle = "Modification d'un Post'iIt";
@@ -163,7 +166,7 @@ namespace PostIt.Forms
 
         private void AddCommentaire()
         {
-            AnnotationsEditForm frm = new AnnotationsEditForm(_id);
+            AnnotationsEditForm frm = new AnnotationsEditForm(this, _id);
             frm.ShowDialog();
         }
 
@@ -254,6 +257,12 @@ namespace PostIt.Forms
             evenement.CreatedAt = DateTime.Now;
 
             evenementProvider.Create(evenement);
+        }
+
+        public void RefreshData()
+        {
+            /* Mets à jour le bouton des annotations */
+            AnnotationsBtnUpdate();
         }
     }
 }

@@ -26,9 +26,13 @@ namespace PostIt.Forms
 
         EvenementProvider evenementProvider = new EvenementProvider();
 
-        public AnnotationsEditForm(int Id)
+        EvenementEditForm _owner;
+
+        public AnnotationsEditForm(EvenementEditForm owner, int Id)
         {
             _id = Id;
+            _owner = owner;
+            FormClosed += new FormClosedEventHandler(AnnotationsEditForm_FormClosed);
             InitializeComponent();
         }
 
@@ -85,7 +89,8 @@ namespace PostIt.Forms
                         UpdateDatabase();
                         break;
                 }
-                Close();
+                VideChamps();
+                RefreshData();
             }
         }
 
@@ -108,7 +113,7 @@ namespace PostIt.Forms
 
             DataGridViewTextBoxColumn dateColumn = new DataGridViewTextBoxColumn();
             dateColumn.Name = "Date";
-            dateColumn.HeaderText = "DATE";
+            dateColumn.HeaderText = "DATE / HEURE";
             dateColumn.Width = 120;
             dateColumn.MinimumWidth = 120;
             dateColumn.FillWeight = 1;
@@ -156,6 +161,13 @@ namespace PostIt.Forms
             }
         }
 
+        private void VideChamps()
+        {
+            TxtCommentaire.Text = "";
+            CbxOperateur.Text = "";
+            TxtCommentaire.Focus();
+        }
+
         public void RefreshData()
         {
             List<Annotation> list;
@@ -169,6 +181,11 @@ namespace PostIt.Forms
         private void AnnotationsEditForm_Load(object sender, EventArgs e)
         {
             RefreshData();
+        }
+
+        private void AnnotationsEditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _owner.RefreshData();
         }
 
         private void AddDatabase()

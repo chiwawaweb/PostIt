@@ -27,7 +27,8 @@ namespace PostIt.Classes
                 new Categorie { Nom="Attente virement", Abrv="VIR", Actif=true },
                 new Categorie { Nom="Demande de transfert", Abrv="TRS", Actif=false },
                 new Categorie { Nom="Devis", Abrv="DEV", Actif=false },
-                new Categorie { Nom="Réservation produit", Abrv="RES", Actif=true }
+                new Categorie { Nom="Réservation produit", Abrv="RES", Actif=true },
+                new Categorie { Nom="A faire", Abrv="TAF", Actif=true}
             };
 
             return categories;

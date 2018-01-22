@@ -198,6 +198,11 @@ namespace PostIt.Forms
             _owner.RefreshData();
         }
 
+        private void BtnFermer_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void AddDatabase()
         {
             Evenement evenement = evenementProvider.GetEvenementById(_id);

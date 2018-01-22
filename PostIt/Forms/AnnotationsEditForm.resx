@@ -117,4 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnFermer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFZSURBVEhL3ZKxSgRBEET3u8zERARBEEwMDEQM7hsVAzE4
+        Q/2ADTbYaP9ATt5211HMze6NYKIFRc/WTFd3z073P/B6f7F7uTnZEcXt5nqmr52lrm/lp3VAIvzcXB0k
+        ofl+LSpHeWkdQHDqUEkvVNM9L60DCLqiJfMWNk1Q67L8P9I+Hs73e+UUaR1Qksihr+3zbpqmmRg93Z7u
+        zfjWHixziWkdQCC57KLv+4Mib3dnq+bNE4g+CXtEQPSrc3OY1gGJsJyCqEkE1kziOX6emNYBhLVuIKYq
+        wlX5XtkUTOuAROjdKJHiXkDNeFPQG0vrgB8q6eZOf6KwnCKtAzLyg9JkOI7jbOovy/+DWC2wdKeYytz3
+        yyIU9jyY1gGJTp7nMAwzawa+Lw0evaJjpIgKLa1hWgcQWgu08P3xsn5Fa0W01xrTOsCP0o9W1EHXf7JO
+        64Ce22/GtP7z6Lpv9eNHCEGvLF8AAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

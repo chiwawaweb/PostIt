@@ -138,6 +138,14 @@ namespace PostIt.Forms
                     dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.Yellow;
                 }
 
+                /* Vérifie si événement terminé */
+                if (statut == "Terminé" || statut == "Annulé")
+                {
+                    dgvEvenements.Rows[number].DefaultCellStyle.Font = new Font(this.Font, FontStyle.Strikeout);
+                    dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.Gray;
+                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.White;
+                }
+
                 /* pointe sur l'enregistrement courant */
                 if (list[i].Id == idRetour)
                 {
@@ -167,7 +175,6 @@ namespace PostIt.Forms
         {
             List<Evenement> list;
             list = evenementProvider.Search(TxtSearch.Text, DtpDebut.Value, DtpFin.Value); // à completer avec mots cles / dates
-            //list = evenementProvider.Search("", DateTime.Now.AddMonths(-1), DateTime.Now);
 
             CreateTable(list, idRetour);
 

@@ -1,7 +1,6 @@
 ﻿FONCTIONNALITES
 ===============
 
-- Laisser un message à un collaborateur
 - Agenda avec rappels
 - Numeros de téléphone utiles (prestataires, fournisseurs, hotlines)
 - Suivi (probleme/commande) client
@@ -14,9 +13,13 @@
 
 - Quand état passe à terminé, un commentaire auto est ajouté avec la date et l'heure
 
+- Dans la liste des post'it, une case à cocher permet d'afficher les Annulés
+- Idem pour les terminés
+
+
 Etats des événements :
 ----------------------
 - En cours
 - Terminé
 - A venir (agenda)
-- 
+- Annulé

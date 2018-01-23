@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvenementsListForm));
             this.dgvEvenements = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -71,8 +71,8 @@
             this.dgvEvenements.Name = "dgvEvenements";
             this.dgvEvenements.ReadOnly = true;
             this.dgvEvenements.RowHeadersVisible = false;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEvenements.ShowCellErrors = false;
             this.dgvEvenements.ShowCellToolTips = false;
@@ -180,6 +180,7 @@
             this.BtnSearch.TabStop = false;
             this.BtnSearch.Text = "Filtrer";
             this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // GrpFiltre
             // 

@@ -10,6 +10,8 @@ namespace PostIt.DAL
 {
     public class EvenementProvider
     {
+        string statutENC, statutAVE, statutFIN, statutANN;
+
         public int CountAll()
         {
             using (Context context = new Context())
@@ -25,14 +27,40 @@ namespace PostIt.DAL
             }
         }
 
-        public List<Evenement> Search(string keywords, DateTime dateDebut, DateTime dateFin)
+        public List<Evenement> Search(string keywords, bool ENC, bool AVE, bool FIN, bool ANN, DateTime dateDebut, DateTime dateFin)
         {
+
+
+            if (ENC == true)
+                statutENC = "En cours";
+                else statutENC = "";
+
+            if (ANN == true)
+                statutANN = "Annulé";
+            else statutANN = "";
+
+            if (AVE == true)
+                statutAVE = "A venir";
+            else statutAVE = "";
+
+            if (FIN == true)
+                statutFIN = "Terminé";
+            else statutFIN = "";
+
             using (Context context = new Context())
             {
                 try
                 {
                     var evenements = from b in context.Evenements
                                      orderby b.Id descending
+
+                                     where (
+                                     
+                                     (b.Statut == statutENC)
+                                     || (b.Statut == statutANN)
+                                     || (b.Statut == statutAVE)
+                                     || (b.Statut == statutFIN)
+                                     )
                                      /*
                                      where (((b.Tiers.Contains(keywords)
                                         || (b.Operateur.Contains(keywords))

@@ -174,7 +174,7 @@ namespace PostIt.Forms
         public void RefreshData()
         {
             List<Evenement> list;
-            list = evenementProvider.Search(TxtSearch.Text, DtpDebut.Value, DtpFin.Value); // à completer avec mots cles / dates
+            list = evenementProvider.Search(TxtSearch.Text, ChkEnCours.Checked, ChkAVenir.Checked,ChkTermine.Checked,ChkAnnule.Checked, DtpDebut.Value, DtpFin.Value); // à completer avec mots cles / dates
 
             CreateTable(list, idRetour);
 
@@ -251,5 +251,9 @@ namespace PostIt.Forms
             ChangeStatut("Annulé");
         }
 
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
     }
 }

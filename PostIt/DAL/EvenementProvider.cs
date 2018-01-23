@@ -69,15 +69,7 @@ namespace PostIt.DAL
                                      && (b.Date <= dateFin)
 
                                      )
-                                     /*
-                                     where (((b.Tiers.Contains(keywords)
-                                        || (b.Operateur.Contains(keywords))
-                                        
-                                        )
-                                     && (b.Date >= dateDebut)
-                                     && (b.Date <= dateFin))
-                                     )
-                                     */
+                                    
                                      select b;
                     return evenements.ToList();
                 }

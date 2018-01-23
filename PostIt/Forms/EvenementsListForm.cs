@@ -180,12 +180,12 @@ namespace PostIt.Forms
         {
             DateTime dateDebut = Convert.ToDateTime(DtpDebut.Value.ToShortDateString());
             DateTime dateFin = Convert.ToDateTime(DtpFin.Value.ToShortDateString());
+            string searchText = utils.RemoveDiacritics(TxtSearch.Text);
 
             List<Evenement> list;
-            list = evenementProvider.Search(TxtSearch.Text, CbxSearchCategorie.Text, ChkEnCours.Checked, ChkAVenir.Checked,ChkTermine.Checked,ChkAnnule.Checked, dateDebut, dateFin); // à completer avec mots cles / dates
+            list = evenementProvider.Search(searchText, CbxSearchCategorie.Text, ChkEnCours.Checked, ChkAVenir.Checked,ChkTermine.Checked,ChkAnnule.Checked, dateDebut, dateFin); // à completer avec mots cles / dates
 
             CreateTable(list, idRetour);
-
         }
 
         private void EvenementsListForm_Load(object sender, EventArgs e)
@@ -203,7 +203,6 @@ namespace PostIt.Forms
         {
             EvenementEditForm frm = new EvenementEditForm(this, false);
             frm.ShowDialog();
-
         }
 
         private void BtnNouveau_Click(object sender, EventArgs e)
@@ -251,7 +250,6 @@ namespace PostIt.Forms
                     RefreshData();
                 }
             }
-                
         }
 
         private void BtnAnnuler_Click(object sender, EventArgs e)
@@ -315,6 +313,11 @@ namespace PostIt.Forms
             DtpDebut.Value = DateTime.Now.AddMonths(-3);
             DtpFin.Value = DateTime.Now;
 
+        }
+
+        private void TsbActualiser_Click(object sender, EventArgs e)
+        {
+            RefreshData();
         }
     }
 }

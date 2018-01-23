@@ -203,6 +203,11 @@ namespace PostIt.Forms
             Close();
         }
 
+        private void CbxOperateur_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = BtnSave;
+        }
+
         private void AddDatabase()
         {
             Evenement evenement = evenementProvider.GetEvenementById(_id);

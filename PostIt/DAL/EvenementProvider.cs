@@ -107,5 +107,22 @@ namespace PostIt.DAL
             }
         }
 
+        public void Update(Evenement Evenement)
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    context.Evenements.Attach(Evenement);
+                    // Très important, signifier le fait que l'entité a été modifiée.
+                    context.Entry(Evenement).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

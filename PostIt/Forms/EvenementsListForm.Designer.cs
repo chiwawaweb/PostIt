@@ -110,6 +110,7 @@
             this.BtnFin.Name = "BtnFin";
             this.BtnFin.Size = new System.Drawing.Size(217, 29);
             this.BtnFin.Text = "Marquer comme traité";
+            this.BtnFin.Click += new System.EventHandler(this.BtnFin_Click);
             // 
             // BtnAnnuler
             // 

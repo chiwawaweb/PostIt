@@ -223,5 +223,22 @@ namespace PostIt.Forms
         {
             UpdatePostIt();
         }
+
+        private void BtnFin_Click(object sender, EventArgs e)
+        {
+            EvenementTraite();
+        }
+
+        private void EvenementTraite()
+        {
+            if (dgvEvenements.RowCount > 0)
+            {
+                int ID = int.Parse(dgvEvenements.CurrentRow.Cells[0].Value.ToString());
+                evenementProvider.GetEvenementById(ID).Statut = "Terminé";
+                evenementProvider.Update( );
+            }
+
+                
+        }
     }
 }

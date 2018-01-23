@@ -38,8 +38,14 @@ namespace PostIt.Forms
 
         private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SetupForm frm = new SetupForm();
+            SetupForm frm = new SetupForm(this);
             frm.ShowDialog();
+        }
+
+        public void RefreshForm()
+        {
+            /* Mise à jour de certaines infos */
+
         }
     }
 }

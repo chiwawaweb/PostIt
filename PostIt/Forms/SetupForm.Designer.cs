@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetupForm));
             this.LblDbPath = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtDbPath = new System.Windows.Forms.TextBox();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,12 +44,12 @@
             this.LblDbPath.TabIndex = 0;
             this.LblDbPath.Text = "Chemin BDD :";
             // 
-            // textBox1
+            // TxtDbPath
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 20);
-            this.textBox1.TabIndex = 1;
+            this.TxtDbPath.Location = new System.Drawing.Point(93, 21);
+            this.TxtDbPath.Name = "TxtDbPath";
+            this.TxtDbPath.Size = new System.Drawing.Size(220, 20);
+            this.TxtDbPath.TabIndex = 1;
             // 
             // BtnSave
             // 
@@ -59,9 +59,11 @@
             this.BtnSave.TabIndex = 2;
             this.BtnSave.Text = "Enregistrer";
             this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // BtnCancel
             // 
+            this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancel.Location = new System.Drawing.Point(139, 58);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(84, 23);
@@ -72,12 +74,14 @@
             // 
             // SetupForm
             // 
+            this.AcceptButton = this.BtnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 100);
+            this.CancelButton = this.BtnCancel;
+            this.ClientSize = new System.Drawing.Size(325, 95);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtDbPath);
             this.Controls.Add(this.LblDbPath);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -87,6 +91,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Paramètres";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SetupForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,7 +100,7 @@
         #endregion
 
         private System.Windows.Forms.Label LblDbPath;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtDbPath;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnCancel;
     }

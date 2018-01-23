@@ -145,6 +145,7 @@
     <Content Include="Resources\icon_list.ico" />
     <Content Include="Resources\icon_new.ico" />
     <Content Include="Resources\icon_quit.ico" />
+    <Content Include="Resources\icon_raz.png" />
     <Content Include="Resources\icon_refresh.ico" />
     <Content Include="Resources\icon_save.ico" />
     <Content Include="Resources\icon_setup.ico" />

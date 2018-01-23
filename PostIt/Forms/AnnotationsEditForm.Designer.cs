@@ -53,7 +53,6 @@
             this.CbxOperateur.Name = "CbxOperateur";
             this.CbxOperateur.Size = new System.Drawing.Size(143, 24);
             this.CbxOperateur.TabIndex = 1;
-            this.CbxOperateur.Enter += new System.EventHandler(this.CbxOperateur_Enter);
             // 
             // TxtCommentaire
             // 
@@ -81,20 +80,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(493, 369);
+            this.label1.Location = new System.Drawing.Point(494, 372);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Opérateur";
+            this.label1.Text = "Auteur :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 369);
+            this.label2.Location = new System.Drawing.Point(10, 372);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 16);
+            this.label2.Size = new System.Drawing.Size(141, 16);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Nouvelle annotation";
+            this.label2.Text = "Nouvelle annotation :";
             // 
             // dgvAnnotations
             // 
@@ -148,6 +147,7 @@
             // 
             // AnnotationsEditForm
             // 
+            this.AcceptButton = this.BtnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 466);

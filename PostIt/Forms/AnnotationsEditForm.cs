@@ -123,7 +123,7 @@ namespace PostIt.Forms
 
             DataGridViewTextBoxColumn dateColumn = new DataGridViewTextBoxColumn();
             dateColumn.Name = "Date";
-            dateColumn.HeaderText = "DATE / HEURE";
+            dateColumn.HeaderText = "Date / Heure";
             dateColumn.Width = 145;
             dateColumn.MinimumWidth = 145;
             dateColumn.FillWeight = 1;
@@ -132,13 +132,13 @@ namespace PostIt.Forms
 
             DataGridViewTextBoxColumn annotationColumn = new DataGridViewTextBoxColumn();
             annotationColumn.Name = "Annotation";
-            annotationColumn.HeaderText = "ANNOTATION";
+            annotationColumn.HeaderText = "Annotation";
             annotationColumn.Width = 359;
             annotationColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn operateurColumn = new DataGridViewTextBoxColumn();
             operateurColumn.Name = "Operateur";
-            operateurColumn.HeaderText = "OPERATEUR";
+            operateurColumn.HeaderText = "Auteur";
             operateurColumn.Width = 120;
             operateurColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
@@ -201,11 +201,6 @@ namespace PostIt.Forms
         private void BtnFermer_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void CbxOperateur_Enter(object sender, EventArgs e)
-        {
-            this.AcceptButton = BtnSave;
         }
 
         private void AddDatabase()

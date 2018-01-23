@@ -72,7 +72,7 @@
             this.CbxOperateur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CbxOperateur.FormattingEnabled = true;
             this.CbxOperateur.Location = new System.Drawing.Point(28, 77);
-            this.CbxOperateur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxOperateur.Margin = new System.Windows.Forms.Padding(2);
             this.CbxOperateur.Name = "CbxOperateur";
             this.CbxOperateur.Size = new System.Drawing.Size(217, 24);
             this.CbxOperateur.TabIndex = 0;
@@ -82,7 +82,7 @@
             this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategorie.FormattingEnabled = true;
             this.CbxCategorie.Location = new System.Drawing.Point(289, 77);
-            this.CbxCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxCategorie.Margin = new System.Windows.Forms.Padding(2);
             this.CbxCategorie.Name = "CbxCategorie";
             this.CbxCategorie.Size = new System.Drawing.Size(208, 24);
             this.CbxCategorie.TabIndex = 1;
@@ -100,7 +100,7 @@
             // TxtTiers
             // 
             this.TxtTiers.Location = new System.Drawing.Point(28, 133);
-            this.TxtTiers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtTiers.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTiers.Name = "TxtTiers";
             this.TxtTiers.Size = new System.Drawing.Size(217, 22);
             this.TxtTiers.TabIndex = 2;
@@ -119,7 +119,7 @@
             // 
             this.TxtDescription.AcceptsReturn = true;
             this.TxtDescription.Location = new System.Drawing.Point(28, 185);
-            this.TxtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.TxtDescription.Multiline = true;
             this.TxtDescription.Name = "TxtDescription";
             this.TxtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -140,7 +140,7 @@
             // 
             this.DtpEcheance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpEcheance.Location = new System.Drawing.Point(28, 343);
-            this.DtpEcheance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpEcheance.Margin = new System.Windows.Forms.Padding(2);
             this.DtpEcheance.Name = "DtpEcheance";
             this.DtpEcheance.Size = new System.Drawing.Size(110, 22);
             this.DtpEcheance.TabIndex = 5;
@@ -158,7 +158,7 @@
             // BtnAnnuler
             // 
             this.BtnAnnuler.Location = new System.Drawing.Point(257, 405);
-            this.BtnAnnuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAnnuler.Name = "BtnAnnuler";
             this.BtnAnnuler.Size = new System.Drawing.Size(107, 42);
             this.BtnAnnuler.TabIndex = 8;
@@ -170,7 +170,7 @@
             // BtnEnregistrer
             // 
             this.BtnEnregistrer.Location = new System.Drawing.Point(369, 405);
-            this.BtnEnregistrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnEnregistrer.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEnregistrer.Name = "BtnEnregistrer";
             this.BtnEnregistrer.Size = new System.Drawing.Size(129, 42);
             this.BtnEnregistrer.TabIndex = 7;
@@ -185,7 +185,7 @@
             this.BtnCommentaires.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCommentaires.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnCommentaires.Location = new System.Drawing.Point(28, 405);
-            this.BtnCommentaires.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCommentaires.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCommentaires.Name = "BtnCommentaires";
             this.BtnCommentaires.Size = new System.Drawing.Size(169, 42);
             this.BtnCommentaires.TabIndex = 12;
@@ -244,13 +244,14 @@
             // 
             // Timer
             // 
-            this.Timer.Interval = 750;
+            this.Timer.Interval = 500;
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // BtnFermer
             // 
+            this.BtnFermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnFermer.Location = new System.Drawing.Point(369, 405);
-            this.BtnFermer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnFermer.Margin = new System.Windows.Forms.Padding(2);
             this.BtnFermer.Name = "BtnFermer";
             this.BtnFermer.Size = new System.Drawing.Size(129, 42);
             this.BtnFermer.TabIndex = 16;
@@ -337,7 +338,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EvenementEditForm";

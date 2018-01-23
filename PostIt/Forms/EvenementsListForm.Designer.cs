@@ -36,16 +36,24 @@
             this.BtnModifier = new System.Windows.Forms.ToolStripButton();
             this.BtnFin = new System.Windows.Forms.ToolStripButton();
             this.BtnAnnuler = new System.Windows.Forms.ToolStripButton();
-            this.CbxSearchCategorie = new System.Windows.Forms.ComboBox();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.DtpFin = new System.Windows.Forms.DateTimePicker();
             this.DtpDebut = new System.Windows.Forms.DateTimePicker();
-            this.BtnSearch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.BtnReset = new System.Windows.Forms.Button();
-            this.CbxStatut = new System.Windows.Forms.ComboBox();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.GrpFiltre = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ChkAnnule = new System.Windows.Forms.CheckBox();
+            this.ChkAVenir = new System.Windows.Forms.CheckBox();
+            this.ChkTermine = new System.Windows.Forms.CheckBox();
+            this.ChkEnCours = new System.Windows.Forms.CheckBox();
+            this.LblSearchText = new System.Windows.Forms.Label();
+            this.LblCategorie = new System.Windows.Forms.Label();
+            this.CbxSearchCategorie = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvenements)).BeginInit();
             this.toolStrip.SuspendLayout();
+            this.GrpFiltre.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvEvenements
@@ -58,7 +66,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEvenements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEvenements.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvEvenements.Location = new System.Drawing.Point(0, 60);
+            this.dgvEvenements.Location = new System.Drawing.Point(0, 108);
             this.dgvEvenements.MultiSelect = false;
             this.dgvEvenements.Name = "dgvEvenements";
             this.dgvEvenements.ReadOnly = true;
@@ -69,8 +77,9 @@
             this.dgvEvenements.ShowCellErrors = false;
             this.dgvEvenements.ShowCellToolTips = false;
             this.dgvEvenements.ShowEditingIcon = false;
-            this.dgvEvenements.Size = new System.Drawing.Size(867, 507);
+            this.dgvEvenements.Size = new System.Drawing.Size(1144, 459);
             this.dgvEvenements.TabIndex = 0;
+            this.dgvEvenements.TabStop = false;
             this.dgvEvenements.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEvenements_CellDoubleClick);
             // 
             // toolStrip
@@ -83,7 +92,7 @@
             this.BtnAnnuler});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(867, 31);
+            this.toolStrip.Size = new System.Drawing.Size(1144, 31);
             this.toolStrip.TabIndex = 1;
             // 
             // BtnNouveau
@@ -122,104 +131,180 @@
             this.BtnAnnuler.Text = "Annuler le Post\'it";
             this.BtnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);
             // 
-            // CbxSearchCategorie
-            // 
-            this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxSearchCategorie.FormattingEnabled = true;
-            this.CbxSearchCategorie.Location = new System.Drawing.Point(39, 34);
-            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.CbxSearchCategorie.Name = "CbxSearchCategorie";
-            this.CbxSearchCategorie.Size = new System.Drawing.Size(173, 21);
-            this.CbxSearchCategorie.TabIndex = 2;
-            this.CbxSearchCategorie.Visible = false;
-            // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(306, 36);
-            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSearch.Location = new System.Drawing.Point(187, 36);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(165, 20);
-            this.TxtSearch.TabIndex = 3;
-            this.TxtSearch.Visible = false;
+            this.TxtSearch.TabIndex = 1;
             // 
             // DtpFin
             // 
             this.DtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFin.Location = new System.Drawing.Point(621, 36);
-            this.DtpFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpFin.Location = new System.Drawing.Point(865, 36);
+            this.DtpFin.Margin = new System.Windows.Forms.Padding(2);
             this.DtpFin.Name = "DtpFin";
-            this.DtpFin.Size = new System.Drawing.Size(94, 20);
-            this.DtpFin.TabIndex = 4;
-            this.DtpFin.Visible = false;
+            this.DtpFin.Size = new System.Drawing.Size(79, 20);
+            this.DtpFin.TabIndex = 7;
+            this.DtpFin.TabStop = false;
             // 
             // DtpDebut
             // 
             this.DtpDebut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpDebut.Location = new System.Drawing.Point(505, 36);
-            this.DtpDebut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpDebut.Location = new System.Drawing.Point(745, 36);
+            this.DtpDebut.Margin = new System.Windows.Forms.Padding(2);
             this.DtpDebut.Name = "DtpDebut";
-            this.DtpDebut.Size = new System.Drawing.Size(93, 20);
-            this.DtpDebut.TabIndex = 5;
-            this.DtpDebut.Visible = false;
+            this.DtpDebut.Size = new System.Drawing.Size(79, 20);
+            this.DtpDebut.TabIndex = 6;
+            this.DtpDebut.TabStop = false;
+            // 
+            // BtnReset
+            // 
+            this.BtnReset.Image = ((System.Drawing.Image)(resources.GetObject("BtnReset.Image")));
+            this.BtnReset.Location = new System.Drawing.Point(1030, 31);
+            this.BtnReset.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(36, 26);
+            this.BtnReset.TabIndex = 9;
+            this.BtnReset.TabStop = false;
+            this.BtnReset.UseVisualStyleBackColor = true;
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(972, 34);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSearch.Location = new System.Drawing.Point(949, 31);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(75, 21);
-            this.BtnSearch.TabIndex = 6;
-            this.BtnSearch.Text = "R.A.Z.";
+            this.BtnSearch.Size = new System.Drawing.Size(77, 26);
+            this.BtnSearch.TabIndex = 8;
+            this.BtnSearch.TabStop = false;
+            this.BtnSearch.Text = "Filtrer";
             this.BtnSearch.UseVisualStyleBackColor = true;
-            this.BtnSearch.Visible = false;
+            // 
+            // GrpFiltre
+            // 
+            this.GrpFiltre.Controls.Add(this.label2);
+            this.GrpFiltre.Controls.Add(this.label1);
+            this.GrpFiltre.Controls.Add(this.ChkAnnule);
+            this.GrpFiltre.Controls.Add(this.BtnReset);
+            this.GrpFiltre.Controls.Add(this.ChkAVenir);
+            this.GrpFiltre.Controls.Add(this.BtnSearch);
+            this.GrpFiltre.Controls.Add(this.ChkTermine);
+            this.GrpFiltre.Controls.Add(this.ChkEnCours);
+            this.GrpFiltre.Controls.Add(this.DtpDebut);
+            this.GrpFiltre.Controls.Add(this.LblSearchText);
+            this.GrpFiltre.Controls.Add(this.DtpFin);
+            this.GrpFiltre.Controls.Add(this.LblCategorie);
+            this.GrpFiltre.Controls.Add(this.CbxSearchCategorie);
+            this.GrpFiltre.Controls.Add(this.TxtSearch);
+            this.GrpFiltre.Location = new System.Drawing.Point(2, 35);
+            this.GrpFiltre.Name = "GrpFiltre";
+            this.GrpFiltre.Size = new System.Drawing.Size(1083, 67);
+            this.GrpFiltre.TabIndex = 10;
+            this.GrpFiltre.TabStop = false;
+            this.GrpFiltre.Text = "Filtrer les résultats";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(829, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "et le :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-3, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(655, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Filtrer :";
-            this.label1.Visible = false;
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Période entre le :";
             // 
-            // BtnReset
+            // ChkAnnule
             // 
-            this.BtnReset.Location = new System.Drawing.Point(891, 33);
-            this.BtnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BtnReset.Name = "BtnReset";
-            this.BtnReset.Size = new System.Drawing.Size(77, 21);
-            this.BtnReset.TabIndex = 8;
-            this.BtnReset.Text = "Filtrer";
-            this.BtnReset.UseVisualStyleBackColor = true;
-            this.BtnReset.Visible = false;
+            this.ChkAnnule.AutoSize = true;
+            this.ChkAnnule.Location = new System.Drawing.Point(573, 38);
+            this.ChkAnnule.Name = "ChkAnnule";
+            this.ChkAnnule.Size = new System.Drawing.Size(59, 17);
+            this.ChkAnnule.TabIndex = 5;
+            this.ChkAnnule.TabStop = false;
+            this.ChkAnnule.Text = "Annulé";
+            this.ChkAnnule.UseVisualStyleBackColor = true;
             // 
-            // CbxStatut
+            // ChkAVenir
             // 
-            this.CbxStatut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxStatut.FormattingEnabled = true;
-            this.CbxStatut.Location = new System.Drawing.Point(763, 35);
-            this.CbxStatut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.CbxStatut.Name = "CbxStatut";
-            this.CbxStatut.Size = new System.Drawing.Size(89, 21);
-            this.CbxStatut.TabIndex = 9;
-            this.CbxStatut.Visible = false;
+            this.ChkAVenir.AutoSize = true;
+            this.ChkAVenir.Location = new System.Drawing.Point(438, 38);
+            this.ChkAVenir.Name = "ChkAVenir";
+            this.ChkAVenir.Size = new System.Drawing.Size(59, 17);
+            this.ChkAVenir.TabIndex = 3;
+            this.ChkAVenir.TabStop = false;
+            this.ChkAVenir.Text = "A venir";
+            this.ChkAVenir.UseVisualStyleBackColor = true;
+            // 
+            // ChkTermine
+            // 
+            this.ChkTermine.AutoSize = true;
+            this.ChkTermine.Location = new System.Drawing.Point(503, 38);
+            this.ChkTermine.Name = "ChkTermine";
+            this.ChkTermine.Size = new System.Drawing.Size(64, 17);
+            this.ChkTermine.TabIndex = 4;
+            this.ChkTermine.TabStop = false;
+            this.ChkTermine.Text = "Terminé";
+            this.ChkTermine.UseVisualStyleBackColor = true;
+            // 
+            // ChkEnCours
+            // 
+            this.ChkEnCours.AutoSize = true;
+            this.ChkEnCours.Checked = true;
+            this.ChkEnCours.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ChkEnCours.Location = new System.Drawing.Point(364, 38);
+            this.ChkEnCours.Name = "ChkEnCours";
+            this.ChkEnCours.Size = new System.Drawing.Size(68, 17);
+            this.ChkEnCours.TabIndex = 2;
+            this.ChkEnCours.TabStop = false;
+            this.ChkEnCours.Text = "En cours";
+            this.ChkEnCours.UseVisualStyleBackColor = true;
+            // 
+            // LblSearchText
+            // 
+            this.LblSearchText.AutoSize = true;
+            this.LblSearchText.Location = new System.Drawing.Point(186, 20);
+            this.LblSearchText.Name = "LblSearchText";
+            this.LblSearchText.Size = new System.Drawing.Size(88, 13);
+            this.LblSearchText.TabIndex = 5;
+            this.LblSearchText.Text = "Recherche libre :";
+            // 
+            // LblCategorie
+            // 
+            this.LblCategorie.AutoSize = true;
+            this.LblCategorie.Location = new System.Drawing.Point(7, 20);
+            this.LblCategorie.Name = "LblCategorie";
+            this.LblCategorie.Size = new System.Drawing.Size(58, 13);
+            this.LblCategorie.TabIndex = 4;
+            this.LblCategorie.Text = "Catégorie :";
+            // 
+            // CbxSearchCategorie
+            // 
+            this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxSearchCategorie.FormattingEnabled = true;
+            this.CbxSearchCategorie.Location = new System.Drawing.Point(10, 35);
+            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2);
+            this.CbxSearchCategorie.Name = "CbxSearchCategorie";
+            this.CbxSearchCategorie.Size = new System.Drawing.Size(173, 21);
+            this.CbxSearchCategorie.TabIndex = 0;
+            this.CbxSearchCategorie.TabStop = false;
             // 
             // EvenementsListForm
             // 
+            this.AcceptButton = this.BtnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 567);
+            this.ClientSize = new System.Drawing.Size(1144, 567);
             this.ControlBox = false;
-            this.Controls.Add(this.CbxStatut);
-            this.Controls.Add(this.BtnReset);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnSearch);
-            this.Controls.Add(this.DtpDebut);
-            this.Controls.Add(this.DtpFin);
-            this.Controls.Add(this.TxtSearch);
-            this.Controls.Add(this.CbxSearchCategorie);
+            this.Controls.Add(this.GrpFiltre);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.dgvEvenements);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -230,6 +315,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvenements)).EndInit();
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
+            this.GrpFiltre.ResumeLayout(false);
+            this.GrpFiltre.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,15 +328,22 @@
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton BtnModifier;
         private System.Windows.Forms.ToolStripButton BtnNouveau;
-        private System.Windows.Forms.ComboBox CbxSearchCategorie;
         private System.Windows.Forms.TextBox TxtSearch;
         private System.Windows.Forms.DateTimePicker DtpFin;
         private System.Windows.Forms.DateTimePicker DtpDebut;
-        private System.Windows.Forms.Button BtnSearch;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnReset;
-        private System.Windows.Forms.ComboBox CbxStatut;
+        private System.Windows.Forms.Button BtnSearch;
         private System.Windows.Forms.ToolStripButton BtnFin;
         private System.Windows.Forms.ToolStripButton BtnAnnuler;
+        private System.Windows.Forms.GroupBox GrpFiltre;
+        private System.Windows.Forms.Label LblCategorie;
+        private System.Windows.Forms.ComboBox CbxSearchCategorie;
+        private System.Windows.Forms.CheckBox ChkAnnule;
+        private System.Windows.Forms.CheckBox ChkAVenir;
+        private System.Windows.Forms.CheckBox ChkTermine;
+        private System.Windows.Forms.CheckBox ChkEnCours;
+        private System.Windows.Forms.Label LblSearchText;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

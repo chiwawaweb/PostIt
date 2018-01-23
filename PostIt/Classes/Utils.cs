@@ -22,16 +22,13 @@ namespace PostIt.Classes
                 new Categorie { Nom="Pochette photo/video", Abrv="PHO", Actif=true },
                 new Categorie { Nom="Rappel agenda", Abrv="AGD", Actif=true },
                 new Categorie { Nom="Livraison à convenir", Abrv="LIV", Actif=true },
-                new Categorie { Nom="Echange produit DOA", Abrv="ECH", Actif=true },
                 new Categorie { Nom="Commande spéciale", Abrv="CDS", Actif=true },
                 new Categorie { Nom="Attente virement", Abrv="VIR", Actif=true },
                 new Categorie { Nom="Demande de transfert", Abrv="TRS", Actif=false },
-                new Categorie { Nom="Devis", Abrv="DEV", Actif=false },
-                new Categorie { Nom="Réservation produit", Abrv="RES", Actif=true },
-                new Categorie { Nom="A faire", Abrv="TAF", Actif=true}
+                new Categorie { Nom="A faire", Abrv="TAF", Actif=true }
             };
 
-            return categories;
+            return categories.OrderBy(o => o.Nom).ToList();
         }
 
         public List<Statut> AllStatutsActives()

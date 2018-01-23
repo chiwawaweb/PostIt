@@ -27,7 +27,7 @@ namespace PostIt.DAL
             }
         }
 
-        public List<Evenement> Search(string keywords, bool ENC, bool AVE, bool FIN, bool ANN, DateTime dateDebut, DateTime dateFin)
+        public List<Evenement> Search(string keywords, string categorie, bool ENC, bool AVE, bool FIN, bool ANN, DateTime dateDebut, DateTime dateFin)
         {
 
 
@@ -56,10 +56,18 @@ namespace PostIt.DAL
 
                                      where (
                                      
-                                     (b.Statut == statutENC)
+                                     ((b.Statut == statutENC)
                                      || (b.Statut == statutANN)
                                      || (b.Statut == statutAVE)
-                                     || (b.Statut == statutFIN)
+                                     || (b.Statut == statutFIN))
+                                     && (b.Categorie.Contains(categorie))
+                                     && (
+                                     (b.Tiers.Contains(keywords))
+                                     || (b.Description.Contains(keywords))
+                                     )
+                                     && (b.Date >= dateDebut)
+                                     && (b.Date <= dateFin)
+
                                      )
                                      /*
                                      where (((b.Tiers.Contains(keywords)

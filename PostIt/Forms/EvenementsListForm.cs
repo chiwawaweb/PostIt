@@ -24,6 +24,25 @@ namespace PostIt.Forms
         public EvenementsListForm()
         {
             InitializeComponent();
+
+            /* Combobox Catégorie */
+            var dsCategorie = new List<Categorie>();
+            Categorie categorievide = new Categorie();
+            categorievide.Nom = "";
+            dsCategorie.Add(categorievide);
+            foreach (Categorie categorie in utils.AllCategoriesActives())
+            {
+                if (categorie.Actif == true)
+                {
+                    dsCategorie.Add(categorie);
+                }
+            }
+            CbxSearchCategorie.DataSource = dsCategorie;
+            CbxSearchCategorie.DisplayMember = "FullName";
+            CbxSearchCategorie.ValueMember = "FullName";
+
+            /* Date de debut de filtrage */
+            DtpDebut.Value = DateTime.Now.AddMonths(-3);
         }
 
         private void CreateTable(List<Evenement> list, int _idRetour)
@@ -153,28 +172,17 @@ namespace PostIt.Forms
                 }
             }
 
-            /* Combobox Catégorie */
-            var dsCategorie = new List<Categorie>();
-            Categorie categorievide = new Categorie();
-            categorievide.Nom = "";
-            dsCategorie.Add(categorievide);
-            foreach (Categorie categorie in utils.AllCategoriesActives())
-            {
-                if (categorie.Actif == true)
-                {
-                    dsCategorie.Add(categorie);
-                }
-            }
-            CbxSearchCategorie.DataSource = dsCategorie;
-            CbxSearchCategorie.DisplayMember = "FullName";
-            CbxSearchCategorie.ValueMember = "FullName";
+           
 
         }
 
         public void RefreshData()
         {
+            DateTime dateDebut = Convert.ToDateTime(DtpDebut.Value.ToShortDateString());
+            DateTime dateFin = Convert.ToDateTime(DtpFin.Value.ToShortDateString());
+
             List<Evenement> list;
-            list = evenementProvider.Search(TxtSearch.Text, ChkEnCours.Checked, ChkAVenir.Checked,ChkTermine.Checked,ChkAnnule.Checked, DtpDebut.Value, DtpFin.Value); // à completer avec mots cles / dates
+            list = evenementProvider.Search(TxtSearch.Text, CbxSearchCategorie.Text, ChkEnCours.Checked, ChkAVenir.Checked,ChkTermine.Checked,ChkAnnule.Checked, dateDebut, dateFin); // à completer avec mots cles / dates
 
             CreateTable(list, idRetour);
 
@@ -252,6 +260,41 @@ namespace PostIt.Forms
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void ChkEnCours_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void ChkAVenir_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void ChkTermine_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void ChkAnnule_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void CbxSearchCategorie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void DtpDebut_ValueChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void DtpFin_ValueChanged(object sender, EventArgs e)
         {
             RefreshData();
         }

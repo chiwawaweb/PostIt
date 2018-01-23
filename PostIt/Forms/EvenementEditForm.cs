@@ -212,7 +212,7 @@ namespace PostIt.Forms
         private void SavePostIt()
         {
             /* Récupération des données */
-            date = Convert.ToDateTime(DateTime.Now);
+            date = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
             operateur = utils.RemoveDiacritics(CbxOperateur.Text.ToUpper().Trim());
             categorie = CbxCategorie.Text.Trim();
             tiers = utils.RemoveDiacritics(TxtTiers.Text.ToUpper().Trim());

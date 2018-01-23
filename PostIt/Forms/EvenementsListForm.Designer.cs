@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvenementsListForm));
             this.dgvEvenements = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -51,6 +51,7 @@
             this.LblSearchText = new System.Windows.Forms.Label();
             this.LblCategorie = new System.Windows.Forms.Label();
             this.CbxSearchCategorie = new System.Windows.Forms.ComboBox();
+            this.TsbActualiser = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvenements)).BeginInit();
             this.toolStrip.SuspendLayout();
             this.GrpFiltre.SuspendLayout();
@@ -72,8 +73,8 @@
             this.dgvEvenements.Name = "dgvEvenements";
             this.dgvEvenements.ReadOnly = true;
             this.dgvEvenements.RowHeadersVisible = false;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEvenements.ShowCellErrors = false;
             this.dgvEvenements.ShowCellToolTips = false;
@@ -90,7 +91,8 @@
             this.BtnNouveau,
             this.BtnModifier,
             this.BtnFin,
-            this.BtnAnnuler});
+            this.BtnAnnuler,
+            this.TsbActualiser});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
@@ -169,6 +171,7 @@
             this.BtnReset.TabIndex = 9;
             this.BtnReset.TabStop = false;
             this.BtnReset.UseVisualStyleBackColor = true;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // BtnSearch
             // 
@@ -311,6 +314,14 @@
             this.CbxSearchCategorie.TabStop = false;
             this.CbxSearchCategorie.SelectedIndexChanged += new System.EventHandler(this.CbxSearchCategorie_SelectedIndexChanged);
             // 
+            // TsbActualiser
+            // 
+            this.TsbActualiser.Image = ((System.Drawing.Image)(resources.GetObject("TsbActualiser.Image")));
+            this.TsbActualiser.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbActualiser.Name = "TsbActualiser";
+            this.TsbActualiser.Size = new System.Drawing.Size(116, 29);
+            this.TsbActualiser.Text = "Actualiser";
+            // 
             // EvenementsListForm
             // 
             this.AcceptButton = this.BtnSearch;
@@ -360,5 +371,6 @@
         private System.Windows.Forms.Label LblSearchText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripButton TsbActualiser;
     }
 }

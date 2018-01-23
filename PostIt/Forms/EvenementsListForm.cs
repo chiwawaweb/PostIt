@@ -298,5 +298,23 @@ namespace PostIt.Forms
         {
             RefreshData();
         }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            ResetFiltre();
+        }
+
+        private void ResetFiltre()
+        {
+            CbxSearchCategorie.Text = "";
+            TxtSearch.Text = "";
+            ChkEnCours.Checked = true;
+            ChkAVenir.Checked = false;
+            ChkAnnule.Checked = false;
+            ChkTermine.Checked = false;
+            DtpDebut.Value = DateTime.Now.AddMonths(-3);
+            DtpFin.Value = DateTime.Now;
+
+        }
     }
 }

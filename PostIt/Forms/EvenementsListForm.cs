@@ -226,19 +226,29 @@ namespace PostIt.Forms
 
         private void BtnFin_Click(object sender, EventArgs e)
         {
-            EvenementTraite();
+            ChangeStatut("Terminé");
         }
 
-        private void EvenementTraite()
+        private void ChangeStatut(string statut)
         {
             if (dgvEvenements.RowCount > 0)
             {
-                int ID = int.Parse(dgvEvenements.CurrentRow.Cells[0].Value.ToString());
-                evenementProvider.GetEvenementById(ID).Statut = "Terminé";
-                evenementProvider.Update( );
+                DialogResult result = MessageBox.Show("Etes-vous certain de vouloir modifier le statut de ce post'it ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    int ID = int.Parse(dgvEvenements.CurrentRow.Cells[0].Value.ToString());
+                    Evenement evenement = evenementProvider.GetEvenementById(ID);
+                    evenement.Statut = statut;
+                    evenementProvider.Update(evenement);
+                    RefreshData();
+                }
             }
-
                 
+        }
+
+        private void BtnAnnuler_Click(object sender, EventArgs e)
+        {
+            ChangeStatut("Annulé");
         }
     }
 }

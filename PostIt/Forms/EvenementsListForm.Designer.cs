@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvenementsListForm));
             this.dgvEvenements = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -57,17 +58,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEvenements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEvenements.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvEvenements.Location = new System.Drawing.Point(0, 92);
-            this.dgvEvenements.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvEvenements.Location = new System.Drawing.Point(0, 60);
             this.dgvEvenements.MultiSelect = false;
             this.dgvEvenements.Name = "dgvEvenements";
             this.dgvEvenements.ReadOnly = true;
             this.dgvEvenements.RowHeadersVisible = false;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEvenements.ShowCellErrors = false;
             this.dgvEvenements.ShowCellToolTips = false;
             this.dgvEvenements.ShowEditingIcon = false;
-            this.dgvEvenements.Size = new System.Drawing.Size(1300, 780);
+            this.dgvEvenements.Size = new System.Drawing.Size(867, 507);
             this.dgvEvenements.TabIndex = 0;
             this.dgvEvenements.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEvenements_CellDoubleClick);
             // 
@@ -81,8 +83,7 @@
             this.BtnAnnuler});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip.Size = new System.Drawing.Size(1300, 32);
+            this.toolStrip.Size = new System.Drawing.Size(867, 31);
             this.toolStrip.TabIndex = 1;
             // 
             // BtnNouveau
@@ -90,7 +91,7 @@
             this.BtnNouveau.Image = ((System.Drawing.Image)(resources.GetObject("BtnNouveau.Image")));
             this.BtnNouveau.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnNouveau.Name = "BtnNouveau";
-            this.BtnNouveau.Size = new System.Drawing.Size(164, 29);
+            this.BtnNouveau.Size = new System.Drawing.Size(119, 28);
             this.BtnNouveau.Text = "Nouveau Post\'it";
             this.BtnNouveau.Click += new System.EventHandler(this.BtnNouveau_Click);
             // 
@@ -99,8 +100,8 @@
             this.BtnModifier.Image = ((System.Drawing.Image)(resources.GetObject("BtnModifier.Image")));
             this.BtnModifier.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnModifier.Name = "BtnModifier";
-            this.BtnModifier.Size = new System.Drawing.Size(93, 29);
-            this.BtnModifier.Text = "Détails";
+            this.BtnModifier.Size = new System.Drawing.Size(114, 28);
+            this.BtnModifier.Text = "Afficher détails";
             this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
             // 
             // BtnFin
@@ -108,7 +109,7 @@
             this.BtnFin.Image = ((System.Drawing.Image)(resources.GetObject("BtnFin.Image")));
             this.BtnFin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnFin.Name = "BtnFin";
-            this.BtnFin.Size = new System.Drawing.Size(217, 29);
+            this.BtnFin.Size = new System.Drawing.Size(154, 28);
             this.BtnFin.Text = "Marquer comme traité";
             this.BtnFin.Click += new System.EventHandler(this.BtnFin_Click);
             // 
@@ -117,50 +118,56 @@
             this.BtnAnnuler.Image = ((System.Drawing.Image)(resources.GetObject("BtnAnnuler.Image")));
             this.BtnAnnuler.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAnnuler.Name = "BtnAnnuler";
-            this.BtnAnnuler.Size = new System.Drawing.Size(101, 29);
-            this.BtnAnnuler.Text = "Annuler";
+            this.BtnAnnuler.Size = new System.Drawing.Size(125, 28);
+            this.BtnAnnuler.Text = "Annuler le Post\'it";
+            this.BtnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);
             // 
             // CbxSearchCategorie
             // 
             this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxSearchCategorie.FormattingEnabled = true;
-            this.CbxSearchCategorie.Location = new System.Drawing.Point(58, 52);
+            this.CbxSearchCategorie.Location = new System.Drawing.Point(39, 34);
+            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CbxSearchCategorie.Name = "CbxSearchCategorie";
-            this.CbxSearchCategorie.Size = new System.Drawing.Size(258, 28);
+            this.CbxSearchCategorie.Size = new System.Drawing.Size(173, 21);
             this.CbxSearchCategorie.TabIndex = 2;
             this.CbxSearchCategorie.Visible = false;
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(459, 55);
+            this.TxtSearch.Location = new System.Drawing.Point(306, 36);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(246, 26);
+            this.TxtSearch.Size = new System.Drawing.Size(165, 20);
             this.TxtSearch.TabIndex = 3;
             this.TxtSearch.Visible = false;
             // 
             // DtpFin
             // 
             this.DtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFin.Location = new System.Drawing.Point(932, 55);
+            this.DtpFin.Location = new System.Drawing.Point(621, 36);
+            this.DtpFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DtpFin.Name = "DtpFin";
-            this.DtpFin.Size = new System.Drawing.Size(139, 26);
+            this.DtpFin.Size = new System.Drawing.Size(94, 20);
             this.DtpFin.TabIndex = 4;
             this.DtpFin.Visible = false;
             // 
             // DtpDebut
             // 
             this.DtpDebut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpDebut.Location = new System.Drawing.Point(758, 55);
+            this.DtpDebut.Location = new System.Drawing.Point(505, 36);
+            this.DtpDebut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DtpDebut.Name = "DtpDebut";
-            this.DtpDebut.Size = new System.Drawing.Size(138, 26);
+            this.DtpDebut.Size = new System.Drawing.Size(93, 20);
             this.DtpDebut.TabIndex = 5;
             this.DtpDebut.Visible = false;
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(1458, 52);
+            this.BtnSearch.Location = new System.Drawing.Point(972, 34);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(112, 32);
+            this.BtnSearch.Size = new System.Drawing.Size(75, 21);
             this.BtnSearch.TabIndex = 6;
             this.BtnSearch.Text = "R.A.Z.";
             this.BtnSearch.UseVisualStyleBackColor = true;
@@ -169,18 +176,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-4, 58);
+            this.label1.Location = new System.Drawing.Point(-3, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Filtrer :";
             this.label1.Visible = false;
             // 
             // BtnReset
             // 
-            this.BtnReset.Location = new System.Drawing.Point(1336, 51);
+            this.BtnReset.Location = new System.Drawing.Point(891, 33);
+            this.BtnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnReset.Name = "BtnReset";
-            this.BtnReset.Size = new System.Drawing.Size(116, 32);
+            this.BtnReset.Size = new System.Drawing.Size(77, 21);
             this.BtnReset.TabIndex = 8;
             this.BtnReset.Text = "Filtrer";
             this.BtnReset.UseVisualStyleBackColor = true;
@@ -190,17 +199,18 @@
             // 
             this.CbxStatut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxStatut.FormattingEnabled = true;
-            this.CbxStatut.Location = new System.Drawing.Point(1144, 54);
+            this.CbxStatut.Location = new System.Drawing.Point(763, 35);
+            this.CbxStatut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CbxStatut.Name = "CbxStatut";
-            this.CbxStatut.Size = new System.Drawing.Size(132, 28);
+            this.CbxStatut.Size = new System.Drawing.Size(89, 21);
             this.CbxStatut.TabIndex = 9;
             this.CbxStatut.Visible = false;
             // 
             // EvenementsListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 872);
+            this.ClientSize = new System.Drawing.Size(867, 567);
             this.ControlBox = false;
             this.Controls.Add(this.CbxStatut);
             this.Controls.Add(this.BtnReset);
@@ -213,7 +223,6 @@
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.dgvEvenements);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EvenementsListForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

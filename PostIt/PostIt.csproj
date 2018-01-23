@@ -136,6 +136,7 @@
     <Content Include="Docs\Fonctionnalités.txt" />
     <Content Include="icon_app.ico" />
     <Content Include="Resources\icon_add.ico" />
+    <Content Include="Resources\icon_annuler.png" />
     <Content Include="Resources\icon_app.ico" />
     <Content Include="Resources\icon_close.ico" />
     <Content Include="Resources\icon_delete.ico" />
@@ -148,6 +149,8 @@
     <Content Include="Resources\icon_save.ico" />
     <Content Include="Resources\icon_setup.ico" />
     <Content Include="Resources\icon_update.ico" />
+    <Content Include="Resources\icon_valider.png" />
+    <Content Include="Resources\icon_view.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

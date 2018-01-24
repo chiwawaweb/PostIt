@@ -171,7 +171,9 @@ namespace PostIt.Forms
                     dgvEvenements.Rows[number].DefaultCellStyle.Font = new Font(this.Font, FontStyle.Strikeout);
                     dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.Gray;
                     dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.White;
-                    
+                    dgvEvenements.Rows[number].DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 224,224);
+                    dgvEvenements.Rows[number].DefaultCellStyle.SelectionForeColor = Color.Black;
+
                 }
 
                 /* pointe sur l'enregistrement courant */
@@ -249,14 +251,34 @@ namespace PostIt.Forms
         {
             if (dgvEvenements.RowCount > 0)
             {
-                DialogResult result = MessageBox.Show("Etes-vous certain de vouloir modifier le statut de ce post'it ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                if (dgvEvenements.CurrentRow.Cells[3].Value.ToString() == "Terminé" || dgvEvenements.CurrentRow.Cells[3].Value.ToString() == "Annulé")
                 {
-                    int ID = int.Parse(dgvEvenements.CurrentRow.Cells[0].Value.ToString());
-                    Evenement evenement = evenementProvider.GetEvenementById(ID);
-                    evenement.Statut = statut;
-                    evenementProvider.Update(evenement);
-                    RefreshData();
+                    /* Deja traite ou annule */
+                    MessageBox.Show("Ce post'it ne peut plus changer de statut !", "Impossible", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Etes-vous certain de vouloir modifier le statut de ce post'it ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        int ID = int.Parse(dgvEvenements.CurrentRow.Cells[0].Value.ToString());
+                        Evenement evenement = evenementProvider.GetEvenementById(ID);
+                        evenement.Statut = statut;
+                        evenementProvider.Update(evenement);
+
+                        /* Ajout d'une annotation */
+                        string commentaire = statut;
+                        AnnotationProvider annotationProvider = new AnnotationProvider();
+                        Annotation annotation = new Annotation();
+                        annotation.Date = DateTime.Now;
+                        annotation.Commentaire = commentaire;
+                        annotation.Operateur = "-";
+                        annotation.CreatedAt = DateTime.Now;
+                        annotation.EvenementId = ID;
+                        annotationProvider.Create(evenement, annotation);
+
+                        RefreshData();
+                    }
                 }
             }
         }

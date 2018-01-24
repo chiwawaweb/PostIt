@@ -42,8 +42,8 @@ Source: "C:\vs\PostIt\PostIt\bin\Release\fr\Microsoft.VisualBasic.PowerPacks.res
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{commonprograms}\PostIt"; Filename: "{app}\PostIt.exe"
-Name: "{commondesktop}\PostIt"; Filename: "{app}\PostIt.exe"; Tasks: desktopicon
+Name: "{commonprograms}\Post'it"; Filename: "{app}\PostIt.exe"
+Name: "{commondesktop}\Post'it"; Filename: "{app}\PostIt.exe"; Tasks: desktopicon
 
 [Run]
 Filename: "{app}\PostIt.exe"; Description: "{cm:LaunchProgram,Post'it}"; Flags: nowait postinstall skipifsilent

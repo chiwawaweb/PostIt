@@ -37,7 +37,8 @@ Source: "C:\vs\PostIt\PostIt\bin\Release\EntityFramework.SqlServer.dll"; DestDir
 Source: "C:\vs\PostIt\PostIt\bin\Release\EntityFramework.SqlServer.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\vs\PostIt\PostIt\bin\Release\EntityFramework.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\vs\PostIt\PostIt\bin\Release\JetEntityFrameworkProvider.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\vs\PostIt\PostIt\bin\Release\fr\Microsoft.VisualBasic.PowerPacks.resources.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\vs\PostIt\PostIt\bin\Release\Microsoft.VisualBasic.PowerPacks.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\vs\PostIt\PostIt\bin\Release\fr\Microsoft.VisualBasic.PowerPacks.resources.dll"; DestDir: "{app}\fr"; Flags: ignoreversion
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

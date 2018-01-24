@@ -114,11 +114,16 @@
             this.dgvAnnotations.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvAnnotations.Location = new System.Drawing.Point(12, 35);
             this.dgvAnnotations.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvAnnotations.MultiSelect = false;
             this.dgvAnnotations.Name = "dgvAnnotations";
             this.dgvAnnotations.ReadOnly = true;
             this.dgvAnnotations.RowHeadersVisible = false;
             this.dgvAnnotations.RowTemplate.Height = 28;
             this.dgvAnnotations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAnnotations.ShowCellErrors = false;
+            this.dgvAnnotations.ShowCellToolTips = false;
+            this.dgvAnnotations.ShowEditingIcon = false;
+            this.dgvAnnotations.ShowRowErrors = false;
             this.dgvAnnotations.Size = new System.Drawing.Size(627, 320);
             this.dgvAnnotations.TabIndex = 5;
             this.dgvAnnotations.TabStop = false;

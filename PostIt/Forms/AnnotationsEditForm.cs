@@ -60,7 +60,7 @@ namespace PostIt.Forms
         private void SaveAnnotation()
         {
             /* Recuperation des donnees */
-            commentaire = TxtCommentaire.Text.Trim();
+            commentaire = utils.RemoveDiacritics(TxtCommentaire.Text.ToUpper().Trim());
             operateur = utils.RemoveDiacritics(CbxOperateur.Text.ToUpper().Trim());
 
             /* Verification des donnees */
@@ -181,8 +181,7 @@ namespace PostIt.Forms
         public void RefreshData()
         {
             List<Annotation> list;
-            list = annotationProvider.GetByEvenementId(_id); // à completer avec mots cles / dates
-            //list = evenementProvider.Search("", DateTime.Now.AddMonths(-1), DateTime.Now);
+            list = annotationProvider.GetByEvenementId(_id);
 
             CreateTable(list, idRetour);
 

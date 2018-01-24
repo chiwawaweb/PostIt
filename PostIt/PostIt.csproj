@@ -70,6 +70,12 @@
     <Compile Include="DTO\Annotation.cs" />
     <Compile Include="DTO\Contact.cs" />
     <Compile Include="DTO\Evenement.cs" />
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AnnotationsEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AnnotationsEditForm.resx">
       <DependentUpon>AnnotationsEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +160,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="changelog.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Docs\Fonctionnalités.txt" />
     <Content Include="icon_app.ico" />
     <Content Include="Resources\icon_actualiser.png" />

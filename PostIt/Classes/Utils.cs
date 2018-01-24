@@ -25,7 +25,8 @@ namespace PostIt.Classes
                 new Categorie { Nom="Commande spéciale", Abrv="CDS", Actif=true },
                 new Categorie { Nom="Attente virement", Abrv="VIR", Actif=true },
                 new Categorie { Nom="Demande de transfert", Abrv="TRS", Actif=false },
-                new Categorie { Nom="A faire", Abrv="TAF", Actif=true }
+                new Categorie { Nom="A faire", Abrv="TAF", Actif=true },
+                new Categorie { Nom="Réservation/Précommande", Abrv="RES", Actif=true }
             };
 
             return categories.OrderBy(o => o.Nom).ToList();

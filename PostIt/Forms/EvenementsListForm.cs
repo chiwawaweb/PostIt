@@ -41,8 +41,7 @@ namespace PostIt.Forms
             CbxSearchCategorie.DisplayMember = "FullName";
             CbxSearchCategorie.ValueMember = "FullName";
 
-            /* Date de debut de filtrage */
-            DtpDebut.Value = DateTime.Now.AddMonths(-3);
+            ResetFiltre();
         }
 
         private void CreateTable(List<Evenement> list, int _idRetour)
@@ -311,7 +310,7 @@ namespace PostIt.Forms
             ChkAnnule.Checked = false;
             ChkTermine.Checked = false;
             DtpDebut.Value = DateTime.Now.AddMonths(-3);
-            DtpFin.Value = DateTime.Now;
+            DtpFin.Value = DateTime.Now.AddDays(30);
 
         }
 

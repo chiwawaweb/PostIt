@@ -116,12 +116,47 @@ namespace PostIt.Forms
         private void updateAppli()
         {
             NewUpdateForm frm = new NewUpdateForm();
+            frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowDialog();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             RefreshForm();
+        }
+
+        private void miseÀJourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MiseAJour();   
+        }
+
+        private void MiseAJour()
+        {
+            switch (checkUpdates())
+            {
+                case 0:
+                    MessageBox.Show("Il n'y a pas de connexion internet actuellement. Merci de réessayer ultérieurement.", "Non connecté", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+
+                case 1:
+
+                    updateAppli();
+                    break;
+
+                case 2:
+                    MessageBox.Show("Vous avez la dernière version disponible.", "Recherche de mises à jour", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    break;
+
+                case 3:
+                    MessageBox.Show("Erreur serveur. Merci de réessayer ultérieurement.", "Erreur serveur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
+        }
+
+        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm frm = new AboutForm();
+            frm.ShowDialog();
         }
     }
 }

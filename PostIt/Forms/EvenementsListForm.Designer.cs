@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvenementsListForm));
             this.dgvEvenements = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -72,8 +72,8 @@
             this.dgvEvenements.Name = "dgvEvenements";
             this.dgvEvenements.ReadOnly = true;
             this.dgvEvenements.RowHeadersVisible = false;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEvenements.ShowCellErrors = false;
             this.dgvEvenements.ShowCellToolTips = false;
@@ -145,16 +145,16 @@
             // TxtSearch
             // 
             this.TxtSearch.Location = new System.Drawing.Point(187, 36);
-            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(165, 20);
+            this.TxtSearch.Size = new System.Drawing.Size(195, 20);
             this.TxtSearch.TabIndex = 1;
             // 
             // DtpFin
             // 
             this.DtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpFin.Location = new System.Drawing.Point(865, 36);
-            this.DtpFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpFin.Margin = new System.Windows.Forms.Padding(2);
             this.DtpFin.Name = "DtpFin";
             this.DtpFin.Size = new System.Drawing.Size(79, 20);
             this.DtpFin.TabIndex = 7;
@@ -165,7 +165,7 @@
             // 
             this.DtpDebut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpDebut.Location = new System.Drawing.Point(745, 36);
-            this.DtpDebut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpDebut.Margin = new System.Windows.Forms.Padding(2);
             this.DtpDebut.Name = "DtpDebut";
             this.DtpDebut.Size = new System.Drawing.Size(79, 20);
             this.DtpDebut.TabIndex = 6;
@@ -176,7 +176,7 @@
             // 
             this.BtnReset.Image = ((System.Drawing.Image)(resources.GetObject("BtnReset.Image")));
             this.BtnReset.Location = new System.Drawing.Point(1030, 31);
-            this.BtnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnReset.Margin = new System.Windows.Forms.Padding(2);
             this.BtnReset.Name = "BtnReset";
             this.BtnReset.Size = new System.Drawing.Size(36, 26);
             this.BtnReset.TabIndex = 9;
@@ -187,7 +187,7 @@
             // BtnSearch
             // 
             this.BtnSearch.Location = new System.Drawing.Point(949, 31);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(77, 26);
             this.BtnSearch.TabIndex = 8;
@@ -231,16 +231,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(655, 38);
+            this.label1.Location = new System.Drawing.Point(642, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Période entre le :";
+            this.label1.Text = "Echéance entre le :";
             // 
             // ChkAnnule
             // 
             this.ChkAnnule.AutoSize = true;
-            this.ChkAnnule.Location = new System.Drawing.Point(573, 38);
+            this.ChkAnnule.Location = new System.Drawing.Point(542, 38);
             this.ChkAnnule.Name = "ChkAnnule";
             this.ChkAnnule.Size = new System.Drawing.Size(59, 17);
             this.ChkAnnule.TabIndex = 5;
@@ -252,19 +252,20 @@
             // ChkAVenir
             // 
             this.ChkAVenir.AutoSize = true;
-            this.ChkAVenir.Location = new System.Drawing.Point(438, 38);
+            this.ChkAVenir.Location = new System.Drawing.Point(438, 16);
             this.ChkAVenir.Name = "ChkAVenir";
             this.ChkAVenir.Size = new System.Drawing.Size(59, 17);
             this.ChkAVenir.TabIndex = 3;
             this.ChkAVenir.TabStop = false;
             this.ChkAVenir.Text = "A venir";
             this.ChkAVenir.UseVisualStyleBackColor = true;
+            this.ChkAVenir.Visible = false;
             this.ChkAVenir.CheckedChanged += new System.EventHandler(this.ChkAVenir_CheckedChanged);
             // 
             // ChkTermine
             // 
             this.ChkTermine.AutoSize = true;
-            this.ChkTermine.Location = new System.Drawing.Point(503, 38);
+            this.ChkTermine.Location = new System.Drawing.Point(472, 38);
             this.ChkTermine.Name = "ChkTermine";
             this.ChkTermine.Size = new System.Drawing.Size(64, 17);
             this.ChkTermine.TabIndex = 4;
@@ -278,7 +279,7 @@
             this.ChkEnCours.AutoSize = true;
             this.ChkEnCours.Checked = true;
             this.ChkEnCours.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkEnCours.Location = new System.Drawing.Point(364, 38);
+            this.ChkEnCours.Location = new System.Drawing.Point(397, 38);
             this.ChkEnCours.Name = "ChkEnCours";
             this.ChkEnCours.Size = new System.Drawing.Size(68, 17);
             this.ChkEnCours.TabIndex = 2;
@@ -310,7 +311,7 @@
             this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxSearchCategorie.FormattingEnabled = true;
             this.CbxSearchCategorie.Location = new System.Drawing.Point(10, 35);
-            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2);
             this.CbxSearchCategorie.Name = "CbxSearchCategorie";
             this.CbxSearchCategorie.Size = new System.Drawing.Size(173, 21);
             this.CbxSearchCategorie.TabIndex = 0;

@@ -46,7 +46,7 @@ namespace PostIt.DAL
                 try
                 {
                     var evenements = from b in context.Evenements
-                                     orderby b.Id descending
+                                     orderby b.Echeance ascending
                                      where (
                                             (
                                              (b.Statut == statutENC)
@@ -59,8 +59,8 @@ namespace PostIt.DAL
                                                 (b.Tiers.Contains(keywords))
                                                 || (b.Description.Contains(keywords))
                                                )
-                                            && (b.Date >= dateDebut)
-                                            && (b.Date <= dateFin)
+                                            && (b.Echeance >= dateDebut)
+                                            && (b.Echeance <= dateFin)
                                            )
                                      select b;
                     return evenements.ToList();

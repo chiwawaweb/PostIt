@@ -143,17 +143,26 @@ namespace PostIt.Forms
                 /* Coloration des lignes en fonction de l'échance */
                 if (echeance == Convert.ToDateTime(DateTime.Now.ToShortDateString()))
                 {
-                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.Orange;
+                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.FromArgb(255, 102, 0); // orange
+                    dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.Black;
+                    dgvEvenements.Rows[number].DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 179, 128);
+                    dgvEvenements.Rows[number].DefaultCellStyle.SelectionForeColor = Color.Black;
                 }
 
                 if (echeance < Convert.ToDateTime(DateTime.Now.ToShortDateString()))
                 {
                     dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.Red;
+                    dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.White;
+                    dgvEvenements.Rows[number].DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 128, 128);
+                    dgvEvenements.Rows[number].DefaultCellStyle.SelectionForeColor = Color.Black;
+
                 }
 
                 if (echeance == Convert.ToDateTime(DateTime.Now.AddDays(1).ToShortDateString()))
                 {
-                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.Yellow;
+                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 0); // jaune
+                    dgvEvenements.Rows[number].DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 255, 128);
+                    dgvEvenements.Rows[number].DefaultCellStyle.SelectionForeColor = Color.Black;
                 }
 
                 /* Vérifie si événement terminé */
@@ -162,6 +171,7 @@ namespace PostIt.Forms
                     dgvEvenements.Rows[number].DefaultCellStyle.Font = new Font(this.Font, FontStyle.Strikeout);
                     dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.Gray;
                     dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.White;
+                    
                 }
 
                 /* pointe sur l'enregistrement courant */

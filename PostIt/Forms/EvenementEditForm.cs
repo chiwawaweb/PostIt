@@ -23,7 +23,7 @@ namespace PostIt.Forms
         Utils utils = new Utils();
 
         string formTitle, operateur, categorie, tiers, description, statut;
-        bool evenementUpdateMode, annotationOk;
+        bool evenementUpdateMode, noAnnotation;
         int _id;
         DateTime date, echeance;
 
@@ -166,6 +166,7 @@ namespace PostIt.Forms
                 BtnModifier.Visible = false;
                 BtnAvanceEcheance.Visible = false;
                 BtnReculeEcheance.Visible = false;
+                noAnnotation = true;
             }
         }
 
@@ -236,7 +237,7 @@ namespace PostIt.Forms
 
         private void AddCommentaire()
         {
-            AnnotationsEditForm frm = new AnnotationsEditForm(this, _id);
+            AnnotationsEditForm frm = new AnnotationsEditForm(this, _id, noAnnotation);
             frm.ShowDialog();
         }
 

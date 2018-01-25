@@ -165,6 +165,7 @@
     </Content>
     <Content Include="Docs\Fonctionnalités.txt" />
     <Content Include="icon_app.ico" />
+    <Content Include="Resources\icone_avancer.png" />
     <Content Include="Resources\icon_actualiser.png" />
     <Content Include="Resources\icon_add.ico" />
     <Content Include="Resources\icon_annuler.png" />
@@ -173,6 +174,8 @@
     <Content Include="Resources\icon_delete.ico" />
     <Content Include="Resources\icon_edit.ico" />
     <Content Include="Resources\icon_email.ico" />
+    <Content Include="Resources\icon_fleche_droite.png" />
+    <Content Include="Resources\icon_fleche_gauche.png" />
     <Content Include="Resources\icon_list.ico" />
     <Content Include="Resources\icon_new.ico" />
     <Content Include="Resources\icon_quit.ico" />

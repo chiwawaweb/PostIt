@@ -1,2 +1,8 @@
-﻿[24/01/2018] Version 1.0.0
+﻿[] Version 1.0.2
+Possibilité de modifier la date d'échéance.
+
+[24/01/2018] Version 1.0.1
+Correction de bugs mineurs.
+
+[24/01/2018] Version 1.0.0
 Première version de l'application.

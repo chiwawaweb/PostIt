@@ -156,6 +156,8 @@ namespace PostIt.Forms
             BtnEnregistrer.Visible = false;
             BtnAnnuler.Visible = false;
             BtnFermer.Visible = true;
+            BtnReculeEcheance.Visible = true;
+            BtnAvanceEcheance.Visible = true;
         }
 
         private void BtnCommentaires_Click(object sender, EventArgs e)
@@ -186,6 +188,26 @@ namespace PostIt.Forms
         private void BtnModifier_Click(object sender, EventArgs e)
         {
             MessageBox.Show("La modification n'est pas encore disponible...", "Fonction à venir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void BtnReculeEcheance_Click(object sender, EventArgs e)
+        {
+            ModifEcheance(-1);
+        }
+
+        private void BtnAvanceEcheance_Click(object sender, EventArgs e)
+        {
+            ModifEcheance(1);
+        }
+
+        private void ModifEcheance(int nbDays)
+        {
+            Evenement evenement = evenementProvider.GetEvenementById(_id);
+
+            evenement.Echeance = echeance.AddDays(nbDays);
+            evenementProvider.Update(evenement);
+            echeance = evenement.Echeance;
+            LblEcheanceView.Text = echeance.ToString("dd/MM/yyyy");
         }
 
         private void Timer_Tick(object sender, EventArgs e)

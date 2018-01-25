@@ -16,6 +16,8 @@
 - Dans la liste des post'it, une case à cocher permet d'afficher les Annulés
 - Idem pour les terminés
 
+- Vérification de la date d'échéance : impossible de l'antidater
+
 
 Etats des événements :
 ----------------------

@@ -54,6 +54,8 @@
             this.LblCategorieView = new System.Windows.Forms.Label();
             this.LblTiersView = new System.Windows.Forms.Label();
             this.LblEcheanceView = new System.Windows.Forms.Label();
+            this.BtnAvanceEcheance = new System.Windows.Forms.Button();
+            this.BtnReculeEcheance = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblOperateur
@@ -309,12 +311,38 @@
             this.LblEcheanceView.Text = "Echeance";
             this.LblEcheanceView.Visible = false;
             // 
+            // BtnAvanceEcheance
+            // 
+            this.BtnAvanceEcheance.Image = ((System.Drawing.Image)(resources.GetObject("BtnAvanceEcheance.Image")));
+            this.BtnAvanceEcheance.Location = new System.Drawing.Point(138, 343);
+            this.BtnAvanceEcheance.Name = "BtnAvanceEcheance";
+            this.BtnAvanceEcheance.Size = new System.Drawing.Size(29, 23);
+            this.BtnAvanceEcheance.TabIndex = 21;
+            this.BtnAvanceEcheance.TabStop = false;
+            this.BtnAvanceEcheance.UseVisualStyleBackColor = true;
+            this.BtnAvanceEcheance.Visible = false;
+            this.BtnAvanceEcheance.Click += new System.EventHandler(this.BtnAvanceEcheance_Click);
+            // 
+            // BtnReculeEcheance
+            // 
+            this.BtnReculeEcheance.Image = ((System.Drawing.Image)(resources.GetObject("BtnReculeEcheance.Image")));
+            this.BtnReculeEcheance.Location = new System.Drawing.Point(108, 343);
+            this.BtnReculeEcheance.Name = "BtnReculeEcheance";
+            this.BtnReculeEcheance.Size = new System.Drawing.Size(29, 23);
+            this.BtnReculeEcheance.TabIndex = 22;
+            this.BtnReculeEcheance.TabStop = false;
+            this.BtnReculeEcheance.UseVisualStyleBackColor = true;
+            this.BtnReculeEcheance.Visible = false;
+            this.BtnReculeEcheance.Click += new System.EventHandler(this.BtnReculeEcheance_Click);
+            // 
             // EvenementEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnFermer;
             this.ClientSize = new System.Drawing.Size(524, 479);
+            this.Controls.Add(this.BtnReculeEcheance);
+            this.Controls.Add(this.BtnAvanceEcheance);
             this.Controls.Add(this.LblEcheanceView);
             this.Controls.Add(this.LblTiersView);
             this.Controls.Add(this.LblCategorieView);
@@ -378,5 +406,7 @@
         private System.Windows.Forms.Label LblCategorieView;
         private System.Windows.Forms.Label LblTiersView;
         private System.Windows.Forms.Label LblEcheanceView;
+        private System.Windows.Forms.Button BtnAvanceEcheance;
+        private System.Windows.Forms.Button BtnReculeEcheance;
     }
 }

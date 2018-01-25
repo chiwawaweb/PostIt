@@ -155,24 +155,18 @@ namespace PostIt.Forms
                 {
                     dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.FromArgb(255, 133, 51); // orange
                     dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.Black;
-                    //dgvEvenements.Rows[number].DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 179, 128);
-                    //dgvEvenements.Rows[number].DefaultCellStyle.SelectionForeColor = Color.Black;
                 }
 
                 if (echeance < Convert.ToDateTime(DateTime.Now.ToShortDateString()))
                 {
                     dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.Red;
                     dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.White;
-                    //dgvEvenements.Rows[number].DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 128, 128);
-                    //dgvEvenements.Rows[number].DefaultCellStyle.SelectionForeColor = Color.Black;
 
                 }
 
                 if (echeance == Convert.ToDateTime(DateTime.Now.AddDays(1).ToShortDateString()))
                 {
                     dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 102); // jaune
-                    //dgvEvenements.Rows[number].DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 255, 128);
-                    //dgvEvenements.Rows[number].DefaultCellStyle.SelectionForeColor = Color.Black;
                 }
 
                 /* Vérifie si événement terminé */
@@ -181,9 +175,6 @@ namespace PostIt.Forms
                     dgvEvenements.Rows[number].DefaultCellStyle.Font = new Font(this.Font, FontStyle.Strikeout);
                     dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.Gray;
                     dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.White;
-                    //dgvEvenements.Rows[number].DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 224,224);
-                    //dgvEvenements.Rows[number].DefaultCellStyle.SelectionForeColor = Color.Black;
-
                 }
 
                 /* pointe sur l'enregistrement courant */
@@ -192,12 +183,9 @@ namespace PostIt.Forms
                     dgvEvenements.Rows[number].Cells[1].Selected = true;
                 }
             }
-
-           
-
         }
 
-        public void RefreshData()
+        public void RefreshData(bool firstLine = false)
         {
             DateTime dateDebut = Convert.ToDateTime(DtpDebut.Value.ToShortDateString());
             DateTime dateFin = Convert.ToDateTime(DtpFin.Value.ToShortDateString());
@@ -205,6 +193,11 @@ namespace PostIt.Forms
 
             List<Evenement> list;
             list = evenementProvider.Search(searchText, CbxSearchCategorie.Text, ChkEnCours.Checked, ChkAVenir.Checked,ChkTermine.Checked,ChkAnnule.Checked, dateDebut, dateFin); // à completer avec mots cles / dates
+
+            if (firstLine == true)
+            {
+                idRetour = 0;
+            }
 
             CreateTable(list, idRetour);
         }
@@ -353,12 +346,16 @@ namespace PostIt.Forms
             ChkTermine.Checked = false;
             DtpDebut.Value = DateTime.Now.AddMonths(-3);
             DtpFin.Value = DateTime.Now.AddDays(30);
-
         }
 
         private void TsbActualiser_Click(object sender, EventArgs e)
         {
-            RefreshData();
+            RefreshData(true);
+        }
+
+        private void TsbReset_Click(object sender, EventArgs e)
+        {
+            ResetFiltre();
         }
     }
 }

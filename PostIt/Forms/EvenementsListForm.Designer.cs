@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvenementsListForm));
             this.dgvEvenements = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -38,6 +39,7 @@
             this.BtnFin = new System.Windows.Forms.ToolStripButton();
             this.BtnAnnuler = new System.Windows.Forms.ToolStripButton();
             this.TsbActualiser = new System.Windows.Forms.ToolStripButton();
+            this.TsbReset = new System.Windows.Forms.ToolStripButton();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.DtpFin = new System.Windows.Forms.DateTimePicker();
             this.DtpDebut = new System.Windows.Forms.DateTimePicker();
@@ -53,7 +55,7 @@
             this.LblSearchText = new System.Windows.Forms.Label();
             this.LblCategorie = new System.Windows.Forms.Label();
             this.CbxSearchCategorie = new System.Windows.Forms.ComboBox();
-            this.TsbReset = new System.Windows.Forms.ToolStripButton();
+            this.timerActualisation = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvenements)).BeginInit();
             this.toolStrip.SuspendLayout();
             this.GrpFiltre.SuspendLayout();
@@ -70,22 +72,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEvenements.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvEvenements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEvenements.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEvenements.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEvenements.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvEvenements.Location = new System.Drawing.Point(0, 108);
             this.dgvEvenements.MultiSelect = false;
             this.dgvEvenements.Name = "dgvEvenements";
             this.dgvEvenements.ReadOnly = true;
             this.dgvEvenements.RowHeadersWidth = 25;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEvenements.ShowCellErrors = false;
             this.dgvEvenements.ShowCellToolTips = false;
@@ -157,10 +159,19 @@
             this.TsbActualiser.Text = "Actualiser";
             this.TsbActualiser.Click += new System.EventHandler(this.TsbActualiser_Click);
             // 
+            // TsbReset
+            // 
+            this.TsbReset.Image = ((System.Drawing.Image)(resources.GetObject("TsbReset.Image")));
+            this.TsbReset.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbReset.Name = "TsbReset";
+            this.TsbReset.Size = new System.Drawing.Size(90, 28);
+            this.TsbReset.Text = "R.à.Z Filtre";
+            this.TsbReset.Click += new System.EventHandler(this.TsbReset_Click);
+            // 
             // TxtSearch
             // 
             this.TxtSearch.Location = new System.Drawing.Point(187, 36);
-            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(195, 20);
             this.TxtSearch.TabIndex = 1;
@@ -169,7 +180,7 @@
             // 
             this.DtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpFin.Location = new System.Drawing.Point(865, 36);
-            this.DtpFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpFin.Margin = new System.Windows.Forms.Padding(2);
             this.DtpFin.Name = "DtpFin";
             this.DtpFin.Size = new System.Drawing.Size(79, 20);
             this.DtpFin.TabIndex = 7;
@@ -180,7 +191,7 @@
             // 
             this.DtpDebut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpDebut.Location = new System.Drawing.Point(745, 36);
-            this.DtpDebut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpDebut.Margin = new System.Windows.Forms.Padding(2);
             this.DtpDebut.Name = "DtpDebut";
             this.DtpDebut.Size = new System.Drawing.Size(79, 20);
             this.DtpDebut.TabIndex = 6;
@@ -191,7 +202,7 @@
             // 
             this.BtnReset.Image = ((System.Drawing.Image)(resources.GetObject("BtnReset.Image")));
             this.BtnReset.Location = new System.Drawing.Point(1030, 31);
-            this.BtnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnReset.Margin = new System.Windows.Forms.Padding(2);
             this.BtnReset.Name = "BtnReset";
             this.BtnReset.Size = new System.Drawing.Size(36, 26);
             this.BtnReset.TabIndex = 9;
@@ -202,7 +213,7 @@
             // BtnSearch
             // 
             this.BtnSearch.Location = new System.Drawing.Point(949, 31);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(77, 26);
             this.BtnSearch.TabIndex = 8;
@@ -326,21 +337,18 @@
             this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxSearchCategorie.FormattingEnabled = true;
             this.CbxSearchCategorie.Location = new System.Drawing.Point(10, 35);
-            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2);
             this.CbxSearchCategorie.Name = "CbxSearchCategorie";
             this.CbxSearchCategorie.Size = new System.Drawing.Size(173, 21);
             this.CbxSearchCategorie.TabIndex = 0;
             this.CbxSearchCategorie.TabStop = false;
             this.CbxSearchCategorie.SelectedIndexChanged += new System.EventHandler(this.CbxSearchCategorie_SelectedIndexChanged);
             // 
-            // TsbReset
+            // timerActualisation
             // 
-            this.TsbReset.Image = ((System.Drawing.Image)(resources.GetObject("TsbReset.Image")));
-            this.TsbReset.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TsbReset.Name = "TsbReset";
-            this.TsbReset.Size = new System.Drawing.Size(90, 28);
-            this.TsbReset.Text = "R.à.Z Filtre";
-            this.TsbReset.Click += new System.EventHandler(this.TsbReset_Click);
+            this.timerActualisation.Enabled = true;
+            this.timerActualisation.Interval = 6000;
+            this.timerActualisation.Tick += new System.EventHandler(this.timerActualisation_Tick);
             // 
             // EvenementsListForm
             // 
@@ -392,5 +400,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton TsbActualiser;
         private System.Windows.Forms.ToolStripButton TsbReset;
+        private System.Windows.Forms.Timer timerActualisation;
     }
 }

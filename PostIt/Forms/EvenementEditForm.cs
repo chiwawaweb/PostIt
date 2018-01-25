@@ -25,7 +25,7 @@ namespace PostIt.Forms
         string formTitle, operateur, categorie, tiers, description, statut;
         bool evenementUpdateMode, noAnnotation;
         int _id;
-        DateTime date, echeance;
+        DateTime date, echeance, createdAt, updatedAt;
 
         EvenementsListForm _owner;
 
@@ -141,6 +141,8 @@ namespace PostIt.Forms
             tiers = evenementProvider.GetEvenementById(_id).Tiers;
             description = evenementProvider.GetEvenementById(_id).Description;
             echeance = evenementProvider.GetEvenementById(_id).Echeance;
+            createdAt = evenementProvider.GetEvenementById(_id).CreatedAt;
+            updatedAt = evenementProvider.GetEvenementById(_id).UpdatedAt;
 
             /* Affichage des donnees */
             CbxOperateur.Text = operateur;
@@ -159,6 +161,9 @@ namespace PostIt.Forms
             BtnFermer.Visible = true;
             BtnReculeEcheance.Visible = true;
             BtnAvanceEcheance.Visible = true;
+
+            /* Barre de statut */
+            TssDateCreation.Text = "Fiche crée le " + createdAt.ToString("dd/MM/yyyy HH:mm:ss");
 
             /* Si statut Annulé ou Terminé, plus de modifications */
             if (statut == "Terminé" || statut == "Annulé")
@@ -202,7 +207,10 @@ namespace PostIt.Forms
 
         private void BtnReculeEcheance_Click(object sender, EventArgs e)
         {
-            ModifEcheance(-1);
+            if (echeance > Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy")))
+            {
+                ModifEcheance(-1);
+            }
         }
 
         private void BtnAvanceEcheance_Click(object sender, EventArgs e)

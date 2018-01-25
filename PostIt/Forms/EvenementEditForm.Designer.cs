@@ -56,6 +56,10 @@
             this.LblEcheanceView = new System.Windows.Forms.Label();
             this.BtnAvanceEcheance = new System.Windows.Forms.Button();
             this.BtnReculeEcheance = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.TssDateCreation = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TssDateModification = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblOperateur
@@ -252,6 +256,7 @@
             // BtnFermer
             // 
             this.BtnFermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnFermer.Image = ((System.Drawing.Image)(resources.GetObject("BtnFermer.Image")));
             this.BtnFermer.Location = new System.Drawing.Point(369, 405);
             this.BtnFermer.Margin = new System.Windows.Forms.Padding(2);
             this.BtnFermer.Name = "BtnFermer";
@@ -259,6 +264,8 @@
             this.BtnFermer.TabIndex = 16;
             this.BtnFermer.TabStop = false;
             this.BtnFermer.Text = "Fermer";
+            this.BtnFermer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnFermer.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.BtnFermer.UseVisualStyleBackColor = true;
             this.BtnFermer.Visible = false;
             this.BtnFermer.Click += new System.EventHandler(this.BtnFermer_Click);
@@ -335,12 +342,35 @@
             this.BtnReculeEcheance.Visible = false;
             this.BtnReculeEcheance.Click += new System.EventHandler(this.BtnReculeEcheance_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TssDateCreation,
+            this.TssDateModification});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 457);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(524, 22);
+            this.statusStrip1.TabIndex = 23;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // TssDateCreation
+            // 
+            this.TssDateCreation.Name = "TssDateCreation";
+            this.TssDateCreation.Size = new System.Drawing.Size(0, 17);
+            // 
+            // TssDateModification
+            // 
+            this.TssDateModification.Name = "TssDateModification";
+            this.TssDateModification.Size = new System.Drawing.Size(0, 17);
+            // 
             // EvenementEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnFermer;
             this.ClientSize = new System.Drawing.Size(524, 479);
+            this.ControlBox = false;
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.BtnReculeEcheance);
             this.Controls.Add(this.BtnAvanceEcheance);
             this.Controls.Add(this.LblEcheanceView);
@@ -375,6 +405,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Post\'it";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EvenementEditForm_FormClosed);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +440,8 @@
         private System.Windows.Forms.Label LblEcheanceView;
         private System.Windows.Forms.Button BtnAvanceEcheance;
         private System.Windows.Forms.Button BtnReculeEcheance;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel TssDateCreation;
+        private System.Windows.Forms.ToolStripStatusLabel TssDateModification;
     }
 }

@@ -250,6 +250,10 @@ namespace PostIt.Forms
             ChangeStatut("Terminé");
         }
 
+        /// <summary>
+        /// Changement de statut du post'it
+        /// </summary>
+        /// <param name="statut">Annulé ou Terminé</param>
         private void ChangeStatut(string statut)
         {
             if (dgvEvenements.RowCount > 0)
@@ -350,12 +354,34 @@ namespace PostIt.Forms
 
         private void TsbActualiser_Click(object sender, EventArgs e)
         {
-            RefreshData(true);
+            ActualiserListe();
         }
 
         private void TsbReset_Click(object sender, EventArgs e)
         {
             ResetFiltre();
+        }
+
+        /// <summary>
+        /// Actualisation de la liste.
+        /// </summary>
+        private void ActualiserListe()
+        {
+            if (dgvEvenements.RowCount > 0)
+            {
+                idRetour = int.Parse(dgvEvenements.CurrentRow.Cells[0].Value.ToString());
+                RefreshData();
+            }
+        }
+
+        /// <summary>
+        /// Actualisation automatique de la liste à intervalle régulier.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timerActualisation_Tick(object sender, EventArgs e)
+        {
+            ActualiserListe();
         }
     }
 }

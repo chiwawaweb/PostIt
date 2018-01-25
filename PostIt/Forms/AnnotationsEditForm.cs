@@ -28,7 +28,7 @@ namespace PostIt.Forms
 
         EvenementEditForm _owner;
 
-        public AnnotationsEditForm(EvenementEditForm owner, int Id)
+        public AnnotationsEditForm(EvenementEditForm owner, int Id, bool annotationOk=false)
         {
             _id = Id;
             _owner = owner;
@@ -44,6 +44,13 @@ namespace PostIt.Forms
             }
             CbxOperateur.DataSource = dataSourceVendeur;
             CbxOperateur.DisplayMember = "Operateur";
+
+            if (annotationOk==true)
+            {
+                /* desactive la zone de saisie des annotations */
+                TxtCommentaire.Enabled = false;
+                CbxOperateur.Enabled = false;
+            }
 
         }
 

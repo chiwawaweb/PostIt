@@ -23,7 +23,7 @@ namespace PostIt.Forms
         Utils utils = new Utils();
 
         string formTitle, operateur, categorie, tiers, description, statut;
-        bool evenementUpdateMode;
+        bool evenementUpdateMode, annotationOk;
         int _id;
         DateTime date, echeance;
 
@@ -136,6 +136,7 @@ namespace PostIt.Forms
 
             /* Récupération des données */
             operateur = evenementProvider.GetEvenementById(_id).Operateur;
+            statut= evenementProvider.GetEvenementById(_id).Statut;
             categorie = evenementProvider.GetEvenementById(_id).Categorie;
             tiers = evenementProvider.GetEvenementById(_id).Tiers;
             description = evenementProvider.GetEvenementById(_id).Description;
@@ -158,6 +159,14 @@ namespace PostIt.Forms
             BtnFermer.Visible = true;
             BtnReculeEcheance.Visible = true;
             BtnAvanceEcheance.Visible = true;
+
+            /* Si statut Annulé ou Terminé, plus de modifications */
+            if (statut == "Terminé" || statut == "Annulé")
+            {
+                BtnModifier.Visible = false;
+                BtnAvanceEcheance.Visible = false;
+                BtnReculeEcheance.Visible = false;
+            }
         }
 
         private void BtnCommentaires_Click(object sender, EventArgs e)

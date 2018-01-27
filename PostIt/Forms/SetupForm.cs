@@ -36,6 +36,7 @@ namespace PostIt.Forms
             AddUpdateAppSettings("dbPath", dbPath);
             AddUpdateConnString("DefaultConnection", dbPath);
             Close();
+            Application.Restart();
         }
 
         static void AddUpdateAppSettings(string key, string value)
@@ -94,6 +95,7 @@ namespace PostIt.Forms
         private void BtnSave_Click(object sender, EventArgs e)
         {
             SaveSetup();
+            
         }
     }
 }

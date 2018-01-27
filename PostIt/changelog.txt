@@ -1,6 +1,9 @@
-﻿[25/01/2018] Version 1.0.2
+﻿[] Version 1.0.3
+Redémarrage après application des paramètres.
+
+[25/01/2018] Version 1.0.2
 Possibilité de modifier la date d'échéance.
-Correction de bug mineurs
+Correction de bug mineurs.
 
 [24/01/2018] Version 1.0.1
 Correction de bugs mineurs.

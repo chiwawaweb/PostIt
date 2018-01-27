@@ -68,7 +68,7 @@ namespace PostIt.Forms
         private void SaveAnnotation()
         {
             /* Recuperation des donnees */
-            commentaire = utils.RemoveDiacritics(TxtCommentaire.Text.ToUpper().Trim());
+            commentaire = TxtCommentaire.Text.ToUpper().Trim();
             operateur = utils.RemoveDiacritics(CbxOperateur.Text.ToUpper().Trim());
 
             /* Verification des donnees */

@@ -192,7 +192,7 @@ namespace PostIt.Forms
             string searchText = utils.RemoveDiacritics(TxtSearch.Text);
 
             List<Evenement> list;
-            list = evenementProvider.Search(searchText, CbxSearchCategorie.Text, ChkEnCours.Checked, ChkAVenir.Checked,ChkTermine.Checked,ChkAnnule.Checked, dateDebut, dateFin); // à completer avec mots cles / dates
+            list = evenementProvider.Search(searchText, CbxSearchCategorie.Text, ChkEnCours.Checked,ChkTermine.Checked,ChkAnnule.Checked, dateDebut, dateFin); // à completer avec mots cles / dates
 
             if (firstLine == true)
             {
@@ -345,7 +345,6 @@ namespace PostIt.Forms
             CbxSearchCategorie.Text = "";
             TxtSearch.Text = "";
             ChkEnCours.Checked = true;
-            ChkAVenir.Checked = false;
             ChkAnnule.Checked = false;
             ChkTermine.Checked = false;
             DtpDebut.Value = DateTime.Now.AddMonths(-3);

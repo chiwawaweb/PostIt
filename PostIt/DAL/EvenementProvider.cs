@@ -27,16 +27,13 @@ namespace PostIt.DAL
             }
         }
 
-        public List<Evenement> Search(string keywords, string categorie, bool ENC, bool AVE, bool FIN, bool ANN, DateTime dateDebut, DateTime dateFin)
+        public List<Evenement> Search(string keywords, string categorie, bool ENC, bool FIN, bool ANN, DateTime dateDebut, DateTime dateFin)
         {
             if (ENC == true) statutENC = "En cours";
             else statutENC = "";
 
             if (ANN == true) statutANN = "Annulé";
             else statutANN = "";
-
-            if (AVE == true) statutAVE = "A venir";
-            else statutAVE = "";
 
             if (FIN == true) statutFIN = "Terminé";
             else statutFIN = "";

@@ -59,6 +59,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.TssDateCreation = new System.Windows.Forms.ToolStripStatusLabel();
             this.TssDateModification = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TssStatut = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             this.LblOperateur.Location = new System.Drawing.Point(28, 58);
             this.LblOperateur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblOperateur.Name = "LblOperateur";
-            this.LblOperateur.Size = new System.Drawing.Size(84, 16);
+            this.LblOperateur.Size = new System.Drawing.Size(128, 23);
             this.LblOperateur.TabIndex = 0;
             this.LblOperateur.Text = "Collaborateur";
             // 
@@ -80,7 +81,7 @@
             this.CbxOperateur.Location = new System.Drawing.Point(28, 77);
             this.CbxOperateur.Margin = new System.Windows.Forms.Padding(2);
             this.CbxOperateur.Name = "CbxOperateur";
-            this.CbxOperateur.Size = new System.Drawing.Size(217, 24);
+            this.CbxOperateur.Size = new System.Drawing.Size(217, 31);
             this.CbxOperateur.TabIndex = 0;
             // 
             // CbxCategorie
@@ -90,7 +91,7 @@
             this.CbxCategorie.Location = new System.Drawing.Point(289, 77);
             this.CbxCategorie.Margin = new System.Windows.Forms.Padding(2);
             this.CbxCategorie.Name = "CbxCategorie";
-            this.CbxCategorie.Size = new System.Drawing.Size(208, 24);
+            this.CbxCategorie.Size = new System.Drawing.Size(208, 31);
             this.CbxCategorie.TabIndex = 1;
             // 
             // LblCategorie
@@ -99,7 +100,7 @@
             this.LblCategorie.Location = new System.Drawing.Point(289, 58);
             this.LblCategorie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblCategorie.Name = "LblCategorie";
-            this.LblCategorie.Size = new System.Drawing.Size(63, 16);
+            this.LblCategorie.Size = new System.Drawing.Size(96, 23);
             this.LblCategorie.TabIndex = 2;
             this.LblCategorie.Text = "Catégorie";
             // 
@@ -108,7 +109,7 @@
             this.TxtTiers.Location = new System.Drawing.Point(28, 133);
             this.TxtTiers.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTiers.Name = "TxtTiers";
-            this.TxtTiers.Size = new System.Drawing.Size(217, 22);
+            this.TxtTiers.Size = new System.Drawing.Size(217, 30);
             this.TxtTiers.TabIndex = 2;
             // 
             // LblTiers
@@ -117,7 +118,7 @@
             this.LblTiers.Location = new System.Drawing.Point(28, 114);
             this.LblTiers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTiers.Name = "LblTiers";
-            this.LblTiers.Size = new System.Drawing.Size(93, 16);
+            this.LblTiers.Size = new System.Drawing.Size(139, 23);
             this.LblTiers.TabIndex = 5;
             this.LblTiers.Text = "Tiers concerné";
             // 
@@ -138,7 +139,7 @@
             this.LblDescription.Location = new System.Drawing.Point(28, 166);
             this.LblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblDescription.Name = "LblDescription";
-            this.LblDescription.Size = new System.Drawing.Size(138, 16);
+            this.LblDescription.Size = new System.Drawing.Size(207, 23);
             this.LblDescription.TabIndex = 8;
             this.LblDescription.Text = "Description / Message";
             // 
@@ -148,7 +149,7 @@
             this.DtpEcheance.Location = new System.Drawing.Point(28, 343);
             this.DtpEcheance.Margin = new System.Windows.Forms.Padding(2);
             this.DtpEcheance.Name = "DtpEcheance";
-            this.DtpEcheance.Size = new System.Drawing.Size(110, 22);
+            this.DtpEcheance.Size = new System.Drawing.Size(110, 30);
             this.DtpEcheance.TabIndex = 5;
             // 
             // LblEcheance
@@ -157,7 +158,7 @@
             this.LblEcheance.Location = new System.Drawing.Point(28, 325);
             this.LblEcheance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblEcheance.Name = "LblEcheance";
-            this.LblEcheance.Size = new System.Drawing.Size(107, 16);
+            this.LblEcheance.Size = new System.Drawing.Size(161, 23);
             this.LblEcheance.TabIndex = 11;
             this.LblEcheance.Text = "Echéance prévue";
             // 
@@ -244,7 +245,7 @@
             this.LblTitre.ForeColor = System.Drawing.Color.White;
             this.LblTitre.Location = new System.Drawing.Point(28, 15);
             this.LblTitre.Name = "LblTitre";
-            this.LblTitre.Size = new System.Drawing.Size(142, 18);
+            this.LblTitre.Size = new System.Drawing.Size(223, 27);
             this.LblTitre.TabIndex = 15;
             this.LblTitre.Text = "Edition d\'un Post\'it";
             // 
@@ -277,7 +278,7 @@
             this.LblOperateurView.Location = new System.Drawing.Point(28, 79);
             this.LblOperateurView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblOperateurView.Name = "LblOperateurView";
-            this.LblOperateurView.Size = new System.Drawing.Size(95, 16);
+            this.LblOperateurView.Size = new System.Drawing.Size(138, 24);
             this.LblOperateurView.TabIndex = 17;
             this.LblOperateurView.Text = "Collaborateur";
             this.LblOperateurView.Visible = false;
@@ -289,7 +290,7 @@
             this.LblCategorieView.Location = new System.Drawing.Point(289, 79);
             this.LblCategorieView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblCategorieView.Name = "LblCategorieView";
-            this.LblCategorieView.Size = new System.Drawing.Size(70, 16);
+            this.LblCategorieView.Size = new System.Drawing.Size(101, 24);
             this.LblCategorieView.TabIndex = 18;
             this.LblCategorieView.Text = "Categorie";
             this.LblCategorieView.Visible = false;
@@ -301,7 +302,7 @@
             this.LblTiersView.Location = new System.Drawing.Point(28, 135);
             this.LblTiersView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTiersView.Name = "LblTiersView";
-            this.LblTiersView.Size = new System.Drawing.Size(39, 16);
+            this.LblTiersView.Size = new System.Drawing.Size(58, 24);
             this.LblTiersView.TabIndex = 19;
             this.LblTiersView.Text = "Tiers";
             this.LblTiersView.Visible = false;
@@ -313,7 +314,7 @@
             this.LblEcheanceView.Location = new System.Drawing.Point(28, 347);
             this.LblEcheanceView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblEcheanceView.Name = "LblEcheanceView";
-            this.LblEcheanceView.Size = new System.Drawing.Size(70, 16);
+            this.LblEcheanceView.Size = new System.Drawing.Size(102, 24);
             this.LblEcheanceView.TabIndex = 20;
             this.LblEcheanceView.Text = "Echeance";
             this.LblEcheanceView.Visible = false;
@@ -344,28 +345,40 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TssDateCreation,
-            this.TssDateModification});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 457);
+            this.TssDateModification,
+            this.TssStatut});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 449);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(524, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(524, 30);
+            this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 23;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // TssDateCreation
             // 
             this.TssDateCreation.Name = "TssDateCreation";
-            this.TssDateCreation.Size = new System.Drawing.Size(0, 17);
+            this.TssDateCreation.Size = new System.Drawing.Size(19, 25);
+            this.TssDateCreation.Text = "-";
             // 
             // TssDateModification
             // 
             this.TssDateModification.Name = "TssDateModification";
-            this.TssDateModification.Size = new System.Drawing.Size(0, 17);
+            this.TssDateModification.Size = new System.Drawing.Size(0, 25);
+            // 
+            // TssStatut
+            // 
+            this.TssStatut.Name = "TssStatut";
+            this.TssStatut.Size = new System.Drawing.Size(444, 25);
+            this.TssStatut.Spring = true;
+            this.TssStatut.Text = "-";
+            this.TssStatut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // EvenementEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnFermer;
             this.ClientSize = new System.Drawing.Size(524, 479);
@@ -443,5 +456,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel TssDateCreation;
         private System.Windows.Forms.ToolStripStatusLabel TssDateModification;
+        private System.Windows.Forms.ToolStripStatusLabel TssStatut;
     }
 }

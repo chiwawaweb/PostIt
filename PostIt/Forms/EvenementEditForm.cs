@@ -163,7 +163,8 @@ namespace PostIt.Forms
             BtnAvanceEcheance.Visible = true;
 
             /* Barre de statut */
-            TssDateCreation.Text = "Fiche crée le " + createdAt.ToString("dd/MM/yyyy HH:mm:ss");
+            TssDateCreation.Text = "Fiche créée le " + createdAt.ToString("dd/MM/yyyy HH:mm:ss");
+            TssStatut.Text = "Statut : " + statut;
 
             /* Si statut Annulé ou Terminé, plus de modifications */
             if (statut == "Terminé" || statut == "Annulé")
@@ -256,7 +257,7 @@ namespace PostIt.Forms
             operateur = utils.RemoveDiacritics(CbxOperateur.Text.ToUpper().Trim());
             categorie = CbxCategorie.Text.Trim();
             tiers = utils.RemoveDiacritics(TxtTiers.Text.ToUpper().Trim());
-            description = utils.RemoveDiacritics(TxtDescription.Text.ToUpper().Trim());
+            description = TxtDescription.Text.ToUpper().Trim();
             statut = "En cours";
             echeance = Convert.ToDateTime(DtpEcheance.Value.ToShortDateString());
 

@@ -18,6 +18,7 @@
 
 - Vérification de la date d'échéance : impossible de l'antidater
 
+- Supprimer la catégorie "Commande spéciale"
 
 Etats des événements :
 ----------------------

@@ -27,9 +27,9 @@ namespace PostIt.Forms
 
             /* Combobox Catégorie */
             var dsCategorie = new List<Categorie>();
-            Categorie categorievide = new Categorie();
-            categorievide.Nom = "";
-            dsCategorie.Add(categorievide);
+            Categorie categorieVide = new Categorie();
+            categorieVide.Nom = "";
+            dsCategorie.Add(categorieVide);
             foreach (Categorie categorie in utils.AllCategoriesActives())
             {
                 if (categorie.Actif == true)

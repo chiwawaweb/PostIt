@@ -1,4 +1,8 @@
-﻿[] Version 1.0.3
+﻿[28/01/2018] Version 1.0.4
+Correction du bug consistant à pouvoir démarrer une nouvelle session de l'application quand elle est déjà lancée.
+A la création d'un post'it, la catégorie par défaut est vide.
+
+[27/01/2018] Version 1.0.3
 Redémarrage après application des paramètres.
 
 [25/01/2018] Version 1.0.2

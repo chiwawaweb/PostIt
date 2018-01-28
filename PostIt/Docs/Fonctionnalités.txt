@@ -1,7 +1,6 @@
 ﻿FONCTIONNALITES
 ===============
 
-- Agenda avec rappels
 - Numeros de téléphone utiles (prestataires, fournisseurs, hotlines)
 - Suivi (probleme/commande) client
     - pochette photo/video perdue
@@ -11,11 +10,6 @@
 	- système d'historique de suivi (commentaires)
 - Affichage des derniers commentaires sur la page d'accueil
 
-- Quand état passe à terminé, un commentaire auto est ajouté avec la date et l'heure
-
-- Dans la liste des post'it, une case à cocher permet d'afficher les Annulés
-- Idem pour les terminés
-
 - Vérification de la date d'échéance : impossible de l'antidater
 
 - Supprimer la catégorie "Commande spéciale"
@@ -24,5 +18,4 @@ Etats des événements :
 ----------------------
 - En cours
 - Terminé
-- A venir (agenda)
 - Annulé

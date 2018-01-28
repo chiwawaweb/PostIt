@@ -206,7 +206,11 @@ namespace PostIt.Forms
 
         private void BtnModifier_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("La modification n'est pas encore disponible...", "Fonction à venir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Etes-vous certain de vouloir modifier cette fiche ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                UpdateMode();
+            }
         }
 
         private void BtnReculeEcheance_Click(object sender, EventArgs e)
@@ -276,7 +280,7 @@ namespace PostIt.Forms
 
             if (categorie.Length<3)
             {
-                bool errors = true;
+                erreurs = true;
                 errMsg += "- Catégorie incorrecte\n";
             }
 
@@ -297,7 +301,6 @@ namespace PostIt.Forms
                 erreurs = true;
                 errMsg += "- Statut incorrect\n";
             }
-
 
             if (erreurs == true)
             {
@@ -323,7 +326,17 @@ namespace PostIt.Forms
 
         private void UpdateDatabase()
         {
-            
+            Evenement evenement = evenementProvider.GetEvenementById(_id);
+
+            evenement.Categorie = categorie;
+            evenement.Operateur = operateur;
+            evenement.Tiers = tiers;
+            evenement.Description = description;
+            evenement.Statut = statut;
+            evenement.Echeance = echeance;
+            evenement.UpdatedAt = DateTime.Now;
+
+            evenementProvider.Update(evenement);
         }
 
         private void AddDatabase()
@@ -348,6 +361,26 @@ namespace PostIt.Forms
             AnnotationsBtnUpdate();
         }
 
-        
+        private void UpdateMode()
+        {
+            LblOperateurView.Visible = false;
+            CbxOperateur.Visible = true;
+            LblCategorieView.Visible = false;
+            CbxCategorie.Visible = true;
+            TxtDescription.ReadOnly = false;
+            BtnCommentaires.Visible = false;
+            BtnEnregistrer.Visible = true;
+            BtnFermer.Visible = false;
+            BtnAnnuler.Visible = true;
+            BtnModifier.Visible = false;
+            LblEcheanceView.Visible = false;
+            BtnAvanceEcheance.Visible = false;
+            BtnReculeEcheance.Visible = false;
+            DtpEcheance.Visible = true;
+            DtpEcheance.Value = echeance;
+            LblTiersView.Visible = false;
+            TxtTiers.Visible = true;
+            LblTitre.Text = "Modification d'un post'it";
+        }
     }
 }

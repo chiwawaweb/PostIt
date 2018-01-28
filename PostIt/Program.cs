@@ -30,7 +30,6 @@ namespace PostIt
             Application.SetCompatibleTextRenderingDefault(false);
             var app = new App();
             app.Run(args);
-            //Application.Run(new Forms.MainForm());
         }
     }
 }

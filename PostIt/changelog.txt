@@ -1,4 +1,7 @@
-﻿[28/01/2018] Version 1.0.4
+﻿[29/01/2018] Version 1.0.5
+Ajout de la possibilité de modification d'un post'it.
+
+[28/01/2018] Version 1.0.4
 Correction du bug consistant à pouvoir démarrer une nouvelle session de l'application quand elle est déjà lancée.
 A la création d'un post'it, la catégorie par défaut est vide.
 

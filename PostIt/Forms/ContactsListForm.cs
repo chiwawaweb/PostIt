@@ -26,7 +26,7 @@ namespace PostIt.Forms
             InitializeComponent();
         }
 
-        private void CreateTable(List<Evenement> list, int _idRetour)
+        private void CreateTable(List<Contact> list, int _idRetour)
         {
             idRetour = _idRetour;
 
@@ -35,31 +35,86 @@ namespace PostIt.Forms
             dgvContacts.Columns.Clear();
 
             /* Mise en forme du tableau */
-            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn();
-            idColumn.Name = "ID";
-            idColumn.HeaderText = "#";
-            idColumn.Width = 50;
-            idColumn.Visible = true;
-            idColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            idColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DataGridViewTextBoxColumn idCol = new DataGridViewTextBoxColumn();
+            idCol.Name = "ID";
+            idCol.HeaderText = "#";
+            idCol.Width = 50;
+            idCol.Visible = true;
+            idCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            idCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
+            DataGridViewTextBoxColumn typeCol = new DataGridViewTextBoxColumn();
+            typeCol.Name = "Type";
+            typeCol.HeaderText = "CATEGORIE";
+            typeCol.Width = 100;
+            typeCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
+            DataGridViewTextBoxColumn nomCol = new DataGridViewTextBoxColumn();
+            nomCol.Name = "Nom";
+            nomCol.HeaderText = "NOM";
+            nomCol.Width = 250;
+            nomCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            
+            DataGridViewTextBoxColumn telCol = new DataGridViewTextBoxColumn();
+            telCol.Name = "Téléphone";
+            telCol.HeaderText = "TELEPHONE";
+            telCol.Width = 120;
+            telCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn faxCol = new DataGridViewTextBoxColumn();
+            faxCol.Name = "Fax";
+            faxCol.HeaderText = "FAX";
+            faxCol.Width = 120;
+            faxCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn gsmCol = new DataGridViewTextBoxColumn();
+            gsmCol.Name = "Gsm";
+            gsmCol.HeaderText = "GSM";
+            gsmCol.Width = 120;
+            gsmCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn emailCol = new DataGridViewTextBoxColumn();
+            emailCol.Name = "Email";
+            emailCol.HeaderText = "EMAIL";
+            emailCol.Width = 170;
+            emailCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
 
 
             /* Création des colonnes */
-            dgvContacts.Columns.Add(idColumn);
-
-
+            dgvContacts.Columns.Add(idCol);
+            dgvContacts.Columns.Add(typeCol);
+            dgvContacts.Columns.Add(nomCol);
+            dgvContacts.Columns.Add(telCol);
+            dgvContacts.Columns.Add(faxCol);
+            dgvContacts.Columns.Add(gsmCol);
+            dgvContacts.Columns.Add(emailCol);
         }
 
-
-
-        private void EvenementsListForm_Load(object sender, EventArgs e)
+        public void RefreshData(bool firstLine = false)
         {
-            //RefreshData();
+            //string searchText = utils.RemoveDiacritics(TxtSearch.Text);
 
+            List<Contact> list;
+            list = contactProvider.Search();
+
+            if (firstLine == true)
+            {
+                idRetour = 0;
+            }
+
+            CreateTable(list, idRetour);
+        }
+
+        private void ContactsListForm_Load(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void TsbNewContact_Click(object sender, EventArgs e)
+        {
+            ContactEditForm frm = new ContactEditForm();
+            frm.ShowDialog();
         }
     }
 }

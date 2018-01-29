@@ -93,6 +93,12 @@
     <Compile Include="Forms\AnnotationsEditForm.Designer.cs">
       <DependentUpon>AnnotationsEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ContactEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ContactEditForm.Designer.cs">
+      <DependentUpon>ContactEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ContactsListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AnnotationsEditForm.resx">
       <DependentUpon>AnnotationsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ContactEditForm.resx">
+      <DependentUpon>ContactEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ContactsListForm.resx">
       <DependentUpon>ContactsListForm.cs</DependentUpon>

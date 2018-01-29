@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PostIt.Classes
 {
-    public class Categorie
+    public class Pays
     {
         public int? Id { get; set; }
         public string Nom { get; set; }

@@ -26,11 +26,11 @@ namespace PostIt.Forms
             InitializeComponent();
 
             /* Combobox Catégorie */
-            var dsCategorie = new List<Categorie>();
-            Categorie categorieVide = new Categorie();
+            var dsCategorie = new List<CategorieEvenement>();
+            CategorieEvenement categorieVide = new CategorieEvenement();
             categorieVide.Nom = "";
             dsCategorie.Add(categorieVide);
-            foreach (Categorie categorie in utils.AllCategoriesActives())
+            foreach (CategorieEvenement categorie in utils.AllCategoriesEvenementsActives())
             {
                 if (categorie.Actif == true)
                 {

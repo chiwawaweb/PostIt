@@ -12,25 +12,26 @@ namespace PostIt.Classes
 {
     public class Utils
     {
-        public List<Categorie> AllCategoriesActives()
+        public List<CategorieEvenement> AllCategoriesEvenementsActives()
         {
-            List<Categorie> categories = new List<Categorie>()
+            List<CategorieEvenement> categoriesEvenements = new List<CategorieEvenement>()
             {
-                new Categorie { Nom="Message à un collaborateur", Abrv="MSG", Actif=true },
-                new Categorie { Nom="Demande prix", Abrv="DPX", Actif=true },
-                new Categorie { Nom="Suivi de réparation", Abrv="REP", Actif=true },
-                new Categorie { Nom="Pochette photo/video perdue", Abrv="PHO", Actif=true },
-                new Categorie { Nom="Rappel agenda", Abrv="AGD", Actif=true },
-                new Categorie { Nom="Livraison à convenir", Abrv="LIV", Actif=true },
-                new Categorie { Nom="Suivi de commande", Abrv="CDS", Actif=true },
-                new Categorie { Nom="Attente virement", Abrv="VIR", Actif=true },
-                new Categorie { Nom="Demande de transfert", Abrv="TRS", Actif=false },
-                new Categorie { Nom="A faire", Abrv="TAF", Actif=true }
+                new CategorieEvenement { Nom="Message à un collaborateur", Abrv="MSG", Actif=true },
+                new CategorieEvenement { Nom="Demande prix", Abrv="DPX", Actif=true },
+                new CategorieEvenement { Nom="Suivi de réparation", Abrv="REP", Actif=true },
+                new CategorieEvenement { Nom="Pochette photo/video perdue", Abrv="PHO", Actif=true },
+                new CategorieEvenement { Nom="Rappel agenda", Abrv="AGD", Actif=true },
+                new CategorieEvenement { Nom="Livraison à convenir", Abrv="LIV", Actif=true },
+                new CategorieEvenement { Nom="Suivi de commande", Abrv="CDS", Actif=true },
+                new CategorieEvenement { Nom="Attente virement", Abrv="VIR", Actif=true },
+                new CategorieEvenement { Nom="Demande de transfert", Abrv="TRS", Actif=false },
+                new CategorieEvenement { Nom="A faire", Abrv="TAF", Actif=true }
             };
 
-            return categories.OrderBy(o => o.Nom).ToList();
+            return categoriesEvenements.OrderBy(o => o.Nom).ToList();
         }
 
+        /*
         public List<Statut> AllStatutsActives()
         {
             List<Statut> statuts = new List<Statut>()
@@ -42,6 +43,20 @@ namespace PostIt.Classes
             };
 
             return statuts;
+        }
+        */
+
+        public List<CategorieContact> AllCategoriesContactsActives()
+        {
+            List<CategorieContact> categoriesContacts = new List<CategorieContact>()
+            {
+                new CategorieContact { Nom="Fournisseur", Abrv="FRS", Actif=true },
+                new CategorieContact { Nom="Interne", Abrv="INT", Actif=true },
+                new CategorieContact { Nom="Service après-vente", Abrv="SAV", Actif=true },
+                
+            };
+
+            return categoriesContacts.OrderBy(o => o.Nom).ToList();
         }
 
         public string RemoveDiacritics(String s)

@@ -31,21 +31,6 @@ namespace PostIt.Classes
             return categoriesEvenements.OrderBy(o => o.Nom).ToList();
         }
 
-        /*
-        public List<Statut> AllStatutsActives()
-        {
-            List<Statut> statuts = new List<Statut>()
-            {
-                new Statut { Id=0, Nom="En cours", Abrv="ENC", Actif=true },
-                new Statut { Id=1, Nom="Terminé", Abrv="FIN", Actif=true },
-                new Statut { Id=2, Nom="A venir", Abrv="AVN", Actif=true },
-                new Statut { Id=3, Nom="Annulé", Abrv="ANN", Actif=false}
-            };
-
-            return statuts;
-        }
-        */
-
         public List<CategorieContact> AllCategoriesContactsActives()
         {
             List<CategorieContact> categoriesContacts = new List<CategorieContact>()
@@ -53,11 +38,28 @@ namespace PostIt.Classes
                 new CategorieContact { Nom="Fournisseur", Abrv="FRS", Actif=true },
                 new CategorieContact { Nom="Interne", Abrv="INT", Actif=true },
                 new CategorieContact { Nom="Service après-vente", Abrv="SAV", Actif=true },
-                
             };
 
             return categoriesContacts.OrderBy(o => o.Nom).ToList();
         }
+
+        public List<Pays> AllPaysActives()
+        {
+            List<Pays> pays = new List<Pays>()
+            {
+                new Pays { Nom="France", Abrv="FR", Actif=true },
+                new Pays { Nom="Belgique", Abrv="BE", Actif=true },
+                new Pays { Nom="Allemagne", Abrv="DE", Actif=true },
+                new Pays { Nom="Luxembourg", Abrv="LU", Actif=true },
+                new Pays { Nom="Suisse", Abrv="CH", Actif=true },
+                new Pays { Nom="Pays-Bas", Abrv="NL", Actif=true },
+                new Pays { Nom="Angleterre", Abrv="UK", Actif=true },
+                new Pays { Nom="Espagne", Abrv="ES", Actif=true },
+            };
+
+            return pays.OrderBy(o => o.Nom).ToList();
+        }
+
 
         public string RemoveDiacritics(String s)
         {

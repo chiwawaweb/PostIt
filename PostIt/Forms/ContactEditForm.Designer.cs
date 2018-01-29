@@ -67,6 +67,7 @@
             // 
             // CbxType
             // 
+            this.CbxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxType.FormattingEnabled = true;
             this.CbxType.Location = new System.Drawing.Point(88, 22);
             this.CbxType.Name = "CbxType";
@@ -179,6 +180,7 @@
             // 
             // CbxPays
             // 
+            this.CbxPays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxPays.FormattingEnabled = true;
             this.CbxPays.Location = new System.Drawing.Point(88, 205);
             this.CbxPays.Name = "CbxPays";
@@ -198,21 +200,21 @@
             // 
             this.TxtTel.Location = new System.Drawing.Point(88, 232);
             this.TxtTel.Name = "TxtTel";
-            this.TxtTel.Size = new System.Drawing.Size(100, 20);
+            this.TxtTel.Size = new System.Drawing.Size(121, 20);
             this.TxtTel.TabIndex = 9;
             // 
             // TxtFax
             // 
             this.TxtFax.Location = new System.Drawing.Point(88, 258);
             this.TxtFax.Name = "TxtFax";
-            this.TxtFax.Size = new System.Drawing.Size(100, 20);
+            this.TxtFax.Size = new System.Drawing.Size(121, 20);
             this.TxtFax.TabIndex = 10;
             // 
             // TxtGsm
             // 
             this.TxtGsm.Location = new System.Drawing.Point(88, 284);
             this.TxtGsm.Name = "TxtGsm";
-            this.TxtGsm.Size = new System.Drawing.Size(100, 20);
+            this.TxtGsm.Size = new System.Drawing.Size(121, 20);
             this.TxtGsm.TabIndex = 11;
             // 
             // label9

@@ -73,7 +73,6 @@
   <ItemGroup>
     <Compile Include="Classes\CategorieContact.cs" />
     <Compile Include="Classes\Pays.cs" />
-    <Compile Include="Classes\Statut.cs" />
     <Compile Include="Classes\CategorieEvenement.cs" />
     <Compile Include="Classes\Utils.cs" />
     <Compile Include="DAL\AnnotationProvider.cs" />

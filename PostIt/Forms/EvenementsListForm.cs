@@ -153,25 +153,23 @@ namespace PostIt.Forms
                 /* Coloration des lignes en fonction de l'échance */
                 if (echeance == Convert.ToDateTime(DateTime.Now.ToShortDateString()))
                 {
-                    rowColorChange(number, Color.Black, Color.FromArgb(255, 133, 51));
+                    rowColorChange(number, Color.Black, Color.FromArgb(255, 133, 51), FontStyle.Regular);
                 }
 
                 if (echeance < Convert.ToDateTime(DateTime.Now.ToShortDateString()))
                 {
-                    rowColorChange(number, Color.White, Color.Red);
-                    dgvEvenements.Rows[number].DefaultCellStyle.Font = new Font(this.Font, FontStyle.Bold);
+                    rowColorChange(number, Color.White, Color.Red, FontStyle.Bold);
                 }
 
                 if (echeance == Convert.ToDateTime(DateTime.Now.AddDays(1).ToShortDateString()))
                 {
-                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 102); // jaune
+                    rowColorChange(number, Color.Black, Color.FromArgb(255, 255, 102), FontStyle.Regular);
                 }
 
                 /* Vérifie si événement terminé */
                 if (statut == "Terminé" || statut == "Annulé")
                 {
-                    dgvEvenements.Rows[number].DefaultCellStyle.Font = new Font(this.Font, FontStyle.Strikeout);
-                    rowColorChange(number, Color.Gray, Color.White);
+                    rowColorChange(number, Color.Gray, Color.White, FontStyle.Strikeout);
                 }
 
                 /* pointe sur l'enregistrement courant */
@@ -188,10 +186,11 @@ namespace PostIt.Forms
         /// <param name="row">ID de la ligne</param>
         /// <param name="fore">Couleur de police</param>
         /// <param name="back">Couleur de fond</param>
-        private void rowColorChange(int row, Color fore, Color back)
+        private void rowColorChange(int row, Color fore, Color back, FontStyle fontStyle)
         {
             dgvEvenements.Rows[row].DefaultCellStyle.ForeColor = fore;
             dgvEvenements.Rows[row].DefaultCellStyle.BackColor = back;
+            dgvEvenements.Rows[row].DefaultCellStyle.Font = new Font(this.Font, fontStyle);
         }
 
         public void RefreshData(bool firstLine = false)

@@ -153,15 +153,13 @@ namespace PostIt.Forms
                 /* Coloration des lignes en fonction de l'échance */
                 if (echeance == Convert.ToDateTime(DateTime.Now.ToShortDateString()))
                 {
-                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.FromArgb(255, 133, 51); // orange
-                    dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.Black;
+                    rowColorChange(number, Color.Black, Color.FromArgb(255, 133, 51));
                 }
 
                 if (echeance < Convert.ToDateTime(DateTime.Now.ToShortDateString()))
                 {
-                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.Red;
-                    dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.White;
-
+                    rowColorChange(number, Color.White, Color.Red);
+                    dgvEvenements.Rows[number].DefaultCellStyle.Font = new Font(this.Font, FontStyle.Bold);
                 }
 
                 if (echeance == Convert.ToDateTime(DateTime.Now.AddDays(1).ToShortDateString()))
@@ -173,8 +171,7 @@ namespace PostIt.Forms
                 if (statut == "Terminé" || statut == "Annulé")
                 {
                     dgvEvenements.Rows[number].DefaultCellStyle.Font = new Font(this.Font, FontStyle.Strikeout);
-                    dgvEvenements.Rows[number].DefaultCellStyle.ForeColor = Color.Gray;
-                    dgvEvenements.Rows[number].DefaultCellStyle.BackColor = Color.White;
+                    rowColorChange(number, Color.Gray, Color.White);
                 }
 
                 /* pointe sur l'enregistrement courant */
@@ -183,6 +180,18 @@ namespace PostIt.Forms
                     dgvEvenements.Rows[number].Cells[1].Selected = true;
                 }
             }
+        }
+
+        /// <summary>
+        /// Change le style d'une ligne
+        /// </summary>
+        /// <param name="row">ID de la ligne</param>
+        /// <param name="fore">Couleur de police</param>
+        /// <param name="back">Couleur de fond</param>
+        private void rowColorChange(int row, Color fore, Color back)
+        {
+            dgvEvenements.Rows[row].DefaultCellStyle.ForeColor = fore;
+            dgvEvenements.Rows[row].DefaultCellStyle.BackColor = back;
         }
 
         public void RefreshData(bool firstLine = false)

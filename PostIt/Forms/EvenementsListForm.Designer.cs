@@ -170,7 +170,7 @@
             // TxtSearch
             // 
             this.TxtSearch.Location = new System.Drawing.Point(187, 36);
-            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(195, 20);
             this.TxtSearch.TabIndex = 1;
@@ -180,7 +180,7 @@
             // 
             this.DtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpFin.Location = new System.Drawing.Point(865, 36);
-            this.DtpFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpFin.Margin = new System.Windows.Forms.Padding(2);
             this.DtpFin.Name = "DtpFin";
             this.DtpFin.Size = new System.Drawing.Size(79, 20);
             this.DtpFin.TabIndex = 7;
@@ -191,7 +191,7 @@
             // 
             this.DtpDebut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpDebut.Location = new System.Drawing.Point(745, 36);
-            this.DtpDebut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpDebut.Margin = new System.Windows.Forms.Padding(2);
             this.DtpDebut.Name = "DtpDebut";
             this.DtpDebut.Size = new System.Drawing.Size(79, 20);
             this.DtpDebut.TabIndex = 6;
@@ -202,7 +202,7 @@
             // 
             this.BtnReset.Image = ((System.Drawing.Image)(resources.GetObject("BtnReset.Image")));
             this.BtnReset.Location = new System.Drawing.Point(1030, 31);
-            this.BtnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnReset.Margin = new System.Windows.Forms.Padding(2);
             this.BtnReset.Name = "BtnReset";
             this.BtnReset.Size = new System.Drawing.Size(36, 26);
             this.BtnReset.TabIndex = 9;
@@ -213,7 +213,7 @@
             // BtnSearch
             // 
             this.BtnSearch.Location = new System.Drawing.Point(949, 31);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(77, 26);
             this.BtnSearch.TabIndex = 8;
@@ -323,12 +323,13 @@
             this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxSearchCategorie.FormattingEnabled = true;
             this.CbxSearchCategorie.Location = new System.Drawing.Point(10, 35);
-            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2);
             this.CbxSearchCategorie.Name = "CbxSearchCategorie";
             this.CbxSearchCategorie.Size = new System.Drawing.Size(173, 21);
             this.CbxSearchCategorie.TabIndex = 0;
             this.CbxSearchCategorie.TabStop = false;
             this.CbxSearchCategorie.SelectedIndexChanged += new System.EventHandler(this.CbxSearchCategorie_SelectedIndexChanged);
+            this.CbxSearchCategorie.SelectionChangeCommitted += new System.EventHandler(this.CbxSearchCategorie_SelectionChangeCommitted);
             // 
             // timerActualisation
             // 

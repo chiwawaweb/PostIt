@@ -331,7 +331,7 @@ namespace PostIt.Forms
 
         private void CbxSearchCategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RefreshData();
+            //RefreshData();
         }
 
         private void DtpDebut_ValueChanged(object sender, EventArgs e)
@@ -390,6 +390,11 @@ namespace PostIt.Forms
         private void timerActualisation_Tick(object sender, EventArgs e)
         {
             ActualiserListe();
+        }
+
+        private void CbxSearchCategorie_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            RefreshData();
         }
     }
 }

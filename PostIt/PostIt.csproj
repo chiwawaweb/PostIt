@@ -75,6 +75,7 @@
     <Compile Include="Classes\Categorie.cs" />
     <Compile Include="Classes\Utils.cs" />
     <Compile Include="DAL\AnnotationProvider.cs" />
+    <Compile Include="DAL\ContactProvider.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="DAL\EvenementProvider.cs" />
     <Compile Include="DTO\Annotation.cs" />
@@ -91,6 +92,12 @@
     </Compile>
     <Compile Include="Forms\AnnotationsEditForm.Designer.cs">
       <DependentUpon>AnnotationsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ContactsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ContactsListForm.Designer.cs">
+      <DependentUpon>ContactsListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EvenementEditForm.cs">
       <SubType>Form</SubType>
@@ -129,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AnnotationsEditForm.resx">
       <DependentUpon>AnnotationsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ContactsListForm.resx">
+      <DependentUpon>ContactsListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EvenementEditForm.resx">
       <DependentUpon>EvenementEditForm.cs</DependentUpon>

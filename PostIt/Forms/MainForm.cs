@@ -158,5 +158,11 @@ namespace PostIt.Forms
             AboutForm frm = new AboutForm();
             frm.ShowDialog();
         }
+
+        private void annuaireToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ContactsListForm frm = new ContactsListForm();
+            frm.ShowDialog();
+        }
     }
 }

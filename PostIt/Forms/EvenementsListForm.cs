@@ -328,11 +328,6 @@ namespace PostIt.Forms
             RefreshData();
         }
 
-        private void CbxSearchCategorie_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //RefreshData();
-        }
-
         private void DtpDebut_ValueChanged(object sender, EventArgs e)
         {
             RefreshData();

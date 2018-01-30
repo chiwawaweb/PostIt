@@ -13,6 +13,6 @@ namespace PostIt.Classes
         public string Abrv { get; set; }
         public bool Actif { get; set; }
 
-        public string FullName => Nom;
+        public string FullName => Nom.ToUpper();
     }
 }

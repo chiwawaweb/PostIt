@@ -113,7 +113,7 @@ namespace PostIt.Forms
 
         private void TsbNewContact_Click(object sender, EventArgs e)
         {
-            ContactEditForm frm = new ContactEditForm();
+            ContactEditForm frm = new ContactEditForm(this, false);
             frm.ShowDialog();
         }
     }

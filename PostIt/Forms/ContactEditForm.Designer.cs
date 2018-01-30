@@ -260,6 +260,7 @@
             this.BtnSave.TabStop = false;
             this.BtnSave.Text = "Enregistrer";
             this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // BtnCancel
             // 
@@ -307,8 +308,10 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ContactEditForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Contact";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ContactEditForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

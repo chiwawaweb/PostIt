@@ -328,7 +328,6 @@
             this.CbxSearchCategorie.Size = new System.Drawing.Size(173, 21);
             this.CbxSearchCategorie.TabIndex = 0;
             this.CbxSearchCategorie.TabStop = false;
-            this.CbxSearchCategorie.SelectedIndexChanged += new System.EventHandler(this.CbxSearchCategorie_SelectedIndexChanged);
             this.CbxSearchCategorie.SelectionChangeCommitted += new System.EventHandler(this.CbxSearchCategorie_SelectionChangeCommitted);
             // 
             // timerActualisation

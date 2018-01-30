@@ -97,6 +97,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ContactsListForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Annuaire ";
             this.Load += new System.EventHandler(this.ContactsListForm_Load);

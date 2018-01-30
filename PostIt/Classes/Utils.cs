@@ -38,6 +38,8 @@ namespace PostIt.Classes
                 new CategorieContact { Nom="Fournisseur", Abrv="FRS", Actif=true },
                 new CategorieContact { Nom="Interne", Abrv="INT", Actif=true },
                 new CategorieContact { Nom="Service après-vente", Abrv="SAV", Actif=true },
+                new CategorieContact { Nom="Maintenance", Abrv="SAV", Actif=true },
+                new CategorieContact { Nom="Divers", Abrv="SAV", Actif=true }
             };
 
             return categoriesContacts.OrderBy(o => o.Nom).ToList();
@@ -55,6 +57,8 @@ namespace PostIt.Classes
                 new Pays { Nom="Pays-Bas", Abrv="NL", Actif=true },
                 new Pays { Nom="Angleterre", Abrv="UK", Actif=true },
                 new Pays { Nom="Espagne", Abrv="ES", Actif=true },
+                new Pays { Nom="Italie", Abrv="IT", Actif=true },
+
             };
 
             return pays.OrderBy(o => o.Nom).ToList();

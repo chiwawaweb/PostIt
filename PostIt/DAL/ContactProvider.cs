@@ -97,5 +97,23 @@ namespace PostIt.DAL
                 }
             }
         }
+
+        public void Delete(Contact Contact)
+        {
+            using (Context context = new Context())
+            {
+
+                try
+                {
+                    context.Contacts.Attach(Contact);
+                    context.Contacts.Remove(Contact);
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

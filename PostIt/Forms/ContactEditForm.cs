@@ -21,6 +21,11 @@ namespace PostIt.Forms
         int _id;
         DateTime createdAt, updatedAt;
 
+        private void BtnFermer_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         Utils utils = new Utils();
 
         ContactsListForm _owner;
@@ -88,15 +93,43 @@ namespace PostIt.Forms
 
         private void NewContact()
         {
-            formTitle = "Création d'un contact";
+            LblTitre.Text = "Création d'un contact";
         }
 
         private void LoadContact()
         {
-            formTitle = "Consultation d'un contact";
+            LblTitre.Text = "Consultation d'un contact";
 
-            /* Modification des boutons */
-
+            /* Modification des boutons et desc champs */
+            BtnModifier.Visible = true;
+            BtnCancel.Visible = false;
+            BtnSave.Visible = false;
+            CbxType.Visible = false;
+            LblTypeView.Visible = true;
+            TxtSociete.Visible = false;
+            LblSocieteView.Visible = true;
+            TxtNom.Visible = false;
+            LblNomView.Visible = true;
+            TxtPrenom.Visible = false;
+            LblPrenomView.Visible = true;
+            TxtAdresse1.Visible = false;
+            LblAdresse1View.Visible = true;
+            TxtAdresse2.Visible = false;
+            LblAdresse2View.Visible = true;
+            TxtCp.Visible = false;
+            TxtVille.Visible = false;
+            LblCpVilleView.Visible = true;
+            CbxPays.Visible = false;
+            LblPaysView.Visible = true;
+            TxtTel.Visible = false;
+            LblTelView.Visible = true;
+            TxtFax.Visible = false;
+            LblFaxView.Visible = true;
+            TxtGsm.Visible = false;
+            LblGsmView.Visible = true;
+            TxtEmail.Visible = false;
+            LblEmailView.Visible = true;
+            BtnFermer.Visible = true;
 
             /* Récupération des données */
             type = contactProvider.GetContactById(_id).Type;
@@ -115,18 +148,30 @@ namespace PostIt.Forms
 
             /* Affichage des données */
             CbxType.Text = type;
+            LblTypeView.Text = type;
             TxtSociete.Text = societe;
+            LblSocieteView.Text = societe;
             TxtNom.Text = nom;
+            LblNomView.Text = nom;
             TxtPrenom.Text = prenom;
+            LblPrenomView.Text = prenom;
             TxtAdresse1.Text = adresse1;
+            LblAdresse1View.Text = adresse1;
             TxtAdresse2.Text = adresse2;
+            LblAdresse2View.Text = adresse2;
             TxtCp.Text = cp;
             TxtVille.Text = ville;
+            LblCpVilleView.Text = (cp + " " + ville).Trim();
             CbxPays.Text = pays;
+            LblPaysView.Text = pays;
             TxtTel.Text = tel;
+            LblTelView.Text = tel;
             TxtFax.Text = fax;
+            LblFaxView.Text = fax;
             TxtGsm.Text = gsm;
+            LblGsmView.Text = gsm;
             TxtEmail.Text = email;
+            LblEmailView.Text = email;
         }
 
 

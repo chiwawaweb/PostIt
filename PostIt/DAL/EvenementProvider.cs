@@ -10,7 +10,7 @@ namespace PostIt.DAL
 {
     public class EvenementProvider
     {
-        string statutENC, statutAVE, statutFIN, statutANN;
+        string statutENC, statutFIN, statutANN;
 
         public int CountAll()
         {
@@ -48,7 +48,6 @@ namespace PostIt.DAL
                                             (
                                              (b.Statut == statutENC)
                                              || (b.Statut == statutANN)
-                                             || (b.Statut == statutAVE)
                                              || (b.Statut == statutFIN)
                                             )
                                             && (b.Categorie.Contains(categorie))

@@ -33,6 +33,8 @@
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.TsbNewContact = new System.Windows.Forms.ToolStripButton();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.TsbView = new System.Windows.Forms.ToolStripButton();
+            this.TsbDelete = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).BeginInit();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +53,11 @@
             this.dgvContacts.ReadOnly = true;
             this.dgvContacts.RowHeadersWidth = 30;
             this.dgvContacts.RowTemplate.Height = 28;
+            this.dgvContacts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvContacts.ShowCellErrors = false;
+            this.dgvContacts.ShowCellToolTips = false;
+            this.dgvContacts.ShowEditingIcon = false;
+            this.dgvContacts.ShowRowErrors = false;
             this.dgvContacts.Size = new System.Drawing.Size(954, 488);
             this.dgvContacts.TabIndex = 0;
             // 
@@ -58,7 +65,9 @@
             // 
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TsbNewContact});
+            this.TsbNewContact,
+            this.TsbView,
+            this.TsbDelete});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Size = new System.Drawing.Size(954, 31);
@@ -83,6 +92,24 @@
             this.statusStrip.Size = new System.Drawing.Size(954, 22);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 2;
+            // 
+            // TsbView
+            // 
+            this.TsbView.Image = ((System.Drawing.Image)(resources.GetObject("TsbView.Image")));
+            this.TsbView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbView.Name = "TsbView";
+            this.TsbView.Size = new System.Drawing.Size(70, 28);
+            this.TsbView.Text = "Détails";
+            this.TsbView.Click += new System.EventHandler(this.TsbView_Click);
+            // 
+            // TsbDelete
+            // 
+            this.TsbDelete.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.TsbDelete.Image = ((System.Drawing.Image)(resources.GetObject("TsbDelete.Image")));
+            this.TsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbDelete.Name = "TsbDelete";
+            this.TsbDelete.Size = new System.Drawing.Size(145, 28);
+            this.TsbDelete.Text = "Supprimer le contact";
             // 
             // ContactsListForm
             // 
@@ -115,5 +142,7 @@
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripButton TsbNewContact;
+        private System.Windows.Forms.ToolStripButton TsbView;
+        private System.Windows.Forms.ToolStripButton TsbDelete;
     }
 }

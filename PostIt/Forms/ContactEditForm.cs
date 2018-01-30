@@ -16,9 +16,7 @@ namespace PostIt.Forms
     public partial class ContactEditForm : Form
     {
         string type, societe, nom, prenom, adresse1, adresse2, cp, ville, pays, tel, fax, gsm, email;
-
-        
-
+        string formTitle;
         bool contactUpdateMode;
         int _id;
         DateTime createdAt, updatedAt;
@@ -70,7 +68,67 @@ namespace PostIt.Forms
             CbxPays.DataSource = dsPays;
             CbxPays.DisplayMember = "FullName";
             CbxPays.ValueMember = "FullName";
+
+            switch (contactUpdateMode)
+            {
+                /* Mode création */
+                case false:
+                    NewContact();
+                    break;
+
+                /* Mode mise à jour */
+                case true:
+                    LoadContact();
+                    break;
+            }
+
+            /* Titre du formulaire */
+            this.Text = formTitle;
         }
+
+        private void NewContact()
+        {
+            formTitle = "Création d'un contact";
+        }
+
+        private void LoadContact()
+        {
+            formTitle = "Consultation d'un contact";
+
+            /* Modification des boutons */
+
+
+            /* Récupération des données */
+            type = contactProvider.GetContactById(_id).Type;
+            societe = contactProvider.GetContactById(_id).Societe;
+            nom = contactProvider.GetContactById(_id).Nom;
+            prenom = contactProvider.GetContactById(_id).Prenom;
+            adresse1 = contactProvider.GetContactById(_id).Adresse1;
+            adresse2 = contactProvider.GetContactById(_id).Adresse2;
+            cp = contactProvider.GetContactById(_id).CodePostal;
+            ville = contactProvider.GetContactById(_id).Ville;
+            pays = contactProvider.GetContactById(_id).Pays;
+            tel = contactProvider.GetContactById(_id).Tel;
+            fax = contactProvider.GetContactById(_id).Fax;
+            gsm = contactProvider.GetContactById(_id).Mob;
+            email = contactProvider.GetContactById(_id).Email;
+
+            /* Affichage des données */
+            CbxType.Text = type;
+            TxtSociete.Text = societe;
+            TxtNom.Text = nom;
+            TxtPrenom.Text = prenom;
+            TxtAdresse1.Text = adresse1;
+            TxtAdresse2.Text = adresse2;
+            TxtCp.Text = cp;
+            TxtVille.Text = ville;
+            CbxPays.Text = pays;
+            TxtTel.Text = tel;
+            TxtFax.Text = fax;
+            TxtGsm.Text = gsm;
+            TxtEmail.Text = email;
+        }
+
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
@@ -86,9 +144,9 @@ namespace PostIt.Forms
         {
             /* Récupération des données */
             type = CbxType.Text.Trim();
-            societe = utils.RemoveDiacritics(TxtSociete.Text.Trim().ToUpper());
+            societe = TxtSociete.Text.Trim().ToUpper();
             nom = TxtNom.Text.Trim().ToUpper();
-            prenom = TxtNom.Text.Trim().ToUpper();
+            prenom = TxtPrenom.Text.Trim().ToUpper();
             adresse1 = TxtAdresse1.Text.Trim().ToUpper();
             adresse2 = TxtAdresse2.Text.Trim().ToUpper();
             cp = TxtCp.Text.Trim().ToUpper();
@@ -109,7 +167,12 @@ namespace PostIt.Forms
                 errMsg += "- Catégorie non spécifiée\n";
             }
 
-
+            string nomComplet = societe + nom + prenom;
+            if (nomComplet.Length<2)
+            {
+                erreurs = true;
+                errMsg += "- Société, nom ou prénom non spécifié\n";
+            }
 
             if (erreurs == true)
             {
@@ -138,12 +201,29 @@ namespace PostIt.Forms
 
         private void UpdateDatabase()
         {
-
+            
         }
 
         private void AddDatabase()
         {
+            Contact contact = new Contact();
 
+            contact.Type = type;
+            contact.Societe = societe;
+            contact.Nom = nom;
+            contact.Prenom = prenom;
+            contact.Adresse1 = adresse1;
+            contact.Adresse2 = adresse2;
+            contact.CodePostal = cp;
+            contact.Ville = ville;
+            contact.Pays = pays;
+            contact.Tel = tel;
+            contact.Mob = gsm;
+            contact.Fax = fax;
+            contact.Email = email;
+            contact.CreatedAt = DateTime.Now;
+
+            contactProvider.Create(contact);
         }
 
         private void ContactEditForm_FormClosed(object sender, FormClosedEventArgs e)

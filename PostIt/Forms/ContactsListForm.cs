@@ -39,7 +39,7 @@ namespace PostIt.Forms
             idCol.Name = "ID";
             idCol.HeaderText = "#";
             idCol.Width = 50;
-            idCol.Visible = true;
+            idCol.Visible = false;
             idCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             idCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
@@ -79,8 +79,6 @@ namespace PostIt.Forms
             emailCol.Width = 170;
             emailCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-
-
             /* Création des colonnes */
             dgvContacts.Columns.Add(idCol);
             dgvContacts.Columns.Add(typeCol);
@@ -89,6 +87,35 @@ namespace PostIt.Forms
             dgvContacts.Columns.Add(faxCol);
             dgvContacts.Columns.Add(gsmCol);
             dgvContacts.Columns.Add(emailCol);
+
+
+            /* Ajout des lignes */
+            for (int i = 0; i < list.Count; i++)
+            {
+                int number = dgvContacts.Rows.Add();
+
+                int? id = list[i].Id;
+                string type = list[i].Type;
+                string nom = (list[i].Societe + " " + list[i].Nom + " " + list[i].Prenom).Trim();
+                string tel = list[i].Tel;
+                string fax = list[i].Fax;
+                string gsm = list[i].Mob;
+                string email = list[i].Email;
+
+                dgvContacts.Rows[number].Cells[0].Value = id;
+                dgvContacts.Rows[number].Cells[1].Value = type;
+                dgvContacts.Rows[number].Cells[2].Value = nom;
+                dgvContacts.Rows[number].Cells[3].Value = tel;
+                dgvContacts.Rows[number].Cells[4].Value = fax;
+                dgvContacts.Rows[number].Cells[5].Value = gsm;
+                dgvContacts.Rows[number].Cells[6].Value = email;
+
+                /* pointe sur l'enregistrement courant */
+                if (list[i].Id == idRetour)
+                {
+                    dgvContacts.Rows[number].Cells[1].Selected = true;
+                }
+            }
         }
 
         public void RefreshData(bool firstLine = false)
@@ -115,6 +142,22 @@ namespace PostIt.Forms
         {
             ContactEditForm frm = new ContactEditForm(this, false);
             frm.ShowDialog();
+        }
+
+        private void TsbView_Click(object sender, EventArgs e)
+        {
+            ViewContact();
+        }
+
+        private void ViewContact()
+        {
+            if (dgvContacts.RowCount > 0)
+            {
+                int ID = int.Parse(dgvContacts.CurrentRow.Cells[0].Value.ToString());
+                idRetour = ID;
+                ContactEditForm frm = new ContactEditForm(this, true, ID);
+                frm.ShowDialog();
+            }
         }
     }
 }

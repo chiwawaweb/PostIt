@@ -110,6 +110,7 @@
             this.TsbDelete.Name = "TsbDelete";
             this.TsbDelete.Size = new System.Drawing.Size(145, 28);
             this.TsbDelete.Text = "Supprimer le contact";
+            this.TsbDelete.Click += new System.EventHandler(this.TsbDelete_Click);
             // 
             // ContactsListForm
             // 

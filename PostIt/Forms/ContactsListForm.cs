@@ -159,5 +159,24 @@ namespace PostIt.Forms
                 frm.ShowDialog();
             }
         }
+
+        private void TsbDelete_Click(object sender, EventArgs e)
+        {
+            DeleteContact();
+        }
+
+        private void DeleteContact()
+        {
+            if (dgvContacts.RowCount > 0)
+            {
+                DialogResult result = MessageBox.Show("Etes-vous certain de vouloir supprimer ce contact ?", "Confirmation de suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    int ID = int.Parse(dgvContacts.CurrentRow.Cells[0].Value.ToString());
+                    contactProvider.Delete(new Contact { Id = ID });
+                    RefreshData();
+                }
+            }
+        }
     }
 }

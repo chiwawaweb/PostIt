@@ -89,7 +89,7 @@
             this.CbxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxType.FormattingEnabled = true;
             this.CbxType.Location = new System.Drawing.Point(117, 69);
-            this.CbxType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbxType.Margin = new System.Windows.Forms.Padding(4);
             this.CbxType.Name = "CbxType";
             this.CbxType.Size = new System.Drawing.Size(160, 24);
             this.CbxType.TabIndex = 0;
@@ -157,7 +157,7 @@
             // TxtSociete
             // 
             this.TxtSociete.Location = new System.Drawing.Point(117, 102);
-            this.TxtSociete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtSociete.Margin = new System.Windows.Forms.Padding(4);
             this.TxtSociete.Name = "TxtSociete";
             this.TxtSociete.Size = new System.Drawing.Size(264, 22);
             this.TxtSociete.TabIndex = 1;
@@ -165,7 +165,7 @@
             // TxtNom
             // 
             this.TxtNom.Location = new System.Drawing.Point(117, 134);
-            this.TxtNom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNom.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNom.Name = "TxtNom";
             this.TxtNom.Size = new System.Drawing.Size(132, 22);
             this.TxtNom.TabIndex = 2;
@@ -173,7 +173,7 @@
             // TxtPrenom
             // 
             this.TxtPrenom.Location = new System.Drawing.Point(117, 166);
-            this.TxtPrenom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtPrenom.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPrenom.Name = "TxtPrenom";
             this.TxtPrenom.Size = new System.Drawing.Size(132, 22);
             this.TxtPrenom.TabIndex = 3;
@@ -181,7 +181,7 @@
             // TxtAdresse1
             // 
             this.TxtAdresse1.Location = new System.Drawing.Point(117, 198);
-            this.TxtAdresse1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtAdresse1.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAdresse1.Name = "TxtAdresse1";
             this.TxtAdresse1.Size = new System.Drawing.Size(264, 22);
             this.TxtAdresse1.TabIndex = 4;
@@ -189,7 +189,7 @@
             // TxtAdresse2
             // 
             this.TxtAdresse2.Location = new System.Drawing.Point(117, 230);
-            this.TxtAdresse2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtAdresse2.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAdresse2.Name = "TxtAdresse2";
             this.TxtAdresse2.Size = new System.Drawing.Size(264, 22);
             this.TxtAdresse2.TabIndex = 5;
@@ -197,7 +197,7 @@
             // TxtCp
             // 
             this.TxtCp.Location = new System.Drawing.Point(117, 262);
-            this.TxtCp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCp.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCp.MaxLength = 10;
             this.TxtCp.Name = "TxtCp";
             this.TxtCp.Size = new System.Drawing.Size(61, 22);
@@ -206,7 +206,7 @@
             // TxtVille
             // 
             this.TxtVille.Location = new System.Drawing.Point(188, 262);
-            this.TxtVille.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtVille.Margin = new System.Windows.Forms.Padding(4);
             this.TxtVille.Name = "TxtVille";
             this.TxtVille.Size = new System.Drawing.Size(193, 22);
             this.TxtVille.TabIndex = 7;
@@ -216,7 +216,7 @@
             this.CbxPays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxPays.FormattingEnabled = true;
             this.CbxPays.Location = new System.Drawing.Point(117, 294);
-            this.CbxPays.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbxPays.Margin = new System.Windows.Forms.Padding(4);
             this.CbxPays.Name = "CbxPays";
             this.CbxPays.Size = new System.Drawing.Size(264, 24);
             this.CbxPays.TabIndex = 8;
@@ -234,7 +234,7 @@
             // TxtTel
             // 
             this.TxtTel.Location = new System.Drawing.Point(117, 327);
-            this.TxtTel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtTel.Margin = new System.Windows.Forms.Padding(4);
             this.TxtTel.Name = "TxtTel";
             this.TxtTel.Size = new System.Drawing.Size(160, 22);
             this.TxtTel.TabIndex = 9;
@@ -242,7 +242,7 @@
             // TxtFax
             // 
             this.TxtFax.Location = new System.Drawing.Point(117, 359);
-            this.TxtFax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtFax.Margin = new System.Windows.Forms.Padding(4);
             this.TxtFax.Name = "TxtFax";
             this.TxtFax.Size = new System.Drawing.Size(160, 22);
             this.TxtFax.TabIndex = 10;
@@ -250,7 +250,7 @@
             // TxtGsm
             // 
             this.TxtGsm.Location = new System.Drawing.Point(117, 391);
-            this.TxtGsm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtGsm.Margin = new System.Windows.Forms.Padding(4);
             this.TxtGsm.Name = "TxtGsm";
             this.TxtGsm.Size = new System.Drawing.Size(160, 22);
             this.TxtGsm.TabIndex = 11;
@@ -288,7 +288,7 @@
             // TxtEmail
             // 
             this.TxtEmail.Location = new System.Drawing.Point(117, 423);
-            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(264, 22);
             this.TxtEmail.TabIndex = 12;
@@ -296,7 +296,7 @@
             // BtnSave
             // 
             this.BtnSave.Location = new System.Drawing.Point(283, 463);
-            this.BtnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(100, 37);
             this.BtnSave.TabIndex = 13;
@@ -308,7 +308,7 @@
             // BtnCancel
             // 
             this.BtnCancel.Location = new System.Drawing.Point(175, 463);
-            this.BtnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(100, 37);
             this.BtnCancel.TabIndex = 25;
@@ -374,6 +374,7 @@
             this.LblTypeView.Size = new System.Drawing.Size(12, 16);
             this.LblTypeView.TabIndex = 29;
             this.LblTypeView.Text = "-";
+            this.LblTypeView.Visible = false;
             // 
             // LblSocieteView
             // 
@@ -385,6 +386,7 @@
             this.LblSocieteView.Size = new System.Drawing.Size(12, 16);
             this.LblSocieteView.TabIndex = 30;
             this.LblSocieteView.Text = "-";
+            this.LblSocieteView.Visible = false;
             // 
             // LblNomView
             // 
@@ -396,6 +398,7 @@
             this.LblNomView.Size = new System.Drawing.Size(12, 16);
             this.LblNomView.TabIndex = 31;
             this.LblNomView.Text = "-";
+            this.LblNomView.Visible = false;
             // 
             // LblPrenomView
             // 
@@ -407,6 +410,7 @@
             this.LblPrenomView.Size = new System.Drawing.Size(12, 16);
             this.LblPrenomView.TabIndex = 32;
             this.LblPrenomView.Text = "-";
+            this.LblPrenomView.Visible = false;
             // 
             // LblAdresse1View
             // 
@@ -418,6 +422,7 @@
             this.LblAdresse1View.Size = new System.Drawing.Size(12, 16);
             this.LblAdresse1View.TabIndex = 33;
             this.LblAdresse1View.Text = "-";
+            this.LblAdresse1View.Visible = false;
             // 
             // LblAdresse2View
             // 
@@ -429,17 +434,19 @@
             this.LblAdresse2View.Size = new System.Drawing.Size(12, 16);
             this.LblAdresse2View.TabIndex = 34;
             this.LblAdresse2View.Text = "-";
+            this.LblAdresse2View.Visible = false;
             // 
-            // LblCpVilleVies
+            // LblCpVilleView
             // 
             this.LblCpVilleView.AutoSize = true;
             this.LblCpVilleView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCpVilleView.Location = new System.Drawing.Point(117, 266);
             this.LblCpVilleView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblCpVilleView.Name = "LblCpVilleVies";
+            this.LblCpVilleView.Name = "LblCpVilleView";
             this.LblCpVilleView.Size = new System.Drawing.Size(12, 16);
             this.LblCpVilleView.TabIndex = 35;
             this.LblCpVilleView.Text = "-";
+            this.LblCpVilleView.Visible = false;
             // 
             // LblPaysView
             // 
@@ -451,6 +458,7 @@
             this.LblPaysView.Size = new System.Drawing.Size(12, 16);
             this.LblPaysView.TabIndex = 36;
             this.LblPaysView.Text = "-";
+            this.LblPaysView.Visible = false;
             // 
             // LblTelView
             // 
@@ -462,6 +470,7 @@
             this.LblTelView.Size = new System.Drawing.Size(12, 16);
             this.LblTelView.TabIndex = 37;
             this.LblTelView.Text = "-";
+            this.LblTelView.Visible = false;
             // 
             // LblFaxView
             // 
@@ -473,6 +482,7 @@
             this.LblFaxView.Size = new System.Drawing.Size(12, 16);
             this.LblFaxView.TabIndex = 38;
             this.LblFaxView.Text = "-";
+            this.LblFaxView.Visible = false;
             // 
             // LblGsmView
             // 
@@ -484,6 +494,7 @@
             this.LblGsmView.Size = new System.Drawing.Size(12, 16);
             this.LblGsmView.TabIndex = 39;
             this.LblGsmView.Text = "-";
+            this.LblGsmView.Visible = false;
             // 
             // LblEmailView
             // 
@@ -495,6 +506,7 @@
             this.LblEmailView.Size = new System.Drawing.Size(12, 16);
             this.LblEmailView.TabIndex = 40;
             this.LblEmailView.Text = "-";
+            this.LblEmailView.Visible = false;
             // 
             // BtnFermer
             // 
@@ -561,7 +573,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ContactEditForm";

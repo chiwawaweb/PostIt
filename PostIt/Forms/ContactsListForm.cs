@@ -178,5 +178,10 @@ namespace PostIt.Forms
                 }
             }
         }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

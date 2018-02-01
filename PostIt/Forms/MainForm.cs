@@ -39,6 +39,12 @@ namespace PostIt.Forms
             frm.MdiParent = this;
             frm.Show();
 
+            ContactsListForm frm2 = new ContactsListForm();
+            frm2.MdiParent = this;
+            frm2.Show();
+
+            
+
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,7 +55,7 @@ namespace PostIt.Forms
         private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetupForm frm = new SetupForm(this);
-            frm.ShowDialog();
+            frm.Show();
         }
 
         public void RefreshForm()
@@ -123,6 +129,7 @@ namespace PostIt.Forms
         private void MainForm_Load(object sender, EventArgs e)
         {
             RefreshForm();
+            this.LayoutMdi(MdiLayout.TileHorizontal);
         }
 
         private void miseÀJourToolStripMenuItem_Click(object sender, EventArgs e)
@@ -162,7 +169,13 @@ namespace PostIt.Forms
         private void annuaireToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ContactsListForm frm = new ContactsListForm();
-            frm.ShowDialog();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
         }
     }
 }

@@ -164,12 +164,9 @@
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.dgvContacts);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "ContactsListForm";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Annuaire ";
             this.Load += new System.EventHandler(this.ContactsListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).EndInit();

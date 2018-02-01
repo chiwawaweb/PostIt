@@ -213,7 +213,8 @@ namespace PostIt.Forms
         private void EvenementsListForm_Load(object sender, EventArgs e)
         {
             RefreshData();
-            WindowState = FormWindowState.Maximized;
+            //WindowState = FormWindowState.Maximized;
+            
         }
 
         private void TslAdd_Click(object sender, EventArgs e)

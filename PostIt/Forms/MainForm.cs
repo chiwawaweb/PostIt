@@ -35,15 +35,14 @@ namespace PostIt.Forms
             EvenementProvider evenementProvider = new EvenementProvider();
             evenementProvider.CountAll();
 
-            EvenementsListForm frm = new EvenementsListForm();
-            frm.MdiParent = this;
-            frm.Show();
-
             ContactsListForm frm2 = new ContactsListForm();
             frm2.MdiParent = this;
             frm2.Show();
 
-            
+            EvenementsListForm frm = new EvenementsListForm();
+            frm.MdiParent = this;
+            frm.Show();
+
 
         }
 

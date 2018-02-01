@@ -51,7 +51,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContacts.Location = new System.Drawing.Point(0, 95);
+            this.dgvContacts.Location = new System.Drawing.Point(0, 62);
+            this.dgvContacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvContacts.MultiSelect = false;
             this.dgvContacts.Name = "dgvContacts";
             this.dgvContacts.ReadOnly = true;
@@ -62,7 +63,7 @@
             this.dgvContacts.ShowCellToolTips = false;
             this.dgvContacts.ShowEditingIcon = false;
             this.dgvContacts.ShowRowErrors = false;
-            this.dgvContacts.Size = new System.Drawing.Size(1431, 751);
+            this.dgvContacts.Size = new System.Drawing.Size(954, 488);
             this.dgvContacts.TabIndex = 0;
             // 
             // toolStrip
@@ -74,8 +75,7 @@
             this.TsbDelete});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip.Size = new System.Drawing.Size(1431, 32);
+            this.toolStrip.Size = new System.Drawing.Size(856, 31);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -84,7 +84,7 @@
             this.TsbNewContact.Image = ((System.Drawing.Image)(resources.GetObject("TsbNewContact.Image")));
             this.TsbNewContact.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbNewContact.Name = "TsbNewContact";
-            this.TsbNewContact.Size = new System.Drawing.Size(174, 29);
+            this.TsbNewContact.Size = new System.Drawing.Size(126, 28);
             this.TsbNewContact.Text = "Nouveau contact";
             this.TsbNewContact.Click += new System.EventHandler(this.TsbNewContact_Click);
             // 
@@ -93,7 +93,7 @@
             this.TsbView.Image = ((System.Drawing.Image)(resources.GetObject("TsbView.Image")));
             this.TsbView.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbView.Name = "TsbView";
-            this.TsbView.Size = new System.Drawing.Size(93, 29);
+            this.TsbView.Size = new System.Drawing.Size(70, 28);
             this.TsbView.Text = "Détails";
             this.TsbView.Click += new System.EventHandler(this.TsbView_Click);
             // 
@@ -103,50 +103,54 @@
             this.TsbDelete.Image = ((System.Drawing.Image)(resources.GetObject("TsbDelete.Image")));
             this.TsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbDelete.Name = "TsbDelete";
-            this.TsbDelete.Size = new System.Drawing.Size(204, 29);
+            this.TsbDelete.Size = new System.Drawing.Size(145, 28);
             this.TsbDelete.Text = "Supprimer le contact";
             this.TsbDelete.Click += new System.EventHandler(this.TsbDelete_Click);
             // 
             // statusStrip
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip.Location = new System.Drawing.Point(0, 858);
+            this.statusStrip.Location = new System.Drawing.Point(0, 550);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1431, 22);
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 9, 0);
+            this.statusStrip.Size = new System.Drawing.Size(856, 22);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 53);
+            this.label1.Location = new System.Drawing.Point(7, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Recherche ";
+            this.label1.Text = "Recherche :";
             // 
             // CbxTypeSearch
             // 
             this.CbxTypeSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxTypeSearch.FormattingEnabled = true;
-            this.CbxTypeSearch.Location = new System.Drawing.Point(453, 61);
+            this.CbxTypeSearch.Location = new System.Drawing.Point(287, 34);
+            this.CbxTypeSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CbxTypeSearch.Name = "CbxTypeSearch";
-            this.CbxTypeSearch.Size = new System.Drawing.Size(263, 28);
+            this.CbxTypeSearch.Size = new System.Drawing.Size(177, 21);
             this.CbxTypeSearch.TabIndex = 4;
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(111, 54);
+            this.TxtSearch.Location = new System.Drawing.Point(74, 35);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(311, 26);
+            this.TxtSearch.Size = new System.Drawing.Size(209, 20);
             this.TxtSearch.TabIndex = 5;
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(744, 49);
+            this.BtnSearch.Location = new System.Drawing.Point(468, 33);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(184, 31);
+            this.BtnSearch.Size = new System.Drawing.Size(80, 23);
             this.BtnSearch.TabIndex = 6;
             this.BtnSearch.Text = "Chercher";
             this.BtnSearch.UseVisualStyleBackColor = true;
@@ -154,9 +158,9 @@
             // 
             // ContactsListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1431, 880);
+            this.ClientSize = new System.Drawing.Size(856, 572);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.CbxTypeSearch);
@@ -164,6 +168,7 @@
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.dgvContacts);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ContactsListForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

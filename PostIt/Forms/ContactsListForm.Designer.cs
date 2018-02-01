@@ -32,9 +32,9 @@
             this.dgvContacts = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.TsbNewContact = new System.Windows.Forms.ToolStripButton();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.TsbView = new System.Windows.Forms.ToolStripButton();
             this.TsbDelete = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).BeginInit();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,7 @@
             this.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContacts.Location = new System.Drawing.Point(0, 62);
             this.dgvContacts.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvContacts.MultiSelect = false;
             this.dgvContacts.Name = "dgvContacts";
             this.dgvContacts.ReadOnly = true;
             this.dgvContacts.RowHeadersWidth = 30;
@@ -83,16 +84,6 @@
             this.TsbNewContact.Text = "Nouveau contact";
             this.TsbNewContact.Click += new System.EventHandler(this.TsbNewContact_Click);
             // 
-            // statusStrip
-            // 
-            this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip.Location = new System.Drawing.Point(0, 550);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 9, 0);
-            this.statusStrip.Size = new System.Drawing.Size(954, 22);
-            this.statusStrip.SizingGrip = false;
-            this.statusStrip.TabIndex = 2;
-            // 
             // TsbView
             // 
             this.TsbView.Image = ((System.Drawing.Image)(resources.GetObject("TsbView.Image")));
@@ -111,6 +102,16 @@
             this.TsbDelete.Size = new System.Drawing.Size(145, 28);
             this.TsbDelete.Text = "Supprimer le contact";
             this.TsbDelete.Click += new System.EventHandler(this.TsbDelete_Click);
+            // 
+            // statusStrip
+            // 
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip.Location = new System.Drawing.Point(0, 550);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 9, 0);
+            this.statusStrip.Size = new System.Drawing.Size(954, 22);
+            this.statusStrip.SizingGrip = false;
+            this.statusStrip.TabIndex = 2;
             // 
             // ContactsListForm
             // 

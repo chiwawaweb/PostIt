@@ -77,18 +77,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 73);
+            this.label1.Location = new System.Drawing.Point(32, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.Size = new System.Drawing.Size(73, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Catégorie";
+            this.label1.Text = "Catégorie :";
             // 
             // CbxType
             // 
             this.CbxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxType.FormattingEnabled = true;
-            this.CbxType.Location = new System.Drawing.Point(117, 69);
+            this.CbxType.Location = new System.Drawing.Point(117, 70);
             this.CbxType.Margin = new System.Windows.Forms.Padding(4);
             this.CbxType.Name = "CbxType";
             this.CbxType.Size = new System.Drawing.Size(160, 24);
@@ -97,66 +97,66 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 106);
+            this.label2.Location = new System.Drawing.Point(45, 103);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Société";
+            this.label2.Text = "Société :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 138);
+            this.label3.Location = new System.Drawing.Point(62, 133);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 16);
+            this.label3.Size = new System.Drawing.Size(43, 16);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Nom";
+            this.label3.Text = "Nom :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 170);
+            this.label4.Location = new System.Drawing.Point(44, 163);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
+            this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Prénom";
+            this.label4.Text = "Prénom :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 202);
+            this.label5.Location = new System.Drawing.Point(40, 193);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 16);
+            this.label5.Size = new System.Drawing.Size(65, 16);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Adresse";
+            this.label5.Text = "Adresse :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 266);
+            this.label6.Location = new System.Drawing.Point(37, 243);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 16);
+            this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 6;
-            this.label6.Text = "CP / Ville";
+            this.label6.Text = "CP / Ville :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 298);
+            this.label7.Location = new System.Drawing.Point(60, 270);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 16);
+            this.label7.Size = new System.Drawing.Size(45, 16);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Pays";
+            this.label7.Text = "Pays :";
             // 
             // TxtSociete
             // 
-            this.TxtSociete.Location = new System.Drawing.Point(117, 102);
+            this.TxtSociete.Location = new System.Drawing.Point(117, 100);
             this.TxtSociete.Margin = new System.Windows.Forms.Padding(4);
             this.TxtSociete.Name = "TxtSociete";
             this.TxtSociete.Size = new System.Drawing.Size(264, 22);
@@ -164,7 +164,7 @@
             // 
             // TxtNom
             // 
-            this.TxtNom.Location = new System.Drawing.Point(117, 134);
+            this.TxtNom.Location = new System.Drawing.Point(117, 130);
             this.TxtNom.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNom.Name = "TxtNom";
             this.TxtNom.Size = new System.Drawing.Size(132, 22);
@@ -172,7 +172,7 @@
             // 
             // TxtPrenom
             // 
-            this.TxtPrenom.Location = new System.Drawing.Point(117, 166);
+            this.TxtPrenom.Location = new System.Drawing.Point(117, 160);
             this.TxtPrenom.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPrenom.Name = "TxtPrenom";
             this.TxtPrenom.Size = new System.Drawing.Size(132, 22);
@@ -180,7 +180,7 @@
             // 
             // TxtAdresse1
             // 
-            this.TxtAdresse1.Location = new System.Drawing.Point(117, 198);
+            this.TxtAdresse1.Location = new System.Drawing.Point(117, 190);
             this.TxtAdresse1.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAdresse1.Name = "TxtAdresse1";
             this.TxtAdresse1.Size = new System.Drawing.Size(264, 22);
@@ -188,7 +188,7 @@
             // 
             // TxtAdresse2
             // 
-            this.TxtAdresse2.Location = new System.Drawing.Point(117, 230);
+            this.TxtAdresse2.Location = new System.Drawing.Point(117, 215);
             this.TxtAdresse2.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAdresse2.Name = "TxtAdresse2";
             this.TxtAdresse2.Size = new System.Drawing.Size(264, 22);
@@ -196,7 +196,7 @@
             // 
             // TxtCp
             // 
-            this.TxtCp.Location = new System.Drawing.Point(117, 262);
+            this.TxtCp.Location = new System.Drawing.Point(117, 240);
             this.TxtCp.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCp.MaxLength = 10;
             this.TxtCp.Name = "TxtCp";
@@ -205,7 +205,7 @@
             // 
             // TxtVille
             // 
-            this.TxtVille.Location = new System.Drawing.Point(188, 262);
+            this.TxtVille.Location = new System.Drawing.Point(188, 240);
             this.TxtVille.Margin = new System.Windows.Forms.Padding(4);
             this.TxtVille.Name = "TxtVille";
             this.TxtVille.Size = new System.Drawing.Size(193, 22);
@@ -215,7 +215,7 @@
             // 
             this.CbxPays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxPays.FormattingEnabled = true;
-            this.CbxPays.Location = new System.Drawing.Point(117, 294);
+            this.CbxPays.Location = new System.Drawing.Point(117, 267);
             this.CbxPays.Margin = new System.Windows.Forms.Padding(4);
             this.CbxPays.Name = "CbxPays";
             this.CbxPays.Size = new System.Drawing.Size(264, 24);
@@ -224,16 +224,16 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 331);
+            this.label8.Location = new System.Drawing.Point(71, 300);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 16);
+            this.label8.Size = new System.Drawing.Size(34, 16);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Tél";
+            this.label8.Text = "Tél :";
             // 
             // TxtTel
             // 
-            this.TxtTel.Location = new System.Drawing.Point(117, 327);
+            this.TxtTel.Location = new System.Drawing.Point(117, 297);
             this.TxtTel.Margin = new System.Windows.Forms.Padding(4);
             this.TxtTel.Name = "TxtTel";
             this.TxtTel.Size = new System.Drawing.Size(160, 22);
@@ -241,7 +241,7 @@
             // 
             // TxtFax
             // 
-            this.TxtFax.Location = new System.Drawing.Point(117, 359);
+            this.TxtFax.Location = new System.Drawing.Point(117, 327);
             this.TxtFax.Margin = new System.Windows.Forms.Padding(4);
             this.TxtFax.Name = "TxtFax";
             this.TxtFax.Size = new System.Drawing.Size(160, 22);
@@ -249,7 +249,7 @@
             // 
             // TxtGsm
             // 
-            this.TxtGsm.Location = new System.Drawing.Point(117, 391);
+            this.TxtGsm.Location = new System.Drawing.Point(117, 357);
             this.TxtGsm.Margin = new System.Windows.Forms.Padding(4);
             this.TxtGsm.Name = "TxtGsm";
             this.TxtGsm.Size = new System.Drawing.Size(160, 22);
@@ -258,36 +258,36 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 363);
+            this.label9.Location = new System.Drawing.Point(69, 330);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 16);
+            this.label9.Size = new System.Drawing.Size(36, 16);
             this.label9.TabIndex = 20;
-            this.label9.Text = "Fax";
+            this.label9.Text = "Fax :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 395);
+            this.label10.Location = new System.Drawing.Point(61, 360);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 16);
+            this.label10.Size = new System.Drawing.Size(44, 16);
             this.label10.TabIndex = 21;
-            this.label10.Text = "GSM";
+            this.label10.Text = "GSM :";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 427);
+            this.label11.Location = new System.Drawing.Point(53, 390);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 16);
+            this.label11.Size = new System.Drawing.Size(52, 16);
             this.label11.TabIndex = 23;
-            this.label11.Text = "E-mail";
+            this.label11.Text = "E-mail :";
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(117, 423);
+            this.TxtEmail.Location = new System.Drawing.Point(117, 387);
             this.TxtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(264, 22);
@@ -295,7 +295,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(283, 463);
+            this.BtnSave.Location = new System.Drawing.Point(283, 425);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(100, 37);
@@ -307,7 +307,7 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(175, 463);
+            this.BtnCancel.Location = new System.Drawing.Point(175, 425);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(100, 37);
@@ -325,7 +325,7 @@
             this.rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
             this.rectangleShape1.Location = new System.Drawing.Point(0, 0);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(400, 43);
+            this.rectangleShape1.Size = new System.Drawing.Size(416, 43);
             // 
             // shapeContainer1
             // 
@@ -334,7 +334,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(401, 512);
+            this.shapeContainer1.Size = new System.Drawing.Size(417, 493);
             this.shapeContainer1.TabIndex = 26;
             this.shapeContainer1.TabStop = false;
             // 
@@ -342,7 +342,7 @@
             // 
             this.BtnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnModifier.Image = ((System.Drawing.Image)(resources.GetObject("BtnModifier.Image")));
-            this.BtnModifier.Location = new System.Drawing.Point(362, 5);
+            this.BtnModifier.Location = new System.Drawing.Point(377, 4);
             this.BtnModifier.Margin = new System.Windows.Forms.Padding(0);
             this.BtnModifier.Name = "BtnModifier";
             this.BtnModifier.Size = new System.Drawing.Size(35, 35);
@@ -380,7 +380,7 @@
             // 
             this.LblSocieteView.AutoSize = true;
             this.LblSocieteView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSocieteView.Location = new System.Drawing.Point(117, 106);
+            this.LblSocieteView.Location = new System.Drawing.Point(117, 103);
             this.LblSocieteView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblSocieteView.Name = "LblSocieteView";
             this.LblSocieteView.Size = new System.Drawing.Size(12, 16);
@@ -392,7 +392,7 @@
             // 
             this.LblNomView.AutoSize = true;
             this.LblNomView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNomView.Location = new System.Drawing.Point(117, 138);
+            this.LblNomView.Location = new System.Drawing.Point(117, 133);
             this.LblNomView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNomView.Name = "LblNomView";
             this.LblNomView.Size = new System.Drawing.Size(12, 16);
@@ -404,7 +404,7 @@
             // 
             this.LblPrenomView.AutoSize = true;
             this.LblPrenomView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPrenomView.Location = new System.Drawing.Point(117, 170);
+            this.LblPrenomView.Location = new System.Drawing.Point(117, 163);
             this.LblPrenomView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPrenomView.Name = "LblPrenomView";
             this.LblPrenomView.Size = new System.Drawing.Size(12, 16);
@@ -416,7 +416,7 @@
             // 
             this.LblAdresse1View.AutoSize = true;
             this.LblAdresse1View.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAdresse1View.Location = new System.Drawing.Point(117, 202);
+            this.LblAdresse1View.Location = new System.Drawing.Point(117, 193);
             this.LblAdresse1View.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAdresse1View.Name = "LblAdresse1View";
             this.LblAdresse1View.Size = new System.Drawing.Size(12, 16);
@@ -428,7 +428,7 @@
             // 
             this.LblAdresse2View.AutoSize = true;
             this.LblAdresse2View.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAdresse2View.Location = new System.Drawing.Point(117, 236);
+            this.LblAdresse2View.Location = new System.Drawing.Point(117, 218);
             this.LblAdresse2View.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAdresse2View.Name = "LblAdresse2View";
             this.LblAdresse2View.Size = new System.Drawing.Size(12, 16);
@@ -440,7 +440,7 @@
             // 
             this.LblCpVilleView.AutoSize = true;
             this.LblCpVilleView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCpVilleView.Location = new System.Drawing.Point(117, 266);
+            this.LblCpVilleView.Location = new System.Drawing.Point(117, 243);
             this.LblCpVilleView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCpVilleView.Name = "LblCpVilleView";
             this.LblCpVilleView.Size = new System.Drawing.Size(12, 16);
@@ -452,7 +452,7 @@
             // 
             this.LblPaysView.AutoSize = true;
             this.LblPaysView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPaysView.Location = new System.Drawing.Point(117, 298);
+            this.LblPaysView.Location = new System.Drawing.Point(117, 270);
             this.LblPaysView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPaysView.Name = "LblPaysView";
             this.LblPaysView.Size = new System.Drawing.Size(12, 16);
@@ -464,7 +464,7 @@
             // 
             this.LblTelView.AutoSize = true;
             this.LblTelView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelView.Location = new System.Drawing.Point(117, 331);
+            this.LblTelView.Location = new System.Drawing.Point(117, 300);
             this.LblTelView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTelView.Name = "LblTelView";
             this.LblTelView.Size = new System.Drawing.Size(12, 16);
@@ -476,7 +476,7 @@
             // 
             this.LblFaxView.AutoSize = true;
             this.LblFaxView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFaxView.Location = new System.Drawing.Point(117, 363);
+            this.LblFaxView.Location = new System.Drawing.Point(117, 330);
             this.LblFaxView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblFaxView.Name = "LblFaxView";
             this.LblFaxView.Size = new System.Drawing.Size(12, 16);
@@ -488,7 +488,7 @@
             // 
             this.LblGsmView.AutoSize = true;
             this.LblGsmView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGsmView.Location = new System.Drawing.Point(117, 397);
+            this.LblGsmView.Location = new System.Drawing.Point(117, 360);
             this.LblGsmView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblGsmView.Name = "LblGsmView";
             this.LblGsmView.Size = new System.Drawing.Size(12, 16);
@@ -500,7 +500,7 @@
             // 
             this.LblEmailView.AutoSize = true;
             this.LblEmailView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmailView.Location = new System.Drawing.Point(117, 426);
+            this.LblEmailView.Location = new System.Drawing.Point(117, 390);
             this.LblEmailView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblEmailView.Name = "LblEmailView";
             this.LblEmailView.Size = new System.Drawing.Size(12, 16);
@@ -512,7 +512,7 @@
             // 
             this.BtnFermer.Image = ((System.Drawing.Image)(resources.GetObject("BtnFermer.Image")));
             this.BtnFermer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnFermer.Location = new System.Drawing.Point(283, 463);
+            this.BtnFermer.Location = new System.Drawing.Point(283, 425);
             this.BtnFermer.Margin = new System.Windows.Forms.Padding(4);
             this.BtnFermer.Name = "BtnFermer";
             this.BtnFermer.Size = new System.Drawing.Size(99, 37);
@@ -528,7 +528,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 512);
+            this.ClientSize = new System.Drawing.Size(417, 493);
             this.Controls.Add(this.BtnFermer);
             this.Controls.Add(this.LblEmailView);
             this.Controls.Add(this.LblGsmView);

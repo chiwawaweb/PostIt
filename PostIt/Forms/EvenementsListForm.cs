@@ -67,6 +67,7 @@ namespace PostIt.Forms
             dateColumn.Width = 85;
             dateColumn.MinimumWidth = 85;
             dateColumn.FillWeight = 1;
+            dateColumn.Visible = false;
             dateColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dateColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 

@@ -135,6 +135,7 @@ namespace PostIt.Forms
             TxtEmail.Visible = false;
             LblEmailView.Visible = true;
             BtnFermer.Visible = true;
+            this.CancelButton = BtnFermer;
 
             /* Récupération des données */
             type = contactProvider.GetContactById(_id).Type;

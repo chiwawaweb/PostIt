@@ -21,6 +21,11 @@ namespace PostIt.Forms
         int _id;
         DateTime createdAt, updatedAt;
 
+        private void ContactEditForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void BtnFermer_Click(object sender, EventArgs e)
         {
             Close();

@@ -197,7 +197,8 @@ namespace PostIt.Forms
         {
             DateTime dateDebut = Convert.ToDateTime(DtpDebut.Value.ToShortDateString());
             DateTime dateFin = Convert.ToDateTime(DtpFin.Value.ToShortDateString());
-            string searchText = utils.RemoveDiacritics(TxtSearch.Text);
+            //string searchText = utils.RemoveDiacritics(TxtSearch.Text);
+            string searchText = TxtSearch.Text;
 
             List<Evenement> list;
             list = evenementProvider.Search(searchText, CbxSearchCategorie.Text, ChkEnCours.Checked,ChkTermine.Checked,ChkAnnule.Checked, dateDebut, dateFin); // à completer avec mots cles / dates

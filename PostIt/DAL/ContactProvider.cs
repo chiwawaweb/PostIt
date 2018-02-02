@@ -11,31 +11,20 @@ namespace PostIt.DAL
 {
     public class ContactProvider
     {
-        public List<Contact> Search()
+        public List<Contact> Search(string keywords, string type)
         {
             using (Context context = new Context())
             {
                 try
                 {
                     var contacts = from b in context.Contacts
-                                     orderby b.Nom ascending
-                                     /*
-                                     where (
-                                            (
-                                             (b.Statut == statutENC)
-                                             || (b.Statut == statutANN)
-                                             || (b.Statut == statutAVE)
-                                             || (b.Statut == statutFIN)
-                                            )
-                                            && (b.Categorie.Contains(categorie))
-                                            && (
-                                                (b.Tiers.Contains(keywords))
-                                                || (b.Description.Contains(keywords))
-                                               )
-                                            && (b.Echeance >= dateDebut)
-                                            && (b.Echeance <= dateFin)
+                                   orderby b.Type ascending
+                                   where (
+                                          (b.Nom.Contains(keywords))
+                                            || (b.Prenom.Contains(keywords))
+                                            || (b.Societe.Contains(keywords))
                                            )
-                                           */
+                                           && (b.Type.Contains(type))
                                      select b;
                                      
                     return contacts.ToList();

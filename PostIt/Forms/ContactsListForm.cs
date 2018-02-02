@@ -24,6 +24,22 @@ namespace PostIt.Forms
         public ContactsListForm()
         {
             InitializeComponent();
+
+            /* Combobox Catégories */
+            var dsCategorie = new List<CategorieContact>();
+            CategorieContact categorieVide = new CategorieContact();
+            categorieVide.Nom = "";
+            dsCategorie.Add(categorieVide);
+            foreach (CategorieContact categorie in utils.AllCategoriesContactsActives())
+            {
+                if (categorie.Actif == true)
+                {
+                    dsCategorie.Add(categorie);
+                }
+            }
+            CbxTypeSearch.DataSource = dsCategorie;
+            CbxTypeSearch.DisplayMember = "FullName";
+            CbxTypeSearch.ValueMember = "FullName";
         }
 
         private void CreateTable(List<Contact> list, int _idRetour)
@@ -123,7 +139,7 @@ namespace PostIt.Forms
             //string searchText = utils.RemoveDiacritics(TxtSearch.Text);
 
             List<Contact> list;
-            list = contactProvider.Search();
+            list = contactProvider.Search(TxtSearch.Text, CbxTypeSearch.Text);
 
             if (firstLine == true)
             {
@@ -181,7 +197,7 @@ namespace PostIt.Forms
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-
+            RefreshData();
         }
     }
 }

@@ -581,6 +581,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Fiche contact";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ContactEditForm_FormClosed);
+            this.Load += new System.EventHandler(this.ContactEditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

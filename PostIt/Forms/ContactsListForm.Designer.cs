@@ -52,7 +52,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContacts.Location = new System.Drawing.Point(0, 62);
-            this.dgvContacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvContacts.Margin = new System.Windows.Forms.Padding(2);
             this.dgvContacts.MultiSelect = false;
             this.dgvContacts.Name = "dgvContacts";
             this.dgvContacts.ReadOnly = true;
@@ -132,7 +132,7 @@
             this.CbxTypeSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxTypeSearch.FormattingEnabled = true;
             this.CbxTypeSearch.Location = new System.Drawing.Point(287, 34);
-            this.CbxTypeSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxTypeSearch.Margin = new System.Windows.Forms.Padding(2);
             this.CbxTypeSearch.Name = "CbxTypeSearch";
             this.CbxTypeSearch.Size = new System.Drawing.Size(177, 21);
             this.CbxTypeSearch.TabIndex = 4;
@@ -140,7 +140,7 @@
             // TxtSearch
             // 
             this.TxtSearch.Location = new System.Drawing.Point(74, 35);
-            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(209, 20);
             this.TxtSearch.TabIndex = 5;
@@ -148,7 +148,7 @@
             // BtnSearch
             // 
             this.BtnSearch.Location = new System.Drawing.Point(468, 33);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(80, 23);
             this.BtnSearch.TabIndex = 6;
@@ -158,6 +158,7 @@
             // 
             // ContactsListForm
             // 
+            this.AcceptButton = this.BtnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 572);
@@ -168,7 +169,7 @@
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.dgvContacts);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ContactsListForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

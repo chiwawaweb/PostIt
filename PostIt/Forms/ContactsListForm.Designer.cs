@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactsListForm));
             this.dgvContacts = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -47,15 +49,33 @@
             // 
             this.dgvContacts.AllowUserToAddRows = false;
             this.dgvContacts.AllowUserToDeleteRows = false;
+            this.dgvContacts.AllowUserToResizeColumns = false;
+            this.dgvContacts.AllowUserToResizeRows = false;
             this.dgvContacts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvContacts.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvContacts.Location = new System.Drawing.Point(0, 62);
             this.dgvContacts.Margin = new System.Windows.Forms.Padding(2);
             this.dgvContacts.MultiSelect = false;
             this.dgvContacts.Name = "dgvContacts";
             this.dgvContacts.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvContacts.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvContacts.RowHeadersWidth = 30;
             this.dgvContacts.RowTemplate.Height = 28;
             this.dgvContacts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -63,11 +83,12 @@
             this.dgvContacts.ShowCellToolTips = false;
             this.dgvContacts.ShowEditingIcon = false;
             this.dgvContacts.ShowRowErrors = false;
-            this.dgvContacts.Size = new System.Drawing.Size(954, 488);
+            this.dgvContacts.Size = new System.Drawing.Size(856, 488);
             this.dgvContacts.TabIndex = 0;
             // 
             // toolStrip
             // 
+            this.toolStrip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TsbNewContact,
@@ -84,7 +105,7 @@
             this.TsbNewContact.Image = ((System.Drawing.Image)(resources.GetObject("TsbNewContact.Image")));
             this.TsbNewContact.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbNewContact.Name = "TsbNewContact";
-            this.TsbNewContact.Size = new System.Drawing.Size(126, 28);
+            this.TsbNewContact.Size = new System.Drawing.Size(132, 28);
             this.TsbNewContact.Text = "Nouveau contact";
             this.TsbNewContact.Click += new System.EventHandler(this.TsbNewContact_Click);
             // 
@@ -93,7 +114,7 @@
             this.TsbView.Image = ((System.Drawing.Image)(resources.GetObject("TsbView.Image")));
             this.TsbView.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbView.Name = "TsbView";
-            this.TsbView.Size = new System.Drawing.Size(70, 28);
+            this.TsbView.Size = new System.Drawing.Size(76, 28);
             this.TsbView.Text = "Détails";
             this.TsbView.Click += new System.EventHandler(this.TsbView_Click);
             // 
@@ -103,7 +124,7 @@
             this.TsbDelete.Image = ((System.Drawing.Image)(resources.GetObject("TsbDelete.Image")));
             this.TsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbDelete.Name = "TsbDelete";
-            this.TsbDelete.Size = new System.Drawing.Size(145, 28);
+            this.TsbDelete.Size = new System.Drawing.Size(156, 28);
             this.TsbDelete.Text = "Supprimer le contact";
             this.TsbDelete.Click += new System.EventHandler(this.TsbDelete_Click);
             // 

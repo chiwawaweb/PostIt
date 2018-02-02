@@ -56,7 +56,7 @@ namespace PostIt.Forms
             DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn();
             idColumn.Name = "ID";
             idColumn.HeaderText = "#";
-            idColumn.Width = 50;
+            idColumn.Width = 60;
             idColumn.Visible = true;
             idColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             idColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -73,13 +73,13 @@ namespace PostIt.Forms
             DataGridViewTextBoxColumn categorieColumn = new DataGridViewTextBoxColumn();
             categorieColumn.Name = "Categorie";
             categorieColumn.HeaderText = "CATEGORIE";
-            categorieColumn.Width = 200;
+            categorieColumn.Width = 210;
             categorieColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn statutColumn = new DataGridViewTextBoxColumn();
             statutColumn.Name = "Statut";
             statutColumn.HeaderText = "STATUT";
-            statutColumn.Width = 80;
+            statutColumn.Width = 85;
             statutColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn tiersColumn = new DataGridViewTextBoxColumn();
@@ -109,12 +109,12 @@ namespace PostIt.Forms
 
             /* Création des colonnes */
             dgvEvenements.Columns.Add(idColumn);
-            dgvEvenements.Columns.Add(dateColumn);
+            dgvEvenements.Columns.Add(echeanceColumn);
             dgvEvenements.Columns.Add(categorieColumn);
             dgvEvenements.Columns.Add(statutColumn);
             dgvEvenements.Columns.Add(tiersColumn);
             dgvEvenements.Columns.Add(descriptionColumn);
-            dgvEvenements.Columns.Add(echeanceColumn);
+            dgvEvenements.Columns.Add(dateColumn);
             dgvEvenements.Columns.Add(operateurColumn);
 
             /* Empeche le tri des colonnes */
@@ -142,12 +142,12 @@ namespace PostIt.Forms
                 string operateur = list[i].Operateur;
                 
                 dgvEvenements.Rows[number].Cells[0].Value = id;
-                dgvEvenements.Rows[number].Cells[1].Value = date.ToString("dd/MM/yyyy");
+                dgvEvenements.Rows[number].Cells[1].Value = echeance.ToString("dd/MM/yyyy");
                 dgvEvenements.Rows[number].Cells[2].Value = categorie;
                 dgvEvenements.Rows[number].Cells[3].Value = statut;
                 dgvEvenements.Rows[number].Cells[4].Value = tiers;
                 dgvEvenements.Rows[number].Cells[5].Value = description;
-                dgvEvenements.Rows[number].Cells[6].Value = echeance.ToString("dd/MM/yyyy");
+                dgvEvenements.Rows[number].Cells[6].Value = date.ToString("dd/MM/yyyy");
                 dgvEvenements.Rows[number].Cells[7].Value = operateur;
 
                 /* Coloration des lignes en fonction de l'échance */
@@ -201,7 +201,7 @@ namespace PostIt.Forms
             string searchText = TxtSearch.Text;
 
             List<Evenement> list;
-            list = evenementProvider.Search(searchText, CbxSearchCategorie.Text, ChkEnCours.Checked,ChkTermine.Checked,ChkAnnule.Checked, dateDebut, dateFin); // à completer avec mots cles / dates
+            list = evenementProvider.Search(searchText, CbxSearchCategorie.Text, RadEncours.Checked, RadTermine.Checked, RadAnnule.Checked, dateDebut, dateFin);
 
             if (firstLine == true)
             {
@@ -310,26 +310,6 @@ namespace PostIt.Forms
             RefreshData();
         }
 
-        private void ChkEnCours_CheckedChanged(object sender, EventArgs e)
-        {
-            RefreshData();
-        }
-
-        private void ChkAVenir_CheckedChanged(object sender, EventArgs e)
-        {
-            RefreshData();
-        }
-
-        private void ChkTermine_CheckedChanged(object sender, EventArgs e)
-        {
-            RefreshData();
-        }
-
-        private void ChkAnnule_CheckedChanged(object sender, EventArgs e)
-        {
-            RefreshData();
-        }
-
         private void DtpDebut_ValueChanged(object sender, EventArgs e)
         {
             RefreshData();
@@ -349,9 +329,7 @@ namespace PostIt.Forms
         {
             CbxSearchCategorie.Text = "";
             TxtSearch.Text = "";
-            ChkEnCours.Checked = true;
-            ChkAnnule.Checked = false;
-            ChkTermine.Checked = false;
+            RadEncours.Checked = true;
             DtpDebut.Value = DateTime.Now.AddMonths(-3);
             DtpFin.Value = DateTime.Now.AddDays(30);
         }
@@ -389,6 +367,21 @@ namespace PostIt.Forms
         }
 
         private void CbxSearchCategorie_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void RadEncours_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void RadTermine_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void RadAnnule_CheckedChanged(object sender, EventArgs e)
         {
             RefreshData();
         }

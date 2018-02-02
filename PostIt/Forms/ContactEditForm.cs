@@ -194,18 +194,18 @@ namespace PostIt.Forms
         {
             /* Récupération des données */
             type = CbxType.Text.Trim();
-            societe = TxtSociete.Text.Trim().ToUpper();
-            nom = TxtNom.Text.Trim().ToUpper();
-            prenom = TxtPrenom.Text.Trim().ToUpper();
-            adresse1 = TxtAdresse1.Text.Trim().ToUpper();
-            adresse2 = TxtAdresse2.Text.Trim().ToUpper();
-            cp = TxtCp.Text.Trim().ToUpper();
-            ville = TxtVille.Text.Trim().ToUpper();
-            pays = CbxPays.Text.Trim().ToUpper();
-            tel = TxtTel.Text.Trim();
-            fax = TxtFax.Text.Trim();
-            gsm = TxtGsm.Text.Trim();
-            email = TxtEmail.Text.ToLower();
+            societe = utils.RemoveDiacritics(TxtSociete.Text.Trim().ToUpper());
+            nom = utils.RemoveDiacritics(TxtNom.Text.Trim().ToUpper());
+            prenom = utils.RemoveDiacritics(TxtPrenom.Text.Trim().ToUpper());
+            adresse1 = utils.RemoveDiacritics(TxtAdresse1.Text.Trim().ToUpper());
+            adresse2 = utils.RemoveDiacritics(TxtAdresse2.Text.Trim().ToUpper());
+            cp = utils.RemoveDiacritics(TxtCp.Text.Trim().ToUpper());
+            ville = utils.RemoveDiacritics(TxtVille.Text.Trim().ToUpper());
+            pays = utils.RemoveDiacritics(CbxPays.Text.Trim().ToUpper());
+            tel = utils.RemoveDiacritics(TxtTel.Text.Trim().ToUpper());
+            fax = utils.RemoveDiacritics(TxtFax.Text.Trim().ToUpper());
+            gsm = utils.RemoveDiacritics(TxtGsm.Text.Trim().ToUpper());
+            email = utils.RemoveDiacritics(TxtEmail.Text.ToLower());
 
             /* Vérification des données */
             bool erreurs = false;

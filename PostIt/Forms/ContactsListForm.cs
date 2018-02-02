@@ -199,5 +199,10 @@ namespace PostIt.Forms
         {
             RefreshData();
         }
+
+        private void dgvContacts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ViewContact();
+        }
     }
 }

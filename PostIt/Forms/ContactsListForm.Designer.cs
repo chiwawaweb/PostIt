@@ -85,6 +85,7 @@
             this.dgvContacts.ShowRowErrors = false;
             this.dgvContacts.Size = new System.Drawing.Size(856, 488);
             this.dgvContacts.TabIndex = 0;
+            this.dgvContacts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContacts_CellDoubleClick);
             // 
             // toolStrip
             // 

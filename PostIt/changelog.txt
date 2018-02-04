@@ -1,4 +1,9 @@
-﻿[29/01/2018] Version 1.0.6
+﻿[] Version 1.0.7
+Ajout de l'annuaire.
+Modification du filtre de recherche des post'it.
+Correction de bugs mineurs.
+
+[29/01/2018] Version 1.0.6
 Correction de bugs mineurs.
 
 [29/01/2018] Version 1.0.5

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvenementsListForm));
             this.dgvEvenements = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -70,24 +70,28 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEvenements.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvEvenements.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEvenements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEvenements.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvEvenements.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEvenements.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEvenements.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvEvenements.Location = new System.Drawing.Point(0, 133);
-            this.dgvEvenements.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvEvenements.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEvenements.MultiSelect = false;
             this.dgvEvenements.Name = "dgvEvenements";
             this.dgvEvenements.ReadOnly = true;
-            this.dgvEvenements.RowHeadersWidth = 25;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvEvenements.RowHeadersWidth = 30;
+            this.dgvEvenements.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEvenements.RowTemplate.Height = 40;
             this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEvenements.ShowCellErrors = false;
             this.dgvEvenements.ShowCellToolTips = false;
@@ -254,7 +258,6 @@
             this.RadAnnule.Name = "RadAnnule";
             this.RadAnnule.Size = new System.Drawing.Size(66, 20);
             this.RadAnnule.TabIndex = 14;
-            this.RadAnnule.TabStop = true;
             this.RadAnnule.Text = "Annulé";
             this.RadAnnule.UseVisualStyleBackColor = true;
             this.RadAnnule.CheckedChanged += new System.EventHandler(this.RadAnnule_CheckedChanged);
@@ -266,7 +269,6 @@
             this.RadTermine.Name = "RadTermine";
             this.RadTermine.Size = new System.Drawing.Size(71, 20);
             this.RadTermine.TabIndex = 13;
-            this.RadTermine.TabStop = true;
             this.RadTermine.Text = "Terminé";
             this.RadTermine.UseVisualStyleBackColor = true;
             this.RadTermine.CheckedChanged += new System.EventHandler(this.RadTermine_CheckedChanged);
@@ -278,7 +280,6 @@
             this.RadEncours.Name = "RadEncours";
             this.RadEncours.Size = new System.Drawing.Size(78, 20);
             this.RadEncours.TabIndex = 12;
-            this.RadEncours.TabStop = true;
             this.RadEncours.Text = "En cours";
             this.RadEncours.UseVisualStyleBackColor = true;
             this.RadEncours.CheckedChanged += new System.EventHandler(this.RadEncours_CheckedChanged);

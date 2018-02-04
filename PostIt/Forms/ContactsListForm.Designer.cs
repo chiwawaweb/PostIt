@@ -54,15 +54,19 @@
             this.dgvContacts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvContacts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvContacts.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContacts.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvContacts.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvContacts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvContacts.Location = new System.Drawing.Point(0, 62);
             this.dgvContacts.Margin = new System.Windows.Forms.Padding(2);
             this.dgvContacts.MultiSelect = false;
@@ -77,7 +81,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvContacts.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvContacts.RowHeadersWidth = 30;
-            this.dgvContacts.RowTemplate.Height = 28;
+            this.dgvContacts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvContacts.RowTemplate.Height = 40;
             this.dgvContacts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvContacts.ShowCellErrors = false;
             this.dgvContacts.ShowCellToolTips = false;
@@ -85,6 +90,7 @@
             this.dgvContacts.ShowRowErrors = false;
             this.dgvContacts.Size = new System.Drawing.Size(856, 488);
             this.dgvContacts.TabIndex = 0;
+            this.dgvContacts.TabStop = false;
             this.dgvContacts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContacts_CellDoubleClick);
             // 
             // toolStrip

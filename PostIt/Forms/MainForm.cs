@@ -25,6 +25,10 @@ namespace PostIt.Forms
 
         Utils utils = new Utils();
 
+        /* Liste des fenêtres MDI gérées */
+        private ContactsListForm contactsListForm;
+        private EvenementsListForm evenementsListForm;
+
         [DllImport("wininet.dll")]
         private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
 
@@ -35,15 +39,8 @@ namespace PostIt.Forms
             EvenementProvider evenementProvider = new EvenementProvider();
             evenementProvider.CountAll();
 
-            ContactsListForm frm2 = new ContactsListForm();
-            frm2.MdiParent = this;
-            frm2.Show();
-
-            EvenementsListForm frm = new EvenementsListForm();
-            frm.MdiParent = this;
-            frm.Show();
-
-
+            OuvreAnnuaire();
+            OuvrePostit();
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -167,14 +164,37 @@ namespace PostIt.Forms
 
         private void annuaireToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ContactsListForm frm = new ContactsListForm();
-            frm.MdiParent = this;
-            frm.Show();
+            OuvreAnnuaire();
         }
 
         private void xToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void OuvreAnnuaire()
+        {
+            if (Application.OpenForms["ContactsListForm"] == null)
+            {
+                ContactsListForm contactsListForm = new ContactsListForm();
+                contactsListForm.Name = "ContactsListForm";
+                contactsListForm.MdiParent = this;
+                contactsListForm.Show();
+                this.LayoutMdi(MdiLayout.TileHorizontal);
+            }
+            
+        }
+
+        private void OuvrePostit()
+        {
+            if (Application.OpenForms["EvenementsListForm"] == null)
+            {
+                EvenementsListForm evenementsListForm = new EvenementsListForm();
+                evenementsListForm.Name = "EvenementsListForm";
+                evenementsListForm.MdiParent = this;
+                evenementsListForm.Show();
+                this.LayoutMdi(MdiLayout.TileHorizontal);
+            }
         }
     }
 }

@@ -104,7 +104,6 @@ namespace PostIt.Forms
             dgvContacts.Columns.Add(gsmCol);
             dgvContacts.Columns.Add(emailCol);
 
-
             /* Ajout des lignes */
             for (int i = 0; i < list.Count; i++)
             {

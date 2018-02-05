@@ -213,6 +213,7 @@ namespace PostIt.Forms
         {
             CbxTypeSearch.Text = "";
             TxtSearch.Text = "";
+            RefreshData();
         }
     }
 }

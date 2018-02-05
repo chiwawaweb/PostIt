@@ -26,6 +26,20 @@ namespace PostIt.Forms
 
         }
 
+        private void BtnModifier_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Etes-vous certain de vouloir modifier cette fiche ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                UpdateMode();
+            }
+        }
+
+        private void UpdateMode()
+        {
+
+        }
+
         private void BtnFermer_Click(object sender, EventArgs e)
         {
             Close();

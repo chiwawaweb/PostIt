@@ -203,5 +203,16 @@ namespace PostIt.Forms
         {
             ViewContact();
         }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            ResetFiltre();
+        }
+
+        private void ResetFiltre()
+        {
+            CbxTypeSearch.Text = "";
+            TxtSearch.Text = "";
+        }
     }
 }

@@ -90,8 +90,7 @@
             this.dgvEvenements.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEvenements.RowTemplate.Height = 40;
-            this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
+            this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEvenements.ShowCellErrors = false;
             this.dgvEvenements.ShowCellToolTips = false;
             this.dgvEvenements.ShowEditingIcon = false;

@@ -215,5 +215,22 @@ namespace PostIt.Forms
             TxtSearch.Text = "";
             RefreshData();
         }
+
+        /// <summary>
+        /// Actualisation de la liste.
+        /// </summary>
+        private void ActualiserListe()
+        {
+            if (dgvContacts.RowCount > 0)
+            {
+                idRetour = int.Parse(dgvContacts.CurrentRow.Cells[0].Value.ToString());
+                RefreshData();
+            }
+        }
+
+        private void timerActualisation_Tick(object sender, EventArgs e)
+        {
+            ActualiserListe();
+        }
     }
 }

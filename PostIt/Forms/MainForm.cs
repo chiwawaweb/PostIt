@@ -169,7 +169,7 @@ namespace PostIt.Forms
 
         private void xToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.LayoutMdi(MdiLayout.TileHorizontal);
+            
         }
 
         private void OuvreAnnuaire()
@@ -195,6 +195,16 @@ namespace PostIt.Forms
                 evenementsListForm.Show();
                 this.LayoutMdi(MdiLayout.TileHorizontal);
             }
+        }
+
+        private void réorganiserLesFenêtresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void postitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OuvrePostit();
         }
     }
 }

@@ -37,7 +37,36 @@ namespace PostIt.Forms
 
         private void UpdateMode()
         {
-
+            BtnModifier.Visible = false;
+            BtnCancel.Visible = true;
+            BtnSave.Visible = true;
+            BtnFermer.Visible = false;
+            LblTypeView.Visible = false;
+            CbxType.Visible = true;
+            LblSocieteView.Visible = false;
+            TxtSociete.Visible = true;
+            LblNomView.Visible = false;
+            TxtNom.Visible = true;
+            LblPrenomView.Visible = false;
+            TxtPrenom.Visible = true;
+            LblAdresse1View.Visible = false;
+            TxtAdresse1.Visible = true;
+            LblAdresse2View.Visible = false;
+            TxtAdresse2.Visible = true;
+            LblCpVilleView.Visible = false;
+            TxtCp.Visible = true;
+            TxtVille.Visible = true;
+            LblPaysView.Visible = false;
+            CbxPays.Visible = true;
+            LblTelView.Visible = false;
+            TxtTel.Visible = true;
+            LblFaxView.Visible = false;
+            TxtFax.Visible = true;
+            LblGsmView.Visible = false;
+            TxtGsm.Visible = true;
+            LblEmailView.Visible = false;
+            TxtEmail.Visible = true;
+            LblTitre.Text = "Modification d'un contact";
         }
 
         private void BtnFermer_Click(object sender, EventArgs e)
@@ -45,12 +74,9 @@ namespace PostIt.Forms
             Close();
         }
 
-        Utils utils = new Utils();
-
         ContactsListForm _owner;
-
+        Utils utils = new Utils();
         ContactProvider contactProvider = new ContactProvider();
-
 
         public ContactEditForm(ContactsListForm owner, bool update, int id = 0)
         {
@@ -266,7 +292,24 @@ namespace PostIt.Forms
 
         private void UpdateDatabase()
         {
-            
+            Contact contact = contactProvider.GetContactById(_id);
+
+            contact.Type = type;
+            contact.Societe = societe;
+            contact.Nom = nom;
+            contact.Prenom = prenom;
+            contact.Adresse1 = adresse1;
+            contact.Adresse2 = adresse2;
+            contact.CodePostal = cp;
+            contact.Ville = ville;
+            contact.Pays = pays;
+            contact.Tel = tel;
+            contact.Fax = fax;
+            contact.Mob = gsm;
+            contact.Email = email;
+            contact.UpdatedAt = DateTime.Now;
+
+            contactProvider.Update(contact);
         }
 
         private void AddDatabase()

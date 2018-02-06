@@ -92,6 +92,7 @@ namespace PostIt.Forms
         private void NewPostIt()
         {
             formTitle = "Création d'un Post'it";
+            TssDateCreation.Text = "";
         }
         
         private void AnnotationsBtnUpdate()

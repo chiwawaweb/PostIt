@@ -232,5 +232,15 @@ namespace PostIt.Forms
         {
             ActualiserListe();
         }
+
+        private void TsbActualiser_Click(object sender, EventArgs e)
+        {
+            ActualiserListe();
+        }
+
+        private void TsbRaz_Click(object sender, EventArgs e)
+        {
+            ResetFiltre();
+        }
     }
 }

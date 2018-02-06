@@ -18,7 +18,7 @@ namespace PostIt.DAL
                 try
                 {
                     var contacts = from b in context.Contacts
-                                   orderby b.Type ascending
+                                   orderby b.Nom, b.Prenom, b.Societe ascending
                                    where (
                                           (b.Nom.Contains(keywords))
                                             || (b.Prenom.Contains(keywords))

@@ -72,6 +72,9 @@
             this.LblGsmView = new System.Windows.Forms.Label();
             this.LblEmailView = new System.Windows.Forms.Label();
             this.BtnFermer = new System.Windows.Forms.Button();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.TssCreatedAt = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -334,7 +337,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(417, 493);
+            this.shapeContainer1.Size = new System.Drawing.Size(417, 501);
             this.shapeContainer1.TabIndex = 26;
             this.shapeContainer1.TabStop = false;
             // 
@@ -525,11 +528,29 @@
             this.BtnFermer.Visible = false;
             this.BtnFermer.Click += new System.EventHandler(this.BtnFermer_Click);
             // 
+            // statusStrip
+            // 
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TssCreatedAt});
+            this.statusStrip.Location = new System.Drawing.Point(0, 471);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(417, 30);
+            this.statusStrip.SizingGrip = false;
+            this.statusStrip.TabIndex = 42;
+            // 
+            // TssCreatedAt
+            // 
+            this.TssCreatedAt.Name = "TssCreatedAt";
+            this.TssCreatedAt.Size = new System.Drawing.Size(19, 25);
+            this.TssCreatedAt.Text = "-";
+            // 
             // ContactEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 493);
+            this.ClientSize = new System.Drawing.Size(417, 501);
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.BtnFermer);
             this.Controls.Add(this.LblEmailView);
             this.Controls.Add(this.LblGsmView);
@@ -583,6 +604,8 @@
             this.Text = "Fiche contact";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ContactEditForm_FormClosed);
             this.Load += new System.EventHandler(this.ContactEditForm_Load);
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -633,5 +656,7 @@
         private System.Windows.Forms.Label LblGsmView;
         private System.Windows.Forms.Label LblEmailView;
         private System.Windows.Forms.Button BtnFermer;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel TssCreatedAt;
     }
 }

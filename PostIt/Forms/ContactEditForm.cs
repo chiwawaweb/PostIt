@@ -16,7 +16,6 @@ namespace PostIt.Forms
     public partial class ContactEditForm : Form
     {
         string type, societe, nom, prenom, adresse1, adresse2, cp, ville, pays, tel, fax, gsm, email;
-        string formTitle;
         bool contactUpdateMode;
         int _id;
         DateTime createdAt, updatedAt;
@@ -131,14 +130,12 @@ namespace PostIt.Forms
                     LoadContact();
                     break;
             }
-
-            /* Titre du formulaire */
-            this.Text = formTitle;
         }
 
         private void NewContact()
         {
             LblTitre.Text = "Création d'un contact";
+            TssCreatedAt.Text = "";
         }
 
         private void LoadContact()
@@ -191,6 +188,7 @@ namespace PostIt.Forms
             fax = contactProvider.GetContactById(_id).Fax;
             gsm = contactProvider.GetContactById(_id).Mob;
             email = contactProvider.GetContactById(_id).Email;
+            createdAt = contactProvider.GetContactById(_id).CreatedAt;
 
             /* Affichage des données */
             CbxType.Text = type;
@@ -218,6 +216,9 @@ namespace PostIt.Forms
             LblGsmView.Text = gsm;
             TxtEmail.Text = email;
             LblEmailView.Text = email;
+
+            /* Barre de statut */
+            TssCreatedAt.Text = "Fiche créée le " + createdAt.ToString("dd/MM/yyyy HH:mm:ss");
         }
 
 

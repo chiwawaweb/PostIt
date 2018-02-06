@@ -20,12 +20,7 @@ namespace PostIt.Forms
         int _id;
         DateTime createdAt, updatedAt;
 
-        private void ContactEditForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnModifier_Click(object sender, EventArgs e)
+        private void ModifierContact()
         {
             DialogResult result = MessageBox.Show("Etes-vous certain de vouloir modifier cette fiche ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
@@ -66,6 +61,27 @@ namespace PostIt.Forms
             LblEmailView.Visible = false;
             TxtEmail.Visible = true;
             LblTitre.Text = "Modification d'un contact";
+        }
+
+        private void BtnCopyEmail_Click(object sender, EventArgs e)
+        {
+            CopyEmail();
+        }
+
+        private void CopyEmail()
+        {
+            Clipboard.SetText(email);
+            MessageBox.Show("Adresse e-mail a bien été copiée dans le presse-papier...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void LblEmailView_Click(object sender, EventArgs e)
+        {
+            CopyEmail();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ModifierContact();
         }
 
         private void BtnFermer_Click(object sender, EventArgs e)
@@ -219,6 +235,12 @@ namespace PostIt.Forms
 
             /* Barre de statut */
             TssCreatedAt.Text = "Fiche créée le " + createdAt.ToString("dd/MM/yyyy HH:mm:ss");
+
+            /* Bouton copier adresse email */
+            if (email!="")
+            {
+                BtnCopyEmail.Visible = true;
+            }
         }
 
 

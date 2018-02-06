@@ -62,7 +62,7 @@ namespace PostIt.Forms
             DataGridViewTextBoxColumn typeCol = new DataGridViewTextBoxColumn();
             typeCol.Name = "Type";
             typeCol.HeaderText = "CATEGORIE";
-            typeCol.Width = 100;
+            typeCol.Width = 170;
             typeCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn nomCol = new DataGridViewTextBoxColumn();
@@ -92,7 +92,7 @@ namespace PostIt.Forms
             DataGridViewTextBoxColumn emailCol = new DataGridViewTextBoxColumn();
             emailCol.Name = "Email";
             emailCol.HeaderText = "EMAIL";
-            emailCol.Width = 170;
+            emailCol.Width = 220;
             emailCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             /* Création des colonnes */

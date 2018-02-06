@@ -68,7 +68,7 @@ namespace PostIt.Forms
             DataGridViewTextBoxColumn nomCol = new DataGridViewTextBoxColumn();
             nomCol.Name = "Nom";
             nomCol.HeaderText = "NOM";
-            nomCol.Width = 250;
+            nomCol.Width = 400;
             nomCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn telCol = new DataGridViewTextBoxColumn();
@@ -241,6 +241,11 @@ namespace PostIt.Forms
         private void TsbRaz_Click(object sender, EventArgs e)
         {
             ResetFiltre();
+        }
+
+        private void CbxTypeSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RefreshData();
         }
     }
 }

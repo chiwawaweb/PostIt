@@ -51,7 +51,7 @@ namespace PostIt.Forms
         private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetupForm frm = new SetupForm(this);
-            frm.Show();
+            frm.ShowDialog();
         }
 
         public void RefreshForm()

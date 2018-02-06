@@ -551,6 +551,7 @@
             // 
             this.BtnModifier.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnModifier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnModifier.ErrorImage = null;
             this.BtnModifier.Image = ((System.Drawing.Image)(resources.GetObject("BtnModifier.Image")));
             this.BtnModifier.InitialImage = null;
             this.BtnModifier.Location = new System.Drawing.Point(391, 17);
@@ -558,6 +559,7 @@
             this.BtnModifier.Size = new System.Drawing.Size(16, 16);
             this.BtnModifier.TabIndex = 44;
             this.BtnModifier.TabStop = false;
+            this.BtnModifier.Visible = false;
             this.BtnModifier.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ContactEditForm

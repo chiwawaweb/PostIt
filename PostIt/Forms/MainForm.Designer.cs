@@ -31,22 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.postitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.annuaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.réorganiserLesFenêtresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.miseÀJourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.TsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.postitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
-            this.réorganiserLesFenêtresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,14 @@
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
+            // postitToolStripMenuItem
+            // 
+            this.postitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("postitToolStripMenuItem.Image")));
+            this.postitToolStripMenuItem.Name = "postitToolStripMenuItem";
+            this.postitToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
+            this.postitToolStripMenuItem.Text = "Post\'it";
+            this.postitToolStripMenuItem.Click += new System.EventHandler(this.postitToolStripMenuItem_Click);
+            // 
             // annuaireToolStripMenuItem
             // 
             this.annuaireToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("annuaireToolStripMenuItem.Image")));
@@ -83,6 +91,11 @@
             this.annuaireToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.annuaireToolStripMenuItem.Text = "Annuaire";
             this.annuaireToolStripMenuItem.Click += new System.EventHandler(this.annuaireToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(157, 6);
             // 
             // paramètresToolStripMenuItem
             // 
@@ -98,6 +111,7 @@
             // 
             // quitterToolStripMenuItem
             // 
+            this.quitterToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quitterToolStripMenuItem.Image")));
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.quitterToolStripMenuItem.Text = "Quitter";
@@ -122,6 +136,18 @@
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.aideToolStripMenuItem.Text = "Aide ?";
+            // 
+            // réorganiserLesFenêtresToolStripMenuItem
+            // 
+            this.réorganiserLesFenêtresToolStripMenuItem.Name = "réorganiserLesFenêtresToolStripMenuItem";
+            this.réorganiserLesFenêtresToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.réorganiserLesFenêtresToolStripMenuItem.Text = "Réorganiser les fenêtres";
+            this.réorganiserLesFenêtresToolStripMenuItem.Click += new System.EventHandler(this.réorganiserLesFenêtresToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(195, 6);
             // 
             // miseÀJourToolStripMenuItem
             // 
@@ -169,31 +195,6 @@
             this.TsslVersion.Name = "TsslVersion";
             this.TsslVersion.Size = new System.Drawing.Size(46, 17);
             this.TsslVersion.Text = "Version";
-            // 
-            // postitToolStripMenuItem
-            // 
-            this.postitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("postitToolStripMenuItem.Image")));
-            this.postitToolStripMenuItem.Name = "postitToolStripMenuItem";
-            this.postitToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
-            this.postitToolStripMenuItem.Text = "Post\'it";
-            this.postitToolStripMenuItem.Click += new System.EventHandler(this.postitToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(157, 6);
-            // 
-            // réorganiserLesFenêtresToolStripMenuItem
-            // 
-            this.réorganiserLesFenêtresToolStripMenuItem.Name = "réorganiserLesFenêtresToolStripMenuItem";
-            this.réorganiserLesFenêtresToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.réorganiserLesFenêtresToolStripMenuItem.Text = "Réorganiser les fenêtres";
-            this.réorganiserLesFenêtresToolStripMenuItem.Click += new System.EventHandler(this.réorganiserLesFenêtresToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(195, 6);
             // 
             // MainForm
             // 

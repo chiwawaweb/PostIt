@@ -26,8 +26,8 @@ namespace PostIt.Forms
         Utils utils = new Utils();
 
         /* Liste des fenêtres MDI gérées */
-        private ContactsListForm contactsListForm;
-        private EvenementsListForm evenementsListForm;
+        static ContactsListForm contactsListForm = new ContactsListForm();
+        static EvenementsListForm evenementsListForm = new EvenementsListForm();
 
         [DllImport("wininet.dll")]
         private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
@@ -48,7 +48,7 @@ namespace PostIt.Forms
             Application.Exit();
         }
 
-        private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ParamètresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetupForm frm = new SetupForm(this);
             frm.ShowDialog();
@@ -60,16 +60,15 @@ namespace PostIt.Forms
             // affiche la version dans la barre de titre
             TsslVersion.Text = "Version : " + versionAppli;
 
-            if (checkUpdates() == 1)
+            if (CheckUpdates() == 1)
             {
-                updateAppli();
+                UpdateAppli();
             }
         }
 
         private static bool CheckInternetConnection()
         {
-            int Desc;
-            if (InternetGetConnectedState(out Desc, 0))
+            if (InternetGetConnectedState(out int Desc, 0))
             {
                 // connexion internet OK
                 return true;
@@ -81,7 +80,7 @@ namespace PostIt.Forms
             }
         }
 
-        private int checkUpdates()
+        private int CheckUpdates()
         {
             if (CheckInternetConnection())
             {
@@ -115,7 +114,7 @@ namespace PostIt.Forms
             }
         }
 
-        private void updateAppli()
+        private void UpdateAppli()
         {
             NewUpdateForm frm = new NewUpdateForm();
             frm.StartPosition = FormStartPosition.CenterScreen;
@@ -128,14 +127,14 @@ namespace PostIt.Forms
             this.LayoutMdi(MdiLayout.TileHorizontal);
         }
 
-        private void miseÀJourToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MiseÀJourToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MiseAJour();   
         }
 
         private void MiseAJour()
         {
-            switch (checkUpdates())
+            switch (CheckUpdates())
             {
                 case 0:
                     MessageBox.Show("Il n'y a pas de connexion internet actuellement. Merci de réessayer ultérieurement.", "Non connecté", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -143,7 +142,7 @@ namespace PostIt.Forms
 
                 case 1:
 
-                    updateAppli();
+                    UpdateAppli();
                     break;
 
                 case 2:
@@ -156,13 +155,13 @@ namespace PostIt.Forms
             }
         }
 
-        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AProposToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm frm = new AboutForm();
             frm.ShowDialog();
         }
 
-        private void annuaireToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AnnuaireToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OuvreAnnuaire();
         }
@@ -171,11 +170,14 @@ namespace PostIt.Forms
         {
             if (Application.OpenForms["ContactsListForm"] == null)
             {
-                ContactsListForm contactsListForm = new ContactsListForm();
-                contactsListForm.Name = "ContactsListForm";
+                
                 contactsListForm.MdiParent = this;
                 contactsListForm.Show();
                 this.LayoutMdi(MdiLayout.TileHorizontal);
+            }
+            else
+            {
+                contactsListForm.Activate();
             }
             
         }
@@ -184,12 +186,13 @@ namespace PostIt.Forms
         {
             if (Application.OpenForms["EvenementsListForm"] == null)
             {
-                EvenementsListForm evenementsListForm = new EvenementsListForm();
-                evenementsListForm.Name = "EvenementsListForm";
                 evenementsListForm.MdiParent = this;
                 evenementsListForm.Show();
                 this.LayoutMdi(MdiLayout.TileHorizontal);
-                
+            }
+            else
+            {
+                evenementsListForm.Activate();
             }
         }
 

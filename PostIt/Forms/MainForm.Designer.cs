@@ -90,7 +90,7 @@
             this.annuaireToolStripMenuItem.Name = "annuaireToolStripMenuItem";
             this.annuaireToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.annuaireToolStripMenuItem.Text = "Annuaire";
-            this.annuaireToolStripMenuItem.Click += new System.EventHandler(this.annuaireToolStripMenuItem_Click);
+            this.annuaireToolStripMenuItem.Click += new System.EventHandler(this.AnnuaireToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -102,7 +102,7 @@
             this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
             this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.paramètresToolStripMenuItem.Text = "Paramètres";
-            this.paramètresToolStripMenuItem.Click += new System.EventHandler(this.paramètresToolStripMenuItem_Click);
+            this.paramètresToolStripMenuItem.Click += new System.EventHandler(this.ParamètresToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -154,7 +154,7 @@
             this.miseÀJourToolStripMenuItem.Name = "miseÀJourToolStripMenuItem";
             this.miseÀJourToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.miseÀJourToolStripMenuItem.Text = "Mise à jour...";
-            this.miseÀJourToolStripMenuItem.Click += new System.EventHandler(this.miseÀJourToolStripMenuItem_Click);
+            this.miseÀJourToolStripMenuItem.Click += new System.EventHandler(this.MiseÀJourToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -166,7 +166,7 @@
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
             this.aProposToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.aProposToolStripMenuItem.Text = "A propos...";
-            this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
+            this.aProposToolStripMenuItem.Click += new System.EventHandler(this.AProposToolStripMenuItem_Click);
             // 
             // toolStrip
             // 

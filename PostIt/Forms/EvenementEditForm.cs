@@ -125,7 +125,7 @@ namespace PostIt.Forms
         {
             formTitle = "Consultation d'un Post'it";
             BtnCommentaires.Visible = true;
-            BtnModifier.Visible = true;
+            PbxModifier.Visible = true;
             CbxOperateur.Visible = false;
             CbxCategorie.Visible = false;
             TxtTiers.Visible = false;
@@ -173,7 +173,7 @@ namespace PostIt.Forms
             /* Si statut Annulé ou Terminé, plus de modifications */
             if (statut == "Terminé" || statut == "Annulé")
             {
-                BtnModifier.Visible = false;
+                PbxModifier.Visible = false;
                 BtnAvanceEcheance.Visible = false;
                 BtnReculeEcheance.Visible = false;
                 noAnnotation = true;
@@ -205,7 +205,9 @@ namespace PostIt.Forms
             Close();
         }
 
-        private void BtnModifier_Click(object sender, EventArgs e)
+
+
+        private void ModifierEvenement()
         {
             DialogResult result = MessageBox.Show("Etes-vous certain de vouloir modifier cette fiche ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
@@ -220,6 +222,11 @@ namespace PostIt.Forms
             {
                 ModifEcheance(-1);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ModifierEvenement();
         }
 
         private void BtnAvanceEcheance_Click(object sender, EventArgs e)
@@ -373,7 +380,7 @@ namespace PostIt.Forms
             BtnEnregistrer.Visible = true;
             BtnFermer.Visible = false;
             BtnAnnuler.Visible = true;
-            BtnModifier.Visible = false;
+            PbxModifier.Visible = false;
             LblEcheanceView.Visible = false;
             BtnAvanceEcheance.Visible = false;
             BtnReculeEcheance.Visible = false;

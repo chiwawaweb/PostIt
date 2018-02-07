@@ -146,6 +146,9 @@ namespace PostIt.Forms
             }
 
             CreateTable(list, idRetour);
+
+            /* Mise à jour du nombre de contact dans la barre de statut */
+            TslNbContacts.Text = "Nombre de contacts affichés : " + list.Count.ToString();
         }
 
         private void ContactsListForm_Load(object sender, EventArgs e)

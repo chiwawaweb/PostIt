@@ -117,27 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BtnModifier.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAORJREFUOE+VkD0KwkAQhXMBL2Nr6SUsLLyBuIKQzsafJk2s7KystRMrO7FT7ARB
-        BQtBBbWyCCNvk8F12UziwsekmPe9IR6/VjsgvxMSJmj63R8Kak7JqvsppSiKKJXqcCNLJMH9FQtESZoA
-        YUwWpEpsAYIuzjci7Cax72MBllwCBMH2mENggxBP8QIsDZYR9RdvPRvTp/7GZMQLIECAsdtr42t+Adrq
-        k4eeCFZGFz1XO0FgtrlAOFNgtnIzKIcnjSjAH+Ygn2tSCg40W2dcwI1mK4LF3l4jCuxGBiGeouAf4pTn
-        fQBwKVUipqyWSAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>247, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BtnFermer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAPNJREFUOE/VkTEOwjAQBP03Ckp+QEUF/ICCT/ATWmokSviCm5TpKYyWu0XLxSS4
+        wQAADsEBuJFr7QAAAPNJREFUOE/VkTEOwjAQBP03Ckp+QEUF/ICCT/ATWmokSviCm5TpKYyWu0XLxSS4
         g5VWic9745Od/kPn5azAt9W8XNeLl4/73WCNHP4P280zz15HmVhkCA2sRXNPD0CPo0wx/K2RhzGIo0wx
         pOsxa9ZRJg3BOefSdV3p+/7tnrCmWZuckPcSoTUYzCkdZYoBngooIVCETT6KvjC/nLI2mR7uKBND2GCI
         NcJgvU9Yc44yaUit09ExMzqhmjB8sb5fTgOoXpGjTAzAOA3NeBCYdTxArCPLa3CUiU1qhGv1T3aUqRZo
@@ -169,4 +159,14 @@
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>329, 17</value>
   </metadata>
+  <data name="PbxModifier.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAAGYktHRAD/AP8A/6C9p5MAAAAHdElNRQfiAgcJKQQ8tRuN
+        AAAA2ElEQVQ4T6WSsQrCQBBEE7RWm4CFoD/kb8VOf0SxU/9BGy200fgbgmKcgUkuWe6SgAOP7M3ObsKR
+        yKc4jlU5+TyvEKQGYANysZbXvgWZPniBD0gFa3o9xcJCaAX41qEseiN5S1lhIXQCex1L0QNHHcNC6AK2
+        OpaiB8461oVG8UzADRzAGEwEa3pXkFRnSsHgJxa33sZOY04wMxP6Bmry0JgTTRPK1WKv5oO7Wk4w7YK3
+        WuzxP6j2Oi0gc2H9zgumYGY84l3wNKGmS8w05gRzYUJNpBr7V1H0A6YSbFRihdg4AAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

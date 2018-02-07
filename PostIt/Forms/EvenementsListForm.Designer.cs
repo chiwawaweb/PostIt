@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvenementsListForm));
             this.dgvEvenements = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -73,14 +73,14 @@
             this.dgvEvenements.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEvenements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEvenements.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEvenements.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 10F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEvenements.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvEvenements.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvEvenements.Location = new System.Drawing.Point(0, 131);
             this.dgvEvenements.Margin = new System.Windows.Forms.Padding(2);
@@ -89,8 +89,8 @@
             this.dgvEvenements.ReadOnly = true;
             this.dgvEvenements.RowHeadersWidth = 30;
             this.dgvEvenements.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEvenements.ShowCellErrors = false;
             this.dgvEvenements.ShowCellToolTips = false;
@@ -177,17 +177,17 @@
             this.TxtSearch.Location = new System.Drawing.Point(218, 44);
             this.TxtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(227, 22);
+            this.TxtSearch.Size = new System.Drawing.Size(227, 23);
             this.TxtSearch.TabIndex = 1;
             this.TxtSearch.TabStop = false;
             // 
             // DtpFin
             // 
             this.DtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFin.Location = new System.Drawing.Point(1012, 44);
+            this.DtpFin.Location = new System.Drawing.Point(1014, 44);
             this.DtpFin.Margin = new System.Windows.Forms.Padding(2);
             this.DtpFin.Name = "DtpFin";
-            this.DtpFin.Size = new System.Drawing.Size(91, 22);
+            this.DtpFin.Size = new System.Drawing.Size(91, 23);
             this.DtpFin.TabIndex = 7;
             this.DtpFin.TabStop = false;
             this.DtpFin.ValueChanged += new System.EventHandler(this.DtpFin_ValueChanged);
@@ -198,7 +198,7 @@
             this.DtpDebut.Location = new System.Drawing.Point(876, 44);
             this.DtpDebut.Margin = new System.Windows.Forms.Padding(2);
             this.DtpDebut.Name = "DtpDebut";
-            this.DtpDebut.Size = new System.Drawing.Size(91, 22);
+            this.DtpDebut.Size = new System.Drawing.Size(91, 23);
             this.DtpDebut.TabIndex = 6;
             this.DtpDebut.TabStop = false;
             this.DtpDebut.ValueChanged += new System.EventHandler(this.DtpDebut_ValueChanged);
@@ -232,16 +232,16 @@
             this.GrpFiltre.Controls.Add(this.RadAnnule);
             this.GrpFiltre.Controls.Add(this.RadTermine);
             this.GrpFiltre.Controls.Add(this.RadEncours);
-            this.GrpFiltre.Controls.Add(this.label2);
-            this.GrpFiltre.Controls.Add(this.label1);
             this.GrpFiltre.Controls.Add(this.BtnReset);
             this.GrpFiltre.Controls.Add(this.BtnSearch);
             this.GrpFiltre.Controls.Add(this.DtpDebut);
-            this.GrpFiltre.Controls.Add(this.LblSearchText);
             this.GrpFiltre.Controls.Add(this.DtpFin);
-            this.GrpFiltre.Controls.Add(this.LblCategorie);
             this.GrpFiltre.Controls.Add(this.CbxSearchCategorie);
             this.GrpFiltre.Controls.Add(this.TxtSearch);
+            this.GrpFiltre.Controls.Add(this.label1);
+            this.GrpFiltre.Controls.Add(this.label2);
+            this.GrpFiltre.Controls.Add(this.LblSearchText);
+            this.GrpFiltre.Controls.Add(this.LblCategorie);
             this.GrpFiltre.Location = new System.Drawing.Point(2, 43);
             this.GrpFiltre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GrpFiltre.Name = "GrpFiltre";
@@ -256,7 +256,7 @@
             this.RadAnnule.AutoSize = true;
             this.RadAnnule.Location = new System.Drawing.Point(628, 46);
             this.RadAnnule.Name = "RadAnnule";
-            this.RadAnnule.Size = new System.Drawing.Size(66, 20);
+            this.RadAnnule.Size = new System.Drawing.Size(70, 20);
             this.RadAnnule.TabIndex = 14;
             this.RadAnnule.Text = "Annulé";
             this.RadAnnule.UseVisualStyleBackColor = true;
@@ -267,7 +267,7 @@
             this.RadTermine.AutoSize = true;
             this.RadTermine.Location = new System.Drawing.Point(551, 46);
             this.RadTermine.Name = "RadTermine";
-            this.RadTermine.Size = new System.Drawing.Size(71, 20);
+            this.RadTermine.Size = new System.Drawing.Size(76, 20);
             this.RadTermine.TabIndex = 13;
             this.RadTermine.Text = "Terminé";
             this.RadTermine.UseVisualStyleBackColor = true;
@@ -278,7 +278,7 @@
             this.RadEncours.AutoSize = true;
             this.RadEncours.Location = new System.Drawing.Point(467, 46);
             this.RadEncours.Name = "RadEncours";
-            this.RadEncours.Size = new System.Drawing.Size(78, 20);
+            this.RadEncours.Size = new System.Drawing.Size(82, 20);
             this.RadEncours.TabIndex = 12;
             this.RadEncours.Text = "En cours";
             this.RadEncours.UseVisualStyleBackColor = true;
@@ -287,18 +287,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(969, 47);
+            this.label2.Location = new System.Drawing.Point(973, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.Size = new System.Drawing.Size(43, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "et le :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(751, 47);
+            this.label1.Location = new System.Drawing.Point(746, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 16);
+            this.label1.Size = new System.Drawing.Size(131, 16);
             this.label1.TabIndex = 10;
             this.label1.Text = "Echéance entre le :";
             // 
@@ -307,7 +307,7 @@
             this.LblSearchText.AutoSize = true;
             this.LblSearchText.Location = new System.Drawing.Point(217, 25);
             this.LblSearchText.Name = "LblSearchText";
-            this.LblSearchText.Size = new System.Drawing.Size(106, 16);
+            this.LblSearchText.Size = new System.Drawing.Size(116, 16);
             this.LblSearchText.TabIndex = 5;
             this.LblSearchText.Text = "Recherche libre :";
             // 
@@ -316,7 +316,7 @@
             this.LblCategorie.AutoSize = true;
             this.LblCategorie.Location = new System.Drawing.Point(8, 25);
             this.LblCategorie.Name = "LblCategorie";
-            this.LblCategorie.Size = new System.Drawing.Size(71, 16);
+            this.LblCategorie.Size = new System.Drawing.Size(78, 16);
             this.LblCategorie.TabIndex = 4;
             this.LblCategorie.Text = "Catégorie :";
             // 
@@ -324,7 +324,7 @@
             // 
             this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxSearchCategorie.FormattingEnabled = true;
-            this.CbxSearchCategorie.Location = new System.Drawing.Point(12, 43);
+            this.CbxSearchCategorie.Location = new System.Drawing.Point(10, 43);
             this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2);
             this.CbxSearchCategorie.Name = "CbxSearchCategorie";
             this.CbxSearchCategorie.Size = new System.Drawing.Size(201, 24);
@@ -357,7 +357,7 @@
             this.Controls.Add(this.GrpFiltre);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.dgvEvenements);
-            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial", 10F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EvenementsListForm";
             this.ShowIcon = false;

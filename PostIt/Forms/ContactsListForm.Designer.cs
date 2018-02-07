@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactsListForm));
             this.dgvContacts = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -45,8 +45,10 @@
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
             this.timerActualisation = new System.Windows.Forms.Timer(this.components);
+            this.TslNbContacts = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).BeginInit();
             this.toolStrip.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvContacts
@@ -61,14 +63,14 @@
             this.dgvContacts.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContacts.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvContacts.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvContacts.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvContacts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvContacts.Location = new System.Drawing.Point(0, 63);
             this.dgvContacts.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -147,13 +149,15 @@
             this.TsbRaz.Image = ((System.Drawing.Image)(resources.GetObject("TsbRaz.Image")));
             this.TsbRaz.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbRaz.Name = "TsbRaz";
-            this.TsbRaz.Size = new System.Drawing.Size(92, 28);
-            this.TsbRaz.Text = "RàZ Filtre";
+            this.TsbRaz.Size = new System.Drawing.Size(100, 28);
+            this.TsbRaz.Text = "R.à.Z Filtre";
             this.TsbRaz.Click += new System.EventHandler(this.TsbRaz_Click);
             // 
             // statusStrip
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TslNbContacts});
             this.statusStrip.Location = new System.Drawing.Point(0, 489);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 17, 0);
@@ -164,20 +168,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label1.Font = new System.Drawing.Font("Arial", 10F);
             this.label1.Location = new System.Drawing.Point(13, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(85, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Recherche :";
             // 
             // CbxTypeSearch
             // 
             this.CbxTypeSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxTypeSearch.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.CbxTypeSearch.Font = new System.Drawing.Font("Arial", 10F);
             this.CbxTypeSearch.FormattingEnabled = true;
-            this.CbxTypeSearch.Location = new System.Drawing.Point(319, 33);
+            this.CbxTypeSearch.Location = new System.Drawing.Point(323, 33);
             this.CbxTypeSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CbxTypeSearch.Name = "CbxTypeSearch";
             this.CbxTypeSearch.Size = new System.Drawing.Size(201, 24);
@@ -186,20 +190,20 @@
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.TxtSearch.Location = new System.Drawing.Point(95, 33);
+            this.TxtSearch.Font = new System.Drawing.Font("Arial", 10F);
+            this.TxtSearch.Location = new System.Drawing.Point(97, 33);
             this.TxtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(217, 22);
+            this.TxtSearch.Size = new System.Drawing.Size(217, 23);
             this.TxtSearch.TabIndex = 5;
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.BtnSearch.Location = new System.Drawing.Point(528, 33);
+            this.BtnSearch.Font = new System.Drawing.Font("Arial", 10F);
+            this.BtnSearch.Location = new System.Drawing.Point(533, 32);
             this.BtnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(102, 24);
+            this.BtnSearch.Size = new System.Drawing.Size(102, 26);
             this.BtnSearch.TabIndex = 6;
             this.BtnSearch.Text = "Chercher";
             this.BtnSearch.UseVisualStyleBackColor = true;
@@ -222,6 +226,12 @@
             this.timerActualisation.Interval = 30000;
             this.timerActualisation.Tick += new System.EventHandler(this.timerActualisation_Tick);
             // 
+            // TslNbContacts
+            // 
+            this.TslNbContacts.Name = "TslNbContacts";
+            this.TslNbContacts.Size = new System.Drawing.Size(12, 17);
+            this.TslNbContacts.Text = "-";
+            // 
             // ContactsListForm
             // 
             this.AcceptButton = this.BtnSearch;
@@ -232,10 +242,10 @@
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.CbxTypeSearch);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.dgvContacts);
+            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ContactsListForm";
@@ -246,6 +256,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).EndInit();
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +279,6 @@
         private System.Windows.Forms.Timer timerActualisation;
         private System.Windows.Forms.ToolStripButton TsbActualiser;
         private System.Windows.Forms.ToolStripButton TsbRaz;
+        private System.Windows.Forms.ToolStripStatusLabel TslNbContacts;
     }
 }

@@ -43,7 +43,6 @@
             this.BtnAnnuler = new System.Windows.Forms.Button();
             this.BtnEnregistrer = new System.Windows.Forms.Button();
             this.BtnCommentaires = new System.Windows.Forms.Button();
-            this.BtnModifier = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -60,7 +59,9 @@
             this.TssDateCreation = new System.Windows.Forms.ToolStripStatusLabel();
             this.TssDateModification = new System.Windows.Forms.ToolStripStatusLabel();
             this.TssStatut = new System.Windows.Forms.ToolStripStatusLabel();
+            this.PbxModifier = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxModifier)).BeginInit();
             this.SuspendLayout();
             // 
             // LblOperateur
@@ -69,7 +70,7 @@
             this.LblOperateur.Location = new System.Drawing.Point(28, 58);
             this.LblOperateur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblOperateur.Name = "LblOperateur";
-            this.LblOperateur.Size = new System.Drawing.Size(128, 23);
+            this.LblOperateur.Size = new System.Drawing.Size(84, 16);
             this.LblOperateur.TabIndex = 0;
             this.LblOperateur.Text = "Collaborateur";
             // 
@@ -81,7 +82,7 @@
             this.CbxOperateur.Location = new System.Drawing.Point(28, 77);
             this.CbxOperateur.Margin = new System.Windows.Forms.Padding(2);
             this.CbxOperateur.Name = "CbxOperateur";
-            this.CbxOperateur.Size = new System.Drawing.Size(217, 31);
+            this.CbxOperateur.Size = new System.Drawing.Size(217, 24);
             this.CbxOperateur.TabIndex = 0;
             // 
             // CbxCategorie
@@ -91,7 +92,7 @@
             this.CbxCategorie.Location = new System.Drawing.Point(289, 77);
             this.CbxCategorie.Margin = new System.Windows.Forms.Padding(2);
             this.CbxCategorie.Name = "CbxCategorie";
-            this.CbxCategorie.Size = new System.Drawing.Size(208, 31);
+            this.CbxCategorie.Size = new System.Drawing.Size(208, 24);
             this.CbxCategorie.TabIndex = 1;
             // 
             // LblCategorie
@@ -100,7 +101,7 @@
             this.LblCategorie.Location = new System.Drawing.Point(289, 58);
             this.LblCategorie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblCategorie.Name = "LblCategorie";
-            this.LblCategorie.Size = new System.Drawing.Size(96, 23);
+            this.LblCategorie.Size = new System.Drawing.Size(63, 16);
             this.LblCategorie.TabIndex = 2;
             this.LblCategorie.Text = "Catégorie";
             // 
@@ -109,7 +110,7 @@
             this.TxtTiers.Location = new System.Drawing.Point(28, 133);
             this.TxtTiers.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTiers.Name = "TxtTiers";
-            this.TxtTiers.Size = new System.Drawing.Size(217, 30);
+            this.TxtTiers.Size = new System.Drawing.Size(217, 22);
             this.TxtTiers.TabIndex = 2;
             // 
             // LblTiers
@@ -118,7 +119,7 @@
             this.LblTiers.Location = new System.Drawing.Point(28, 114);
             this.LblTiers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTiers.Name = "LblTiers";
-            this.LblTiers.Size = new System.Drawing.Size(139, 23);
+            this.LblTiers.Size = new System.Drawing.Size(93, 16);
             this.LblTiers.TabIndex = 5;
             this.LblTiers.Text = "Tiers concerné";
             // 
@@ -139,7 +140,7 @@
             this.LblDescription.Location = new System.Drawing.Point(28, 166);
             this.LblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblDescription.Name = "LblDescription";
-            this.LblDescription.Size = new System.Drawing.Size(207, 23);
+            this.LblDescription.Size = new System.Drawing.Size(138, 16);
             this.LblDescription.TabIndex = 8;
             this.LblDescription.Text = "Description / Message";
             // 
@@ -149,7 +150,7 @@
             this.DtpEcheance.Location = new System.Drawing.Point(28, 343);
             this.DtpEcheance.Margin = new System.Windows.Forms.Padding(2);
             this.DtpEcheance.Name = "DtpEcheance";
-            this.DtpEcheance.Size = new System.Drawing.Size(110, 30);
+            this.DtpEcheance.Size = new System.Drawing.Size(110, 22);
             this.DtpEcheance.TabIndex = 5;
             // 
             // LblEcheance
@@ -158,7 +159,7 @@
             this.LblEcheance.Location = new System.Drawing.Point(28, 325);
             this.LblEcheance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblEcheance.Name = "LblEcheance";
-            this.LblEcheance.Size = new System.Drawing.Size(161, 23);
+            this.LblEcheance.Size = new System.Drawing.Size(107, 16);
             this.LblEcheance.TabIndex = 11;
             this.LblEcheance.Text = "Echéance prévue";
             // 
@@ -202,20 +203,6 @@
             this.BtnCommentaires.Visible = false;
             this.BtnCommentaires.Click += new System.EventHandler(this.BtnCommentaires_Click);
             // 
-            // BtnModifier
-            // 
-            this.BtnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModifier.Image = ((System.Drawing.Image)(resources.GetObject("BtnModifier.Image")));
-            this.BtnModifier.Location = new System.Drawing.Point(485, 5);
-            this.BtnModifier.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnModifier.Name = "BtnModifier";
-            this.BtnModifier.Size = new System.Drawing.Size(33, 34);
-            this.BtnModifier.TabIndex = 13;
-            this.BtnModifier.TabStop = false;
-            this.BtnModifier.UseVisualStyleBackColor = true;
-            this.BtnModifier.Visible = false;
-            this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
-            // 
             // shapeContainer1
             // 
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
@@ -245,7 +232,7 @@
             this.LblTitre.ForeColor = System.Drawing.Color.White;
             this.LblTitre.Location = new System.Drawing.Point(28, 15);
             this.LblTitre.Name = "LblTitre";
-            this.LblTitre.Size = new System.Drawing.Size(223, 27);
+            this.LblTitre.Size = new System.Drawing.Size(142, 18);
             this.LblTitre.TabIndex = 15;
             this.LblTitre.Text = "Edition d\'un Post\'it";
             // 
@@ -278,7 +265,7 @@
             this.LblOperateurView.Location = new System.Drawing.Point(28, 79);
             this.LblOperateurView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblOperateurView.Name = "LblOperateurView";
-            this.LblOperateurView.Size = new System.Drawing.Size(138, 24);
+            this.LblOperateurView.Size = new System.Drawing.Size(95, 16);
             this.LblOperateurView.TabIndex = 17;
             this.LblOperateurView.Text = "Collaborateur";
             this.LblOperateurView.Visible = false;
@@ -290,7 +277,7 @@
             this.LblCategorieView.Location = new System.Drawing.Point(289, 79);
             this.LblCategorieView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblCategorieView.Name = "LblCategorieView";
-            this.LblCategorieView.Size = new System.Drawing.Size(101, 24);
+            this.LblCategorieView.Size = new System.Drawing.Size(70, 16);
             this.LblCategorieView.TabIndex = 18;
             this.LblCategorieView.Text = "Categorie";
             this.LblCategorieView.Visible = false;
@@ -302,7 +289,7 @@
             this.LblTiersView.Location = new System.Drawing.Point(28, 135);
             this.LblTiersView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTiersView.Name = "LblTiersView";
-            this.LblTiersView.Size = new System.Drawing.Size(58, 24);
+            this.LblTiersView.Size = new System.Drawing.Size(39, 16);
             this.LblTiersView.TabIndex = 19;
             this.LblTiersView.Text = "Tiers";
             this.LblTiersView.Visible = false;
@@ -314,7 +301,7 @@
             this.LblEcheanceView.Location = new System.Drawing.Point(28, 347);
             this.LblEcheanceView.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblEcheanceView.Name = "LblEcheanceView";
-            this.LblEcheanceView.Size = new System.Drawing.Size(102, 24);
+            this.LblEcheanceView.Size = new System.Drawing.Size(70, 16);
             this.LblEcheanceView.TabIndex = 20;
             this.LblEcheanceView.Text = "Echeance";
             this.LblEcheanceView.Visible = false;
@@ -350,9 +337,9 @@
             this.TssDateCreation,
             this.TssDateModification,
             this.TssStatut});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 449);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 457);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(524, 30);
+            this.statusStrip1.Size = new System.Drawing.Size(524, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 23;
             this.statusStrip1.Text = "statusStrip1";
@@ -360,29 +347,44 @@
             // TssDateCreation
             // 
             this.TssDateCreation.Name = "TssDateCreation";
-            this.TssDateCreation.Size = new System.Drawing.Size(19, 25);
+            this.TssDateCreation.Size = new System.Drawing.Size(12, 17);
             this.TssDateCreation.Text = "-";
             // 
             // TssDateModification
             // 
             this.TssDateModification.Name = "TssDateModification";
-            this.TssDateModification.Size = new System.Drawing.Size(0, 25);
+            this.TssDateModification.Size = new System.Drawing.Size(0, 17);
             // 
             // TssStatut
             // 
             this.TssStatut.Name = "TssStatut";
-            this.TssStatut.Size = new System.Drawing.Size(444, 25);
+            this.TssStatut.Size = new System.Drawing.Size(497, 17);
             this.TssStatut.Spring = true;
             this.TssStatut.Text = "-";
             this.TssStatut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // PbxModifier
+            // 
+            this.PbxModifier.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.PbxModifier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbxModifier.ErrorImage = null;
+            this.PbxModifier.Image = ((System.Drawing.Image)(resources.GetObject("PbxModifier.Image")));
+            this.PbxModifier.InitialImage = null;
+            this.PbxModifier.Location = new System.Drawing.Point(502, 15);
+            this.PbxModifier.Name = "PbxModifier";
+            this.PbxModifier.Size = new System.Drawing.Size(16, 16);
+            this.PbxModifier.TabIndex = 24;
+            this.PbxModifier.TabStop = false;
+            this.PbxModifier.Visible = false;
+            this.PbxModifier.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // EvenementEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnFermer;
             this.ClientSize = new System.Drawing.Size(524, 479);
-            this.ControlBox = false;
+            this.Controls.Add(this.PbxModifier);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.BtnReculeEcheance);
             this.Controls.Add(this.BtnAvanceEcheance);
@@ -392,7 +394,6 @@
             this.Controls.Add(this.LblOperateurView);
             this.Controls.Add(this.BtnFermer);
             this.Controls.Add(this.LblTitre);
-            this.Controls.Add(this.BtnModifier);
             this.Controls.Add(this.BtnCommentaires);
             this.Controls.Add(this.BtnEnregistrer);
             this.Controls.Add(this.BtnAnnuler);
@@ -420,6 +421,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EvenementEditForm_FormClosed);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxModifier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,7 +442,6 @@
         private System.Windows.Forms.Button BtnAnnuler;
         private System.Windows.Forms.Button BtnEnregistrer;
         private System.Windows.Forms.Button BtnCommentaires;
-        private System.Windows.Forms.Button BtnModifier;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
@@ -457,5 +458,6 @@
         private System.Windows.Forms.ToolStripStatusLabel TssDateCreation;
         private System.Windows.Forms.ToolStripStatusLabel TssDateModification;
         private System.Windows.Forms.ToolStripStatusLabel TssStatut;
+        private System.Windows.Forms.PictureBox PbxModifier;
     }
 }

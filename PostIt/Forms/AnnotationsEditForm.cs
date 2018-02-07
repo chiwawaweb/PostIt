@@ -18,7 +18,7 @@ namespace PostIt.Forms
     {
         string commentaire, operateur;
         bool annotationUpdateMode;
-        int _id, idRetour;
+        int _id, idRetour = 0;
 
         Utils utils = new Utils();
 
@@ -114,40 +114,48 @@ namespace PostIt.Forms
 
         private void CreateTable(List<Annotation> list, int _idRetour)
         {
-            _idRetour = _idRetour;
+            idRetour = _idRetour;
 
             /* Initialisation du tableau */
             dgvAnnotations.Rows.Clear();
             dgvAnnotations.Columns.Clear();
 
             /* Mise en forme du tableau */
-            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn();
-            idColumn.Name = "ID";
-            idColumn.HeaderText = "#";
-            idColumn.Width = 50;
-            idColumn.Visible = false;
+            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "ID",
+                HeaderText = "#",
+                Width = 50,
+                Visible = false
+            };
             idColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             idColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn dateColumn = new DataGridViewTextBoxColumn();
-            dateColumn.Name = "Date";
-            dateColumn.HeaderText = "Date / Heure";
-            dateColumn.Width = 145;
-            dateColumn.MinimumWidth = 145;
-            dateColumn.FillWeight = 1;
+            DataGridViewTextBoxColumn dateColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "Date",
+                HeaderText = "Date / Heure",
+                Width = 145,
+                MinimumWidth = 145,
+                FillWeight = 1
+            };
             dateColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dateColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn annotationColumn = new DataGridViewTextBoxColumn();
-            annotationColumn.Name = "Annotation";
-            annotationColumn.HeaderText = "Annotation";
-            annotationColumn.Width = 359;
+            DataGridViewTextBoxColumn annotationColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "Annotation",
+                HeaderText = "Annotation",
+                Width = 359
+            };
             annotationColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn operateurColumn = new DataGridViewTextBoxColumn();
-            operateurColumn.Name = "Operateur";
-            operateurColumn.HeaderText = "Auteur";
-            operateurColumn.Width = 120;
+            DataGridViewTextBoxColumn operateurColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "Operateur",
+                HeaderText = "Auteur",
+                Width = 120
+            };
             operateurColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             /* Création des colonnes */
@@ -213,14 +221,16 @@ namespace PostIt.Forms
         private void AddDatabase()
         {
             Evenement evenement = evenementProvider.GetEvenementById(_id);
-                
+
             /* Création de l'annotation */
-            Annotation annotation = new Annotation();
-            annotation.Date = DateTime.Now;
-            annotation.Commentaire = commentaire;
-            annotation.Operateur = operateur;
-            annotation.CreatedAt = DateTime.Now;
-            annotation.EvenementId = _id;
+            Annotation annotation = new Annotation
+            {
+                Date = DateTime.Now,
+                Commentaire = commentaire,
+                Operateur = operateur,
+                CreatedAt = DateTime.Now,
+                EvenementId = _id
+            };
 
             annotationProvider.Create(evenement, annotation);
         }

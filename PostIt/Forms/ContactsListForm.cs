@@ -51,48 +51,62 @@ namespace PostIt.Forms
             dgvContacts.Columns.Clear();
 
             /* Mise en forme du tableau */
-            DataGridViewTextBoxColumn idCol = new DataGridViewTextBoxColumn();
-            idCol.Name = "ID";
-            idCol.HeaderText = "#";
-            idCol.Width = 50;
-            idCol.Visible = false;
+            DataGridViewTextBoxColumn idCol = new DataGridViewTextBoxColumn
+            {
+                Name = "ID",
+                HeaderText = "#",
+                Width = 50,
+                Visible = false
+            };
             idCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             idCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn typeCol = new DataGridViewTextBoxColumn();
-            typeCol.Name = "Type";
-            typeCol.HeaderText = "CATEGORIE";
-            typeCol.Width = 170;
+            DataGridViewTextBoxColumn typeCol = new DataGridViewTextBoxColumn
+            {
+                Name = "Type",
+                HeaderText = "CATEGORIE",
+                Width = 170
+            };
             typeCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn nomCol = new DataGridViewTextBoxColumn();
-            nomCol.Name = "Nom";
-            nomCol.HeaderText = "NOM";
-            nomCol.Width = 400;
+            DataGridViewTextBoxColumn nomCol = new DataGridViewTextBoxColumn
+            {
+                Name = "Nom",
+                HeaderText = "NOM",
+                Width = 400
+            };
             nomCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn telCol = new DataGridViewTextBoxColumn();
-            telCol.Name = "Téléphone";
-            telCol.HeaderText = "TELEPHONE";
-            telCol.Width = 120;
+            DataGridViewTextBoxColumn telCol = new DataGridViewTextBoxColumn
+            {
+                Name = "Téléphone",
+                HeaderText = "TELEPHONE",
+                Width = 120
+            };
             telCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn faxCol = new DataGridViewTextBoxColumn();
-            faxCol.Name = "Fax";
-            faxCol.HeaderText = "FAX";
-            faxCol.Width = 120;
+            DataGridViewTextBoxColumn faxCol = new DataGridViewTextBoxColumn
+            {
+                Name = "Fax",
+                HeaderText = "FAX",
+                Width = 120
+            };
             faxCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn gsmCol = new DataGridViewTextBoxColumn();
-            gsmCol.Name = "Gsm";
-            gsmCol.HeaderText = "GSM";
-            gsmCol.Width = 120;
+            DataGridViewTextBoxColumn gsmCol = new DataGridViewTextBoxColumn
+            {
+                Name = "Gsm",
+                HeaderText = "GSM",
+                Width = 120
+            };
             gsmCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn emailCol = new DataGridViewTextBoxColumn();
-            emailCol.Name = "Email";
-            emailCol.HeaderText = "EMAIL";
-            emailCol.Width = 220;
+            DataGridViewTextBoxColumn emailCol = new DataGridViewTextBoxColumn
+            {
+                Name = "Email",
+                HeaderText = "EMAIL",
+                Width = 220
+            };
             emailCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             /* Création des colonnes */

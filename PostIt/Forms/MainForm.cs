@@ -43,7 +43,7 @@ namespace PostIt.Forms
             OuvrePostit();
         }
 
-        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -167,11 +167,6 @@ namespace PostIt.Forms
             OuvreAnnuaire();
         }
 
-        private void xToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void OuvreAnnuaire()
         {
             if (Application.OpenForms["ContactsListForm"] == null)
@@ -194,15 +189,16 @@ namespace PostIt.Forms
                 evenementsListForm.MdiParent = this;
                 evenementsListForm.Show();
                 this.LayoutMdi(MdiLayout.TileHorizontal);
+                
             }
         }
 
-        private void réorganiserLesFenêtresToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RéorganiserLesFenêtresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.TileHorizontal);
         }
 
-        private void postitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PostitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OuvrePostit();
         }

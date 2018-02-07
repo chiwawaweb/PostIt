@@ -82,7 +82,7 @@
             this.postitToolStripMenuItem.Name = "postitToolStripMenuItem";
             this.postitToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.postitToolStripMenuItem.Text = "Post\'it";
-            this.postitToolStripMenuItem.Click += new System.EventHandler(this.postitToolStripMenuItem_Click);
+            this.postitToolStripMenuItem.Click += new System.EventHandler(this.PostitToolStripMenuItem_Click);
             // 
             // annuaireToolStripMenuItem
             // 
@@ -115,7 +115,7 @@
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.quitterToolStripMenuItem.Text = "Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -142,7 +142,7 @@
             this.réorganiserLesFenêtresToolStripMenuItem.Name = "réorganiserLesFenêtresToolStripMenuItem";
             this.réorganiserLesFenêtresToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.réorganiserLesFenêtresToolStripMenuItem.Text = "Réorganiser les fenêtres";
-            this.réorganiserLesFenêtresToolStripMenuItem.Click += new System.EventHandler(this.réorganiserLesFenêtresToolStripMenuItem_Click);
+            this.réorganiserLesFenêtresToolStripMenuItem.Click += new System.EventHandler(this.RéorganiserLesFenêtresToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 

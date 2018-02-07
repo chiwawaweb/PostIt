@@ -79,7 +79,7 @@ namespace PostIt.Forms
             CopyEmail();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void BtnModifier_Click(object sender, EventArgs e)
         {
             ModifierContact();
         }

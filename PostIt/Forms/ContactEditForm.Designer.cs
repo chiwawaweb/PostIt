@@ -560,7 +560,7 @@
             this.BtnModifier.TabIndex = 44;
             this.BtnModifier.TabStop = false;
             this.BtnModifier.Visible = false;
-            this.BtnModifier.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
             // 
             // ContactEditForm
             // 

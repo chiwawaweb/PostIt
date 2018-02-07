@@ -121,7 +121,7 @@
   <data name="BtnFermer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAPNJREFUOE/VkTEOwjAQBP03Ckp+QEUF/ICCT/ATWmokSviCm5TpKYyWu0XLxSS4
+        vgAADr4B6kKxwAAAAPNJREFUOE/VkTEOwjAQBP03Ckp+QEUF/ICCT/ATWmokSviCm5TpKYyWu0XLxSS4
         g5VWic9745Od/kPn5azAt9W8XNeLl4/73WCNHP4P280zz15HmVhkCA2sRXNPD0CPo0wx/K2RhzGIo0wx
         pOsxa9ZRJg3BOefSdV3p+/7tnrCmWZuckPcSoTUYzCkdZYoBngooIVCETT6KvjC/nLI2mR7uKBND2GCI
         NcJgvU9Yc44yaUit09ExMzqhmjB8sb5fTgOoXpGjTAzAOA3NeBCYdTxArCPLa3CUiU1qhGv1T3aUqRZo
@@ -134,7 +134,7 @@
   <data name="BtnCopyEmail.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACw8AAAsPAZL5A6UAAAAGYktHRAD/AP8A/6C9p5MAAAAHdElNRQfiAgYRBwXqPLea
+        YQUAAAAJcEhZcwAACw4AAAsOAUC+4UEAAAAGYktHRAD/AP8A/6C9p5MAAAAHdElNRQfiAgYRBwXqPLea
         AAACvUlEQVQ4T32SbUhTYRTHrxlIIX6ovkYQFH3SKPrQhwy1FyqQSQmKSIFpEmmWGZLQItJeVDTIpBdI
         TaTMWL6/tHyduiUunZvbdG5r06aObaZTc957/515r2Ig/eDC8zzn/P/nOec+zGZOXv0lrhgmLHYs/IDE
         +CwySV0qHv2f/We1B/ecGMmKvW3pLiyfRV2fF+4VIFmqXhJTtmbfae2De0VTKGv0YNjOY2QW+DoG9FkB
@@ -153,7 +153,7 @@
   <data name="BtnModifier.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAGYktHRAD/AP8A/6C9p5MAAAAHdElNRQfiAgcJKQQ8tRuN
+        YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAAGYktHRAD/AP8A/6C9p5MAAAAHdElNRQfiAgcJKQQ8tRuN
         AAAA2ElEQVQ4T6WSsQrCQBBEE7RWm4CFoD/kb8VOf0SxU/9BGy200fgbgmKcgUkuWe6SgAOP7M3ObsKR
         yKc4jlU5+TyvEKQGYANysZbXvgWZPniBD0gFa3o9xcJCaAX41qEseiN5S1lhIXQCex1L0QNHHcNC6AK2
         OpaiB8461oVG8UzADRzAGEwEa3pXkFRnSsHgJxa33sZOY04wMxP6Bmry0JgTTRPK1WKv5oO7Wk4w7YK3

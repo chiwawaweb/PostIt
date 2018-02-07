@@ -26,8 +26,8 @@ namespace PostIt.Forms
         Utils utils = new Utils();
 
         /* Liste des fenêtres MDI gérées */
-        static ContactsListForm contactsListForm = new ContactsListForm();
-        static EvenementsListForm evenementsListForm = new EvenementsListForm();
+        private ContactsListForm contactsListForm = new ContactsListForm();
+        EvenementsListForm evenementsListForm = new EvenementsListForm();
 
         [DllImport("wininet.dll")]
         private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
@@ -141,7 +141,6 @@ namespace PostIt.Forms
                     break;
 
                 case 1:
-
                     UpdateAppli();
                     break;
 
@@ -171,24 +170,43 @@ namespace PostIt.Forms
             if (Application.OpenForms["ContactsListForm"] == null)
             {
                 
-                contactsListForm.MdiParent = this;
-                contactsListForm.Show();
-                this.LayoutMdi(MdiLayout.TileHorizontal);
+                if (contactsListForm.IsDisposed == true)
+                {
+                    ContactsListForm contactsListForm = new ContactsListForm();
+                    contactsListForm.MdiParent = this;
+                    contactsListForm.Show();
+                    this.LayoutMdi(MdiLayout.TileHorizontal);
+                }
+                else
+                {
+                    contactsListForm.MdiParent = this;
+                    contactsListForm.Show();
+                    this.LayoutMdi(MdiLayout.TileHorizontal);
+                }
             }
             else
             {
                 contactsListForm.Activate();
             }
-            
         }
 
         private void OuvrePostit()
         {
             if (Application.OpenForms["EvenementsListForm"] == null)
             {
-                evenementsListForm.MdiParent = this;
-                evenementsListForm.Show();
-                this.LayoutMdi(MdiLayout.TileHorizontal);
+                if (evenementsListForm.IsDisposed==true)
+                {
+                    EvenementsListForm evenementsListForm = new EvenementsListForm();
+                    evenementsListForm.MdiParent = this;
+                    evenementsListForm.Show();
+                    this.LayoutMdi(MdiLayout.TileHorizontal);
+                }
+                else
+                {
+                    evenementsListForm.MdiParent = this;
+                    evenementsListForm.Show();
+                    this.LayoutMdi(MdiLayout.TileHorizontal);
+                }
             }
             else
             {
@@ -204,6 +222,16 @@ namespace PostIt.Forms
         private void PostitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OuvrePostit();
+        }
+
+        private void TsbEvenements_Click(object sender, EventArgs e)
+        {
+            OuvrePostit();
+        }
+
+        private void TsbAnnuaire_Click(object sender, EventArgs e)
+        {
+            OuvreAnnuaire();
         }
     }
 }

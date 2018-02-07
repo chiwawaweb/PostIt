@@ -245,7 +245,7 @@ namespace PostIt.Forms
             }
         }
 
-        private void timerActualisation_Tick(object sender, EventArgs e)
+        private void TimerActualisation_Tick(object sender, EventArgs e)
         {
             ActualiserListe();
         }

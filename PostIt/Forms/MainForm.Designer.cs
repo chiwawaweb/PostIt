@@ -45,10 +45,13 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.TsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TsbEvenements = new System.Windows.Forms.ToolStripButton();
+            this.TsbAnnuaire = new System.Windows.Forms.ToolStripButton();
             this.menuStrip.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.toolStrip.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -99,6 +102,7 @@
             // 
             // paramètresToolStripMenuItem
             // 
+            this.paramètresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("paramètresToolStripMenuItem.Image")));
             this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
             this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.paramètresToolStripMenuItem.Text = "Paramètres";
@@ -136,6 +140,7 @@
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.aideToolStripMenuItem.Text = "Aide ?";
+            this.aideToolStripMenuItem.Visible = false;
             // 
             // réorganiserLesFenêtresToolStripMenuItem
             // 
@@ -151,8 +156,9 @@
             // 
             // miseÀJourToolStripMenuItem
             // 
+            this.miseÀJourToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("miseÀJourToolStripMenuItem.Image")));
             this.miseÀJourToolStripMenuItem.Name = "miseÀJourToolStripMenuItem";
-            this.miseÀJourToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.miseÀJourToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
             this.miseÀJourToolStripMenuItem.Text = "Mise à jour...";
             this.miseÀJourToolStripMenuItem.Click += new System.EventHandler(this.MiseÀJourToolStripMenuItem_Click);
             // 
@@ -163,32 +169,35 @@
             // 
             // aProposToolStripMenuItem
             // 
+            this.aProposToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aProposToolStripMenuItem.Image")));
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
             this.aProposToolStripMenuItem.Text = "A propos...";
             this.aProposToolStripMenuItem.Click += new System.EventHandler(this.AProposToolStripMenuItem_Click);
             // 
             // toolStrip
             // 
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsbEvenements,
+            this.TsbAnnuaire});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(751, 25);
+            this.toolStrip.Size = new System.Drawing.Size(751, 31);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
-            this.toolStrip.Visible = false;
             // 
-            // statusStrip1
+            // statusStrip
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TsslVersion});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 449);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(751, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip";
+            this.statusStrip.Location = new System.Drawing.Point(0, 449);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(751, 22);
+            this.statusStrip.SizingGrip = false;
+            this.statusStrip.TabIndex = 3;
+            this.statusStrip.Text = "statusStrip";
             // 
             // TsslVersion
             // 
@@ -196,12 +205,30 @@
             this.TsslVersion.Size = new System.Drawing.Size(46, 17);
             this.TsslVersion.Text = "Version";
             // 
+            // TsbEvenements
+            // 
+            this.TsbEvenements.Image = ((System.Drawing.Image)(resources.GetObject("TsbEvenements.Image")));
+            this.TsbEvenements.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbEvenements.Name = "TsbEvenements";
+            this.TsbEvenements.Size = new System.Drawing.Size(68, 28);
+            this.TsbEvenements.Text = "Post\'it";
+            this.TsbEvenements.Click += new System.EventHandler(this.TsbEvenements_Click);
+            // 
+            // TsbAnnuaire
+            // 
+            this.TsbAnnuaire.Image = ((System.Drawing.Image)(resources.GetObject("TsbAnnuaire.Image")));
+            this.TsbAnnuaire.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbAnnuaire.Name = "TsbAnnuaire";
+            this.TsbAnnuaire.Size = new System.Drawing.Size(83, 28);
+            this.TsbAnnuaire.Text = "Annuaire";
+            this.TsbAnnuaire.Click += new System.EventHandler(this.TsbAnnuaire_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 471);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -213,8 +240,10 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,12 +262,14 @@
         private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem miseÀJourToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripMenuItem annuaireToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel TsslVersion;
         private System.Windows.Forms.ToolStripMenuItem postitToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem réorganiserLesFenêtresToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripButton TsbEvenements;
+        private System.Windows.Forms.ToolStripButton TsbAnnuaire;
     }
 }

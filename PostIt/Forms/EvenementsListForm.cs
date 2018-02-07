@@ -405,5 +405,10 @@ namespace PostIt.Forms
         {
             RefreshData();
         }
+
+        private void EvenementsListForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Dispose();
+        }
     }
 }

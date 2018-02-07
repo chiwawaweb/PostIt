@@ -49,11 +49,11 @@
             this.RadAnnule = new System.Windows.Forms.RadioButton();
             this.RadTermine = new System.Windows.Forms.RadioButton();
             this.RadEncours = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
+            this.CbxSearchCategorie = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.LblSearchText = new System.Windows.Forms.Label();
             this.LblCategorie = new System.Windows.Forms.Label();
-            this.CbxSearchCategorie = new System.Windows.Forms.ComboBox();
             this.timerActualisation = new System.Windows.Forms.Timer(this.components);
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.TslNbEvenements = new System.Windows.Forms.ToolStripStatusLabel();
@@ -286,14 +286,17 @@
             this.RadEncours.UseVisualStyleBackColor = true;
             this.RadEncours.CheckedChanged += new System.EventHandler(this.RadEncours_CheckedChanged);
             // 
-            // label2
+            // CbxSearchCategorie
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(973, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 16);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "et le :";
+            this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxSearchCategorie.FormattingEnabled = true;
+            this.CbxSearchCategorie.Location = new System.Drawing.Point(10, 43);
+            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2);
+            this.CbxSearchCategorie.Name = "CbxSearchCategorie";
+            this.CbxSearchCategorie.Size = new System.Drawing.Size(201, 24);
+            this.CbxSearchCategorie.TabIndex = 0;
+            this.CbxSearchCategorie.TabStop = false;
+            this.CbxSearchCategorie.SelectionChangeCommitted += new System.EventHandler(this.CbxSearchCategorie_SelectionChangeCommitted);
             // 
             // label1
             // 
@@ -303,6 +306,15 @@
             this.label1.Size = new System.Drawing.Size(131, 16);
             this.label1.TabIndex = 10;
             this.label1.Text = "Echéance entre le :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(973, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 16);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "et le :";
             // 
             // LblSearchText
             // 
@@ -322,23 +334,11 @@
             this.LblCategorie.TabIndex = 4;
             this.LblCategorie.Text = "Catégorie :";
             // 
-            // CbxSearchCategorie
-            // 
-            this.CbxSearchCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxSearchCategorie.FormattingEnabled = true;
-            this.CbxSearchCategorie.Location = new System.Drawing.Point(10, 43);
-            this.CbxSearchCategorie.Margin = new System.Windows.Forms.Padding(2);
-            this.CbxSearchCategorie.Name = "CbxSearchCategorie";
-            this.CbxSearchCategorie.Size = new System.Drawing.Size(201, 24);
-            this.CbxSearchCategorie.TabIndex = 0;
-            this.CbxSearchCategorie.TabStop = false;
-            this.CbxSearchCategorie.SelectionChangeCommitted += new System.EventHandler(this.CbxSearchCategorie_SelectionChangeCommitted);
-            // 
             // timerActualisation
             // 
             this.timerActualisation.Enabled = true;
             this.timerActualisation.Interval = 30000;
-            this.timerActualisation.Tick += new System.EventHandler(this.timerActualisation_Tick);
+            this.timerActualisation.Tick += new System.EventHandler(this.TimerActualisation_Tick);
             // 
             // statusStrip
             // 
@@ -372,7 +372,7 @@
             this.Name = "EvenementsListForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Liste des Post\'it";
+            this.Text = "Post\'it";
             this.Load += new System.EventHandler(this.EvenementsListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvenements)).EndInit();
             this.toolStrip.ResumeLayout(false);

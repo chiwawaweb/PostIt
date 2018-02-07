@@ -53,59 +53,75 @@ namespace PostIt.Forms
             dgvEvenements.Columns.Clear();
 
             /* Mise en forme du tableau */
-            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn();
-            idColumn.Name = "ID";
-            idColumn.HeaderText = "#";
-            idColumn.Width = 60;
-            idColumn.Visible = true;
+            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "ID",
+                HeaderText = "#",
+                Width = 60,
+                Visible = true
+            };
             idColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             idColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn dateColumn = new DataGridViewTextBoxColumn();
-            dateColumn.Name = "Date";
-            dateColumn.HeaderText = "DATE";
-            dateColumn.Width = 85;
-            dateColumn.MinimumWidth = 85;
-            dateColumn.FillWeight = 1;
-            dateColumn.Visible = false;
+            DataGridViewTextBoxColumn dateColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "Date",
+                HeaderText = "DATE",
+                Width = 85,
+                MinimumWidth = 85,
+                FillWeight = 1,
+                Visible = false
+            };
             dateColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dateColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn categorieColumn = new DataGridViewTextBoxColumn();
-            categorieColumn.Name = "Categorie";
-            categorieColumn.HeaderText = "CATEGORIE";
-            categorieColumn.Width = 210;
+            DataGridViewTextBoxColumn categorieColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "Categorie",
+                HeaderText = "CATEGORIE",
+                Width = 210
+            };
             categorieColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn statutColumn = new DataGridViewTextBoxColumn();
-            statutColumn.Name = "Statut";
-            statutColumn.HeaderText = "STATUT";
-            statutColumn.Width = 85;
+            DataGridViewTextBoxColumn statutColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "Statut",
+                HeaderText = "STATUT",
+                Width = 85
+            };
             statutColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn tiersColumn = new DataGridViewTextBoxColumn();
-            tiersColumn.Name = "Tiers";
-            tiersColumn.HeaderText = "TIERS";
-            tiersColumn.Width = 200;
+            DataGridViewTextBoxColumn tiersColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "Tiers",
+                HeaderText = "TIERS",
+                Width = 200
+            };
             tiersColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn descriptionColumn = new DataGridViewTextBoxColumn();
-            descriptionColumn.Name = "Description";
-            descriptionColumn.HeaderText = "DESCRIPTION";
-            descriptionColumn.Width = 460;
+            DataGridViewTextBoxColumn descriptionColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "Description",
+                HeaderText = "DESCRIPTION",
+                Width = 460
+            };
             descriptionColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn echeanceColumn = new DataGridViewTextBoxColumn();
-            echeanceColumn.Name = "Echeance";
-            echeanceColumn.HeaderText = "ECHEANCE";
-            echeanceColumn.Width = 85;
+            DataGridViewTextBoxColumn echeanceColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "Echeance",
+                HeaderText = "ECHEANCE",
+                Width = 85
+            };
             echeanceColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             echeanceColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn operateurColumn = new DataGridViewTextBoxColumn();
-            operateurColumn.Name = "Suivi par";
-            operateurColumn.HeaderText = "SUIVI PAR";
-            operateurColumn.Width = 140;
+            DataGridViewTextBoxColumn operateurColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "Suivi par",
+                HeaderText = "SUIVI PAR",
+                Width = 140
+            };
             operateurColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             /* Création des colonnes */
@@ -154,23 +170,23 @@ namespace PostIt.Forms
                 /* Coloration des lignes en fonction de l'échance */
                 if (echeance == Convert.ToDateTime(DateTime.Now.ToShortDateString()))
                 {
-                    rowColorChange(number, Color.Black, Color.FromArgb(255, 133, 51), FontStyle.Regular);
+                    RowColorChange(number, Color.Black, Color.FromArgb(255, 133, 51), FontStyle.Regular);
                 }
 
                 if (echeance < Convert.ToDateTime(DateTime.Now.ToShortDateString()))
                 {
-                    rowColorChange(number, Color.White, Color.Red, FontStyle.Bold);
+                    RowColorChange(number, Color.White, Color.Red, FontStyle.Bold);
                 }
 
                 if (echeance == Convert.ToDateTime(DateTime.Now.AddDays(1).ToShortDateString()))
                 {
-                    rowColorChange(number, Color.Black, Color.FromArgb(255, 255, 102), FontStyle.Regular);
+                    RowColorChange(number, Color.Black, Color.FromArgb(255, 255, 102), FontStyle.Regular);
                 }
 
                 /* Vérifie si événement terminé */
                 if (statut == "Terminé" || statut == "Annulé")
                 {
-                    rowColorChange(number, Color.Gray, Color.White, FontStyle.Strikeout);
+                    RowColorChange(number, Color.Gray, Color.White, FontStyle.Strikeout);
                 }
 
                 /* pointe sur l'enregistrement courant */
@@ -187,7 +203,7 @@ namespace PostIt.Forms
         /// <param name="row">ID de la ligne</param>
         /// <param name="fore">Couleur de police</param>
         /// <param name="back">Couleur de fond</param>
-        private void rowColorChange(int row, Color fore, Color back, FontStyle fontStyle)
+        private void RowColorChange(int row, Color fore, Color back, FontStyle fontStyle)
         {
             dgvEvenements.Rows[row].DefaultCellStyle.ForeColor = fore;
             dgvEvenements.Rows[row].DefaultCellStyle.BackColor = back;
@@ -288,12 +304,14 @@ namespace PostIt.Forms
                         /* Ajout d'une annotation */
                         string commentaire = statut;
                         AnnotationProvider annotationProvider = new AnnotationProvider();
-                        Annotation annotation = new Annotation();
-                        annotation.Date = DateTime.Now;
-                        annotation.Commentaire = commentaire;
-                        annotation.Operateur = "-";
-                        annotation.CreatedAt = DateTime.Now;
-                        annotation.EvenementId = ID;
+                        Annotation annotation = new Annotation
+                        {
+                            Date = DateTime.Now,
+                            Commentaire = commentaire,
+                            Operateur = "-",
+                            CreatedAt = DateTime.Now,
+                            EvenementId = ID
+                        };
                         annotationProvider.Create(evenement, annotation);
 
                         RefreshData();
@@ -363,7 +381,7 @@ namespace PostIt.Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void timerActualisation_Tick(object sender, EventArgs e)
+        private void TimerActualisation_Tick(object sender, EventArgs e)
         {
             ActualiserListe();
         }

@@ -212,14 +212,12 @@ namespace PostIt.Forms
             CreateTable(list, idRetour);
 
             /* Mise à jour du nombre de contact dans la barre de statut */
-            TslNbContacts.Text = "Nombre de contacts affichés : " + list.Count.ToString();
+            TslNbEvenements.Text = "Nombre de post'it affichés : " + list.Count.ToString();
         }
 
         private void EvenementsListForm_Load(object sender, EventArgs e)
         {
             RefreshData();
-            //WindowState = FormWindowState.Maximized;
-            
         }
 
         private void TslAdd_Click(object sender, EventArgs e)

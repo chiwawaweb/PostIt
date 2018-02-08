@@ -15,7 +15,7 @@ namespace PostIt.Forms
 {
     public partial class ContactEditForm : Form
     {
-        string type, societe, nom, prenom, adresse1, adresse2, cp, ville, pays, tel, fax, gsm, email;
+        string type, societe, nom, prenom, adresse1, adresse2, cp, ville, pays, tel, fax, gsm, email, web, notes;
         bool contactUpdateMode;
         int _id;
         DateTime createdAt, updatedAt;
@@ -35,6 +35,8 @@ namespace PostIt.Forms
             BtnCancel.Visible = true;
             BtnSave.Visible = true;
             BtnFermer.Visible = false;
+            BtnCopyWeb.Visible = false;
+            BtnCopyEmail.Visible = false;
             LblTypeView.Visible = false;
             CbxType.Visible = true;
             LblSocieteView.Visible = false;
@@ -60,6 +62,9 @@ namespace PostIt.Forms
             TxtGsm.Visible = true;
             LblEmailView.Visible = false;
             TxtEmail.Visible = true;
+            LblWebView.Visible = false;
+            TxtWeb.Visible = true;
+            TxtNotes.ReadOnly = false;
             LblTitre.Text = "Modification d'un contact";
         }
 
@@ -72,6 +77,27 @@ namespace PostIt.Forms
         {
             Clipboard.SetText(email);
             MessageBox.Show("Adresse e-mail a bien été copiée dans le presse-papier...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void CopyWeb()
+        {
+            Clipboard.SetText(web);
+            MessageBox.Show("Adresse web a bien été copiée dans le presse-papier...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void BtnCopyWeb_Click(object sender, EventArgs e)
+        {
+            CopyWeb();
+        }
+
+        private void LblWebView_Click(object sender, EventArgs e)
+        {
+            CopyWeb();
+        }
+
+        private void ContactEditForm_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void LblEmailView_Click(object sender, EventArgs e)
@@ -187,6 +213,9 @@ namespace PostIt.Forms
             LblGsmView.Visible = true;
             TxtEmail.Visible = false;
             LblEmailView.Visible = true;
+            TxtWeb.Visible = false;
+            LblWebView.Visible = true;
+            TxtNotes.ReadOnly = true;
             BtnFermer.Visible = true;
             this.CancelButton = BtnFermer;
 
@@ -204,6 +233,8 @@ namespace PostIt.Forms
             fax = contactProvider.GetContactById(_id).Fax;
             gsm = contactProvider.GetContactById(_id).Mob;
             email = contactProvider.GetContactById(_id).Email;
+            web = contactProvider.GetContactById(_id).Web;
+            notes = contactProvider.GetContactById(_id).Notes;
             createdAt = contactProvider.GetContactById(_id).CreatedAt;
 
             /* Affichage des données */
@@ -232,6 +263,9 @@ namespace PostIt.Forms
             LblGsmView.Text = gsm;
             TxtEmail.Text = email;
             LblEmailView.Text = email;
+            TxtWeb.Text = web;
+            LblWebView.Text = web;
+            TxtNotes.Text = notes;
 
             /* Barre de statut */
             TssCreatedAt.Text = "Fiche créée le " + createdAt.ToString("dd/MM/yyyy HH:mm:ss");
@@ -240,6 +274,12 @@ namespace PostIt.Forms
             if (email!="")
             {
                 BtnCopyEmail.Visible = true;
+            }
+
+            /* Bouton copier adresse web */
+            if (web!="")
+            {
+                BtnCopyWeb.Visible = true;
             }
         }
 
@@ -270,6 +310,8 @@ namespace PostIt.Forms
             fax = utils.RemoveDiacritics(TxtFax.Text.Trim().ToUpper());
             gsm = utils.RemoveDiacritics(TxtGsm.Text.Trim().ToUpper());
             email = utils.RemoveDiacritics(TxtEmail.Text.ToLower());
+            web = utils.RemoveDiacritics(TxtWeb.Text.ToLower());
+            notes = utils.RemoveDiacritics(TxtNotes.Text.ToUpper());
 
             /* Vérification des données */
             bool erreurs = false;
@@ -308,9 +350,6 @@ namespace PostIt.Forms
                     Close();
                 }
             }
-
-
-
         }
 
         private void UpdateDatabase()
@@ -330,6 +369,8 @@ namespace PostIt.Forms
             contact.Fax = fax;
             contact.Mob = gsm;
             contact.Email = email;
+            contact.Web = web;
+            contact.Notes = notes;
             contact.UpdatedAt = DateTime.Now;
 
             contactProvider.Update(contact);
@@ -352,6 +393,8 @@ namespace PostIt.Forms
             contact.Mob = gsm;
             contact.Fax = fax;
             contact.Email = email;
+            contact.Web = web;
+            contact.Notes = notes;
             contact.CreatedAt = DateTime.Now;
 
             contactProvider.Create(contact);

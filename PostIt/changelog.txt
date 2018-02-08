@@ -1,4 +1,17 @@
-﻿[06/02/2018] Version 1.0.7
+﻿[08/02/2018] Version 1.0.11
+Ajout de champs (web et notes) dans le fiche contacts.
+
+[08/02/2018] Version 1.0.10
+Correction de bugs mineurs.
+Refonte des icones et améliorations graphiques.
+
+[07/02/2018] Version 1.0.9
+Correction de bugs mineurs.
+
+[06/02/2018] Version 1.0.8
+Correction de bugs mineurs.
+
+[06/02/2018] Version 1.0.7
 Ajout de l'annuaire.
 Modification du filtre de recherche des post'it.
 Correction de bugs mineurs.

@@ -75,6 +75,12 @@
             this.TssCreatedAt = new System.Windows.Forms.ToolStripStatusLabel();
             this.BtnCopyEmail = new System.Windows.Forms.Button();
             this.BtnModifier = new System.Windows.Forms.PictureBox();
+            this.LblWebView = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.TxtWeb = new System.Windows.Forms.TextBox();
+            this.BtnCopyWeb = new System.Windows.Forms.Button();
+            this.TxtNotes = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnModifier)).BeginInit();
             this.SuspendLayout();
@@ -229,7 +235,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(71, 300);
+            this.label8.Location = new System.Drawing.Point(443, 73);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 16);
@@ -238,7 +244,7 @@
             // 
             // TxtTel
             // 
-            this.TxtTel.Location = new System.Drawing.Point(117, 297);
+            this.TxtTel.Location = new System.Drawing.Point(489, 70);
             this.TxtTel.Margin = new System.Windows.Forms.Padding(4);
             this.TxtTel.Name = "TxtTel";
             this.TxtTel.Size = new System.Drawing.Size(160, 22);
@@ -246,7 +252,7 @@
             // 
             // TxtFax
             // 
-            this.TxtFax.Location = new System.Drawing.Point(117, 327);
+            this.TxtFax.Location = new System.Drawing.Point(489, 100);
             this.TxtFax.Margin = new System.Windows.Forms.Padding(4);
             this.TxtFax.Name = "TxtFax";
             this.TxtFax.Size = new System.Drawing.Size(160, 22);
@@ -254,7 +260,7 @@
             // 
             // TxtGsm
             // 
-            this.TxtGsm.Location = new System.Drawing.Point(117, 357);
+            this.TxtGsm.Location = new System.Drawing.Point(489, 130);
             this.TxtGsm.Margin = new System.Windows.Forms.Padding(4);
             this.TxtGsm.Name = "TxtGsm";
             this.TxtGsm.Size = new System.Drawing.Size(160, 22);
@@ -263,7 +269,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(69, 330);
+            this.label9.Location = new System.Drawing.Point(441, 103);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(36, 16);
@@ -273,7 +279,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(61, 360);
+            this.label10.Location = new System.Drawing.Point(433, 133);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 16);
@@ -283,7 +289,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(53, 390);
+            this.label11.Location = new System.Drawing.Point(425, 163);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 16);
@@ -292,7 +298,7 @@
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(117, 387);
+            this.TxtEmail.Location = new System.Drawing.Point(489, 160);
             this.TxtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(264, 22);
@@ -300,7 +306,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(283, 425);
+            this.BtnSave.Location = new System.Drawing.Point(654, 311);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(100, 37);
@@ -312,7 +318,7 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(175, 425);
+            this.BtnCancel.Location = new System.Drawing.Point(546, 311);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(100, 37);
@@ -330,7 +336,7 @@
             this.rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
             this.rectangleShape1.Location = new System.Drawing.Point(0, 0);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(416, 43);
+            this.rectangleShape1.Size = new System.Drawing.Size(809, 43);
             // 
             // shapeContainer1
             // 
@@ -339,7 +345,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(417, 501);
+            this.shapeContainer1.Size = new System.Drawing.Size(784, 386);
             this.shapeContainer1.TabIndex = 26;
             this.shapeContainer1.TabStop = false;
             // 
@@ -456,7 +462,7 @@
             // 
             this.LblTelView.AutoSize = true;
             this.LblTelView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelView.Location = new System.Drawing.Point(117, 300);
+            this.LblTelView.Location = new System.Drawing.Point(489, 73);
             this.LblTelView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTelView.Name = "LblTelView";
             this.LblTelView.Size = new System.Drawing.Size(12, 16);
@@ -468,7 +474,7 @@
             // 
             this.LblFaxView.AutoSize = true;
             this.LblFaxView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFaxView.Location = new System.Drawing.Point(117, 330);
+            this.LblFaxView.Location = new System.Drawing.Point(489, 103);
             this.LblFaxView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblFaxView.Name = "LblFaxView";
             this.LblFaxView.Size = new System.Drawing.Size(12, 16);
@@ -480,7 +486,7 @@
             // 
             this.LblGsmView.AutoSize = true;
             this.LblGsmView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGsmView.Location = new System.Drawing.Point(117, 360);
+            this.LblGsmView.Location = new System.Drawing.Point(489, 133);
             this.LblGsmView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblGsmView.Name = "LblGsmView";
             this.LblGsmView.Size = new System.Drawing.Size(12, 16);
@@ -493,7 +499,7 @@
             this.LblEmailView.AutoSize = true;
             this.LblEmailView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LblEmailView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmailView.Location = new System.Drawing.Point(117, 390);
+            this.LblEmailView.Location = new System.Drawing.Point(489, 163);
             this.LblEmailView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblEmailView.Name = "LblEmailView";
             this.LblEmailView.Size = new System.Drawing.Size(12, 16);
@@ -506,7 +512,7 @@
             // 
             this.BtnFermer.Image = ((System.Drawing.Image)(resources.GetObject("BtnFermer.Image")));
             this.BtnFermer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnFermer.Location = new System.Drawing.Point(283, 425);
+            this.BtnFermer.Location = new System.Drawing.Point(654, 311);
             this.BtnFermer.Margin = new System.Windows.Forms.Padding(4);
             this.BtnFermer.Name = "BtnFermer";
             this.BtnFermer.Size = new System.Drawing.Size(99, 37);
@@ -523,9 +529,9 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TssCreatedAt});
-            this.statusStrip.Location = new System.Drawing.Point(0, 479);
+            this.statusStrip.Location = new System.Drawing.Point(0, 364);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(417, 22);
+            this.statusStrip.Size = new System.Drawing.Size(784, 22);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 42;
             // 
@@ -538,7 +544,7 @@
             // BtnCopyEmail
             // 
             this.BtnCopyEmail.Image = ((System.Drawing.Image)(resources.GetObject("BtnCopyEmail.Image")));
-            this.BtnCopyEmail.Location = new System.Drawing.Point(27, 386);
+            this.BtnCopyEmail.Location = new System.Drawing.Point(399, 159);
             this.BtnCopyEmail.Name = "BtnCopyEmail";
             this.BtnCopyEmail.Size = new System.Drawing.Size(24, 24);
             this.BtnCopyEmail.TabIndex = 43;
@@ -554,7 +560,7 @@
             this.BtnModifier.ErrorImage = null;
             this.BtnModifier.Image = ((System.Drawing.Image)(resources.GetObject("BtnModifier.Image")));
             this.BtnModifier.InitialImage = null;
-            this.BtnModifier.Location = new System.Drawing.Point(391, 17);
+            this.BtnModifier.Location = new System.Drawing.Point(785, 17);
             this.BtnModifier.Name = "BtnModifier";
             this.BtnModifier.Size = new System.Drawing.Size(16, 16);
             this.BtnModifier.TabIndex = 44;
@@ -562,11 +568,79 @@
             this.BtnModifier.Visible = false;
             this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
             // 
+            // LblWebView
+            // 
+            this.LblWebView.AutoSize = true;
+            this.LblWebView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblWebView.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblWebView.Location = new System.Drawing.Point(489, 193);
+            this.LblWebView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblWebView.Name = "LblWebView";
+            this.LblWebView.Size = new System.Drawing.Size(12, 16);
+            this.LblWebView.TabIndex = 47;
+            this.LblWebView.Text = "-";
+            this.LblWebView.Visible = false;
+            this.LblWebView.Click += new System.EventHandler(this.LblWebView_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(434, 193);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 16);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "Web :";
+            // 
+            // TxtWeb
+            // 
+            this.TxtWeb.Location = new System.Drawing.Point(489, 190);
+            this.TxtWeb.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtWeb.Name = "TxtWeb";
+            this.TxtWeb.Size = new System.Drawing.Size(264, 22);
+            this.TxtWeb.TabIndex = 45;
+            // 
+            // BtnCopyWeb
+            // 
+            this.BtnCopyWeb.Image = ((System.Drawing.Image)(resources.GetObject("BtnCopyWeb.Image")));
+            this.BtnCopyWeb.Location = new System.Drawing.Point(399, 189);
+            this.BtnCopyWeb.Name = "BtnCopyWeb";
+            this.BtnCopyWeb.Size = new System.Drawing.Size(24, 24);
+            this.BtnCopyWeb.TabIndex = 48;
+            this.BtnCopyWeb.TabStop = false;
+            this.BtnCopyWeb.UseVisualStyleBackColor = true;
+            this.BtnCopyWeb.Visible = false;
+            this.BtnCopyWeb.Click += new System.EventHandler(this.BtnCopyWeb_Click);
+            // 
+            // TxtNotes
+            // 
+            this.TxtNotes.Location = new System.Drawing.Point(489, 221);
+            this.TxtNotes.Multiline = true;
+            this.TxtNotes.Name = "TxtNotes";
+            this.TxtNotes.Size = new System.Drawing.Size(264, 73);
+            this.TxtNotes.TabIndex = 49;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(427, 224);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(50, 16);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "Notes :";
+            // 
             // ContactEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 501);
+            this.ClientSize = new System.Drawing.Size(784, 386);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.TxtNotes);
+            this.Controls.Add(this.BtnCopyWeb);
+            this.Controls.Add(this.LblWebView);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.TxtWeb);
             this.Controls.Add(this.BtnModifier);
             this.Controls.Add(this.BtnCopyEmail);
             this.Controls.Add(this.statusStrip);
@@ -621,6 +695,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Fiche contact";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ContactEditForm_FormClosed);
+            this.Load += new System.EventHandler(this.ContactEditForm_Load);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnModifier)).EndInit();
@@ -677,5 +752,11 @@
         private System.Windows.Forms.ToolStripStatusLabel TssCreatedAt;
         private System.Windows.Forms.Button BtnCopyEmail;
         private System.Windows.Forms.PictureBox BtnModifier;
+        private System.Windows.Forms.Label LblWebView;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox TxtWeb;
+        private System.Windows.Forms.Button BtnCopyWeb;
+        private System.Windows.Forms.TextBox TxtNotes;
+        private System.Windows.Forms.Label label12;
     }
 }

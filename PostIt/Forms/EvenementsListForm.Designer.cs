@@ -152,8 +152,8 @@
             this.BtnAnnuler.Image = ((System.Drawing.Image)(resources.GetObject("BtnAnnuler.Image")));
             this.BtnAnnuler.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAnnuler.Name = "BtnAnnuler";
-            this.BtnAnnuler.Size = new System.Drawing.Size(134, 28);
-            this.BtnAnnuler.Text = "Annuler le Post\'it";
+            this.BtnAnnuler.Size = new System.Drawing.Size(149, 28);
+            this.BtnAnnuler.Text = "Supprimer le Post\'it";
             this.BtnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);
             // 
             // TsbActualiser

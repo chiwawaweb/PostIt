@@ -138,7 +138,7 @@
             // 
             this.aideToolStripMenuItem.Enabled = false;
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.aideToolStripMenuItem.Text = "Aide ?";
             this.aideToolStripMenuItem.Visible = false;
             // 
@@ -146,33 +146,33 @@
             // 
             this.réorganiserLesFenêtresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("réorganiserLesFenêtresToolStripMenuItem.Image")));
             this.réorganiserLesFenêtresToolStripMenuItem.Name = "réorganiserLesFenêtresToolStripMenuItem";
-            this.réorganiserLesFenêtresToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
+            this.réorganiserLesFenêtresToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.réorganiserLesFenêtresToolStripMenuItem.Text = "Réorganiser les fenêtres";
             this.réorganiserLesFenêtresToolStripMenuItem.Click += new System.EventHandler(this.RéorganiserLesFenêtresToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(203, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(195, 6);
             // 
             // miseÀJourToolStripMenuItem
             // 
             this.miseÀJourToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("miseÀJourToolStripMenuItem.Image")));
             this.miseÀJourToolStripMenuItem.Name = "miseÀJourToolStripMenuItem";
-            this.miseÀJourToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
+            this.miseÀJourToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.miseÀJourToolStripMenuItem.Text = "Mise à jour...";
             this.miseÀJourToolStripMenuItem.Click += new System.EventHandler(this.MiseÀJourToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(203, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(195, 6);
             // 
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aProposToolStripMenuItem.Image")));
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.aProposToolStripMenuItem.Text = "A propos...";
             this.aProposToolStripMenuItem.Click += new System.EventHandler(this.AProposToolStripMenuItem_Click);
             // 
@@ -187,6 +187,7 @@
             this.toolStrip.Size = new System.Drawing.Size(751, 31);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
+            this.toolStrip.Visible = false;
             // 
             // TsbEvenements
             // 
@@ -221,7 +222,7 @@
             // TsslVersion
             // 
             this.TsslVersion.Name = "TsslVersion";
-            this.TsslVersion.Size = new System.Drawing.Size(45, 17);
+            this.TsslVersion.Size = new System.Drawing.Size(46, 17);
             this.TsslVersion.Text = "Version";
             // 
             // MainForm

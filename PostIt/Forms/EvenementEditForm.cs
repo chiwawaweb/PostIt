@@ -376,6 +376,7 @@ namespace PostIt.Forms
             LblCategorieView.Visible = false;
             CbxCategorie.Visible = true;
             TxtDescription.ReadOnly = false;
+            TxtDescription.TabStop = true;
             BtnCommentaires.Visible = false;
             BtnEnregistrer.Visible = true;
             BtnFermer.Visible = false;

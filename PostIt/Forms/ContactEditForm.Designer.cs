@@ -336,7 +336,7 @@
             this.rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
             this.rectangleShape1.Location = new System.Drawing.Point(0, 0);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(809, 43);
+            this.rectangleShape1.Size = new System.Drawing.Size(780, 43);
             // 
             // shapeContainer1
             // 
@@ -345,7 +345,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(784, 386);
+            this.shapeContainer1.Size = new System.Drawing.Size(781, 386);
             this.shapeContainer1.TabIndex = 26;
             this.shapeContainer1.TabStop = false;
             // 
@@ -531,7 +531,7 @@
             this.TssCreatedAt});
             this.statusStrip.Location = new System.Drawing.Point(0, 364);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(784, 22);
+            this.statusStrip.Size = new System.Drawing.Size(781, 22);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 42;
             // 
@@ -560,7 +560,7 @@
             this.BtnModifier.ErrorImage = null;
             this.BtnModifier.Image = ((System.Drawing.Image)(resources.GetObject("BtnModifier.Image")));
             this.BtnModifier.InitialImage = null;
-            this.BtnModifier.Location = new System.Drawing.Point(785, 17);
+            this.BtnModifier.Location = new System.Drawing.Point(760, 17);
             this.BtnModifier.Name = "BtnModifier";
             this.BtnModifier.Size = new System.Drawing.Size(16, 16);
             this.BtnModifier.TabIndex = 44;
@@ -634,7 +634,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 386);
+            this.ClientSize = new System.Drawing.Size(781, 386);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.TxtNotes);
             this.Controls.Add(this.BtnCopyWeb);

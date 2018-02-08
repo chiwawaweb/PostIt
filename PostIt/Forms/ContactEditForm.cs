@@ -65,6 +65,7 @@ namespace PostIt.Forms
             LblWebView.Visible = false;
             TxtWeb.Visible = true;
             TxtNotes.ReadOnly = false;
+            TxtNotes.TabStop = true;
             LblTitre.Text = "Modification d'un contact";
         }
 
@@ -188,6 +189,7 @@ namespace PostIt.Forms
             BtnModifier.Visible = true;
             BtnCancel.Visible = false;
             BtnSave.Visible = false;
+            TxtNotes.TabStop = false;
             CbxType.Visible = false;
             LblTypeView.Visible = true;
             TxtSociete.Visible = false;

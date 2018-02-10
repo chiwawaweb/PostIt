@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvenementsListForm));
             this.dgvEvenements = new System.Windows.Forms.DataGridView();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -75,14 +75,14 @@
             this.dgvEvenements.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEvenements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEvenements.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEvenements.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEvenements.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvEvenements.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvEvenements.Location = new System.Drawing.Point(0, 131);
             this.dgvEvenements.Margin = new System.Windows.Forms.Padding(2);
@@ -91,8 +91,8 @@
             this.dgvEvenements.ReadOnly = true;
             this.dgvEvenements.RowHeadersWidth = 30;
             this.dgvEvenements.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvenements.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEvenements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEvenements.ShowCellErrors = false;
             this.dgvEvenements.ShowCellToolTips = false;
@@ -186,7 +186,7 @@
             // DtpFin
             // 
             this.DtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFin.Location = new System.Drawing.Point(1014, 44);
+            this.DtpFin.Location = new System.Drawing.Point(1014, 45);
             this.DtpFin.Margin = new System.Windows.Forms.Padding(2);
             this.DtpFin.Name = "DtpFin";
             this.DtpFin.Size = new System.Drawing.Size(91, 23);
@@ -197,7 +197,7 @@
             // DtpDebut
             // 
             this.DtpDebut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpDebut.Location = new System.Drawing.Point(876, 44);
+            this.DtpDebut.Location = new System.Drawing.Point(876, 45);
             this.DtpDebut.Margin = new System.Windows.Forms.Padding(2);
             this.DtpDebut.Name = "DtpDebut";
             this.DtpDebut.Size = new System.Drawing.Size(91, 23);
@@ -301,7 +301,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(746, 47);
+            this.label1.Location = new System.Drawing.Point(746, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 16);
             this.label1.TabIndex = 10;
@@ -310,7 +310,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(973, 47);
+            this.label2.Location = new System.Drawing.Point(973, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 16);
             this.label2.TabIndex = 11;
@@ -363,14 +363,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 698);
-            this.ControlBox = false;
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.GrpFiltre);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.dgvEvenements);
             this.Font = new System.Drawing.Font("Arial", 10F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EvenementsListForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

@@ -268,13 +268,13 @@ namespace PostIt.Forms
             TssCreatedAt.Text = "Fiche créée le " + createdAt.ToString("dd/MM/yyyy HH:mm:ss");
 
             /* Bouton copier adresse email */
-            if (email!="" || email==null)
+            if (email!="" || email!=null)
             {
                 BtnCopyEmail.Visible = true;
             }
 
             /* Bouton copier adresse web */
-            if (web!="" || web==null)
+            if (web!="" || web!=null)
             {
                 BtnCopyWeb.Visible = true;
             }

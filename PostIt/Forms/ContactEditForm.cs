@@ -77,13 +77,13 @@ namespace PostIt.Forms
         private void CopyEmail()
         {
             Clipboard.SetText(email);
-            MessageBox.Show("Adresse e-mail a bien été copiée dans le presse-papier...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("L'adresse e-mail a bien été copiée dans le presse-papier...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void CopyWeb()
         {
             Clipboard.SetText(web);
-            MessageBox.Show("Adresse web a bien été copiée dans le presse-papier...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("L'adresse web a bien été copiée dans le presse-papier...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void BtnCopyWeb_Click(object sender, EventArgs e)
@@ -94,11 +94,6 @@ namespace PostIt.Forms
         private void LblWebView_Click(object sender, EventArgs e)
         {
             CopyWeb();
-        }
-
-        private void ContactEditForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void LblEmailView_Click(object sender, EventArgs e)
@@ -273,13 +268,13 @@ namespace PostIt.Forms
             TssCreatedAt.Text = "Fiche créée le " + createdAt.ToString("dd/MM/yyyy HH:mm:ss");
 
             /* Bouton copier adresse email */
-            if (email!="")
+            if (email!="" || email==null)
             {
                 BtnCopyEmail.Visible = true;
             }
 
             /* Bouton copier adresse web */
-            if (web!="")
+            if (web!="" || web==null)
             {
                 BtnCopyWeb.Visible = true;
             }

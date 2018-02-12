@@ -617,6 +617,7 @@
             this.TxtNotes.Location = new System.Drawing.Point(489, 221);
             this.TxtNotes.Multiline = true;
             this.TxtNotes.Name = "TxtNotes";
+            this.TxtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TxtNotes.Size = new System.Drawing.Size(264, 73);
             this.TxtNotes.TabIndex = 49;
             // 
@@ -695,7 +696,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Fiche contact";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ContactEditForm_FormClosed);
-            this.Load += new System.EventHandler(this.ContactEditForm_Load);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnModifier)).EndInit();

@@ -23,6 +23,7 @@ namespace PostIt.DAL
                                           (b.Nom.Contains(keywords))
                                             || (b.Prenom.Contains(keywords))
                                             || (b.Societe.Contains(keywords))
+                                            || (b.Notes.Contains(keywords))
                                            )
                                            && (b.Type.Contains(type))
                                      select b;
